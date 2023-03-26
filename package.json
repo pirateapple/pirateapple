@@ -1,8 +1,8 @@
 {
-  "name": "@twilightscapes/completeweb",
-  "description": "A starter",
-  "version": "2.0.0",
-  "author": "Anonymous <Anonymous@gmail.com>",
+  "name": "@completeweb-site/base",
+  "description": "A Complete Web solution to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Todd Lambert",
+  "version": "3.0.0",
+  "author": "Todd Lambert <toddlambert@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
