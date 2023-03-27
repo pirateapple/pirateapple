@@ -166,6 +166,7 @@ const { menu2 } = useSiteMetadata()
 const { menu3 } = useSiteMetadata()
 const { menu4 } = useSiteMetadata()
 const { font1 } = useSiteMetadata()
+const { userStyles } = useSiteMetadata()
 
 
   const QUERY = '(prefers-reduced-motion: no-preference)';
@@ -181,6 +182,8 @@ const navStyle = {
 const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=swap"
 
 
+
+
   return (
 
 <>
@@ -189,17 +192,18 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 <Helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" /> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" /> 
-{ !font1 ? (
-''
-  ) : (
-    <link id="yyy" rel="stylesheet"
-          href={fontUrl} crossorigin="anonymous" />
-  )} 
-
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+  {font1 ? (
+    <link id="yyy" rel="stylesheet" href={fontUrl} crossOrigin="anonymous" />
+  ) : null}
+  <style>{`* {font-family: ${font1};}`}</style>
+  <style>{`${userStyles}`}</style>
 </Helmet>
+
+
+
+
 
 <Seo />
 
@@ -746,3 +750,5 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   };
   
   export default Layout;
+
+  

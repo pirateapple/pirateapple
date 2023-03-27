@@ -678,3 +678,12 @@ collections:
           - label: "Google Font"
             name: "fontFamily"
             widget: "string"
+
+        - label: "User Styles"
+        name: "userStyles"
+        file: "src/util/site.json"
+        fields:
+          - label: "Override Site Styles"
+            name: "userStyles"
+            widget: "string"
+            hint: "Additional CSS can be written here, overwriting the site's default styles."
