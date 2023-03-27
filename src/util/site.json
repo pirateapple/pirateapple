@@ -2,8 +2,10 @@
   "meta": {
     "iconimage": "/assets/logo.svg",
     "font1": "Titan One",
+    "showModals": false,
     "favicon32x32": "/assets/logo.svg",
     "favicon16x16": "/assets/logo.svg",
+    "showSearch": true,
     "showNav": true,
     "companyname": "CompleteWeb",
     "siteUrl": "https://completeweb.site",
@@ -14,6 +16,7 @@
     "showResume": false,
     "showInfo": false,
     "showNav2": false,
+    "userStyles": "",
     "postcount": "1",
     "showPopup": false,
     "icon192": "/assets/logo.svg",
@@ -28,15 +31,13 @@
     "showfooter": false,
     "showFeature": true,
     "showCover": true,
-    "showSearch": true, 
     "image": "/assets/circuit-bg.webp",
     "description": "A CompleteWeb Solution",
     "icon512": "/assets/logo.svg",
-    "showSkills": false,
-    "showModals": false,
     "showSwipe": true,
-    "userStyles": ""
+    "showSkills": false
   },
   "ga": "UA-89654528-2",
-  "comments": "5639031584980992-proj"
+  "comments": "5639031584980992-proj",
+  "userStyles": "*{color:red;}"
 }
