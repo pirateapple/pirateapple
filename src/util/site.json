@@ -34,8 +34,7 @@
     "icon512": "/assets/logo.svg",
     "showSkills": false,
     "showModals": false,
-    "showSwipe": true,
-    "userStyles": ""
+    "showSwipe": true
   },
   "ga": "UA-89654528-2",
   "comments": "5639031584980992-proj"

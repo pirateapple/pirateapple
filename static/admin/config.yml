@@ -578,12 +578,13 @@ collections:
     files:
       - label: "User Styles"
         name: "userStyles"
-        file: "src/util/site.json"
+        file: "src/util/userStyles.json"
         fields:
           - label: "Override Site Styles"
             name: "userStyles"
             widget: "string"
             hint: "Additional CSS can be written here, overwriting the site's default styles."
+
       - label: "Default Theme"
         name: "themescolors"
         file: "src/util/default-colors.json"

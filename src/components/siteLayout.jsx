@@ -33,6 +33,9 @@ import { MdOutlineRectangle } from "react-icons/md"
 
 import Menu from "../components/menu"
 
+import { userStyles } from "../util/userStyles.json"
+
+
 import Fullscreen from "../components/FullScreen"
 // import ss from "../../static/assets/pagebg.webp"
 // import { Link } from "gatsby-plugin-anchor-links"
@@ -166,7 +169,7 @@ const { menu2 } = useSiteMetadata()
 const { menu3 } = useSiteMetadata()
 const { menu4 } = useSiteMetadata()
 const { font1 } = useSiteMetadata()
-const { userStyles } = useSiteMetadata()
+// const { userStyles } = useSiteMetadata()
 
 
   const QUERY = '(prefers-reduced-motion: no-preference)';
