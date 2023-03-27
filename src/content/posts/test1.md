@@ -27,9 +27,9 @@ isnftforsale: false
 svgzindex: "0"
 comments: false
 shareable: false
-underlayImage: ../../img/transparent.png
+underlayImage: /assets/transparent.png
 featuredImage: /assets/default-og-image.webp
-svgImage: ../../img/null.svg
+svgImage: /assets/null.svg
 scrollable: true
 nftdrop: "2023-02-11T10:00:00"
 contentinvideo: false
