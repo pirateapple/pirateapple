@@ -1,10 +1,10 @@
 ---
 slug: /
 tagline:  Memes are life
-featuredImage: /assets/trump-epstein-promo.webp
+featuredImage: /assets/transparent.png
 youtube:
   youtuber: https://youtu.be/k8TjgvwoVgE
-  youtuber2: https://youtu.be/k8TjgvwoVgE
+  youtuber2: ""
   youtubeautostart: false
   youtubemute: false
   youtubecontrols: false
@@ -58,7 +58,7 @@ skillsText:
 cta:
   ctaText: Contact Gene
   ctaLink: ""
-svgImage: /assets/transparent.png
+svgImage: /assets/null.svg
 secondaryImage: /assets/default-user.webp
 title: Do these memes make my butt look fat?
 sharethis: false

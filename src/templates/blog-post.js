@@ -841,7 +841,7 @@ Click to play
   { showModals ? (
     ""
     ) : (
-      <div id="gobacker" style={{position:'absolute', top:'50px', right:'3vw', zIndex:'5'}}><GoBack /></div>
+      <div id="gobacker" style={{position:'fixed', top:'50px', right:'3vw', zIndex:'5'}}><GoBack /></div>
       )} 
 
 {/* <div id="gobacker" style={{position:'absolute', top:'12vh', right:'1vw', zIndex:'5'}}><GoBack /></div> */}
@@ -1436,21 +1436,7 @@ Click to play original video
           )}
 
 
-<div className="panel legal" style={{textAlign: 'center', padding:'1rem',  justifyContent: 'center', fontSize: '.95rem', textDecoration:'none', maxWidth:'90vw'}}>
-            Legal:<br />
-            <Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link>
-      <br /> <br />
-    <div style={{display:'grid', placeContent:'center'}}>
-      <p style={{textAlign:'left'}}>
-        <strong>*This is a parody website meant for education and entertainment purposes.</strong> <br /><br />
-        All characters, and events portrayed in this production are fictitious or are being portrayed in a satirical manner.<br /><br />There is no identification with actual persons (living or deceased), <br />places, buildings, and/or products. There is no harm/insult intended and/or none should be inferred. 
-        <br /><br /> No Celebrities or Politicians were harmed.
 
-        <br /><br />
-        Video footage public youtube.com | Some imagery provided from <a rel="noopener noreferrer" href="https://www.flickr.com/photos/donkeyhotey/" >DonkeyHotey</a>, Wikipedia and other public sourced materials.
-        </p>
-    </div>
-</div>
 
 
 
@@ -1503,9 +1489,9 @@ Click to play original video
 
       
 
-{/* {iframeFiltered} */}
 
-<br/><br/><br/><br/><br/><br/>
+
+<br/>
 
    </CustomBox>
 

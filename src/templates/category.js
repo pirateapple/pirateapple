@@ -49,7 +49,7 @@ const Category = ({ data, pageContext }) => {
  </div>       
         
 
-        <div className="contentpanel horizontal-scroll panels" style={{ marginTop: "5vh" }}>
+        <div className="contentpanel grid-container" style={{ marginTop: "5vh" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "0", display: "none" }}></div>
 
           {posts.map(({ node }) => {

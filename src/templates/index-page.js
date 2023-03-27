@@ -879,7 +879,7 @@ Click to play
 
 
   {/* <TwilightLogo className="bglogo darkened" /> */}
-<div className="contentpanel" style={{padding:''}}>
+<div className="contentpanel grid-container" style={{padding:''}}>
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
                          <BlogListHome data={posts} />

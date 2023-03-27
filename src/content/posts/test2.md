@@ -1,12 +1,12 @@
 ---
 template: blog-post
-title: YellowStone is just Broke Back Mountain but for Conservatives
-slug: /yellowbackmtn
+title: Another Test Blog Post
+slug: /test2
 date: 2023-02-10 10:43
-description: The Bro Love in this show is what gets conservative guys up in the morning.
+description: A test blog post to show a blog post.
 youtube:
- youtuber: 
- youtuber2: 
+ youtuber: ""
+ youtuber2: ""
  youtubeshoworiginal: false
  youtubersuggestion1:
  youtubersuggestion2:
@@ -15,6 +15,8 @@ youtube:
  youtubeend: 
  youtubemute: true
  youtubecontrols: true
+ clicktoplay: false
+ customcontrols: false
  youtubeautostart: true
  youtubeloop: true
 audiostart: "20"
@@ -23,14 +25,14 @@ audiotitle: "Liar Liar!"
 liarliar: false
 isnftforsale: false
 svgzindex: "0"
-comments: true
-shareable: true
+comments: false
+shareable: false
 underlayImage: 
-featuredImage: /assets/yellowbackmountain.webp
-svgImage: 
+featuredImage: /assets/default-og-image.webp
+svgImage: /assets/null.svg
 scrollable: true
 nftdrop: "2023-02-11T10:00:00"
-contentinvideo: true
+contentinvideo: false
 bumpertext: ""
 marating1: YB
 marating2: SS
@@ -42,14 +44,11 @@ maratingtx3: It's Humor - laugh
 maratingtx4: Adult Language
 category: memes
 tags:
-  - gop
-  - tv
-  - gay
-  - yellowstone
+ - test
 ---
 <div class="contentinside" style="position:relative; aspect-ratio:16/9;  width:100%; border:0px solid white; display:flex; flex-direction:column; justify-content:center;">
 
-<div class="bubble bubble-bottom-left" style="position:absolute; width:; top:45%; left:15vw; display:flex; justify-content:center;backdrop-filter: blur(6px); font-size:110%;
+<!-- <div class="bubble bubble-bottom-left" style="position:absolute; width:; top:45%; left:15vw; display:flex; justify-content:center;backdrop-filter: blur(6px); font-size:110%;
 animation: question1 15s ease-in;
 animation-delay: 2s;
 animation-direction: forwards;
@@ -71,7 +70,7 @@ animation: question1 5s ease-out;
 animation-delay: 11s;
 animation-direction: forwards;
 animation-iteration-count:1;
-opacity:0;">Yeah, I'm your Little Bitch... </div>
+opacity:0;">Yeah, I'm your Little Bitch... </div> -->
 
 
 
@@ -154,19 +153,7 @@ opacity:0;">Yeah, I'm your Little Bitch... </div>
 
 <div class="contentbody" style="text-align:left !important; margin-top:0;">
 
-<blockquote>"I love the smell of balls in the morning", said Kevin Costner. "Something about it just gets my blood flowing and makes me want to work even harder to keep this ranch and all of the privacy that a million acres brings us"!</blockquote>
 
-
-## About Brokeback Mountain
-
-"Brokeback Mountain" is a 2005 American romantic-drama film directed by Ang Lee. The film is based on the short story of the same name by Annie Proulx and stars Heath Ledger and Jake Gyllenhaal as two ranch hands who develop a romantic and sexual relationship while working on a sheep drive in the 1960s.
-
-The film was well-received by critics and audiences alike, and it was widely praised for its sensitive and nuanced portrayal of a same-sex relationship. However, it was also the subject of controversy and criticism from some conservative quarters, who took issue with its depiction of homosexuality.
-
-Some conservative groups, religious organizations, and individuals accused the film of promoting a homosexual agenda and sought to have it banned or boycotted. They argued that the film was inappropriate and went against traditional family values. There were also claims that the film was vulgar and obscene, and that it would have a negative impact on society.
-
-Despite the controversy, "Brokeback Mountain" went on to become one of the most acclaimed films of 2005, winning several awards, including three Academy Awards. The film remains an important work in the LGBTQ+ film canon, and it continues to be widely discussed and studied for its powerful exploration of love, sexuality, and identity.
-<!-- <div class="" style="font-size:clamp(2rem, 3vw, 3.8rem); padding:0; text-align:center; width:80%; height:; overflow:visible; margin:5vh auto; border-radius:12px;">10 Major Failures<br />of the Trump Presidency:</div> -->
 
 
 

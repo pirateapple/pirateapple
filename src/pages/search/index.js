@@ -9,6 +9,8 @@ import { Helmet } from "react-helmet"
 import TwilightLogo from "../../../static/assets/logo.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
+import useSiteMetadata from "../../hooks/SiteMetadata"
+
 // import TimeAgo from 'react-timeago'
 
 function clearfield() {  
@@ -20,6 +22,9 @@ function clearfield() {
 
 
 const SearchPage = ({ data }) => {
+
+  const { showModals } = useSiteMetadata();
+
   const allPosts = data.allMarkdownRemark.edges
   const [query, setQuery] = React.useState("")
   const [filteredPosts, setFilteredPosts] = React.useState(allPosts)
@@ -64,7 +69,7 @@ const SearchPage = ({ data }) => {
       </div>
 
       <TwilightLogo className="bglogo darkened" />
-      <div className="contentpanel horizontal-scroll panels" style={{justifyContent:'center', alignItems:'center', marginTop:'70px'}}>
+      <div className="contentpanel grid-container" style={{justifyContent:'center', alignItems:'center', marginTop:'70px'}}>
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
 
@@ -88,23 +93,31 @@ const SearchPage = ({ data }) => {
   >
 
 
-
 {node.frontmatter.featuredImage ? (
-      <Link to={node.frontmatter.slug}>
-        <GatsbyImage
-          image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-          alt={node.frontmatter.title + " - Featured image"}
-          className="featured-image1"
-          placeholder="blurred"
-              // loading="eager"
-    
-              style={{position:'relative', zIndex:'1', maxHeight:'', margin:'0 auto'}}
-        />
-      </Link>
-      
-    ) : (
-      <Link  to={node.frontmatter.slug}><StaticImage className="featured-image1" src="../../static/assets/default-og-image.webp" alt="Default Image" style={{position:'relative', zIndex:''}} /></Link>
-    )}
+        <Link state={showModals ? { modal: true } : {}} to={node.frontmatter.slug}>
+          <GatsbyImage
+            image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+            alt={node.frontmatter.title + " - Featured image"}
+            className="featured-image1"
+            placeholder="blurred"
+            loading="eager"
+            style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
+          />
+        </Link>
+      ) : (
+        <Link state={showModals ? { modal: true } : {}} to={node.frontmatter.slug}>
+          <StaticImage
+            className="featured-image1"
+            src="../../../static/assets/default-og-image.webp"
+            alt="Default Image"
+            style={{ position: 'relative', zIndex: '' }}
+          />
+        </Link>
+      )}
+
+
+
+
 
 <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
 

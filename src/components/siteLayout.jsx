@@ -43,6 +43,8 @@ import SignUp from "../components/newssign"
 // import { navigate } from "gatsby";
 const Layout = ({ children }) => {
 
+
+  
        useEffect(() => {
       sessionStorage.setItem("scrollPos", window.pageYOffset)
     }, [])
@@ -83,47 +85,48 @@ const Layout = ({ children }) => {
     }, []);
   
 
+    const { showSwipe } = useSiteMetadata()
+    const [archiveView, setArchiveView] = useState('');
 
-      const [archiveView, setArchiveView] = useState('');
-  
-      useEffect(() => {
-        // Retrieve the selected option from local storage or default to 'grid'
-        const storedArchiveView = localStorage.getItem('archiveView');
-        setArchiveView(storedArchiveView || 'grid');
-      }, []);
     
-      useEffect(() => {
-        // Apply the selected option on page load
-        applyArchiveView();
-      }, [archiveView]);
+    useEffect(() => {
+      if (showSwipe) {
+        // Retrieve the selected option from local storage or default to 'grid' or 'swipe'
+        const storedArchiveView = localStorage.getItem("archiveView");
+        setArchiveView(
+          storedArchiveView || (showSwipe ? "swipe" : "grid")
+        );
+      }
+    }, [showSwipe]);
     
-      const applyArchiveView = () => {
-        const elements = document.querySelectorAll('.contentpanel');
-        elements.forEach((el) => {
-          if (archiveView === 'grid') {
-            el.classList.remove('horizontal-scroll', 'panels');
-            el.classList.add('grid-container');
-            document.body.classList.add('scroll');
-            window.scrollTo(0, 0);
-          } else if (archiveView === 'swipe') {
-            el.classList.remove('grid-container');
-            el.classList.add('horizontal-scroll', 'panels');
-            document.body.classList.remove('scroll');
-            // window.scrollTo(0, 0);
-            if (showNav2) {
-              document.querySelector('#menuicon').style.transform = 'translateX(110%)';
-            }
-          }
-        });
-        // window.scrollTo(0, 0);
-        localStorage.setItem('archiveView', archiveView);
-      };
+    useEffect(() => {
+      // Apply the selected option on page load
+      applyArchiveView();
+    }, [archiveView]);
     
-      const toggleArchiveView = () => {
-        const newArchiveView = archiveView === 'grid' ? 'swipe' : 'grid';
-        setArchiveView(newArchiveView);
-        applyArchiveView();
-      };
+    const applyArchiveView = () => {
+      const elements = document.querySelectorAll(".contentpanel");
+      elements.forEach((el) => {
+        if (archiveView === "grid") {
+          el.classList.remove("horizontal-scroll", "panels");
+          el.classList.add("grid-container");
+          document.body.classList.add("scroll");
+          window.scrollTo(0, 0);
+        } else if (archiveView === "swipe") {
+          el.classList.remove("grid-container");
+          el.classList.add("horizontal-scroll", "panels");
+          document.body.classList.remove("scroll");
+          // window.scrollTo(0, 0);
+        }
+      });
+      localStorage.setItem("archiveView", archiveView);
+    };
+    
+    const toggleArchiveView = () => {
+      const newArchiveView = archiveView === "grid" ? "swipe" : "grid";
+      setArchiveView(newArchiveView);
+      applyArchiveView();
+    };
 
 
 
@@ -151,6 +154,7 @@ const { showInfo } = useSiteMetadata()
 const { showFeature } = useSiteMetadata()
 const { showPosts } = useSiteMetadata()
 const { showSearch } = useSiteMetadata()
+
 const { showResume } = useSiteMetadata()
 // const { showSocial } = useSiteMetadata()
 const { showSkills } = useSiteMetadata()
@@ -463,8 +467,8 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
         </div>
 
   
+        {showSwipe ? (
   <div>
-
   <button
   aria-label="Grid/Swipe View"
   onClick={toggleArchiveView}
@@ -486,24 +490,13 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
     {archiveView === "grid" ? "swipe" : "scroll"}
   </span>
 </button>
-
-
-
-  {/* <button onClick={toggleArchiveView}>Toggle Archive View</button> */}
-    {/* <button aria-label="Dark/Light Mode" onClick={toggleArchiveView} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}>
-      {archiveView === 'grid' ? <MdOutlineRectangle  style={{width:'3vh', height:'3vw'}} /> : <BiGridHorizontal  style={{width:'4vh', height:'3vw'}} /> }
-      <span className="themetext">{archiveView === 'grid' ? 'swipe' : ' scroll '}</span>
-    </button> */}
 </div>
-
+      ) : (
+        ""
+      )}
  
 
-    {/* <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'10px', textAlign:'center'}}>
-   
-   <Fullscreen style={{width:'', height:''}} />
-   <span className="themetext">fullscreen</span>
 
-        </div> */}
 </div>
       
 
