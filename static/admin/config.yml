@@ -439,6 +439,11 @@ collections:
                 required: false
 
               - widget: boolean
+                name: showSwipe
+                label: Show Swipe Icon
+                required: false
+
+              - widget: boolean
                 name: showCover
                 label: Show Cover Link
                 required: false
