@@ -1294,6 +1294,6 @@ Click to play
 
 export default HomePage
 
-export const Head = () => (
-  <body className="todd" />
-)
+// export const Head = () => (
+//   <body className="todd" />
+// )
