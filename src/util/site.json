@@ -26,7 +26,7 @@
     "showPosts": true,
     "title": "A Complete Web Solution",
     "showfooter": false,
-    "showFeature": false,
+    "showFeature": true,
     "showCover": true,
     "showSearch": true, 
     "image": "/assets/circuit-bg.webp",
