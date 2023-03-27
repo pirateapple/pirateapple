@@ -35,7 +35,7 @@
     "showSkills": false,
     "showModals": false,
     "showSwipe": true,
-    "userStyles": "* {color:red;}"
+    "userStyles": ""
   },
   "ga": "UA-89654528-2",
   "comments": "5639031584980992-proj"
