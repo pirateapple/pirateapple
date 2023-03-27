@@ -21,15 +21,15 @@ youtube:
  youtubeloop: true
 audiostart: "20"
 audioend: "5000"
-audiotitle: "Liar Liar!"
+audiotitle: ""
 liarliar: false
 isnftforsale: false
 svgzindex: "0"
 comments: false
 shareable: false
-underlayImage: 
+underlayImage: /assets/transparent.png
 featuredImage: /assets/default-og-image.webp
-svgImage: ../../img/null.svg
+svgImage: /assets/null.svg
 scrollable: true
 nftdrop: "2023-02-11T10:00:00"
 contentinvideo: false

@@ -28,9 +28,9 @@ isnftforsale: false
 svgzindex: "0"
 comments: true
 shareable: true
-underlayImage: /assets/kimberly-makeup-bg.webp
-featuredImage: /assets/kimberly-makeup-promo.webp
-svgImage: 
+underlayImage: /assets/transparent.png
+featuredImage: 
+svgImage: /assets/null.svg
 scrollable: true
 nftdrop: "2023-02-22T10:00:00"
 contentinvideo: true

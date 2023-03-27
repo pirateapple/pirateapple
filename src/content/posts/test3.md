@@ -19,15 +19,15 @@ youtube:
  customcontrols: true
  youtubeautostart: false
  youtubeloop: true
-audiotitle: "Fuckin' Liar!"
+audiotitle: ""
 liarliar: false
 isnftforsale: false
 svgzindex: "0"
 comments: true
 shareable: true
-underlayImage: "../img/transparent.png"
+underlayImage: /assets/transparent.png
 featuredImage: /assets/marge-flag.webp
-svgImage: /img/null.svg
+svgImage: /assets/null.svg
 scrollable: true
 nftdrop: "2023-02-09T10:00:00"
 contentinvideo: true
