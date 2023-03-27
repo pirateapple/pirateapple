@@ -405,7 +405,7 @@ const OriginalUrl = frontmatter.youtube.youtuber
       </div>
           </button>}
    
-            light="../assets/transparent.png"
+            light="../src/img/transparent.png"
           />
      
 

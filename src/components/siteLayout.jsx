@@ -15,7 +15,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { Helmet } from "react-helmet"
 import Theme from "./theme"
 // import { CartButton } from "./cart-button"
-import SearchIcon from "../../static/assets/search"
+import SearchIcon from "../../src/img/search"
 // import SearchForm from "./searchbox"
 import useSiteMetadata from "../hooks/SiteMetadata"
 

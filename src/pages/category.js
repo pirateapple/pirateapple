@@ -13,7 +13,7 @@ const CategoryIndex = ({ data }) => {
       <h1>Categories</h1>
 <br /><br />
 
-      <div style={{maxWidth:'70vw', margin:'0 auto'}}><StaticImage className="featured-image1 layer1" src="../../static/assets/edition1-promo.webp" alt="Default Image" style={{position:'relative', zIndex:'',}} /></div>
+      {/* <div style={{maxWidth:'70vw', margin:'0 auto'}}><StaticImage className="featured-image1 layer1" src="../../static/assets/edition1-promo.webp" alt="Default Image" style={{position:'relative', zIndex:'',}} /></div> */}
 
       <ul style={{display:'flex', justifyItems:'center', justifyContent:'center', gap:'3vw', textTransform:'capitalize', margin:'3vh'}}>
         {categories.map(category => (

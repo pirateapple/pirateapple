@@ -135,7 +135,7 @@ import ReactPlayer from 'react-player/lazy'
       
       // </div>
       // </button>}
-      // light="../static/assets/transparent.png"
+      // light="../static../img/transparent.png"
     />
 
 

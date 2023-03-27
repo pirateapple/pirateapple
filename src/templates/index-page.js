@@ -543,7 +543,7 @@ display:'flex', justifyContent:'center', maxHeight:'80px !important', height:'15
           </div>
           </button>}
    
-            light="../assets/transparent.png"
+            light="../src/img/transparent.png"
           />
      </div>
 

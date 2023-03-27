@@ -25,9 +25,9 @@ isnftforsale: false
 svgzindex: "0"
 comments: true
 shareable: true
-underlayImage: "/assets/transparent.png"
+underlayImage: "../img/transparent.png"
 featuredImage: /assets/marge-flag.webp
-svgImage: /assets/null.svg
+svgImage: /img/null.svg
 scrollable: true
 nftdrop: "2023-02-09T10:00:00"
 contentinvideo: true

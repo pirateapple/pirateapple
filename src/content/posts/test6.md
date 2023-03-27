@@ -28,7 +28,7 @@ isnftforsale: false
 svgzindex: "0"
 comments: true
 shareable: true
-underlayImage: /assets/transparent.png
+underlayImage: ../img/transparent.png
 featuredImage: /assets/yellowstone-promo.webp
 svgImage: 
 scrollable: true
@@ -49,8 +49,7 @@ tags:
 ---
 <div class="contentinside " style="">
 
-</div> -->
-
+</div> 
 
 <div class="contentbody" style="text-align:left !important; margin-top:0;">
 
