@@ -11,7 +11,7 @@
     "twitterUsername": "CompleteWeb",
     "titleDefault": "A CompleteWeb Solution",
     "showSocial": true,
-    "showResume": false,
+    "showResume": true,
     "showInfo": true,
     "showNav2": true,
     "postcount": "1",
@@ -32,9 +32,9 @@
     "image": "/assets/circuit-bg.webp",
     "description": "A CompleteWeb Solution",
     "icon512": "/assets/logo.svg",
-    "showSkills": false,
+    "showSkills": true,
     "showModals": false,
-    "showSwipe": true
+    "showSwipe": false
   },
   "ga": "UA-89654528-2",
   "comments": "5639031584980992-proj"

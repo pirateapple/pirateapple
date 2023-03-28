@@ -345,6 +345,11 @@ p{margin-bottom:2rem}
 20%{opacity:0}
 to{opacity:1}
 }
+@keyframes slide {
+	100% {
+	width: 0;
+	}
+}
 .mobile{border:0 solid red!important}
 .mobilefix{margin:-120px 0 30px;position:relative;z-index:1}
 
