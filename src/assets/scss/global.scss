@@ -555,7 +555,7 @@ to{opacity:0;z-index:-3}
   margin-top:0!important;
   overflow:visible!important;
   }
-#menu li{color:#eee;font-size:clamp(.9rem,1.4vw,2.2rem);text-shadow:2px 2px 0 #000}
+#menu li{color:#eee;font-size:clamp(.8rem,1.4vw,2.2rem);text-shadow:2px 2px 0 #000}
 #menu li .fullscreenButt{display:none;fill:var(--theme-ui-colors-text)!important;filter:dropShadow(2px 2px 2px #000)!important;}
 #menu li svg{color:var(--theme-ui-colors-text)!important;outline:#ff0;stroke:var(--theme-ui-colors-text)!important;}
 
@@ -675,7 +675,7 @@ ul li{display:inline-block}
   
   body.homepage #showPosts {height:inherit !important; border:0px solid yellow}
 
-  #missioncontrol {position:absolute; right:4vw; top:10px; gap:5vw !important;}
+  #missioncontrol {position:absolute; right:2vw; top:10px; gap:5vw !important;}
 
   .cornerlogo{ left:18%; top:2px; width:117; height:60px; }
   
