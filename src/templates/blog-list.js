@@ -35,10 +35,9 @@ const BlogList = ({ data, pageContext }) => {
       )}
 
       <div style={{maxHeight:'100vh'}}>
+
+
         {/* <h1 style={{textAlign:'center'}}>Archive</h1> */}
-
-
-
 
 
         <div className="contentpanel horizontal-scroll panels" style={{padding:''}}>
@@ -53,7 +52,7 @@ const BlogList = ({ data, pageContext }) => {
           const featuredImg = node.frontmatter.featuredImage
 
           return (
-            <div key={node.fields.slug}>
+            <div className='post-card1' key={node.fields.slug}>
               {/* Render featured image thumbnail if it exists */}
               {featuredImg && (
                 <Link to={node.fields.slug}>
