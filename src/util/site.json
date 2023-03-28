@@ -4,7 +4,7 @@
     "font1": "Russo One",
     "favicon32x32": "/assets/logo.svg",
     "favicon16x16": "/assets/logo.svg",
-    "showNav": true,
+    "showNav": false,
     "companyname": "CompleteWeb",
     "siteUrl": "https://completeweb.site",
     "showDates": true,

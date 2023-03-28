@@ -577,7 +577,7 @@ to{opacity:0;z-index:-3}
 
 
 
-.videohide{border:0px solid yellow; margin-top:-10px;}
+// .videohide{border:1px solid yellow; margin-top:-10px;}
 
 .horizontal-scroll{margin:0;max-height:100vw;overflow-x:hidden;overflow-y:auto;position:relative;scroll-padding:0 5%;transform:rotate(-90deg) translateY(-100%);transform-origin:right top;transition:transform .2s;width:100%}
 .horizontal-scroll img{max-height:65vh;object-fit:contain!important}
@@ -739,6 +739,7 @@ ul li{display:inline-block}
   body.homepage #showPosts {height:inherit !important; border:0px solid yellow}
 
   #missioncontrol {position:absolute; right:4vw; top:10px; gap:5vw !important;}
+
   .cornerlogo{ left:18%; top:2px; width:117; height:60px; }
   
   .spacer{display:block; height:130px !important;}
@@ -754,9 +755,10 @@ ul li{display:inline-block}
   
   }
 
-  #missioncontrol{
+  .missioncontrol{
     // background:rgba(0, 0, 0, 0.2);
     padding:0 20px;
+    color:#ddd;
   }
 
   .cattags{
@@ -850,7 +852,9 @@ body.homepage:before{display:none}
 .clickplays{color:default; height:100%; max-height: 280px;}
 .bumper{display:none;}
 
-.pane1{top:135px !important; height:100%; min-height: 400px; display: block;}
+// .pane1{
+//   // top:135px !important; 
+//   height:100%; min-height: 400px; display: block;}
 // .pane2{top:70px !important;}
 // .pane3{top:150px !important; min-height:300px; display: block;}
 .cattags{top:140px !important; }

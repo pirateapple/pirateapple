@@ -34,8 +34,8 @@ const BlogList = ({ data, pageContext }) => {
         ""
       )}
 
-      <div style={{maxHeight:'80vh'}}>
-        <h1 style={{textAlign:'center'}}>Archive</h1>
+      <div style={{maxHeight:'100vh'}}>
+        {/* <h1 style={{textAlign:'center'}}>Archive</h1> */}
 
 
 
@@ -135,7 +135,7 @@ Play Multimedia
       </div>
 
       {/* Render pagination links */}
-<div style={{position:'fixed', bottom:'0', width:'100vw',  background:'rgba(0, 0, 0, 0.7)', padding:'2vh 2vw', textAlign:'center', color:'#fff'}}>
+<div style={{position:'fixed', bottom:'0', width:'100vw',  background:'rgba(0, 0, 0, 0.7)', padding:'2vh 2vw', textAlign:'center', color:'#fff', display:'flex', justifyContent:'center'}}>
   <button onClick={() => navigate(pageContext.currentPage > 2 ? `/archive/${pageContext.currentPage - 1}` : '/archive')} disabled={pageContext.currentPage === 1}>
     Previous
   </button>
