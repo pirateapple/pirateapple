@@ -48,6 +48,8 @@ const Tag = ({ data, pageContext }) => {
       </select>
       </div> 
 
+      <section id="showPosts" style={{marginTop:''}}>
+
       <div className='contentpanel grid-container' style={{ marginTop: '1.5rem' }}>
         <div className='sliderSpacer' style={{ height: '', paddingTop: '0', display: 'none' }}></div>
 
@@ -109,6 +111,8 @@ Play Multimedia
           );
         })}
       </div>
+
+      </section>
     </Layout>
   );
 };

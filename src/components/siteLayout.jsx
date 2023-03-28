@@ -114,13 +114,13 @@ const Layout = ({ children }) => {
           el.classList.remove("horizontal-scroll", "panels");
           el.classList.add("grid-container");
           document.body.classList.add("scroll");
-          document.querySelector('#showPosts').style.height = 'auto';
+          // document.querySelector('#showPosts').style.height = 'auto';
           window.scrollTo(0, 0);
         } else if (archiveView === "swipe") {
           el.classList.remove("grid-container");
           el.classList.add("horizontal-scroll", "panels");
           document.body.classList.remove("scroll");
-          document.querySelector('#showPosts').style.height = '400px';
+          // document.querySelector('#showPosts').style.height = '600px';
           // window.scrollTo(0, 0);
         }
       });

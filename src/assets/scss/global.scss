@@ -9,7 +9,7 @@
 
 .frame-content *{color:red !important;}
 
-// #gatsby-focus-wrapper{height:100vh;}
+#gatsby-focus-wrapper{height:100vh;}
 
 :root{--button-alternate-color:#e3272d;--button-color:#e5c3d3;--font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;--font-family-mono:Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;--font-size-small:12px;--grid-gap:30px;--home-link-color:#d4d4d4;--home-link-hover-color:var(--primary-color);--home-link-hover-color:#e3272d;--input-focus-border:#83aaac;--label-text:#777;--nav-link-hover-bg:#111;--post-link-color:#0f070b;--text-color-meta:rgba(0,0,0,.5)}
 
@@ -47,7 +47,10 @@ body.scroll{overflow-x:hidden!important;overflow-y:scroll!important}
 
 
 
+// body.homepage .panels img{max-height: 60vh;}
+body.homepage #showPosts { display: block !important; position:relative; max-height:90vh; overflow: hidden; }
 
+body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scroll .gatsby-image-wrapper {max-height: 55vh !important; overflow: hidden;}
 
 
 
@@ -121,7 +124,7 @@ body.scroll{overflow-x:hidden!important;overflow-y:scroll!important}
   display: flex;
   flex-direction: column;
   height: auto;
-  max-height: 300px;
+  max-height: 70vh;
   justify-content: start;
 }
 
@@ -513,13 +516,15 @@ a[aria-current]{box-shadow:none;text-decoration:none}
 a.cornerlogo, .footerlinks a, #sidebarMenu a {border-bottom: 0px solid transparent !important;}
 
 
-body.homepage .panels img{max-height: 30vh;}
 
 
 
 
 
-body.homepage .featured-image1, body.homepage .gatsby-image-wrapper {max-height: 30vh;}
+
+
+
+
 
 
 body.homepage .pleaseshare{display:none}
