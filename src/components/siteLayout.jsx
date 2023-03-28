@@ -305,9 +305,6 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       <AnchorLink aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>
       {menu1}</AnchorLink>         
     )}
-{/* <AnchorLink aria-label="Menu 1" className="navbar-item" to="/about" style={{paddingRight:'',}}>
-      About</AnchorLink>    */}
-
 </li>
       ) : (
   ""
@@ -486,6 +483,23 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
+          {showInfo ? (
+<li style={{position:'relative',}}>
+      {prefersReducedMotion ? (
+       <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
+   ) : (
+      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>
+      {menu1}</AnchorLink>         
+    )}
+</li>
+      ) : (
+  ""
+)}
+
+
+
+
+
 {showResume ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
@@ -515,18 +529,10 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   ""
 )}
 
-       
-
-
-
 
 <Menu />
 
-   
-
-
-
-    <div className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
+<div className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
 
 {showSearch ? (
 <div>
@@ -572,12 +578,10 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       ) : (
         ""
       )}
- 
-
-
 </div>
 
 </ul>
+
 
   </div>
   </>
