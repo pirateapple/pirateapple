@@ -794,7 +794,15 @@ Click to play
   )}
 
 
-{FrontImage ? (
+{/* {FrontImage ? (
+  <Seo
+        title={frontmatter.title}
+        description={
+          frontmatter.description ? frontmatter.description : excerpt
+        }
+   image={ siteUrl + getSrc(frontmatter.featuredImage) }
+      />
+) : (
   <Seo
         title={frontmatter.title}
         description={
@@ -802,8 +810,10 @@ Click to play
         }
   //  image={ siteUrl + getSrc(frontmatter.featuredImage) }
       />
-)}
+)} */}
        
+       <Seo {...seoProps} />
+
 
 {showNav ? (
   <div id="top" className="spacer" style={{height:'70px', border:'0px solid yellow'}}></div>
