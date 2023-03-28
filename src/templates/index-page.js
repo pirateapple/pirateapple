@@ -788,13 +788,26 @@ Click to play
   <body id="body" className="homepage" style={{}} />
 </Helmet>
   )}
-       <Seo
+
+
+{FrontImage ? (
+  <Seo
+        title={frontmatter.title}
+        description={
+          frontmatter.description ? frontmatter.description : excerpt
+        }
+   image={ siteUrl + getSrc(frontmatter.featuredImage) }
+      />
+) : (
+  <Seo
         title={frontmatter.title}
         description={
           frontmatter.description ? frontmatter.description : excerpt
         }
   //  image={ siteUrl + getSrc(frontmatter.featuredImage) }
       />
+)}
+       
 
 
 {showNav ? (
