@@ -4,7 +4,7 @@
     "font1": "Russo One",
     "favicon32x32": "/assets/logo.svg",
     "favicon16x16": "/assets/logo.svg",
-    "showNav": false,
+    "showNav": true,
     "companyname": "CompleteWeb",
     "siteUrl": "https://completeweb.site",
     "showDates": true,
@@ -34,7 +34,7 @@
     "icon512": "/assets/logo.svg",
     "showSkills": true,
     "showModals": false,
-    "showSwipe": false
+    "showSwipe": true
   },
   "ga": "UA-89654528-2",
   "comments": "5639031584980992-proj"
