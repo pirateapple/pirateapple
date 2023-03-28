@@ -1,7 +1,7 @@
 ---
 slug: /
 tagline:  Memes are life
-featuredImage: /assets/default-og-image.webp
+featuredImage: 
 youtube:
   youtuber: https://youtu.be/k8TjgvwoVgE
   youtuber2: ""
