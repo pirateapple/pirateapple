@@ -1,23 +1,23 @@
 ---
 template: blog-post
-title: Test Blog Post
-slug: /test1
+title: Test post with auto advance video playlist
+slug: /test6
 date: 2023-02-10 10:43
-description: A test blog post to show a blog post.
+description: example of using video playlists
 youtube:
- youtuber: 
+ youtuber: https://youtu.be/S1LC7jDHqr0
  youtuber2: 
  youtubeshoworiginal: false
- youtubersuggestion1:
- youtubersuggestion2:
- youtubersuggestion3:
- youtubestart: 
- youtubeend: 
- youtubemute: true
- youtubecontrols: true
+ youtubersuggestion1: https://youtu.be/yEn8_X7Ei3A
+ youtubersuggestion2: https://youtu.be/yEn8_X7Ei3A
+ youtubersuggestion3: https://youtu.be/dQw4w9WgXcQ
+ youtubestart: "0"
+ youtubeend: "10"
+ youtubemute: false
+ youtubecontrols: false
  clicktoplay: false
- customcontrols: false
- youtubeautostart: true
+ customcontrols: true
+ youtubeautostart: false
  youtubeloop: true
 audiostart: 
 audioend: 

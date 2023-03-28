@@ -1,11 +1,11 @@
 ---
 template: blog-post
-title: Test Blog Post
-slug: /test1
+title: Test blog post with auto play video
+slug: /test4
 date: 2023-02-10 10:43
-description: A test blog post to show a blog post.
+description: Showing video that is muted and set to autoplay
 youtube:
- youtuber: 
+ youtuber: https://youtu.be/ErSd_YiRCAs
  youtuber2: 
  youtubeshoworiginal: false
  youtubersuggestion1:

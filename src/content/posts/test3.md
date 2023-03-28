@@ -1,11 +1,11 @@
 ---
 template: blog-post
-title: Test Blog Post
-slug: /test1
+title: Test post with video
+slug: /test3
 date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
 youtube:
- youtuber: 
+ youtuber: https://youtu.be/9q-C04jwaog
  youtuber2: 
  youtubeshoworiginal: false
  youtubersuggestion1:

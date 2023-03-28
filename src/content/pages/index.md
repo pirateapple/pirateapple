@@ -3,23 +3,23 @@ slug: /
 tagline:  Memes are life
 featuredImage: /assets/default-og-image.webp
 youtube:
-  youtuber: https://youtu.be/k8TjgvwoVgE
-  youtuber2: ""
+  youtuber: x
+  youtuber2: x
   youtubeautostart: false
   youtubemute: false
   youtubecontrols: false
   clicktoplay: false
   customcontrols: false
-  youtubestart: "0"
-  youtubeend: "10"
+  youtubestart: x
+  youtubeend: x
   youtubeloop: true
   youtubeshoworiginal: false
-  youtubersuggestion1: ""
-  youtubersuggestion2: ""
-  youtubersuggestion3: ""
-audiostart: "20"
-audioend: "5000"
-audiotitle: "Lamb - Gorecki"
+  youtubersuggestion1: x
+  youtubersuggestion2: x
+  youtubersuggestion3: x
+audiostart: x
+audioend: x
+audiotitle: x
 underlayImage: /assets/transparent.png
 profText: 
  <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
@@ -57,33 +57,33 @@ skillsText:
   </dl>
 cta:
   ctaText: Contact Gene
-  ctaLink: ""
+  ctaLink: x
 svgImage: /assets/null.svg
 secondaryImage: /assets/default-user.webp
-title: Do these memes make my butt look fat?
+title: Complete Web Solutions
 sharethis: false
 liarliar: false
-bumpertext: "These guys were bros"
-marate: SICK
-viewerwarning: You may lose brain cells after viewing this
-marating1: SP
-marating2: LS
-marating3: PH
-marating4: 
-maratingtx1: Souless Perverts
-maratingtx2: Love Story
-maratingtx3: Political Humor
-maratingtx4: 
+bumpertext: x
+marate: x
+viewerwarning: x
+marating1: x
+marating2: x
+marating3: x
+marating4: x
+maratingtx1: x
+maratingtx2: x
+maratingtx3: x
+maratingtx4: x
 template: index-page
-description: A rogue one, out there to change the world, one meme at a time. 
-svgzindex: ""
-profTitle: MG Reports
+description: A description of the site
+svgzindex: x
+profTitle: Complete Web
 coverletter:
   coverText: About Meme Genes
   coverLink: /about
 scrollable: true
 contentinvideo: false
-nftdrop: "2023-02-11T10:00:00"
+nftdrop: x
 ---
 <!-- Do not delete -->
 <div>

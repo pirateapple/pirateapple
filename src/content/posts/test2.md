@@ -1,7 +1,7 @@
 ---
 template: blog-post
-title: Test Blog Post
-slug: /test1
+title: Another Test Blog Post
+slug: /test2
 date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
 youtube:

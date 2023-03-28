@@ -1,23 +1,23 @@
 ---
 template: blog-post
-title: Test Blog Post
-slug: /test1
+title: Another blog post test with video
+slug: /test5
 date: 2023-02-10 10:43
-description: A test blog post to show a blog post.
+description: Showing video
 youtube:
- youtuber: 
+ youtuber: https://youtu.be/Yq5OBekqY6A
  youtuber2: 
- youtubeshoworiginal: false
+ youtubeshoworiginal: true
  youtubersuggestion1:
  youtubersuggestion2:
  youtubersuggestion3:
- youtubestart: 
+ youtubestart: "0"
  youtubeend: 
- youtubemute: true
- youtubecontrols: true
+ youtubemute: false
+ youtubecontrols: false
  clicktoplay: false
- customcontrols: false
- youtubeautostart: true
+ customcontrols: true
+ youtubeautostart: false
  youtubeloop: true
 audiostart: 
 audioend: 
