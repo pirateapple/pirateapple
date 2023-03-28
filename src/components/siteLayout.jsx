@@ -421,44 +421,29 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 <header id="top" name="pagetop" style={{}} >
-
-
-
 {showNav2 ? (
 
 <>
+
 <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
   <label htmlFor="openSidebarMenu" className="backdrop1" ></label>
 
 <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle bug">
 <div style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'500px', color:'#fff', fontWeight:'bold', border:'0px solid blue'}}>
-
-{/* <Bug className="bug" style={{fontSize:'38px', maxWidth:'', opacity:'1', margin:'0 0 0 0', width:'100%', display:'none' }}/>  */}
 {iconimage ? (
       <img className="" src={iconimage} alt={companyname} width="120" height="60" style={{maxHeight:'60px', maxWidth:'120px', border:'none'}} />
                 ) : (
                   <div style={{fontWeight:'bold', color:'yellow'}}>companyname</div>
                 )}
-
 </div>
   </label>
 
   
 
-
-
-
-
    <div id="sidebarMenu" style={{minWidth:'', width:'',}}>
-  
-{/* <div className="no-app promocode">
-30% OFF CODE: <span style={{color:'var(--primary-color)', fontWeight:'bold'}}>LoveTheNight</span>
-</div> */}
 
-  
-
-    <ul className="sidebarMenuInner post-card panel" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
+<ul className="sidebarMenuInner post-card panel" style={{maxWidth:'260px', position:'absolute', right:'0', display:'', justifyContent:''}}>
 
     <li className="grad logo" style={{position:'relative', maxHeight:'100px', width:'auto', display:'flex', justifyContent:'center'}}>
             <AnchorLink className="sidelogo" to="/" name="homereturn" style={{position:'', display:'block', maxWidth:'150px', height:'60px', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
@@ -468,22 +453,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
                   <div style={{fontWeight:'bold'}}>companyname</div>
                 )}
             </AnchorLink>
-          </li>
+    </li>
       
-      
-
-
-
-            
-
-
-
-
-          
-
-
-
-          {showInfo ? (
+{showInfo ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
        <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
@@ -495,10 +467,6 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       ) : (
   ""
 )}
-
-
-
-
 
 {showResume ? (
 <li style={{position:'relative',}}>
@@ -514,8 +482,6 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 )}
 
 
-
-
 {showSkills ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
@@ -529,30 +495,30 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   ""
 )}
 
-
 <Menu />
 
-<div className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
+<li>
+<ul className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
 
 {showSearch ? (
-<div>
+<li>
    <Link aria-label="Search UrbanFetish" to="/search/" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}>
     <SearchIcon style={{height:'30px'}} />
     <span className="themetext">search</span>
    </Link>
-        </div>
+        </li>
       ) : (
         ""
       )}
 
 
-  <div>
+  <li>
       <Theme  style={{}} />
-        </div>
+        </li>
 
   
         {showSwipe ? (
-  <div>
+  <li>
   <button
   aria-label="Grid/Swipe View"
   onClick={toggleArchiveView}
@@ -574,17 +540,19 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
     {archiveView === "grid" ? "swipe" : "scroll"}
   </span>
 </button>
-</div>
+</li>
       ) : (
         ""
       )}
-</div>
+
 
 </ul>
+</li>
 
+</ul>
+</div>
+</>
 
-  </div>
-  </>
 
 ) : (
   ""
@@ -593,13 +561,17 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-{showPopup ? (
-//  <ScrollAnimation className="signup" animateIn="bounceInDown" delay={5000} initiallyVisible={false} animateOnce={true} animatePreScroll={true} style={{position:'absolute', top:'15vh', zIndex:'1', margin:'0 auto', padding:'',  width:'100vw', textAlign:'',}}>
-//  <div style={{position:'relative', bottom:'', margin:'70px auto 0 auto', padding:' 0',  maxWidth:'500px', zIndex:'', textAlign:'', borderRadius:'12px',}}>
-//  <SignUp />
-//    </div>
-//  </ScrollAnimation>
 
+
+
+
+
+
+</header>
+
+
+
+{showPopup ? (
 <div className="signup popper"
   style={{
   position:'fixed',
@@ -620,9 +592,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       ) : (
         ""
       )}
-     
 
-</header>
+
+
 
 <div style={{maxWidth:'100vw', overflowX:'hidden', position:'relative'}}>
 {children}
