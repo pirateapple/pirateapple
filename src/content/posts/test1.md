@@ -48,6 +48,9 @@ tags:
 ---
 <div class="contentinside" style="position:relative; aspect-ratio:16/9;  width:100%; border:0px solid white; display:flex; flex-direction:column; justify-content:center;">
 
+
+
+
 <!-- <div class="bubble bubble-bottom-left" style="position:absolute; width:; top:45%; left:15vw; display:flex; justify-content:center;backdrop-filter: blur(6px); font-size:110%;
 animation: question1 15s ease-in;
 animation-delay: 2s;
@@ -155,6 +158,8 @@ opacity:0;">Yeah, I'm your Little Bitch... </div> -->
 
 
 
-
+<a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;utm_source=github&amp;utm_medium=nextstarter-cs&amp;utm_campaign=devex-cs&amp;CUSTOM_LOGO=https://completeweb.site/assets/logo.svg" rel="nofollow">
+Deploy to Netlify
+</a>
 
 </div>
