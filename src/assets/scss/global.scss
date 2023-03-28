@@ -660,7 +660,9 @@ to{opacity:0;z-index:-3}
 body.blogpost #menu li .fullscreenButt{display:flex}
 
 // .avatar-frame{filter:drop-shadow(5px 3px 4px #999)}
+
 .avatar-frame img{background:transparent!important;background-position:top;background-size:contain;border-radius:38%;margin:0 auto;max-height:40vh;max-width:300px;opacity:0;transition:opacity 1.2s ease-in-out;width:100%}
+
 .blog-post-content blockquote,.blog-post-content h2,.blog-post-content h3,.blog-post-content h4,.blog-post-content h5{font-size:clamp(18px,1rem + 2vw,36px);margin-left:auto;margin-right:auto}
 .contact-form{margin-top:36px}
 .contact-form input,.contact-form textarea{-webkit-appearance:none;appearance:none;border-radius:12px;font-size:18px;font-weight:600;margin:8px 0 16px;max-width:100%;padding:16px;width:100%}
