@@ -148,7 +148,7 @@ query HomeQuery($id: String!) {
   posts: allMarkdownRemark(
     sort: {frontmatter: {date: DESC}}
     filter: {frontmatter: {template: {eq: "blog-post"}, category: {eq: "news"}}}
-    limit: 3
+    limit: 6
   ) {
     edges {
       node {
@@ -889,7 +889,7 @@ Click to play
 
 {showPosts ? (
   <section id="showPosts" style={{marginTop:''}}>
-  <div style={{position:'relative', background:'none', maxHeight:'', overflow:'', width:'100vw'}}>
+
 
 
 
@@ -897,7 +897,7 @@ Click to play
 
 
   {/* <TwilightLogo className="bglogo darkened" /> */}
-<div className="contentpanel grid-container" style={{padding:''}}>
+<div className="contentpanel grid-container" style={{}}>
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
                          <BlogListHome data={posts} />
@@ -905,7 +905,7 @@ Click to play
       </div> */}
 </div>
 
-</div>
+
 </section>
       ) : (
         ""

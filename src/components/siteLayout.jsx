@@ -114,11 +114,13 @@ const Layout = ({ children }) => {
           el.classList.remove("horizontal-scroll", "panels");
           el.classList.add("grid-container");
           document.body.classList.add("scroll");
+          document.querySelector('#showPosts').style.height = 'auto';
           window.scrollTo(0, 0);
         } else if (archiveView === "swipe") {
           el.classList.remove("grid-container");
           el.classList.add("horizontal-scroll", "panels");
           document.body.classList.remove("scroll");
+          document.querySelector('#showPosts').style.height = '400px';
           // window.scrollTo(0, 0);
         }
       });
@@ -564,9 +566,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
     <ul className="sidebarMenuInner post-card panel" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
 
     <li className="grad logo" style={{position:'relative', maxHeight:'100px', width:'auto', display:'flex', justifyContent:'center'}}>
-            <AnchorLink to="/" name="homereturn" style={{position:'', display:'block', maxWidth:'150px', height:'60px', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
+            <AnchorLink className="sidelogo" to="/" name="homereturn" style={{position:'', display:'block', maxWidth:'150px', height:'60px', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
-      <img className="sidelogo" src={iconimage} alt={companyname} width="120" height="60" style={{maxHeight:'60px', border:'none'}} />
+      <img src={iconimage} alt={companyname} width="120" height="60" style={{maxHeight:'60px', border:'none'}} />
                 ) : (
                   <div style={{fontWeight:'bold'}}>companyname</div>
                 )}

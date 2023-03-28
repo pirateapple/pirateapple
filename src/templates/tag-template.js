@@ -78,9 +78,9 @@ const Tag = ({ data, pageContext }) => {
 <div className="posticons" style={{flexDirection:'column', margin:'0 auto'}}>
 
 <div style={{display:'flex', justifyContent:'space-around', gap:'2vw', color:'fff', }}>
-<FaImage className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
-    <ImPlay className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
-    <AiOutlinePicLeft className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
+<FaImage className="posticon" style={{margin:'0 auto', width:'60%', height:'30px', fontSize:''}} />
+<ImPlay className="posticon" style={{margin:'0 auto', width:'60%', height:'30px', fontSize:''}} />
+<AiOutlinePicLeft className="posticon" style={{margin:'0 auto', width:'60%', height:'30px', fontSize:''}} />
 </div>
 
 Play Multimedia
