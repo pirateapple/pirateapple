@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Memes are life
+tagline:  Complete Web Solutions
 featuredImage: 
 youtube:
   youtuber: https://youtu.be/k8TjgvwoVgE
@@ -17,9 +17,9 @@ youtube:
   youtubersuggestion1: ""
   youtubersuggestion2: ""
   youtubersuggestion3: ""
-audiostart: "20"
-audioend: "5000"
-audiotitle: "Lamb - Gorecki"
+audiostart: ""
+audioend: ""
+audiotitle: ""
 underlayImage: /assets/transparent.png
 profText: 
  <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
@@ -60,10 +60,10 @@ cta:
   ctaLink: ""
 svgImage: /assets/null.svg
 secondaryImage: /assets/default-user.webp
-title: Do these memes make my butt look fat?
+title: Complete Web Site Applications - just add water!
 sharethis: false
 liarliar: false
-bumpertext: "These guys were bros"
+bumpertext: ""
 marate: SICK
 viewerwarning: You may lose brain cells after viewing this
 marating1: SP
@@ -77,9 +77,9 @@ maratingtx4:
 template: index-page
 description: A rogue one, out there to change the world, one meme at a time. 
 svgzindex: ""
-profTitle: MG Reports
+profTitle: Complete Web
 coverletter:
-  coverText: About Meme Genes
+  coverText: About Complete Web
   coverLink: /about
 scrollable: true
 contentinvideo: false

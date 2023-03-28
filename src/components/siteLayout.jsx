@@ -19,7 +19,7 @@ import SearchIcon from "../../src/img/search"
 // import SearchForm from "./searchbox"
 import useSiteMetadata from "../hooks/SiteMetadata"
 
-import { RiCloseCircleFill, RiMenuUnfoldFill, RiArrowUpFill } from "react-icons/ri"
+import { RiArrowUpFill } from "react-icons/ri"
 
 // import GoBack from "../components/goBack"
 import { BiLeftArrow } from "react-icons/bi"
@@ -149,12 +149,12 @@ const { iconimage } = useSiteMetadata()
 
 const { image } = useSiteMetadata()
 
-const { showModals } = useSiteMetadata()
+// const { showModals } = useSiteMetadata()
 
 const { showNav } = useSiteMetadata()
 const { showNav2 } = useSiteMetadata()
 const { showInfo } = useSiteMetadata()
-const { showFeature } = useSiteMetadata()
+// const { showFeature } = useSiteMetadata()
 const { showPosts } = useSiteMetadata()
 const { showSearch } = useSiteMetadata()
 
@@ -200,7 +200,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   {font1 ? (
     <link id="yyy" rel="stylesheet" href={fontUrl} crossOrigin="anonymous" />
   ) : null}
-  <style>{`* {font-family: ${font1};}`}</style>
+  <style>{`
+  #menu,.font,.full-width-image:after,.h1,.h2,.h3,.h4,.header .menu-icon:before,.horizontal-scroll:before,.intro:after,.intro:before,.scrolldown,h1,h2,h3,h4,input.special{font-family:${font1}, sans-serif}
+  `}</style>
   <style>{`${userStyles}`}</style>
 </Helmet>
 

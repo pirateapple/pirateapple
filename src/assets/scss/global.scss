@@ -278,7 +278,7 @@ body.scroll{overflow-x:hidden!important;overflow-y:scroll!important}
 
 
 
-#menu,.font,.full-width-image:after,.h1,.h2,.h3,.h4,.header .menu-icon:before,.horizontal-scroll:before,.intro:after,.intro:before,.scrolldown,h1,h2,h3,h4,input.special{font-family:var(--theme-ui-colors-fontFamily), sans-serif}
+// #menu,.font,.full-width-image:after,.h1,.h2,.h3,.h4,.header .menu-icon:before,.horizontal-scroll:before,.intro:after,.intro:before,.scrolldown,h1,h2,h3,h4,input.special{font-family:var(--theme-ui-colors-fontFamily), sans-serif}
 
 
 
@@ -439,8 +439,8 @@ p{margin-bottom:1rem}
 // .nextbutt .back{display:none;font-size:1rem}
 .nextbutt .backbutton{align-self:center;display:flex;justify-content:center;margin-top:10px;text-align:center}
 .post-content h2{border:0 solid red;font-size:clamp(1rem, 1.2vw, 1.4rem);padding:0 1rem;width:100%!important}
-.specialfont{font-size:clamp(2.5rem,5vw,5rem)}
-.specialfont,.specialfont2{font-family:var(--theme-ui-colors-fontFamily);line-height:100%!important}
+// .specialfont{font-size:clamp(2.5rem,5vw,5rem)}
+// .specialfont,.specialfont2{font-family:var(--theme-ui-colors-fontFamily);line-height:100%!important}
 .tronText{color:#fff;font-size:clamp(2rem,3.5vw,3.8rem);text-shadow:0 20px 7px #000,0 8px 20px #ca0f08,0 12px 10px #a78ba2,0 2px #e3272d,0 5px 2px #e3272d,0 0 2px #e3272d,0 0 2px #e3272d,0 0 1px #e3272d}
 body.homepage .ReactModalPortal .nextbutt{display:none!important}
 
