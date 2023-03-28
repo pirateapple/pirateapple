@@ -293,6 +293,9 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
 
 .bug{filter:drop-shadow(1px 0 4px rgba(0,0,0,.9));height:auto!important;max-width:150px!important;opacity:.7}
 .bug:hover{opacity:.6!important}
+
+.bug::after{content:" menu "; color:#fff;}
+
 .fire{box-shadow:0 4px 22px var(--primary-color)!important}
 
 .round,.round img{border-radius:12px!important}
