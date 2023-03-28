@@ -793,7 +793,7 @@ Click to play
         description={
           frontmatter.description ? frontmatter.description : excerpt
         }
-   image={ siteUrl + getSrc(frontmatter.featuredImage) }
+  //  image={ siteUrl + getSrc(frontmatter.featuredImage) }
       />
 
 
