@@ -1,10 +1,6 @@
 {
   "menuItems": [
     {
-      "menutitle": "About",
-      "url": "/about"
-    },
-    {
       "menutitle": "Category",
       "url": "/category/news"
     },

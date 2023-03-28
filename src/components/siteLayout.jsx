@@ -293,98 +293,11 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-<Menu />
-      
-      
-{/* <li>
-   <ul className="has-app" style={{position:'', right:'1rem', top:'80px', display:'flex', flexDirection:'column', gap:'4px'}}>
-            <li className="has-app1" style={{position:'relative', display:''}}>
-            <Link to="/login" className="" style={{color:'#fff',fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)',  width:'', justifyContent:'center', fontWeight:'', }}>Admin</Link>
-              </li>
-
-
-
-
-      <li className="has-app" order="5" style={{display:'',}}>
- <Link state={{modal: true}} to="/notes" className="" style={{fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)',}}>Notes</Link>
- </li>
-</ul>
-</li>     */}
-
-
-
-
 
       
+ 
 
-
-
-
-
-{/* <li className="has-app" order="5" style={{display:'none',}}>
- <Link state={{modal: true}} to="/posts" className="navbar-item" style={{paddingRight:'',}}>{menu2}</Link>
- </li> */}
-
-
-      {/* {showPosts ? (
-            <li className="" style={{position:'relative',}}>
-            <AnchorLink ariaLabel="Menu 2" className="navbar-item" to="/archive/2" style={{paddingRight:'',}}>
-            {menu2}
-            </AnchorLink>
-            </li>
-            ) : (
-  ""
-)} */}
-
-
-
-
-
-{/* {showPosts ? (
-<li style={{position:'relative',}}>
-      {prefersReducedMotion ? (
-       <Link aria-label="Menu 2" className="navbar-item" to="/#showPosts" style={{paddingRight:'',}}>{menu2}</Link>    
-   ) : (
-      <AnchorLink aria-label="Menu 2" className="navbar-item" to="/#showPosts" style={{paddingRight:'',}}>
-      {menu2}</AnchorLink>         
-    )}
-</li>
-      ) : (
-  ""
-)} */}
-
-
-{/* <li style={{position:'relative',}}>
-
-      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/category/" style={{paddingRight:'',}}>
-      Magazine</AnchorLink>         
-
-</li> */}
-
-
-
-{/* {showFeature ? (
-<li style={{position:'relative',}}>
-      {prefersReducedMotion ? (
-       <Link aria-label="Featured" className="navbar-item" to="/#showPosts" style={{paddingRight:'',}}>{menu2}</Link>    
-   ) : (
-      <AnchorLink aria-label="Featured" className="navbar-item" to="/#showPosts" style={{paddingRight:'',}}>
-      {menu2}</AnchorLink>         
-    )}
-</li>
-      ) : (
-  ""
-)} */}
-
-
-
-
-
-
-
-
-
-{/* {showInfo ? (
+{showInfo ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
        <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
@@ -392,28 +305,14 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       <AnchorLink aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>
       {menu1}</AnchorLink>         
     )}
-<AnchorLink aria-label="Menu 1" className="navbar-item" to="/about" style={{paddingRight:'',}}>
-      About</AnchorLink>   
+{/* <AnchorLink aria-label="Menu 1" className="navbar-item" to="/about" style={{paddingRight:'',}}>
+      About</AnchorLink>    */}
 
 </li>
       ) : (
   ""
-)} */}
+)}
 
-
-
-
-
-
-
-
-
-{/* <li style={{position:'relative',}}>
-
-      <AnchorLink aria-label="Menu 1" className="navbar-item" to="/contact" style={{paddingRight:'',}}>
-      Submissions</AnchorLink>         
-
-</li> */}
 
 
 
@@ -447,16 +346,15 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   ""
 )}
 
-{/* <li>
-<Link aria-label="Contact" className="navbar-item" to="/contact" style={{paddingRight:'',}}>Submissions</Link> 
-</li> */}
+
+<Menu />
 
 
-{/* <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
-  
-  <Theme  style={{padding:'0'}} />
-  <SearchIcon />
-  </li> */}
+
+
+
+
+
 </ul>
 
 <div id="missioncontrol" className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
