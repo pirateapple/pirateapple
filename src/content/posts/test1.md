@@ -55,8 +55,12 @@ tags:
 
 <div class="contentbody" style="text-align:left; margin-top:0;">
 
-<!-- <a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;utm_source=github&amp;utm_medium=nextstarter-cs&amp;utm_campaign=devex-cs&amp;CUSTOM_LOGO=https://completeweb.site/assets/logo.svg" rel="nofollow">
-Deploy to Netlify
-</a> -->
+<a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg" rel="nofollow">
+Install CompleteWeb
+</a>
+
+
+
+
 
 </div>

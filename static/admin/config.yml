@@ -582,7 +582,7 @@ collections:
         fields:
           - label: "Override Site Styles"
             name: "userStyles"
-            widget: "string"
+            widget: "markdown"
             hint: "Additional CSS can be written here, overwriting the site's default styles."
 
       - label: "Default Theme"
