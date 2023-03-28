@@ -235,7 +235,11 @@ const ClickToPlay = frontmatter.clicktoplay
 
 
 
-
+const seoProps = {
+  title: frontmatter.title,
+  description: frontmatter.description ? frontmatter.description : excerpt,
+  image: frontmatter.featuredImage ? siteUrl + getSrc(frontmatter.featuredImage) : undefined,
+};
 
 
 
@@ -790,7 +794,7 @@ Click to play
   )}
 
 
-{FrontImage ? (
+{/* {FrontImage ? (
   <Seo
         title={frontmatter.title}
         description={
@@ -806,8 +810,9 @@ Click to play
         }
   //  image={ siteUrl + getSrc(frontmatter.featuredImage) }
       />
-)}
+)} */}
        
+       <Seo {...seoProps} />
 
 
 {showNav ? (
