@@ -9,6 +9,7 @@
 
 .frame-content *{color:red !important;}
 
+#gatsby-focus-wrapper{height:100vh;}
 
 :root{--button-alternate-color:#e3272d;--button-color:#e5c3d3;--font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;--font-family-mono:Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;--font-size-small:12px;--grid-gap:30px;--home-link-color:#d4d4d4;--home-link-hover-color:var(--primary-color);--home-link-hover-color:#e3272d;--input-focus-border:#83aaac;--label-text:#777;--nav-link-hover-bg:#111;--post-link-color:#0f070b;--text-color-meta:rgba(0,0,0,.5)}
 
@@ -40,6 +41,7 @@ body.scroll{overflow-x:hidden!important;overflow-y:scroll!important}
 }
 .bglogo.darkened{
   filter:brightness(0.8)contrast(1.4)saturate(.9); 
+  color:rgba(218, 210, 210, 0.8);
 }
 
 
@@ -113,7 +115,7 @@ body.scroll{overflow-x:hidden!important;overflow-y:scroll!important}
 //   color:#aaa;
 // }
 
-.grid-container .title1:hover, .horizontal-scroll .title1:hover{color:#fff !important;}
+.grid-container .title1:hover, .horizontal-scroll .title1:hover{color:var(--theme-ui-colors-siteColor) !important;}
 
 .post-card1{
   display: flex;
@@ -466,8 +468,8 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
   font-weight:700;
   height:auto;
   width:100%; 
-  max-width: 300px;
-  padding:1vh 2vw;
+  max-width: 200px;
+  padding:1vh 1vw;
   text-align: center;
   margin:0 auto;
 }
@@ -499,14 +501,16 @@ textarea{min-height:200px}
 ::-webkit-scrollbar,::-webkit-scrollbar-button{height:1px!important;width:1px!important}
 
 
-a [aria-current]:hover{box-shadow:none!important;}
+a:hover{color:var(--theme-ui-colors-siteColor);}
 
-a [aria-current]:hover, a[aria-current]{cursor:default!important;filter:none!important;pointer-events:none!important; border-bottom:1px solid rgb(255, 0, 212) !important; display:block;
-  margin-bottom: -1px;}
+a [aria-current]:hover{box-shadow:none!important; }
+
+a [aria-current]:hover, a[aria-current]{cursor:default!important;filter:none!important;pointer-events:none!important; border-bottom:1px solid var(--theme-ui-colors-siteColor) !important; display:block;
+  margin-bottom: -1px;color:var(--theme-ui-colors-siteColor) !important;}
 
 a[aria-current]{box-shadow:none;text-decoration:none}
 
-a.cornerlogo, .footerlinks a {border-bottom: 0px solid transparent !important;}
+a.cornerlogo, .footerlinks a, #sidebarMenu a {border-bottom: 0px solid transparent !important;}
 
 
 

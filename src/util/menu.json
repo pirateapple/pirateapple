@@ -1,5 +1,24 @@
 {
   "menuItems": [
-
+    {
+      "menutitle": "About",
+      "url": "/about"
+    },
+    {
+      "menutitle": "Category",
+      "url": "/category/news"
+    },
+    {
+      "menutitle": "Tags",
+      "url": "/tag/test"
+    },
+    {
+      "menutitle": "Archive",
+      "url": "/archive"
+    },
+    {
+      "menutitle": "Contact",
+      "url": "/contact"
+    }
   ]
 }

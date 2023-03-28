@@ -39,7 +39,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 
 import { ImCross } from "react-icons/im"
 
-import { RiCloseCircleFill, RiMenuUnfoldFill, RiArrowUpFill } from "react-icons/ri"
+// import { RiCloseCircleFill, RiMenuUnfoldFill, RiArrowUpFill } from "react-icons/ri"
 
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -49,7 +49,7 @@ import Footer from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import YouTubed from "../components/youtube"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"

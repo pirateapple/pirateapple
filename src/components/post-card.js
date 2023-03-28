@@ -39,11 +39,11 @@ const PostCard = ({ data }) => {
         {data.frontmatter.youtube.youtuber ? (
           <Link state={showModals ? { modal: true } : {}} to={data.frontmatter.slug} style={{}}>
             <div className="spotlight" style={{marginLeft:'10%', marginTop:'-24%', margin:'-24% 10% 0 10%'}}>
-              <div className="posticons" style={{flexDirection:'column', margin:'0 auto'}}>
+              <div className="posticons" style={{flexDirection:'column', justifyContent:'center', margin:'0 auto'}}>
                 <div style={{display:'flex', justifyContent:'space-around', gap:'2vw', color:'fff', }}>
-                  <FaImage className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
-                  <ImPlay className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
-                  <AiOutlinePicLeft className="posticon" style={{margin:'0 auto', width:'100%', height:'5vh', fontSize:''}} />
+                  <FaImage className="posticon" style={{margin:'0 auto', width:'100%', height:'4vh', fontSize:''}} />
+                  <ImPlay className="posticon" style={{margin:'0 auto', width:'100%', height:'4vh', fontSize:''}} />
+                  <AiOutlinePicLeft className="posticon" style={{margin:'0 auto', width:'100%', height:'4vh', fontSize:''}} />
                 </div>
                 Play Multimedia
               </div>

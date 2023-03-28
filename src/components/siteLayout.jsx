@@ -566,7 +566,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
     <li className="grad logo" style={{position:'relative', maxHeight:'100px', width:'auto', display:'flex', justifyContent:'center'}}>
             <AnchorLink to="/" name="homereturn" style={{position:'', display:'block', maxWidth:'150px', height:'60px', border:'0px solid'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
-      <img className="" src={iconimage} alt={companyname} width="120" height="60" style={{maxHeight:'60px', border:'none'}} />
+      <img className="sidelogo" src={iconimage} alt={companyname} width="120" height="60" style={{maxHeight:'60px', border:'none'}} />
                 ) : (
                   <div style={{fontWeight:'bold'}}>companyname</div>
                 )}
@@ -576,122 +576,108 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       
 
 
-   
+
             
 
-          {showPosts ? (
-<li style={{position:'relative',}}>
-      {prefersReducedMotion ? (
-       <Link aria-label="Menu 2" className="navbar-item" to="/#showPosts" style={{paddingRight:'',}}>{menu2}</Link>    
-   ) : (
-      <AnchorLink aria-label="Menu 2" className="navbar-item" to="/#showPosts" style={{paddingRight:'',}}>
-      {menu2}</AnchorLink>         
-    )}
-</li>
-      ) : (
-  ""
-)}
 
-
-
-
-{showInfo ? (
-  <li className="no-app" style={{position:'relative',}}>
-      {prefersReducedMotion ? (
-       <Link aria-label={menu1} className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
-   ) : (
-      <AnchorLink aria-label={menu1} className="navbar-item" to="/#info" style={{paddingRight:'',}}>
-      {menu1}</AnchorLink>         
-    )}
-</li>
-      ) : (
-  ""
-)}
 
 
           
 
 
 
-
-
-       
 {showResume ? (
-            <li className="" style={{position:'relative',}}>
-              <AnchorLink className="navbar-item" to="/#resume" style={{paddingRight:'',}}>
-              {menu3}
-              </AnchorLink>
-              </li>
-            ) : (
-              ""
-            )}
-
-
-
-{showSkills ? (
-              <li className="" style={{position:'relative',}}>
-              {/* <AnchorLink to="/#contact" className="navbar-item" style={{paddingRight:'',}}>
-                Contact <span className="mobilehide">Me</span>
-              </AnchorLink> */}
-      
-              <AnchorLink className="navbar-item" to="/#skills" style={{paddingRight:'',}}>{menu4}</AnchorLink>
-              </li>
-
-              ) : (
+<li style={{position:'relative',}}>
+      {prefersReducedMotion ? (
+       <Link aria-label="Menu 3" className="navbar-item" to="/#resume" style={{paddingRight:'',}}>{menu3}</Link>    
+   ) : (
+      <AnchorLink aria-label="Menu 3" className="navbar-item" to="/#resume" style={{paddingRight:'',}}>
+      {menu3}</AnchorLink>         
+    )}
+</li>
+      ) : (
   ""
 )}
 
 
 
+
+{showSkills ? (
 <li style={{position:'relative',}}>
-       <Link aria-label="Menu 2" className="navbar-item" to="/archive/2" style={{paddingRight:'',}}>Archive</Link>    
+      {prefersReducedMotion ? (
+       <Link className="navbar-item" to="/#skills" style={{paddingRight:'',}}>{menu4}</Link>    
+   ) : (
+      <AnchorLink aria-label="Menu 4" className="navbar-item" to="/#skills" style={{paddingRight:'',}}>
+      {menu4}</AnchorLink>         
+    )}
 </li>
+      ) : (
+  ""
+)}
+
+       
 
 
 
 
-{/* <li className="has-app" order="5" style={{display:'none',}}>
- <Link state={{modal: true}} to="/notes" className="navbar-item" style={{paddingRight:'',}}>Notes</Link>
- </li>
+<Menu />
 
- <li className="has-app" style={{position:'relative', display:'none'}}>
-            <Link to="/login" className="navbar-item" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
-              </li> */}
+   
 
 
 
+    <div id="missioncontrol" className="sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'3vw', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
 
-  <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', gap:'1vw', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
-      
-
-      
-
-   <Link aria-label="Search UrbanFetish" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
-    <SearchIcon />
+{showSearch ? (
+<div>
+   <Link aria-label="Search UrbanFetish" to="/search/" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}>
+    <SearchIcon style={{height:'30px'}} />
+    <span className="themetext">search</span>
    </Link>
-    
-
-<Theme  style={{}} />
-
-
-   <Link aria-label="Enter Full Screen Mode" className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
-   <Fullscreen />
-   </Link>
-        </li>
+        </div>
+      ) : (
+        ""
+      )}
 
 
+  <div>
+      <Theme  style={{}} />
+        </div>
+
+  
+        {showSwipe ? (
+  <div>
+  <button
+  aria-label="Grid/Swipe View"
+  onClick={toggleArchiveView}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "0px",
+    textAlign: "center",
+  }}
+>
+  {archiveView === "grid" ? (
+    <MdOutlineRectangle style={{ width: "40px", height: "30px" }} />
+  ) : (
+    <BiGridHorizontal style={{ width: "40px", height: "30px" }} />
+  )}
+  <span className="themetext">
+    {archiveView === "grid" ? "swipe" : "scroll"}
+  </span>
+</button>
+</div>
+      ) : (
+        ""
+      )}
+ 
 
 
+</div>
 
-      {/* <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)', color:'red !important' }}>
-      <Theme  style={{color:'red !important'}} />
-   <Link className="sherlock" to="/search/" style={{display:'flex',justifyContent:'space-around', marginTop:'5px'}}>
-    <SearchIcon />
-   </Link>
-   <CartButton quantity={quantity} />
-        </li> */}
-
-    </ul>
+</ul>
 
   </div>
   </>
