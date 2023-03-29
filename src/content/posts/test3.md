@@ -26,7 +26,8 @@ slug: /test3
 audiostart: null
 template: blog-post
 title: Test post with video
-category: news
+categories:
+  - news
 date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
 comments: false
@@ -43,6 +44,7 @@ svgzindex: null
 maratingtx2: null
 contentinvideo: false
 maratingtx3: null
+category: news
 isnftforsale: false
 maratingtx4: null
 ---
