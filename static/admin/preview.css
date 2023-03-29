@@ -19,6 +19,13 @@
 .frame-content * {
   color: red !important;
 }
+
+.frame-content img {
+    max-width: 300px;
+    margin:0 auto;
+  }
+
+
 #gatsby-focus-wrapper {
   height: 100vh;
 }
