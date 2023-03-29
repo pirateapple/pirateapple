@@ -1,50 +1,52 @@
 ---
+marating1: null
+marating2: null
+audiotitle: null
+marating3: null
+marating4: null
+youtube:
+  youtubersuggestion3: https://youtu.be/dQw4w9WgXcQ
+  youtuber2: null
+  youtubeloop: true
+  customcontrols: true
+  youtuber: https://youtu.be/S1LC7jDHqr0
+  youtubeautostart: false
+  youtubeshoworiginal: false
+  clicktoplay: false
+  youtubeend: "10"
+  youtubecontrols: false
+  youtubemute: false
+  youtubersuggestion1: https://youtu.be/yEn8_X7Ei3A
+  youtubersuggestion2: https://youtu.be/yEn8_X7Ei3A
+  youtubestart: "0"
+audioend: null
+scrollable: true
+nftdrop: null
+slug: /test6
+audiostart: null
 template: blog-post
 title: Test post with auto advance video playlist
-slug: /test6
+categories:
+  - testing
 date: 2023-02-10 10:43
 description: example of using video playlists
-youtube:
- youtuber: https://youtu.be/S1LC7jDHqr0
- youtuber2: 
- youtubeshoworiginal: false
- youtubersuggestion1: https://youtu.be/yEn8_X7Ei3A
- youtubersuggestion2: https://youtu.be/yEn8_X7Ei3A
- youtubersuggestion3: https://youtu.be/dQw4w9WgXcQ
- youtubestart: "0"
- youtubeend: "10"
- youtubemute: false
- youtubecontrols: false
- clicktoplay: false
- customcontrols: true
- youtubeautostart: false
- youtubeloop: true
-audiostart: 
-audioend: 
-audiotitle: 
-liarliar: false
-isnftforsale: false
-svgzindex: 
 comments: false
 shareable: false
-underlayImage: 
+tags:
+  - test
 featuredImage: /assets/default-og-image.webp
-svgImage: 
-scrollable: true
-nftdrop: 
+underlayImage: null
+bumpertext: null
+svgImage: null
+maratingtx1: null
+liarliar: false
+svgzindex: null
+maratingtx2: null
 contentinvideo: false
-bumpertext: 
-marating1: 
-marating2: 
-marating3: 
-marating4: 
-maratingtx1: 
-maratingtx2: 
-maratingtx3: 
-maratingtx4: 
+maratingtx3: null
 category: news
-tags: 
- - test
+isnftforsale: false
+maratingtx4: null
 ---
 <div class="contentinside" style="position:relative; aspect-ratio:16/9;  width:100%; border:0px solid white; display:flex; flex-direction:column; justify-content:center;">
 </div>
