@@ -8,6 +8,8 @@ backend:
     delete: "Delete {{collection}} “{{slug}}”"
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
+  import:
+    - file: ../../src/cms/categories.js
 
 
 # Uncomment local_backend when you need to develop in your local
@@ -21,7 +23,7 @@ show_preview_links: true
 collections:
   - name: "posts"
     editor:
-      preview: true
+      preview: false
     label: "Posts"
     label_singular: "Post"
     description: "Create awesome stuff here."
@@ -38,14 +40,10 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
-          label: "Categories",
-          name: "categories",
-          widget: "categories",
-          separator: "__",
+          label: "Category",
+          name: "category",
+          widget: "CategoriesControl",
         }
-
-
-
 
       - {
           label: "Slug",
@@ -680,5 +678,5 @@ collections:
             widget: "string"
 
 widgets:
-  Categories:
-    control: categories
+  CategoriesControl:
+    control: CategoriesControl
