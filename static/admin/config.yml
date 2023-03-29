@@ -57,25 +57,7 @@ collections:
           format: "YYYY-MM-DD HH:mm",
         }
       - { label: "SEO Description", name: "description", widget: "text" }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options: [
-            {
-              label: "News",
-              value: "news",
-            },
-            {
-              label: "Opinion",
-              value: "opinion",
-            },
-            {
-              label: "Feature",
-              value: "feature",
-            },
-          ],
-        }
+  
 
 
       - { label: "Make Comments Available?", name: "comments", widget: "boolean", default: "true", required: false }
