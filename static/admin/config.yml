@@ -13,6 +13,9 @@ backend:
 # Uncomment local_backend when you need to develop in your local
 # local_backend: true # run npx netlify-cms-proxy-server for local testing
 publish_mode: editorial_workflow
+site_url: https://completeweb.site
+display_url: https://completeweb.site
+show_preview_links: true
 logo_url: ../assets/logo.svg
 media_folder: "static/assets"
 public_folder: "/assets"
