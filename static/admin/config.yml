@@ -63,8 +63,8 @@ collections:
               value: "news",
             },
             {
-              label: "Opinion",
-              value: "opinion",
+              label: "Info",
+              value: "info",
             },
             {
               label: "Feature",
