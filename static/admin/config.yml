@@ -678,3 +678,7 @@ collections:
           - label: "Google Font"
             name: "fontFamily"
             widget: "string"
+
+widgets:
+  categories:
+    control: categories
