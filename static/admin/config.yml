@@ -18,7 +18,7 @@ publish_mode: editorial_workflow
 logo_url: ../assets/logo.svg
 media_folder: "static/assets"
 public_folder: "/assets"
-show_preview_links: true
+
 
 collections:
   - name: "posts"
