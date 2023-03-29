@@ -41,9 +41,9 @@
 
 
 
-<script>
+<!-- <script>
 
-CMS.registerWidget('categories', CategoriesControl);
+  CMS.registerWidget('CategoriesControl', CategoriesControl);
   const CategoriesControl = ({ value, onChange, options }) => (
   <div>
     {options.map((option) => (
@@ -73,10 +73,10 @@ CategoriesControl.propTypes = {
   onChange: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
-</script>
+</script> -->
 
 
-  <!-- <script>
+  <script>
     var CategoriesControl = createClass({
       handleChange: function(e) {
         const separator = this.props.field.get('separator', ', ')
@@ -112,8 +112,8 @@ CategoriesControl.propTypes = {
       },
     }
     
-    CMS.registerWidget('categories', CategoriesControl, CategoriesPreview, schema);
-    </script> -->
+    CMS.registerWidget('CategoriesControl', CategoriesControl, CategoriesPreview, schema);
+    </script>
   
 
 
