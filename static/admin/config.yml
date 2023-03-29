@@ -41,11 +41,13 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
-          label: "Categories",
+          label: "Category",
           name: "category",
-          widget: "categories",
+          widget: "CategoriesControl",
           separator: "__",
         }
+
+
 
       - {
           label: "Slug",
@@ -680,5 +682,5 @@ collections:
             widget: "string"
 
 widgets:
-  categories:
-    control: categories
+  CategoriesControl:
+    control: CategoriesControl
