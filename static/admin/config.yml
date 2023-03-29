@@ -38,9 +38,10 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
-          label: "Category",
-          name: "category",
+          label: "Categories",
+          name: "categories",
           widget: "categories",
+          separator: "__",
         }
 
       - {
