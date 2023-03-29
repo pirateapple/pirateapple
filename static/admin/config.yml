@@ -678,3 +678,6 @@ collections:
             name: "fontFamily"
             widget: "string"
 
+widgets:
+  Categories:
+    control: categories
