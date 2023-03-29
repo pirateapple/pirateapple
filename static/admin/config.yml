@@ -72,8 +72,6 @@ collections:
             },
           ],
         }
-
-
       - { label: "Make Comments Available?", name: "comments", widget: "boolean", default: "true", required: false }
       - { label: "Make Post Shareable?", name: "shareable", widget: "boolean", default: "true", required: false }
       # - { label: "Turn Page Scroll On", name: "scrollable", widget: "boolean", default: "false", hint: "Allows post to be scrolled vertically", required: false  }
