@@ -23,7 +23,7 @@ show_preview_links: true
 collections:
   - name: "posts"
     editor:
-      preview: false
+      preview: true
     label: "Posts"
     label_singular: "Post"
     description: "Create awesome stuff here."
@@ -166,7 +166,7 @@ collections:
   - label: "Pages"
     name: "pages"
     editor:
-      preview: false
+      preview: true
     files:
       - label: "Home"
         name: "home"
