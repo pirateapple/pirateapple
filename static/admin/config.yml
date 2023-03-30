@@ -1,7 +1,7 @@
 backend:
   # name: test-repo
   name: git-gateway
-  branch: main
+  branch: decap
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
@@ -41,22 +41,6 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
-      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
-      - {
-          label: "Slug",
-          name: "slug",
-          widget: "string",
-          hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
-        }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          date_format: "YYYY-MM-DD",
-          time_format: "HH:mm",
-          format: "YYYY-MM-DD HH:mm",
-        }
-      - { label: "SEO Description", name: "description", widget: "text" }
       - {
           label: "Category",
           name: "category",
@@ -76,8 +60,27 @@ collections:
             },
           ],
         }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: "HH:mm",
+          format: "YYYY-MM-DD HH:mm",
+        }
+      - { label: "SEO Description", name: "description", widget: "text" }
       - { label: "Make Comments Available?", name: "comments", widget: "boolean", default: "true", required: false }
       - { label: "Make Post Shareable?", name: "shareable", widget: "boolean", default: "true", required: false }
+
+
+
       # - { label: "Turn Page Scroll On", name: "scrollable", widget: "boolean", default: "false", hint: "Allows post to be scrolled vertically", required: false  }
       # - { label: "Place content inside Video Frame", name: "contentinvideo", widget: "boolean", default: "false", hint: "For Devs to inject the content of the post directly into video frame area, allowing for custom layout and features - By doing so, this replaces the normally visible content on your page - BEWARE", required: false }
       # - { label: "Fact Checked NO Mark", name: "liarliar", widget: "boolean", default: "false", hint: "Shows Red X mark next to 2nd Video", required: false }
@@ -172,7 +175,7 @@ collections:
       # - { label: "For NFT DROP - enter drop time", name: "nftdrop", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm", format: "YYYY-MM-DDTHH:mm:ss", required: false }
 
         
-    preview_template: "preview-templates/posts.js"
+
 
 
 
