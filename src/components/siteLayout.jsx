@@ -380,6 +380,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   <button
   aria-label="Grid/Swipe View"
   onClick={toggleArchiveView}
+  className="swipescroll"
   style={{
     display: "flex",
     flexDirection: "column",
@@ -524,6 +525,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   <button
   aria-label="Grid/Swipe View"
   onClick={toggleArchiveView}
+  className="swipescroll"
   style={{
     display: "flex",
     flexDirection: "column",

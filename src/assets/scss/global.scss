@@ -123,7 +123,9 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
 //   color:#aaa;
 // }
 
-.grid-container .title1:hover, .horizontal-scroll .title1:hover{color:var(--theme-ui-colors-siteColor) !important;}
+// .grid-container .title1:hover, .horizontal-scroll .title1:hover{color:var(--theme-ui-colors-siteColor) !important;}
+
+.postlink:hover h2{color:var(--theme-ui-colors-siteColor) !important; outline:1px solid var(--theme-ui-colors-siteColor); border-radius: 12px;}
 
 .post-card1{
   display: flex;
@@ -432,13 +434,27 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
 
 
 
-.spotlight{flex-direction:column;margin:0 auto; position:absolute;}
+// .spotlight{flex-direction:column;margin:0 auto;}
 .searchform ::placeholder{color:#fff}
 .signbox{align-items:center;align-self:center;display:flex;flex-direction:column;gap:10px;justify-content:center;overflow:hidden;padding:0 10px;width:100%}
 .spacer33{height:8vh}
 .spacer66{height:33vh}
 .spacer99{height:99vh}
-.spotlight{color:#fff;cursor:pointer;display:inherit;display:block;left:0;padding:0;pointer-events:pointer;right:0;top:0;z-index:1; margin:0 auto;}
+
+.spotlight{color:#fff;cursor:pointer;
+  display:grid;
+  place-content: center;
+   position:absolute;
+  left:0;
+  right:0;
+  top:-85%;
+  z-index:1;
+  min-height: 300px;
+
+  padding:0;pointer-events:pointer; margin:0 auto;}
+
+  .horizontal-scroll .spotlight{ height:100%; top:-300px !important; border:0px solid red !important;}
+
 .spotlight:hover{-webkit-backdrop-filter:none;backdrop-filter:none;color:#fff!important;fill:#fff!important}
 .spotlight:hover .posticons{animation:move 1s forwards;animation-delay:.2s}
 a.call{text-decoration:none}
@@ -589,6 +605,7 @@ to{opacity:0;z-index:-3}
   display:block;left:0;opacity:.5;pointer-events:none;position:absolute;right:0;top:0;z-index:-1}
 
 .themer{display:flex; flex-direction: column; justify-content: center;}
+
 .themetext{
     display:block;
     font-family: sans-serif;
@@ -597,6 +614,8 @@ to{opacity:0;z-index:-3}
     text-shadow:none !important;
     text-align:center;
 }
+.themer:hover, .swipescroll:hover{color:var(--theme-ui-colors-siteColor) !important; }
+
 .wrap-element iframe{border:0;height:100%;left:0;position:absolute;top:0;width:100vw!important}
 body.blogpost #menu li .fullscreenButt{display:flex}
 

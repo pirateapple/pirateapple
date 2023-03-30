@@ -78,7 +78,7 @@ const SearchPage = ({ data }) => {
 
 
         {filteredPosts.map(({ node }) => (
-          <Link key={node.id} to={node.frontmatter.slug}>
+ 
 
 
 
@@ -91,10 +91,10 @@ const SearchPage = ({ data }) => {
     className="post-card1"
     style={{  alignItems:'center'}}
   >
-
+<Link className="postlink" state={showModals ? { modal: true } : {}} key={node.id} to={node.frontmatter.slug}>
 
 {node.frontmatter.featuredImage ? (
-        <Link state={showModals ? { modal: true } : {}} to={node.frontmatter.slug}>
+        
           <GatsbyImage
             image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
             alt={node.frontmatter.title + " - Featured image"}
@@ -103,16 +103,16 @@ const SearchPage = ({ data }) => {
             loading="eager"
             style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
           />
-        </Link>
+
       ) : (
-        <Link state={showModals ? { modal: true } : {}} to={node.frontmatter.slug}>
+
           <StaticImage
             className="featured-image1"
             src="../../../static/assets/default-og-image.webp"
             alt="Default Image"
             style={{ position: 'relative', zIndex: '' }}
           />
-        </Link>
+
       )}
 
 
@@ -122,7 +122,7 @@ const SearchPage = ({ data }) => {
 <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
 
 {node.frontmatter.youtube.youtuber ? (
-<Link to={node.frontmatter.slug} style={{}}>
+
 
   <div className="spotlight" style={{marginLeft:'10%', marginTop:'-28%', margin:'-24% 10% 0 10%'}}>
 
@@ -139,7 +139,7 @@ Play Multimedia
 
 </div>
 
-</Link>
+
 ) : (
   ""
 )}
@@ -153,16 +153,15 @@ Play Multimedia
 <h2 className="title1" style={{ }}>
     {node.frontmatter.title}
 </h2>
-
-
-            </div>
+ </div>
 
             </div>
-
+</Link>
 </div>
-            
-          </Link>
+
+          
         ))}
+        
       </div>
 
       </Layout>
