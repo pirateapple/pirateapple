@@ -35,9 +35,9 @@ shareable: false
 tags:
   - test
 featuredImage: /assets/default-og-image.webp
-underlayImage: null
+underlayImage: /assets/transparent.png
 bumpertext: null
-svgImage: null
+svgImage: /assets/null.svg
 maratingtx1: null
 liarliar: false
 svgzindex: null
