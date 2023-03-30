@@ -47,9 +47,10 @@ const Contact = ({ data }) => {
   }
   
   const handleSubmit = e => {
-    setTimeout(() => {
-      window.location.href = "/thanks"
-    }, 2000) // 2 seconds
+    // setTimeout(() => {
+    //   window.location.href = "/thanks"
+    // }, 4000) // 2 seconds
+    setTimeout(() => setSubmitted(true), 700);
     e.preventDefault();
     const form = e.target;
     fetch("/", {
