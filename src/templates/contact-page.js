@@ -56,13 +56,14 @@ const Contact = ({ data }) => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state
+        "form-name": form.getAttribute("contact"),
+        ...Object.fromEntries(new FormData(form))
       })
     })
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
+  
   
 
   return (
