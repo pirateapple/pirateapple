@@ -89,7 +89,7 @@ const Contact = ({ data }) => {
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
-          <input type="email" name="email" placeholder="your@email.com" />
+          <input type="email" name="email" placeholder="your@email.com" required />
         </label>
       </p>
       <p>
