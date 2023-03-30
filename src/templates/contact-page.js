@@ -16,6 +16,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 140)
       frontmatter {
         title
+        redirect
       }
     }
     site {
@@ -34,11 +35,7 @@ const Contact = ({ data }) => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-  //   setTimeout(() => setSubmitted(true), 700);
-  // };
+
   
   const encode = data => {
     return Object.keys(data)
@@ -47,23 +44,33 @@ const Contact = ({ data }) => {
   }
   
   const handleSubmit = e => {
-    // setTimeout(() => {
-    //   window.location.href = "/thanks"
-    // }, 4000) // 2 seconds
-    setTimeout(() => setSubmitted(true), 700);
     e.preventDefault();
     const form = e.target;
+    setIsSubmitting(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("contact"),
-        ...Object.fromEntries(new FormData(form))
+        "form-name": form.getAttribute("name"),
+        ...state
       })
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error));
+      .then(() => {
+        setIsSubmitting(false);
+        if (frontmatter.redirect) {
+          setTimeout(() => {
+            navigate("/thanks");
+          }, 1600);
+        } else {
+          setSubmitted(true);
+        }
+      })
+      .catch(error => {
+        setIsSubmitting(false);
+        alert(error);
+      });
   };
+  
   
   
 

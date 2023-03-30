@@ -331,6 +331,12 @@ collections:
               default: "/contact",
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Redirect to Thanks Page",
+              name: "redirect",
+              widget: "boolean",
+              default: "false",
+              required: false
+            }
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "team"
