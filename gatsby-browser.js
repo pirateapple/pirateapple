@@ -17,50 +17,17 @@ export const onInitialClientRender = () => {
 
 
 
-// export const onServiceWorkerUpdateReady = () => {
-//   const answer = window.confirm(
-//     `This website has been updated since your last visit. ` +
-//       `Reload to display the latest version?`
-//   )
+export const onServiceWorkerUpdateReady = () => {
+  const answer = window.confirm(
+    `This website has been updated since your last visit. ` +
+      `Reload to display the latest version?`
+  )
 
-//   if (answer === true) {
-//     window.location.reload()
-//   }
-// }
-
-
-
-export const onServiceWorkerUpdateFound = () => {
-  const showNotification = () => {
-    Notification.requestPermission(result => {
-        if (result === 'granted') {
-            navigator.serviceWorker.ready.then(registration => {
-                registration.showNotification('Update', {
-                    body: 'New content is available!',
-                    icon: 'static/icons/manifest-icon-512.png',
-                    vibrate: [200, 100, 200, 100, 200, 100, 400],
-                    tag: 'request',
-                    actions: [ // you can customize these actions as you like
-                        {
-                            action: window.location.reload(), // you should define this
-                            title: 'update'
-                        },
-                        {
-                            action: window.confirm(
-                              `This website has been updated since your last visit. ` +
-                                `Reload to display the latest version?`
-                            ), // you should define this
-                            title: 'ignore'
-                        }
-                    ]
-                })
-            })
-        }
-    })
+  if (answer === true) {
+    window.location.reload()
   }
-
-  showNotification()
 }
+
 
 
 
