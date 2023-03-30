@@ -43,31 +43,33 @@ collections:
         }
 
       - { label: "Post Details",
-              name: "details",
-              widget: "object",
-              collapsed: false,
-              fields: [
-                label: "Category",
-                  name: "category",
-                  widget: "select",
-                  options: [
-                    {
-                    label: "News",
-                    value: "news",
-                    },
-                    {
-                    label: "Info",
-                    value: "info",
-                    },
-                    {
-                    label: "Feature",
-                    value: "feature",
-                    },
-                    ],
-              ]
-      }
-      
-      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+           name: "youtube",
+           widget: "object",
+           collapsed: true,
+           fields: [
+              label: "Title", name: "title", widget: "string", tagname: "h1"
+          ]
+        }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: [
+            {
+              label: "News",
+              value: "news",
+            },
+            {
+              label: "Info",
+              value: "info",
+            },
+            {
+              label: "Feature",
+              value: "feature",
+            },
+          ],
+        }
+
       - {
           label: "Slug",
           name: "slug",
