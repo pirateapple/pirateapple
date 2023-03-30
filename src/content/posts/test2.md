@@ -1,52 +1,53 @@
 ---
+marating1: null
+marating2: null
+audiotitle: null
+marating3: null
+marating4: null
 template: blog-post
+youtube:
+  youtubersuggestion3: null
+  youtuber2: null
+  youtubeloop: true
+  customcontrols: false
+  youtuber: null
+  youtubeautostart: true
+  youtubeshoworiginal: false
+  clicktoplay: false
+  youtubeend: null
+  youtubecontrols: true
+  youtubemute: true
+  youtubersuggestion1: null
+  youtubersuggestion2: null
+  youtubestart: null
+audioend: null
+scrollable: true
+nftdrop: null
+category: news
 title: Another Test Blog Post
 slug: /test2
+audiostart: null
 date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
-youtube:
- youtuber: 
- youtuber2: 
- youtubeshoworiginal: false
- youtubersuggestion1:
- youtubersuggestion2:
- youtubersuggestion3:
- youtubestart: 
- youtubeend: 
- youtubemute: true
- youtubecontrols: true
- clicktoplay: false
- customcontrols: false
- youtubeautostart: true
- youtubeloop: true
-audiostart: 
-audioend: 
-audiotitle: 
-liarliar: false
-isnftforsale: false
-svgzindex: 
 comments: false
 shareable: false
-underlayImage: 
+showZoom: true
 featuredImage: /assets/default-og-image.webp
-svgImage: 
-scrollable: true
-nftdrop: 
+underlayImage: null
+bumpertext: null
+tags:
+  - test
+  - blog
+  - article
+svgImage: null
+maratingtx1: null
+liarliar: false
+svgzindex: null
+maratingtx2: null
 contentinvideo: false
-bumpertext: 
-marating1: 
-marating2: 
-marating3: 
-marating4: 
-maratingtx1: 
-maratingtx2: 
-maratingtx3: 
-maratingtx4: 
-category: news
-tags: 
- - test
- - blog
- - article
+maratingtx3: null
+isnftforsale: false
+maratingtx4: null
 ---
 <div class="contentinside" style="position:relative; aspect-ratio:16/9;  width:100%; border:0px solid white; display:flex; flex-direction:column; justify-content:center;">
 </div>
