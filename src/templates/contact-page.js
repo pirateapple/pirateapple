@@ -1,6 +1,6 @@
 import { jsx } from "theme-ui";
 import React from "react";
-import { useState, state } from "react";
+import { useState } from "react";
 import { graphql, navigate } from "gatsby";
 import Seo from "../components/seo";
 import Layout from "../components/siteLayout";
@@ -35,11 +35,8 @@ const Contact = ({ data }) => {
   const { markdownRemark, site } = data;
   const { frontmatter, html } = markdownRemark;
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [submitted, setSubmitted] = useState(false);
 
-
-  
   const encode = data => {
     return Object.keys(data)
       .map(key => {
@@ -50,8 +47,7 @@ const Contact = ({ data }) => {
       })
       .join("&");
   };
-  
-  
+
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -82,9 +78,12 @@ const Contact = ({ data }) => {
         .catch(error => alert(error));
     }
   };
-  
-  
-  
+
+  const FileUploadMessage = () => (
+    <p style={{ textAlign: "right", margin: "auto", color: "#fff" }}>
+      {frontmatter.uploadtext}
+    </p>
+  );
   
   
   
@@ -118,7 +117,7 @@ const Contact = ({ data }) => {
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
-  encType="multipart/form-data" // add enctype
+  enctype="multipart/form-data"
   onSubmit={handleSubmit}
   style={{
     display: "flex",
@@ -127,6 +126,8 @@ const Contact = ({ data }) => {
     opacity: isSubmitting ? 0.5 : 1,
   }}
 >
+
+
 
 
   {submitted ? (
@@ -170,7 +171,9 @@ const Contact = ({ data }) => {
 
       {frontmatter.contactupload && (
    <label htmlFor="attachment1" style={{padding: '0', color: 'inherit', textShadow:'1px 1px 0 #555', display:'flex', width:'100%', fontSize:'90%', gap:'15px', justifyContent:'center', alignItems:'center'}}>
-        <input className="file-input hidden" type="file" name="file" accept=".pdf,.doc,.docx" />{frontmatter.uploadtext}
+        <input className="file-input hidden" type="file" name="file" 
+        // accept=".pdf,.doc,.docx" 
+        />{frontmatter.uploadtext}
       </label>
   )}
 
