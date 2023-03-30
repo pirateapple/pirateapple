@@ -442,18 +442,26 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
 .spacer99{height:99vh}
 
 .spotlight{color:#fff;cursor:pointer;
-  display:grid;
-  place-content: center;
-   position:absolute;
+  // display:grid;
+  // place-content: center;
+  display:block;
+  position:absolute;
   left:0;
   right:0;
-  top:-85%;
+  top:-100px;
   z-index:1;
   min-height: 300px;
+  border:0px solid blue !important;
+  padding:0;pointer-events:pointer; margin:0 auto;
+}
 
-  padding:0;pointer-events:pointer; margin:0 auto;}
 
-  .horizontal-scroll .spotlight{ height:100%; top:-300px !important; border:0px solid red !important;}
+  .horizontal-scroll .spotlight{ height:100vh; top:-300px !important; border:0px solid red !important;}
+
+
+  // .post-content{ height:100vh;}
+  // .post-content{ position:absolute; display: block; height:100%; top:-200px; left:0; border:0px solid yellow;}
+
 
 .spotlight:hover{-webkit-backdrop-filter:none;backdrop-filter:none;color:#fff!important;fill:#fff!important}
 .spotlight:hover .posticons{animation:move 1s forwards;animation-delay:.2s}
