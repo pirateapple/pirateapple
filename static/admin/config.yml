@@ -42,20 +42,16 @@ collections:
           default: "blog-post",
         }
 
-      # - { 
-      #     label: "Post Details",
-      #     name: "youtube",
-      #     widget: "object",
-      #     collapsed: true,
-      #     fields: [
-
-      #     ]
-      #   }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options: [
+      - { 
+          label: "Post Details",
+          name: "details",
+          widget: "object",
+          collapsed: false,
+          fields: [
+            label: "Category",
+            name: "category",
+            widget: "select",
+            options: [
             {
               label: "News",
               value: "news",
@@ -69,7 +65,9 @@ collections:
               value: "feature",
             },
           ],
+          ]
         }
+  
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
           label: "Slug",
