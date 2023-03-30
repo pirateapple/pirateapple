@@ -42,14 +42,15 @@ collections:
           default: "blog-post",
         }
 
-      - { label: "Post Details",
-           name: "youtube",
-           widget: "object",
-           collapsed: true,
-           fields: [
-              label: "Title", name: "title", widget: "string", tagname: "h1"
-          ]
-        }
+      # - { 
+      #     label: "Post Details",
+      #     name: "youtube",
+      #     widget: "object",
+      #     collapsed: true,
+      #     fields: [
+
+      #     ]
+      #   }
       - {
           label: "Category",
           name: "category",
@@ -69,7 +70,7 @@ collections:
             },
           ],
         }
-
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
           label: "Slug",
           name: "slug",
