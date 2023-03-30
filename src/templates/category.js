@@ -6,7 +6,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
-
+import { StaticImage } from 'gatsby-plugin-image';
 import { Helmet } from "react-helmet"
 
 
@@ -57,15 +57,28 @@ const Category = ({ data, pageContext }) => {
 
             return (
               <div className="post-card1" style={{ justifyContent: "center", alignItems: "center" }} key={node.id}>
-                {featuredImg && (
+                
+    
                   <Link className="postlink" key={node.id} to={node.frontmatter.slug}>
-                    <GatsbyImage
-                      image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-                      alt={node.frontmatter.title + " - Featured image"}
-                      className="featured-image1"
-                      placeholder="blurred"
-                      style={{ position: "relative", zIndex: "1", maxHeight: "", margin: "0 auto" }}
-                    />
+
+
+{featuredImg ? (
+
+<GatsbyImage
+image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+alt={node.frontmatter.title + " - Featured image"}
+className="featured-image12 layer12 iiz__img"
+placeholder="blurred"
+// loading="eager"
+/>
+) : (
+<StaticImage
+            className="featured-image1"
+            src="../../static/assets/default-og-image.webp"
+            alt="Default Image"
+            style={{ position: 'relative', zIndex: '' }}
+          />
+)}
 
 <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
         
@@ -98,7 +111,7 @@ const Category = ({ data, pageContext }) => {
 
 
                   </Link>
-                )}
+
               </div>
             );
           })}

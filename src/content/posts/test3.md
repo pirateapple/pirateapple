@@ -14,7 +14,7 @@ youtube:
   youtubeshoworiginal: false
   clicktoplay: false
   youtubeend: null
-  youtubecontrols: true
+  youtubecontrols: false
   youtubemute: true
   youtubersuggestion1: null
   youtubersuggestion2: null
@@ -25,7 +25,7 @@ nftdrop: null
 slug: /test3
 audiostart: null
 template: blog-post
-title: Test post with video
+title: Test post with NO video or image
 categories:
   - news
 date: 2023-02-10 10:43

@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
-
+import { StaticImage } from 'gatsby-plugin-image';
 const Tag = ({ data, pageContext }) => {
   const { tag } = pageContext;
   const posts = data.allMarkdownRemark.edges;
@@ -50,7 +50,7 @@ const Tag = ({ data, pageContext }) => {
 
       <section id="showPosts" style={{marginTop:''}}>
 
-      <div className='contentpanel grid-container' style={{ marginTop: '1.5rem' }}>
+      <div className='contentpanel grid-container' style={{ marginTop: '5vh' }}>
         <div className='sliderSpacer' style={{ height: '', paddingTop: '0', display: 'none' }}></div>
 
         {filteredPosts.map(({ node }) => {
@@ -58,15 +58,26 @@ const Tag = ({ data, pageContext }) => {
           return (
             <div className='post-card1' style={{ justifyContent: 'center', alignItems: 'center' }} key={node.id}>
               {/* Render featured image thumbnail if it exists */}
-              {featuredImg && (
+        
                 <a className="postlink" key={node.id} href={node.frontmatter.slug}>
-                  <GatsbyImage
-                    image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-                    alt={node.frontmatter.title + ' - Featured image'}
-                    className='featured-image1'
-                    placeholder='blurred'
-                    style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
-                  />
+
+{featuredImg ? (
+
+<GatsbyImage
+image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+alt={node.frontmatter.title + " - Featured image"}
+className="featured-image12 layer12 iiz__img"
+placeholder="blurred"
+// loading="eager"
+/>
+) : (
+<StaticImage
+            className="featured-image1"
+            src="../../static/assets/default-og-image.webp"
+            alt="Default Image"
+            style={{ position: 'relative', zIndex: '' }}
+          />
+)}
 
                   
 <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
@@ -100,7 +111,7 @@ const Tag = ({ data, pageContext }) => {
 
 
                 </a>
-              )}
+              
             </div>
           );
         })}
