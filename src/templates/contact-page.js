@@ -37,7 +37,7 @@ const Contact = ({ data }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => setSubmitted(true), 2000);
+    setTimeout(() => setSubmitted(true), 700);
   };
   
 
@@ -63,33 +63,49 @@ const Contact = ({ data }) => {
         >
 
 
-          <form
-            className={`contact-form ${submitted ? "submitted" : ""}`}
-            action="/thanks"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>
-                <input type="email" name="email" placeholder="your@email.com"  />
-              </label>
-            </p>
-            <p>
-              <label>
-                <textarea name="message" placeholder="Your Message" ></textarea>
-              </label>
-            </p>
-            <p className="text-align-right1" style={{ margin: "0 auto", color: "#fff" }}>
-              <button className="button" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Send Message"}
-              </button>
-            </p>
-          </form>
+<form
+  className={`contact-form ${submitted ? "submitted" : ""}`}
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    opacity: isSubmitting ? 0.5 : 1,
+  }}
+>
+  {submitted ? (
+    <div className="thank-you-message" style={{fontSize:'200%', height:'60vh', textAlign:'center'}}>
+      Thank you - we'll be in touch!
+    </div>
+  ) : (
+    <>
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>
+          <input type="email" name="email" placeholder="your@email.com" />
+        </label>
+      </p>
+      <p>
+        <label>
+          <textarea name="message" placeholder="Your Message"></textarea>
+        </label>
+      </p>
+      <p
+        className="text-align-right1"
+        style={{ margin: "0 auto", color: "#fff" }}
+      >
+        <button className="button" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Send Message"}
+        </button>
+      </p>
+    </>
+  )}
+</form>
+
         </div>
       </div>
       <br />
