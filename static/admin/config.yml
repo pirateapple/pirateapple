@@ -49,25 +49,6 @@ collections:
           collapsed: false,
           fields: [
             { label: "Title", name: "title", widget: "string", tagname: "h1" }
-            {
-              label: "Category",
-              name: "category",
-              widget: "select",
-              options: [
-                  {
-                    label: "News",
-                    value: "news",
-                  },
-                {
-                    label: "Info",
-                    value: "info",
-                },
-                {
-                    label: "Feature",
-                    value: "feature",
-                },
-                ],
-            }
           ]
         }
       - {
