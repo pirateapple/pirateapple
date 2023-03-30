@@ -37,47 +37,52 @@ const Contact = ({ data }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => {
-        if (key === "file") {
-          return encodeURIComponent(key) + "=" + encodeURIComponent(data[key][0].name);
-        }
-        return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
-      })
-      .join("&");
-  };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
-    setIsSubmitting(true);
-    const formData = new FormData(form);
-    const data = {};
-    formData.forEach((value, key) => {
+const encode = data => {
+  console.log(data);
+  return Object.keys(data)
+    .map(key => {
       if (key === "file") {
-        data[key] = [value];
-      } else {
-        data[key] = value;
+        return encodeURIComponent(key) + "=" + encodeURIComponent(data[key][0].name);
       }
-    });
-    if (frontmatter.redirect === true) {
-      setTimeout(() => {
-        window.location.href = "/thanks";
-      }, 1600);
+      return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
+    })
+    .join("&");
+};
+
+const handleSubmit = e => {
+  e.preventDefault();
+  const form = e.target;
+  setIsSubmitting(true);
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => {
+    if (key === "file") {
+      data[key] = [value];
     } else {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": form.getAttribute("contact"),
-          ...data,
-        }),
-      })
-        .then(() => setSubmitted(true))
-        .catch(error => alert(error));
+      data[key] = value;
     }
-  };
+  });
+  console.log(frontmatter.redirect);
+  if (frontmatter.redirect === true) {
+    setTimeout(() => {
+      window.location.href = "/thanks";
+    }, 1600);
+  } else {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("contact"),
+        ...data,
+      }),
+    })
+      .then(() => setSubmitted(true))
+      .catch(error => alert(error));
+  }
+};
+
+
 
   const FileUploadMessage = () => (
     <p style={{ textAlign: "right", margin: "auto", color: "#fff" }}>
