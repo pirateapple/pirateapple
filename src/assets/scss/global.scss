@@ -656,7 +656,20 @@ body.blogpost #menu li .fullscreenButt{display:flex}
 
 // .avatar-frame{filter:drop-shadow(5px 3px 4px #999)}
 
-.avatar-frame img{background:transparent!important;background-position:top;background-size:contain;border-radius:38%;margin:0 auto;max-height:40vh;max-width:300px;opacity:0;transition:opacity 1.2s ease-in-out;width:100%}
+.avatar-frame img{
+  
+  background:transparent!important;
+  background-position:top;
+  background-size:contain;
+  // border-radius:38%;
+  margin:0 auto;
+  // max-height:40vh;
+  // max-width:300px;
+  opacity:0;transition:opacity 1.2s ease-in-out;
+  width:100%;
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
 
 .blog-post-content blockquote,.blog-post-content h2,.blog-post-content h3,.blog-post-content h4,.blog-post-content h5{font-size:clamp(18px,1rem + 2vw,36px);margin-left:auto;margin-right:auto}
 .contact-form{margin-top:36px}
