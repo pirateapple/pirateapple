@@ -48,10 +48,14 @@ collections:
           widget: "object",
           collapsed: false,
           fields: [
-            label: "Category",
-            name: "category",
-            widget: "select",
-            options: [
+
+          ]
+        }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: [
             {
               label: "News",
               value: "news",
@@ -65,9 +69,7 @@ collections:
               value: "feature",
             },
           ],
-          ]
         }
-  
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
           label: "Slug",
