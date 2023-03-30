@@ -266,7 +266,7 @@ module.exports = {
                       }
                     }
                   }`,
-                  output: "/rss.xml",
+                  output: "/public/rss.xml",
                   title: "Complete Web RSS Feed",
                 },
               ],
