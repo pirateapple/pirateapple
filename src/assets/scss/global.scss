@@ -52,6 +52,15 @@ body.scroll{overflow-x:hidden!important;overflow-y:scroll!important}
 
 
 
+.contact-form.submitted {
+  transform: scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+
+
 // body.homepage .panels img{max-height: 60vh;}
 body.homepage #showPosts { display: block !important; position:relative; max-height:90vh; overflow: hidden; }
 

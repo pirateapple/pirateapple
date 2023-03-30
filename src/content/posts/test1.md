@@ -36,7 +36,7 @@ tags:
   - test
   - blog
   - article
-featuredImage: /assets/default-og-image.webp
+featuredImage: /assets/CW-promo1.webp
 underlayImage: null
 bumpertext: null
 svgImage: null
