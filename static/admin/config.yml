@@ -41,16 +41,6 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
-
-      - {
-          label: "Post Details",
-          name: "details",
-          widget: "object",
-          collapsed: false,
-          fields: [
-            { label: "Title", name: "title", widget: "string", tagname: "h1" }
-          ]
-        }
       - {
           label: "Category",
           name: "category",
@@ -85,6 +75,17 @@ collections:
           time_format: "HH:mm",
           format: "YYYY-MM-DD HH:mm",
         }
+
+      - {
+          label: "Post Details",
+          name: "details",
+          widget: "object",
+          collapsed: false,
+          fields: [
+            { label: "Title", name: "title", widget: "string", tagname: "h1" }
+          ]
+        }
+
       - { label: "SEO Description", name: "description", widget: "text" }
       - { label: "Make Comments Available?", name: "comments", widget: "boolean", default: "true", required: false }
       - { label: "Make Post Shareable?", name: "shareable", widget: "boolean", default: "true", required: false }
