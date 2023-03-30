@@ -849,13 +849,14 @@ Click to play
 
   <div className='stack-layout' style={{ display:'flex',justifyContent:'center', position:'relative', top:'0', zIndex:'0', minHeight:'250px', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
 {FrontImage ? (
-            <GatsbyImage
-              image={FrontImage}
-              alt={frontmatter.title + " - Featured image"}
-              className="featured-image12 layer1"
-              style={{height:'100vh', maxHeight:'100vh', width:'', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'cover', paddingTop:'0', overflow:'hidden',}}
-            />
 
+            <GatsbyImage
+            image={FrontImage}
+            alt={frontmatter.title + " - Featured image"}
+            className="featured-image12 layer12 iiz__img"
+            placeholder="blurred"
+            // loading="eager"
+          />
 
 
 
