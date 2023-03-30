@@ -6,7 +6,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
-
+import { StaticImage } from 'gatsby-plugin-image';
 
 // import TimeAgo from 'react-timeago'
 
@@ -54,19 +54,27 @@ const BlogList = ({ data, pageContext }) => {
           return (
             <div className='post-card1' key={node.fields.slug}>
               {/* Render featured image thumbnail if it exists */}
-              {featuredImg && (
+ 
                 <Link className="postlink" to={node.fields.slug}>
 
 
+{featuredImg ? (
+
 <GatsbyImage
-          image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-          alt={node.frontmatter.title + " - Featured image"}
-          className="featured-image1"
-          placeholder="blurred"
-              // loading="eager"
-    
-              style={{position:'relative', zIndex:'1', maxHeight:'', margin:'0 auto'}}
-        />
+image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+alt={node.frontmatter.title + " - Featured image"}
+className="featured-image12 layer12 iiz__img"
+placeholder="blurred"
+// loading="eager"
+/>
+) : (
+<StaticImage
+            className="featured-image1"
+            src="../../static/assets/default-og-image.webp"
+            alt="Default Image"
+            style={{ position: 'relative', zIndex: '' }}
+          />
+)}
 
       
 
@@ -111,7 +119,7 @@ const BlogList = ({ data, pageContext }) => {
 
             
           </Link>
-              )}
+      
 
 
             </div>
