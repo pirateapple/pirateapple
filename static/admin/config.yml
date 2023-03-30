@@ -42,13 +42,13 @@ collections:
           default: "blog-post",
         }
 
-      - { 
+      - {
           label: "Post Details",
           name: "details",
           widget: "object",
           collapsed: false,
           fields: [
-            label: "Title", name: "title", widget: "string", tagname: "h1"
+            { label: "Title", name: "title", widget: "string", tagname: "h1" }
           ]
         }
       - {
