@@ -118,6 +118,7 @@ const Contact = ({ data }) => {
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
+  encType="multipart/form-data" // add enctype
   onSubmit={handleSubmit}
   style={{
     display: "flex",

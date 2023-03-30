@@ -3,7 +3,7 @@ template: contact-page
 slug: /contact
 title: Contact
 scrollable: true
-redirect: false
+redirect: true
 contactname: true
 contactphone: true
 contactupload: true
