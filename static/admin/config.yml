@@ -42,7 +42,7 @@ collections:
           default: "blog-post",
         }
 
-    - { label: "Post Details",
+      - { label: "Post Details",
               name: "details",
               widget: "object",
               collapsed: false,
