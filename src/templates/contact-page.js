@@ -47,29 +47,30 @@ const Contact = ({ data }) => {
     e.preventDefault();
     const form = e.target;
     setIsSubmitting(true);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    if (frontmatter.redirect === true) {
+      setTimeout(() => {
+        window.location.href = "/thanks";
+      }, 1600);
+    } else {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          ...data
+        })
       })
-    })
-      .then(() => {
-        setIsSubmitting(false);
-        if (frontmatter.redirect) {
-          setTimeout(() => {
-            navigate("/thanks");
-          }, 1600);
-        } else {
-          setSubmitted(true);
-        }
-      })
-      .catch(error => {
-        setIsSubmitting(false);
-        alert(error);
-      });
+        .then(() => setSubmitted(true))
+        .catch(error => alert(error));
+    }
   };
+  
+  
   
   
   
