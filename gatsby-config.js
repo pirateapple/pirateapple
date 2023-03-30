@@ -272,7 +272,15 @@ module.exports = {
               ],
             },
           },
-          
+          {
+  resolve: 'gatsby-plugin-page-creator',
+  options: {
+    path: '/rss.xml',
+    ignore: true,
+    // this adds the rss.xml.js file as a page
+    createPage: require.resolve('./src/rss.xml.js'),
+  },
+},
 
           `gatsby-remark-responsive-iframe`,
           // {
