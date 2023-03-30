@@ -337,6 +337,32 @@ collections:
               default: "false",
               required: false
             }
+
+          - { label: "Show Name Field",
+              name: "contactname",
+              widget: "boolean",
+              default: "false",
+              required: false
+            }
+          - { label: "Show Phone Field",
+              name: "contactphone",
+              widget: "boolean",
+              default: "false",
+              required: false
+            }
+          - { label: "Show File Upload Field",
+              name: "contactupload",
+              widget: "boolean",
+              default: "false",
+              required: false
+            }
+          - { label: "Upload Text",
+              name: "uploadtext",
+              widget: "string",
+              default: "false",
+              required: false
+            }
+
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "team"

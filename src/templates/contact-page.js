@@ -17,6 +17,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         redirect
+        contactname
+        contactphone
+        contactupload
       }
     }
     site {
@@ -39,9 +42,15 @@ const Contact = ({ data }) => {
   
   const encode = data => {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .map(key => {
+        if (key === "file") {
+          return encodeURIComponent(key) + "=" + encodeURIComponent(data[key][0].name);
+        }
+        return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
+      })
       .join("&");
-  }
+  };
+  
   
   const handleSubmit = e => {
     e.preventDefault();
@@ -50,7 +59,11 @@ const Contact = ({ data }) => {
     const formData = new FormData(form);
     const data = {};
     formData.forEach((value, key) => {
-      data[key] = value;
+      if (key === "file") {
+        data[key] = [value];
+      } else {
+        data[key] = value;
+      }
     });
     if (frontmatter.redirect === true) {
       setTimeout(() => {
@@ -62,13 +75,14 @@ const Contact = ({ data }) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": form.getAttribute("name"),
-          ...data
-        })
+          ...data,
+        }),
       })
         .then(() => setSubmitted(true))
         .catch(error => alert(error));
     }
   };
+  
   
   
   
@@ -121,22 +135,50 @@ const Contact = ({ data }) => {
   ) : (
     <>
       <input type="hidden" name="form-name" value="contact" />
+
+      {frontmatter.contactname && (
+    <p>
+      <label>
+        <input type="text" name="name" placeholder="Your name" required />
+      </label>
+    </p>
+  )}
+
       <p>
         <label>
           <input type="email" name="email" placeholder="your@email.com" required />
         </label>
       </p>
+
+      {frontmatter.contactphone && (
+    <p>
+      <label>
+        <input type="tel" name="phone" placeholder="Your phone number" />
+      </label>
+    </p>
+  )}
+
+
       <p>
         <label>
-          <textarea name="message" placeholder="Your Message"></textarea>
+          <textarea name="message" placeholder="Your Message" required></textarea>
         </label>
       </p>
+
+
+
+      {frontmatter.contactupload && (
+   <label htmlFor="attachment1" style={{padding: '0', color: 'inherit', textShadow:'1px 1px 0 #555', display:'flex', width:'100%', fontSize:'90%', gap:'15px', justifyContent:'center', alignItems:'center'}}>
+        <input className="file-input hidden" type="file" name="file" accept=".pdf,.doc,.docx" />{frontmatter.uploadtext}
+      </label>
+  )}
+
       <p
         className="text-align-right1"
         style={{ margin: "0 auto", color: "#fff" }}
       >
-        <button className="button" type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Send Message"}
+        <button className="button" type="submit" disabled={isSubmitting} style={{padding:'1vh 10vw'}}>
+          {isSubmitting ? "Submitting..." : "Send Now"}
         </button>
       </p>
     </>
