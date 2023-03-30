@@ -34,6 +34,7 @@ comments: false
 shareable: false
 tags:
   - test
+  - popmusic
 featuredImage: /assets/default-og-image.webp
 underlayImage: null
 bumpertext: null

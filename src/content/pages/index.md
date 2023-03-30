@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Memes are life
+tagline:  Your LAST Website
 featuredImage: /assets/default-og-image.webp
 youtube:
   youtuber: x
@@ -56,7 +56,7 @@ skillsText:
   <dd class="percentage percentage-99"><span class="text">Hacking</span> <span class="percent">99%</span></dd>
   </dl>
 cta:
-  ctaText: Contact Gene
+  ctaText: Contact
   ctaLink: x
 svgImage: /assets/null.svg
 secondaryImage: /assets/default-user.webp
@@ -79,7 +79,7 @@ description: A description of the site
 svgzindex: x
 profTitle: Complete Web
 coverletter:
-  coverText: About Meme Genes
+  coverText: About Complete Web
   coverLink: /about
 scrollable: true
 contentinvideo: false

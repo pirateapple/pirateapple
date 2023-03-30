@@ -1,5 +1,5 @@
 /** @jsx jsx */
-// import * as React from "react"
+import * as React from "react"
 
 import { useState, useRef,forwardRef } from "react";
 
@@ -557,7 +557,7 @@ const YouTube = frontmatter.youtube.youtuber
 
 
 
-<button aria-label="Click To Play" className="clickplays videohide 555" style={{position:'relative', zIndex:'', top:'0', border:'0px  solid red', width:'100vw', height:'', minHeight:'300px', aspectRatio:'16/9', maxHeight:'', background:'rgba(0, 0, 0, .99)', color:'', fontSize:'', textAlign:'center', display:'', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center',   padding:'2vh 0 0 0', background:'#111', color:'#ddd'}}>
+<button aria-label="Click To Play" className="clickplays videohide 555" style={{position:'relative', zIndex:'', top:'0', border:'0px  solid red', width:'100vw', height:'', minHeight:'300px', aspectRatio:'16/9', maxHeight:'', color:'', fontSize:'', textAlign:'center', display:'', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', padding:'2vh 0 0 0', background:'#111', color:'#ddd', transition:'all 2s ease-in-out', cursor:'pointer'}}>
 
 
 
@@ -644,7 +644,7 @@ Click to play
 )}
 </div>
 
-<button aria-label="Video Play/Pause Button"
+{/* <button aria-label="Video Play/Pause Button"
         onClick={onPlayPause}
         className="videohide 644 pane2" 
         style={{
@@ -659,7 +659,7 @@ Click to play
          border:'0px solid blue',
          zindex:'1'
         }}
-      ></button>
+      ></button> */}
       
       
       </button>
@@ -695,7 +695,8 @@ Click to play
          left:'0',
          right:'0',
          border:'0px solid yellow',
-         zindex:'1'
+         zindex:'1', 
+        //  animation: 'fadeout 4s forwards'
         }}
       ></button>
 
@@ -1288,6 +1289,9 @@ zindex:'1'
           ))}
         </div>
       )}
+
+      
+
       {tags && tags.length > 0 && (
         <div style={{position:'relative', zindex:'2', margin:'1vh auto', width:'100%'}}>
           <h4>Tags:</h4>
@@ -1310,7 +1314,33 @@ zindex:'1'
             <h1 className="headline" style={{color:'#ddd', borderRadius:'12px'}}>{frontmatter.title}</h1>
             {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
            {/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
-          {frontmatter.category} {frontmatter.tags}</div>
+           
+
+        <div  style={{maxWidth:'300px', margin:'3vh auto', paddingBottom:'2vh', borderBottom:'1px solid'}}>
+          <h4>Category:</h4>
+          <Link to={`/category/${frontmatter.category}`}>{frontmatter.category}</Link>
+        </div>
+
+
+      {tags && tags.length > 0 && (
+        <>
+        <h4>Tags:</h4>
+        <div style={{position:'relative', zindex:'2', margin:'1vh auto', width:'100%', display:'flex', justifyContent:'center', gap:'1vw'}}>
+          
+          {tags.map((tag) => (
+            <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
+          ))}
+          
+        </div>
+        </>
+      )}
+
+
+        
+
+          
+          
+          </div>
                 </header>
             )}
 

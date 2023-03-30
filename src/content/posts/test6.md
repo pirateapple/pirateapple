@@ -34,6 +34,8 @@ comments: false
 shareable: false
 tags:
   - test
+  - video
+  - playlist
 featuredImage: /assets/default-og-image.webp
 underlayImage: /assets/transparent.png
 bumpertext: null

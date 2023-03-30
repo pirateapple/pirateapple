@@ -33,6 +33,8 @@ comments: false
 shareable: false
 tags:
   - test
+  - blog
+  - article
 featuredImage: /assets/default-og-image.webp
 underlayImage: null
 bumpertext: null
