@@ -411,6 +411,25 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
   text-align: center;
   margin:0 auto;
 }
+.contentpanel{
+  // mask-image: linear-gradient (black, transparent);
+  // -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  transition:all 1s ease-in-out;
+}
+
+.horizontal-scroll{
+  transition:all 1s ease-in-out;
+}
+
+
+
+// .contentpanel:hover{
+//   // mask-image: none;
+//   // -webkit-mask-image: none;
+//   transition:all 1s ease-in-out;
+//   animation:fadeIn 1s forwards;animation-delay:.2s
+// }
+
 
 
 .spotlight{flex-direction:column;margin:0 auto; position:absolute;}

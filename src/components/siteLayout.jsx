@@ -120,6 +120,8 @@ const Layout = ({ children }) => {
           el.classList.remove("grid-container");
           el.classList.add("horizontal-scroll", "panels");
           document.body.classList.remove("scroll");
+    
+          document.querySelector('.contentpanel').style.transition = 'all .5s ease-in-out';
           // document.querySelector('#showPosts').style.height = '600px';
           // window.scrollTo(0, 0);
         }
