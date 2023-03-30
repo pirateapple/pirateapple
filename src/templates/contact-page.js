@@ -65,6 +65,7 @@ const Contact = ({ data }) => {
 
 <form
   className={`contact-form ${submitted ? "submitted" : ""}`}
+  action="/thanks"
   name="contact"
   method="POST"
   data-netlify="true"
@@ -77,6 +78,8 @@ const Contact = ({ data }) => {
     opacity: isSubmitting ? 0.5 : 1,
   }}
 >
+
+
   {submitted ? (
     <div className="thank-you-message" style={{fontSize:'200%', height:'60vh', textAlign:'center'}}>
       Thank you - we'll be in touch!
