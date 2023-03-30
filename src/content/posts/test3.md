@@ -9,7 +9,7 @@ youtube:
   youtuber2: null
   youtubeloop: true
   customcontrols: false
-  youtuber: https://youtu.be/9q-C04jwaog
+  youtuber: 
   youtubeautostart: true
   youtubeshoworiginal: false
   clicktoplay: false
@@ -35,7 +35,7 @@ shareable: false
 tags:
   - test
   - popmusic
-featuredImage: /assets/default-og-image.webp
+featuredImage: 
 underlayImage: null
 bumpertext: null
 svgImage: null

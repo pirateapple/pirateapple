@@ -212,7 +212,7 @@ const YoutubeLoop = frontmatter.youtube.youtubeloop
 
 const ClickToPlay = frontmatter.youtube.clicktoplay
 
-
+const hasYoutubeFrontmatter = frontmatter.youtube.youtuber
 
 
 
@@ -910,84 +910,57 @@ Click to play
   )} */}
 
 
+<div className="wrap-element effects" style={hasYoutubeFrontmatter ? {aspectRatio:'16/9'} : {}}>
 
 
-<div className="wrap-element effects" style={{aspectRatio:'16/9', minHeight:'', maxHeight:'', overFlow:'', marginTop:''}}>
 
 
-{/* <GatsbyImage
-        image={FrontImage}
-        alt={frontmatter.title + " - Featured image"}
-        className="featured-image1 layer1"
-        placeholder="blurred"
-        loading="eager"
-        // layout="constrained"
-        style={{position:'absolute', top:'0', zIndex:'0', width:'100vw', minHeight:'300px'}}
-      /> */}
+
+
+
 
 
 
 {YouTube ? (
-
-<div>
-{FrontImage ? (
-
-
-<GatsbyImage
-image={FrontImage}
-alt={frontmatter.title + " - Featured image"}
-className="featured-image1 layer1"
-placeholder="blurred"
-loading="eager"
-// layout="constrained"
-style={{display:'none', position:'absolute', top:'0', zIndex:'0', width:'100vw', maxHeight:'300px'}}
-/>
-
-    ) : (
-      ""
-    )}
-
-</div>
-    ) : (
-
-<div className="imageonly" style={{ display:'flex', justifyContent:'center', maxHeight:'',}}>
-{/* <InnerImageZoom src={getSrc(FrontImage)}  className="featured-imager"
-        placeholder="blurred"
-        loading="eager" layout="constrained" /> */}
-
-<InnerImageZoom
+  // Show YouTube video if available
+  <div>
+    {/* JSX to display YouTube video */}
+  </div>
+) : (
+  // Show image if YouTube is not available
+  <div>
+    {/* Check if FrontImage is present */}
+    {FrontImage ? (
+      // Show zoom or regular Gatsby image based on showZoom flag
+      frontmatter.showZoom ? (
+        <div className="imageonly" style={{ display: "flex", justifyContent: "center", maxHeight: "" }}>
+          <InnerImageZoom
             src={getSrc(FrontImage)}
             // zoomSrc={getSrc(FrontImage)}
             // fullscreenOnMobile={true}
             // moveType="drag"
             // zoomScale={0.9}
             // zoomPreload={true}
-
             // height={300}
           />
-    
-{/* <Zoom>
-{FrontImage ? (
-
-
-      <GatsbyImage
+        </div>
+      ) : (
+        <GatsbyImage
         image={FrontImage}
         alt={frontmatter.title + " - Featured image"}
-        className="featured-image1 layer1"
+        className="featured-image12 layer12 iiz__img"
         placeholder="blurred"
         loading="eager"
-        // layout="constrained"
-        style={{position:'relative', top:'0', zIndex:'0', minHeight:'300px'}}
-
       />
-
+          
+      )
     ) : (
+      // Show nothing if FrontImage is not present
       ""
     )}
-    </Zoom> */}
-</div>
+  </div>
+)}
 
-    )}
 
 
 
@@ -1568,6 +1541,7 @@ export const pageQuery = graphql`
         tags
         category
         description
+        showZoom
         youtube {
           youtuber
           youtuber2
