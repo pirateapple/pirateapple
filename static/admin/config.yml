@@ -41,43 +41,60 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options: [
-            {
-              label: "News",
-              value: "news",
-            },
-            {
-              label: "Info",
-              value: "info",
-            },
-            {
-              label: "Feature",
-              value: "feature",
-            },
-          ],
-        }
-      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
-      - {
-          label: "Slug",
-          name: "slug",
-          widget: "string",
-          hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
-        }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          date_format: "YYYY-MM-DD",
-          time_format: "HH:mm",
-          format: "YYYY-MM-DD HH:mm",
-        }
-      - { label: "SEO Description", name: "description", widget: "text" }
-      - { label: "Make Comments Available?", name: "comments", widget: "boolean", default: "true", required: false }
-      - { label: "Make Post Shareable?", name: "shareable", widget: "boolean", default: "true", required: false }
+
+    - { label: "Post Details",
+              name: "details",
+              widget: "object",
+              collapsed: false,
+              fields: [
+               label: "Category",
+                name: "category",
+              widget: "select",
+             options: [
+                    {
+                    label: "News",
+                    value: "news",
+                    },
+                    {
+                    label: "Info",
+                    value: "info",
+                    },
+                    {
+                    label: "Feature",
+                    value: "feature",
+                    },
+                    ],
+                    label: "Title", name: "title", widget: "string", tagname: "h1",
+                    label: "Slug",
+                     name: "slug",
+                   widget: "string",
+                     hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
+                    label: "Slug",
+                     name: "slug",
+                   widget: "string",
+                     hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
+                    label: "Publish Date",
+                     name: "date",
+                   widget: "datetime",
+              date_format: "YYYY-MM-DD",
+              time_format: "HH:mm",
+                   format: "YYYY-MM-DD HH:mm",
+                   label: "SEO Description", name: "description", widget: "text",
+                   label: "Make Comments Available?", name: "comments", widget: "boolean", default: "true", required: false,
+                   label: "Make Post Shareable?", name: "shareable", widget: "boolean", default: "true", required: false,
+              ]
+      }
+      
+   
+
+
+
+
+ 
+
+
+
+
 
 
 
