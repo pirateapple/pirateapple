@@ -2,8 +2,10 @@
   "meta": {
     "iconimage": "/assets/logo.svg",
     "font1": "Russo One",
+    "showModals": false,
     "favicon32x32": "/assets/logo.svg",
     "favicon16x16": "/assets/logo.svg",
+    "showSearch": true,
     "showNav": true,
     "companyname": "CompleteWeb",
     "siteUrl": "https://completeweb.site",
@@ -28,13 +30,11 @@
     "showfooter": true,
     "showFeature": true,
     "showCover": true,
-    "showSearch": true, 
-    "image": "/assets/circuit-bg.webp",
+    "image": "/assets/transparent.png",
     "description": "A CompleteWeb Solution",
     "icon512": "/assets/logo.svg",
-    "showSkills": false,
-    "showModals": false,
-    "showSwipe": true
+    "showSwipe": true,
+    "showSkills": false
   },
   "ga": "UA-89654528-2",
   "comments": "5639031584980992-proj"
