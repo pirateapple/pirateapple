@@ -328,7 +328,7 @@ p{margin-bottom:1rem}
   
   .ReactModal__Content #menu{display: none ;}
 
-  .ReactModal__Content{background:#ff0000;}
+
 //   .ReactModal__Content .pane1{top:0 ; height:102% ;}
 
 //   .ReactModalPortal div.toppad{border:0px solid blue; display: none ;}
@@ -340,17 +340,17 @@ p{margin-bottom:1rem}
 //     border:0px !important;
 //   }
 
-//   .ReactModal__Content{
-//     position: absolute;
-//     inset: 40px;
-//     border: 0px solid rgb(204, 204, 204) !important;
-//     background: transparent !important;
-//     color:inherit !important;
-//     overflow: auto;
-//     border-radius: 4px;
-//     outline: none;
-//     padding: 20px;
-// }
+  .ReactModal__Content{
+    position: absolute;
+    inset: 40px;
+    border: 0px solid rgb(204, 204, 204) !important;
+    background: transparent !important;
+    color:inherit !important;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+}
   
 //   .ReactModal__Overlay{
 //     // background:transparent ;
