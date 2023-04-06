@@ -9,4 +9,4 @@ contactupload: true
 scrollable: true
 uploadtext: JPG preferred - (1600px wide)
 ---
-Love to hear from you!
+&nbsp;
