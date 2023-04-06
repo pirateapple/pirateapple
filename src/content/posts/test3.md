@@ -35,7 +35,7 @@ shareable: false
 tags:
   - test
   - popmusic
-featuredImage: 
+featuredImage: /assets/CW-promo3.webp
 underlayImage: null
 bumpertext: null
 svgImage: null

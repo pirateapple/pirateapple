@@ -7,7 +7,7 @@
     "favicon16x16": "/assets/logo.svg",
     "showSearch": true,
     "showNav": true,
-    "companyname": "CompleteWeb",
+    "companyname": "Complete Web",
     "siteUrl": "https://completeweb.site",
     "showDates": true,
     "twitterUsername": "CompleteWeb",
@@ -31,7 +31,7 @@
     "showFeature": true,
     "showCover": true,
     "image": "/assets/transparent.png",
-    "description": "A CompleteWeb Solution",
+    "description": "A Complete Web Solution",
     "icon512": "/assets/logo.svg",
     "showSwipe": true,
     "showSkills": false

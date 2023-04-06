@@ -1,10 +1,9 @@
 {
   "siteColor": "#3491B0",
   "headerColor": "rgba(0, 0, 0, .8)",
-  "background": "rgba(36, 55, 59, 0.85)",
-  "bodyColor": "#223333",
+  "background": "",
+  "bodyColor": "",
   "text": "#222222",
-  "fontFamily": "Titan One",
   "cardBg": "rgba(0, 0, 0, .6)",
   "textShadow": "rgba(0, 0, 0, .1)"
 }

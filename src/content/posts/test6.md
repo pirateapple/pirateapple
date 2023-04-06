@@ -36,7 +36,7 @@ tags:
   - test
   - video
   - playlist
-featuredImage: /assets/default-og-image.webp
+featuredImage: /assets/CW-promo2.webp
 underlayImage: /assets/transparent.png
 bumpertext: null
 svgImage: /assets/null.svg

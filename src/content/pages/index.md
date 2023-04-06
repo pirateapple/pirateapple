@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Your LAST Website
+tagline:  Launch Your Web App
 featuredImage: /assets/default-og-image.webp
 youtube:
   youtuber: x
@@ -22,15 +22,12 @@ audioend: x
 audiotitle: x
 underlayImage: /assets/transparent.png
 profText: 
- <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
-  <p>Please enjoy(and share) the memes! <br /><br />Stay tuned for really big news about the platform that we're building and that we'll soon be offering to everyone. </p>
+ <div class="" style="text-align:left;">Offering complete website/app platforms with multimedia blog and customizable pages with integrated contact forms.
+ Built for small businesses, artists, photographers, musicians and clubs & restaurants to drive and engage traffic. </p>
 addressText: ""
 portfolio:
-  openText: "Thank you for visiting, please swipe to view my portfolio"
-  closeText: Experience has taught me that good design is not created on a spur of
-    the moment, nor does it come naturally. Good design is a thorough and
-    interative process with site visitors in mind foremost. Good design is
-    identifying a problem for those visitors and removing that problem.
+  openText: ""
+  closeText: ""
 addressText2: ""
 skillsTitle: "Mad Skills Yo!"
 skillsText: 

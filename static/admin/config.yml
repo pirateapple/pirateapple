@@ -684,9 +684,7 @@ collections:
             enableAlpha: true
             allowInput: true
 
-          - label: "Google Font"
-            name: "fontFamily"
-            widget: "string"
+
 
 
       - label: "Dark Theme"
@@ -736,6 +734,3 @@ collections:
             enableAlpha: true
             allowInput: true
 
-          - label: "Google Font"
-            name: "fontFamily"
-            widget: "string"

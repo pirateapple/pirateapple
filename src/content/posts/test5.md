@@ -28,7 +28,7 @@ svgzindex:
 comments: false
 shareable: false
 underlayImage: 
-featuredImage: /assets/default-og-image.webp
+featuredImage: /assets/CW-promo4.webp
 svgImage: 
 scrollable: true
 nftdrop: 

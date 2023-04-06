@@ -1060,8 +1060,8 @@ Click to play
             <GatsbyImage
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
-              className="drop-shadow avatar-frame"
-              style={{ maxWidth:'80%', margin:'0 auto', height:'25vh', maxHeight:'25vh', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', marginBottom:'0', border:'2rem'}}
+              className="avatar-frame"
+              style={{ maxWidth:'80%', margin:'0 auto', height:'25vh', maxHeight:'25vh', position:'relative',  top:'', objectFit:'cover', backgroundSize:'cover', marginBottom:'0', border:'0'}}
             />
           ) : (
             ""
