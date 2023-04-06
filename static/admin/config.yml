@@ -328,7 +328,7 @@ collections:
               label: "Slug",
               name: "slug",
               widget: "hidden",
-              default: "/contact",
+              default: "/contact/",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Redirect to Thanks Page",

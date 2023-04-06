@@ -224,7 +224,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 {({ modal, closeTo }) => (
 <div style={{overflow:''}}>
   {modal ? (
-    <div style={{display:'', position:'fixed', top:'130px', right:'3%', padding:'0px', fontSize:'', opacity:'1 !important', zIndex:'105', filter:' drop-shadow(0px 4px 3px #000)', color:'#fff', border:'1px solid red !important'}}>
+    <div style={{display:'', position:'fixed', top:'80px', right:'3%', padding:'0px', fontSize:'', opacity:'1 !important', zIndex:'105', filter:' drop-shadow(0px 4px 3px #000)', color:'#fff', border:'1px solid red !important'}}>
     <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'#fff', cursor:'pointer'}}>
     <button className="button" style={{display:'flex', justifyContent:'center'}}><span className="icon -left" style={{paddingRight:''}}><BiLeftArrow /></span> {" "}Go Back</button>
     </Link>
