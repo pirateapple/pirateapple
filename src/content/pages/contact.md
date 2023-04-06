@@ -2,12 +2,11 @@
 template: contact-page
 slug: /contact
 title: Contact
-scrollable: true
-redirect: true
+redirect: false
 contactname: true
-contactphone: true
+contactphone: false
 contactupload: true
-uploadtext: "JPG preferred - (1600px wide)"
+scrollable: true
+uploadtext: JPG preferred - (1600px wide)
 ---
-
-
+Love to hear from you!
