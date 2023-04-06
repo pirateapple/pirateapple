@@ -363,7 +363,7 @@ collections:
               required: false
             }
 
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "team"
     editor:

@@ -34,28 +34,28 @@ const RssXml = ({ data }) => {
 };
 
 export const query = graphql`
-  query RssQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-      }
+query RssQuery {
+  site {
+    siteMetadata {
+      title
+      description
+      siteUrl
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        html
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          date
-        }
+  }
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      excerpt
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        date
       }
     }
   }
+}
 `;
 
 export default RssXml;
