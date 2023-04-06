@@ -66,7 +66,7 @@ const handleSubmit = e => {
   console.log(frontmatter.redirect);
   if (frontmatter.redirect === true) {
     setTimeout(() => {
-      window.location.href = "/thanks";
+      window.location.href = "/thanks/";
     }, 1600);
   } else {
     fetch("/", {
