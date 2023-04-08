@@ -2,7 +2,7 @@
   "meta": {
     "iconimage": "/assets/logo.svg",
     "font1": "Russo One",
-    "showModals": true,
+    "showModals": false,
     "favicon32x32": "/assets/logo.svg",
     "favicon16x16": "/assets/logo.svg",
     "showSearch": true,

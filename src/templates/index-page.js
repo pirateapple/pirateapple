@@ -888,65 +888,6 @@ Click to play
 
 
 
-{showPosts ? (
-  <section id="showPosts" style={{marginTop:''}}>
-
-
-
-
-
-
-
-  {/* <TwilightLogo className="bglogo darkened" /> */}
-<div className="contentpanel grid-container" style={{}}>
-
-<div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
-                         <BlogListHome data={posts} />
-      {/* <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/2" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
-      </div> */}
-</div>
-
-
-</section>
-      ) : (
-        ""
-      )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1201,6 +1142,36 @@ Click to play
   ""
 )}
 {/* end show Info */}
+
+
+
+
+
+
+
+{showPosts ? (
+  <section id="showPosts" style={{marginTop:''}}>
+
+
+
+
+
+
+
+  {/* <TwilightLogo className="bglogo darkened" /> */}
+<div className="contentpanel grid-container" style={{}}>
+
+<div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
+                         <BlogListHome data={posts} />
+      {/* <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/2" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
+      </div> */}
+</div>
+
+
+</section>
+      ) : (
+        ""
+      )}
 
 
 
