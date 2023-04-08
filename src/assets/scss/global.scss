@@ -63,7 +63,7 @@ body.scroll{overflow-x:hidden;overflow-y:scroll;}
 
 
 
-body.homepage #showPosts { display: block; position:relative; max-height:90vh; overflow: hidden; }
+body.homepage #showPosts { display: block; position:relative; }
 
 body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scroll .gatsby-image-wrapper {max-height: 55vh; overflow: hidden;}
 
@@ -236,7 +236,7 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
 .spacer{display:block; height:50px !important;}
 
 .sliderSpacer{display:none;}
-.horizontal-scroll .sliderSpacer{display:block ; height:50%; padding-top:0%; }
+.horizontal-scroll .sliderSpacer{display:block !important; height:50% !important; padding-top:0% !important; }
 
 
 
