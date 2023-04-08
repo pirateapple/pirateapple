@@ -27,7 +27,7 @@
     "menu4": "Skills",
     "showPosts": true,
     "title": "A Complete Web Solution",
-    "showfooter": true,
+    "showfooter": false,
     "showFeature": true,
     "showCover": true,
     "image": "/assets/transparent.png",
