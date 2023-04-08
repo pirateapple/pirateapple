@@ -186,8 +186,8 @@ const navStyle = {
   bg: "",
 }
 
-const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=swap"
-
+// const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=swap"
+const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(' ', '+') + "&display=swap";
 
 
 
