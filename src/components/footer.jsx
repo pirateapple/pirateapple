@@ -231,7 +231,8 @@ export default function Footer() {
   
 
 <div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem'}}>Copyright &copy;
-{(new Date().getFullYear())} &nbsp;
+{/* {(new Date().getFullYear())}  */}
+&nbsp;
  {companyname}
 </div>
 
