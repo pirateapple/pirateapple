@@ -19,7 +19,7 @@ const CategoryIndex = ({ data }) => {
 
       <ul className="contentpanel horizontal-scroll panels" style={{display:'flex', justifyItems:'center', justifyContent:'center', gap:'3vw', textTransform:'capitalize', margin:'3vh'}}>
 
-<div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
+<div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
 
    
         {categories.map(category => (

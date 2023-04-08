@@ -1161,7 +1161,7 @@ Click to play
   {/* <TwilightLogo className="bglogo darkened" /> */}
 <div className="contentpanel grid-container" style={{}}>
 
-<div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
+<div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
                          <BlogListHome data={posts} />
       {/* <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/2" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
       </div> */}

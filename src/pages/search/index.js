@@ -71,7 +71,7 @@ const SearchPage = ({ data }) => {
       <TwilightLogo className="bglogo darkened" />
       <div className="contentpanel grid-container" style={{justifyContent:'center', alignItems:'center', marginTop:'70px'}}>
 
-<div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
+<div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
 
 
   {/* {filteredPosts.length} result{filteredPosts.length !== 1 && 's'} */}

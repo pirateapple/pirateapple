@@ -42,7 +42,7 @@ const BlogList = ({ data, pageContext }) => {
 
         <div className="contentpanel horizontal-scroll panels" style={{padding:''}}>
 
-<div className="sliderSpacer" style={{height:'', paddingTop:'0', display:'none'}}></div>
+<div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
 
 
         {posts.map(({ node }) => {

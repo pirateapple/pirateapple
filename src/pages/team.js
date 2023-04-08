@@ -78,7 +78,7 @@ const TeamPage = ({ data }) => {
 
         <div className="contentpanel grid-container" style={{padding:''}}>
           
-        <div className="sliderSpacer" style={{height:'', paddingTop:'', display:'none'}}></div>
+        <div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
         
           {posts.map(({ node }) => (
             <div className="post-card1 grid-item"
