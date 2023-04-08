@@ -31,7 +31,7 @@ date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
 comments: false
 shareable: false
-showZoom: true
+showZoom: false
 featuredImage: /assets/CW-promo6.webp
 underlayImage: null
 bumpertext: null

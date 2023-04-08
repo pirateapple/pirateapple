@@ -936,11 +936,12 @@ Click to play
         <div className="imageonly" style={{ display: "flex", justifyContent: "center", maxHeight: "" }}>
           <InnerImageZoom
             src={getSrc(FrontImage)}
-            // zoomSrc={getSrc(FrontImage)}
-            // fullscreenOnMobile={true}
+            loading="eager"
+            zoomSrc={getSrc(FrontImage)}
+            fullscreenOnMobile={true}
             // moveType="drag"
-            // zoomScale={0.9}
-            // zoomPreload={true}
+            zoomScale={0.9}
+            zoomPreload={true}
             // height={300}
           />
         </div>
