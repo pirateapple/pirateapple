@@ -1,4 +1,5 @@
-import * as React from "react"
+import React from "react"
+
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { ImPlay } from "react-icons/im"
@@ -91,7 +92,7 @@ const SearchPage = ({ data }) => {
     className="post-card1"
     style={{  alignItems:'center'}}
   >
-<Link className="postlink" state={showModals ? { modal: true } : {}} key={node.id} to={node.frontmatter.slug}>
+<Link className="postlink" state={showModals ? { modal: true } : {}} key={node.frontmatter.slug} to={node.frontmatter.slug}>
 
 {node.frontmatter.featuredImage ? (
         

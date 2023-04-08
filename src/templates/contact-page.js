@@ -122,7 +122,7 @@ const handleSubmit = e => {
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
-  enctype="multipart/form-data"
+  encType="multipart/form-data"
   onSubmit={handleSubmit}
   style={{
     display: "flex",
