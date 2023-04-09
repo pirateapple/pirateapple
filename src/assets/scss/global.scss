@@ -29,10 +29,11 @@ body.blogpost .backimage{z-index:-5;}
 body.blogpost .wrap-element iframe,body.homepage .wrap-element iframe{border:0;left:0;position:absolute;top:0;width:100vw;}
 body.homepage section{margin-bottom:0;margin-top:0; height:auto;}
 
+body.homepage #gobacker{display: none;}
 
 // body{overflow-x:hidden !important;overflow-y:auto;}
-body{overflow-x:hidden; overflow-y:hidden !important;}
-body.scroll{overflow-x:hidden; overflow-y:auto !important;}
+body{overflow-x:hidden; overflow-y:auto !important;}
+body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
 
 
 .bglogo{

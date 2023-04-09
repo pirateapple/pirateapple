@@ -6,7 +6,7 @@ redirect: false
 contactname: true
 contactphone: false
 contactupload: true
-scrollable: true
+scrollable: false
 uploadtext: JPG preferred - (1600px wide)
 ---
 &nbsp;

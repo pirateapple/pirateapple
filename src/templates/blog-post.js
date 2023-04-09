@@ -800,15 +800,15 @@ Click to play
   return (
     
     <Layout className="page">
-<CustomBox style={{}}>
+<CustomBox>
 
 {frontmatter.scrollable ? (
   <Helmet>
-  <body id="body" className="blogpost" style={{}} />
+  <body id="body" className="blogpost scroll" />
 </Helmet>
 ) : (
   <Helmet>
-  <body id="body" className="blogpost scroll" style={{}} />
+  <body id="body" className="blogpost" />
 </Helmet>
   )}
 
@@ -840,13 +840,15 @@ Click to play
       )}
 
 
-  { showModals ? (
+  {/* { showModals ? (
     ""
     ) : (
-      <div id="gobacker" style={{position:'fixed', top:'50px', right:'3vw', zIndex:'5'}}><GoBack /></div>
-      )} 
+      <div id="gobacker" style={{position:'fixed', top:'60px', right:'3vw', zIndex:'5'}}><GoBack /></div>
+      )}  */}
 
-{/* <div id="gobacker" style={{position:'absolute', top:'12vh', right:'1vw', zIndex:'5'}}><GoBack /></div> */}
+
+
+
 
 
 {frontmatter.showPageNav ? (

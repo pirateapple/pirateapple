@@ -21,7 +21,7 @@ youtube:
   youtubersuggestion2: null
   youtubestart: null
 audioend: null
-scrollable: true
+scrollable: false
 nftdrop: null
 category: news
 title: Another Test Blog Post

@@ -3,11 +3,18 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/siteLayout"
+import { Helmet } from "react-helmet"
+
 const CategoryIndex = ({ data }) => {
   const categories = data.allMarkdownRemark.group.map(group => group.fieldValue);
 
   return (
+
+    
     <Layout>
+      <Helmet>
+        <body className="categorypage utilitypage scroll" />
+      </Helmet>
       <div className="spacer" style={{ height: '70px', border: '0px solid yellow' }}></div>
       <div style={{textAlign:'center', paddingTop:'1rem'}}>
       <h1>Categories</h1>

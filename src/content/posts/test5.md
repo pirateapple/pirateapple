@@ -30,7 +30,7 @@ shareable: false
 underlayImage: 
 featuredImage: /assets/CW-promo4.webp
 svgImage: 
-scrollable: true
+scrollable: false
 nftdrop: 
 contentinvideo: false
 bumpertext: 

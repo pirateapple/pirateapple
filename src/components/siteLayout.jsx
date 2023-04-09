@@ -21,7 +21,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 
 import { RiArrowUpFill } from "react-icons/ri"
 
-// import GoBack from "../components/goBack"
+import GoBack from "../components/goBack"
 import { BiLeftArrow } from "react-icons/bi"
 
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-4'
@@ -81,7 +81,7 @@ const Layout = ({ children }) => {
             document.querySelector('#menuicon').style.transform = 'translateX(110%)';
           }
           document.querySelector('.pagemenu').style.transform = 'translateY(-200%)';
-          document.body.classList.add('scroll');
+          // document.body.classList.add('scroll');
         }
         prevScrollpos = currentScrollPos;
       };
@@ -248,7 +248,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-
+<div id="gobacker" style={{position:'fixed', top:'60px', right:'3vw', zIndex:'5'}}><GoBack /></div>
 
 
 
