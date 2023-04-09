@@ -784,12 +784,12 @@ Click to play
 
     <Layout>
 {frontmatter.scrollable ? (
-  <Helmet>
-  <body id="body" className="homepage scroll"  />
+<Helmet>
+  <body id="body" className=""  />
 </Helmet>
 ) : (
-  <Helmet>
-  <body id="body" className="homepage" />
+<Helmet>
+  <body id="body" className="scroll" />
 </Helmet>
   )}
 

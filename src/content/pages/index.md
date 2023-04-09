@@ -78,7 +78,7 @@ profTitle: Complete Web
 coverletter:
   coverText: About Complete Web
   coverLink: /about
-scrollable: true
+scrollable: false
 contentinvideo: false
 nftdrop: x
 ---

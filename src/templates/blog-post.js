@@ -53,7 +53,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import YouTubed from "../components/youtube"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
-// import ShareSocial from '../components/share' 
+import ShareSocial from '../components/share' 
 import GoBack from "../components/goBack"
 import { ImPlay } from "react-icons/im"
 // import TimeAgo from 'react-timeago'
@@ -803,11 +803,11 @@ Click to play
 
 {frontmatter.scrollable ? (
   <Helmet>
-  <body id="body" className="blogpost scroll" style={{}} />
+  <body id="body" className="blogpost" style={{}} />
 </Helmet>
 ) : (
   <Helmet>
-  <body id="body" className="blogpost" style={{}} />
+  <body id="body" className="blogpost scroll" style={{}} />
 </Helmet>
   )}
 
@@ -1343,7 +1343,7 @@ zindex:'1'
   {ShareThis ? (
     <header style={{ height:'', display:'grid', placeContent:'center'}}>
     <div id="sharethis1" style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
-    {/* <ShareSocial style={{}} /> */}
+    <ShareSocial style={{}} />
     </div>
     <div className="article-header panel" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:''}}>
             <h1 className="headline" style={{fontSize:''}}>{frontmatter.title}</h1>
@@ -1361,7 +1361,19 @@ zindex:'1'
               
       </header>
               )}
+
+<div className="panel" style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow', borderRadius:''}}>
+<div
+  className="blog-post-content bodycontent" style={{ fontSize:'clamp(1.2rem, 2.8vw, 1.8rem)', textAlign:'center', width:'100%', maxWidth:'', padding:'2vh 6% 10vh 6%', margin:'0 auto', color:'inherit !important'}}
+  dangerouslySetInnerHTML={{ __html: html }}
+/>    
 </div>
+</div>
+
+
+
+
+
           )}
 
  </article>

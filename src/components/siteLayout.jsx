@@ -113,13 +113,13 @@ const Layout = ({ children }) => {
         if (archiveView === "grid") {
           el.classList.remove("horizontal-scroll", "panels");
           el.classList.add("grid-container");
-          document.body.classList.add("scroll");
+          // document.body.classList.add("scrollable");
           // document.querySelector('#showPosts').style.height = 'auto';
           window.scrollTo(0, 0);
         } else if (archiveView === "swipe") {
           el.classList.remove("grid-container");
           el.classList.add("horizontal-scroll", "panels");
-          document.body.classList.remove("scroll");
+          // document.body.classList.remove("scrollable");
     
           document.querySelector('.contentpanel').style.transition = 'all .5s ease-in-out';
           // document.querySelector('#showPosts').style.height = '600px';
