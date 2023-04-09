@@ -43,7 +43,7 @@ maratingtx1:
 maratingtx2: 
 maratingtx3: 
 maratingtx4: 
-category: news
+category: 
 tags: 
  - test
  - video

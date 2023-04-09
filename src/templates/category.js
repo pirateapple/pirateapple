@@ -20,7 +20,7 @@ const Category = ({ data, pageContext }) => {
   return (
     <Layout>
       <Helmet>
-        <body id="body" className="tag" style={{}} />
+        <body id="body" className="category" />
       </Helmet>
 
       {showNav ? (

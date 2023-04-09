@@ -158,7 +158,17 @@ const Post = ({ data, pageContext }) => {
 
     
 
-
+    const categoryList = categories && categories.length > 1 && (
+      <div style={{ maxWidth: '300px', margin: '3vh auto', paddingBottom: '2vh', borderBottom: '1px solid' }}>
+        <h4>Category:</h4>
+        {categories.map((category, index) => (
+          <React.Fragment key={category}>
+            {index > 0 && ', '}
+            <Link to={`/category/${category}`}>{category}</Link>
+          </React.Fragment>
+        ))}
+      </div>
+    )
 
 
 
@@ -1254,8 +1264,8 @@ zindex:'1'
 {ShareThis ? (
 <header style={{ height:'', display:'grid', placeContent:'center'}}>
 
-  <div id="sharethis" style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
-  {/* <ShareSocial style={{}} /> */}
+  <div id="sharethis1" style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
+  <ShareSocial />
   </div>
 
   <div className="article-header" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:'', borderRadius:'12px'}}>
@@ -1267,29 +1277,18 @@ zindex:'1'
            {/* <Link to={`/category/${frontmatter.category}`}>Category:{frontmatter.category}</Link>
 
            <p>Tags: {frontmatter.tags.join(", ")}</p> */}
-      {categories && categories.length > 0 && (
-        <div>
-          <h4>Categories:</h4>
-          {categories.map((category) => (
-            <Link to={`/categories/${category}`} key={category}>
-              {category}
-            </Link>
-          ))}
-        </div>
+           {categoryList}
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <>
+  
+          <div style={{ position: 'relative', zindex: '2', margin: '1vh auto', width: '100%', display: 'flex', justifyContent: 'center', gap: '1vw' }}>
+            {frontmatter.tags.map((tag) => (
+              <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
+            ))}
+          </div>
+        </>
       )}
 
-      
-
-      {tags && tags.length > 0 && (
-        <div style={{position:'relative', zindex:'2', margin:'1vh auto', width:'100%'}}>
-          <h4>Tags:</h4>
-          {tags.map((tag) => (
-            <Link to={`/tag/${tag}`} key={tag}>
-              {tag} &nbsp;
-            </Link>
-          ))}
-        </div>
-      )}
   </div>
 </header>
             ) : (
@@ -1300,24 +1299,18 @@ zindex:'1'
            {/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
            
 
-        <div  style={{maxWidth:'300px', margin:'3vh auto', paddingBottom:'2vh', borderBottom:'1px solid'}}>
-          <h4>Category:</h4>
-          <Link to={`/category/${frontmatter.category}`}>{frontmatter.category}</Link>
-        </div>
-
-
-      {tags && tags.length > 0 && (
+           {categoryList}
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
         <>
-        <h4>Tags:</h4>
-        <div style={{position:'relative', zindex:'2', margin:'1vh auto', width:'100%', display:'flex', justifyContent:'center', gap:'1vw'}}>
-          
-          {tags.map((tag) => (
-            <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
-          ))}
-          
-        </div>
+  
+          <div style={{ position: 'relative', zindex: '2', margin: '1vh auto', width: '100%', display: 'flex', justifyContent: 'center', gap: '1vw' }}>
+            {frontmatter.tags.map((tag) => (
+              <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
+            ))}
+          </div>
         </>
       )}
+
 
 
         
@@ -1344,16 +1337,47 @@ zindex:'1'
 
   <div>
   {ShareThis ? (
-    <header style={{ height:'', display:'grid', placeContent:'center'}}>
-    <div id="sharethis1" style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
+
+
+
+
+<header style={{ height:'', display:'grid', placeContent:'center'}}>
+<div style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
     <ShareSocial style={{}} />
     </div>
-    <div className="article-header panel" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:''}}>
-            <h1 className="headline" style={{fontSize:''}}>{frontmatter.title}</h1>
-            {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
-           {/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
+<div className="article-header panel" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:'', borderRadius:'', marginTop:'0'}}>
+<h1 className="headline" style={{color:'#ddd', borderRadius:'12px'}}>{frontmatter.title}</h1>
+{/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
+{/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
+
+
+
+{categoryList}
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <>
+  
+          <div style={{ position: 'relative', zindex: '2', margin: '1vh auto', width: '100%', display: 'flex', justifyContent: 'center', gap: '1vw' }}>
+            {frontmatter.tags.map((tag) => (
+              <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
+            ))}
           </div>
-  </header>
+        </>
+      )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</header>
               ) : (
                 <header style={{ height:'', display:'grid', placeContent:'center'}}>
                 <div className="article-header" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:''}}>
@@ -1361,7 +1385,18 @@ zindex:'1'
                 {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
                {/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
               </div>
-              
+              {categoryList}
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <>
+  
+          <div style={{ position: 'relative', zindex: '2', margin: '1vh auto', width: '100%', display: 'flex', justifyContent: 'center', gap: '1vw' }}>
+            {frontmatter.tags.map((tag) => (
+              <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
+            ))}
+          </div>
+        </>
+      )}
+
       </header>
               )}
 

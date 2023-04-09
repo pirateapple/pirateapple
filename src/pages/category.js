@@ -13,7 +13,7 @@ const CategoryIndex = ({ data }) => {
     
     <Layout>
       <Helmet>
-        <body className="categorypage utilitypage scroll" />
+        <body className="categorypage utilitypage" />
       </Helmet>
       <div className="spacer" style={{ height: '70px', border: '0px solid yellow' }}></div>
       <div style={{textAlign:'center', paddingTop:'1rem'}}>

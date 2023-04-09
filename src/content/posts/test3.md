@@ -22,8 +22,7 @@ slug: /test3
 audiostart: null
 template: blog-post
 title: Test post with NO video or image at ALL
-categories:
-  - news
+categories: news
 date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
 comments: true

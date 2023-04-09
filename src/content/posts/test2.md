@@ -23,7 +23,7 @@ youtube:
 audioend: null
 scrollable: false
 nftdrop: null
-category: news
+category: 
 title: Another Test Blog Post
 slug: /test2
 audiostart: null

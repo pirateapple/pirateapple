@@ -40,7 +40,7 @@ const TeamPage = ({ data }) => {
   return (
     <Layout className="contact-page">
       <Helmet>
-  <body className="contactpage utilitypage scroll" />
+  <body className="contactpage utilitypage" />
 </Helmet>
       <Seo
         title=""

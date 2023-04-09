@@ -11,7 +11,7 @@ youtube:
   customcontrols: false
   youtuber: null
   youtubeautostart: true
-  youtubeshoworiginal: false
+  youtubeshoworiginal: true
   clicktoplay: false
   youtubeend: null
   youtubecontrols: true
@@ -28,10 +28,10 @@ slug: /test1
 audiostart: null
 template: blog-post
 title: Test Blog Post
-category: news
+category: 
 date: 2023-02-10 10:43
 description: A test blog post to show a blog post.
-comments: false
+comments: true
 shareable: false
 tags:
   - test

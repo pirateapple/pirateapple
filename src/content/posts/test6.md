@@ -48,7 +48,7 @@ svgzindex: null
 maratingtx2: null
 contentinvideo: false
 maratingtx3: null
-category: news
+category: blooper
 isnftforsale: false
 maratingtx4: null
 ---
