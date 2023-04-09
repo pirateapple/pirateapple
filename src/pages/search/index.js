@@ -49,11 +49,11 @@ const SearchPage = ({ data }) => {
 <Layout>
 
 <Helmet>
-  <body id="body" className="search scroll" style={{}} />
+  <body id="body" className="search"  />
 </Helmet>
 
 
-<div id="top" className="spacer" style={{height:'80px', border:'0px solid yellow'}}></div>
+<div className="spacer" style={{height:'80px', border:'0px solid yellow'}}></div>
 
       <div className="searchform" style={{
 

@@ -22,7 +22,7 @@ const CategoryIndex = ({ data }) => {
   return (
     <Layout>
         <Helmet>
-        <body className="tagpage utilitypage scroll" />
+        <body className="tagpage utilitypage" />
       </Helmet>
       <div className="spacer" style={{ height: '70px', border: '0px solid yellow' }}></div>
       <div style={{textAlign:'center', paddingTop:'1rem'}}>

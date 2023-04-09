@@ -32,6 +32,7 @@ description: A test blog post to show a blog post.
 comments: false
 shareable: false
 showZoom: false
+showPageNav: true
 featuredImage: /assets/CW-promo6.webp
 underlayImage: null
 bumpertext: null

@@ -31,6 +31,7 @@ underlayImage:
 featuredImage: /assets/CW-promo5.webp
 svgImage: 
 scrollable: false
+showPageNav: true
 nftdrop: 
 contentinvideo: false
 bumpertext: 
