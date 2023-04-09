@@ -644,7 +644,7 @@ Click to play
 )}
 </div>
 
-{/* <button aria-label="Video Play/Pause Button"
+<button aria-label="Video Play/Pause Button"
         onClick={onPlayPause}
         className="videohide 644 pane2" 
         style={{
@@ -659,7 +659,7 @@ Click to play
          border:'0px solid blue',
          zindex:'1'
         }}
-      ></button> */}
+      ></button>
       
       
       </button>
@@ -696,6 +696,7 @@ Click to play
          right:'0',
          border:'0px solid yellow',
          zindex:'1', 
+         cursor:'pointer'
         //  animation: 'fadeout 4s forwards'
         }}
       ></button>
@@ -830,10 +831,10 @@ Click to play
 
 
 
-<div id="top"></div>
+
 
 {showNav ? (
-  <div className="spacer" style={{height:'70px', border:'0px solid yellow'}}></div>
+  <div id="top" className="spacer" style={{height:'70px', border:'0px solid yellow'}}></div>
       ) : (
         ""
       )}
