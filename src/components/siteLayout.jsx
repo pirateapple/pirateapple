@@ -36,7 +36,7 @@ import Menu from "../components/menu"
 import { userStyles } from "../util/userStyles.json"
 
 
-import Fullscreen from "../components/FullScreen"
+// import Fullscreen from "../components/FullScreen"
 // import ss from "../../static/assets/pagebg.webp"
 // import { Link } from "gatsby-plugin-anchor-links"
 // import { StaticImage } from "gatsby-plugin-image"
@@ -159,7 +159,7 @@ const { showNav } = useSiteMetadata()
 const { showNav2 } = useSiteMetadata()
 const { showInfo } = useSiteMetadata()
 // const { showFeature } = useSiteMetadata()
-const { showPosts } = useSiteMetadata()
+// const { showPosts } = useSiteMetadata()
 const { showSearch } = useSiteMetadata()
 
 const { showResume } = useSiteMetadata()
@@ -169,7 +169,7 @@ const { showSkills } = useSiteMetadata()
 // const { showfooter } = useSiteMetadata()
 const { showPopup } = useSiteMetadata()
 const { menu1 } = useSiteMetadata()
-const { menu2 } = useSiteMetadata()
+// const { menu2 } = useSiteMetadata()
 const { menu3 } = useSiteMetadata()
 const { menu4 } = useSiteMetadata()
 const { font1 } = useSiteMetadata()

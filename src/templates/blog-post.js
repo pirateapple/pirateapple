@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import * as React from "react"
+import React from "react"
 
 import { useState, useRef,forwardRef } from "react";
 
@@ -39,7 +39,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 
 import { ImCross } from "react-icons/im"
 
-// import { RiCloseCircleFill, RiMenuUnfoldFill, RiArrowUpFill } from "react-icons/ri"
+import { RiCloseCircleFill, RiMenuUnfoldFill, RiArrowUpFill } from "react-icons/ri"
 
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -49,11 +49,11 @@ import Footer from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
-// import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import YouTubed from "../components/youtube"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
-import ShareSocial from '../components/share' 
+// import ShareSocial from '../components/share' 
 import GoBack from "../components/goBack"
 import { ImPlay } from "react-icons/im"
 // import TimeAgo from 'react-timeago'
@@ -168,7 +168,7 @@ const Post = ({ data, pageContext }) => {
 
 
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
 
 const resizeMobile = () => {
   setIsMobile(true);
@@ -848,14 +848,19 @@ Click to play
 {/* <div id="gobacker" style={{position:'absolute', top:'12vh', right:'1vw', zIndex:'5'}}><GoBack /></div> */}
 
 
-{/* <div className="pagemenu panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'1vw', right:'', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw',	background:'rgba(0, 0, 0, .5)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'clamp(2rem, 3vw, 3rem)', verticalAlign:'center' }}>
+{frontmatter.showPageNav ? (
+  
+<div className="pagemenu panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'1vw', right:'', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw',	background:'rgba(0, 0, 0, .5)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'clamp(2rem, 3vw, 3rem)', verticalAlign:'center' }}>
 
-<div className="menusnapp" style={{display:'flex', gap:'10px', padding:'1vh 1vw', alignItems:'center'}}>
-{frontmatter.scrollable ? (
+<div className="menusnapp" style={{display:'none', gap:'10px', padding:'1vh 1vw', alignItems:'center'}}>
+
+{/* {frontmatter.scrollable ? (
   <AnchorLink to="#top" style={{cursor:'pointer', height:'2vh'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999'}} /></AnchorLink>
 ) : (
 ""
-  )}
+  )} */}
+
+
 {(previous || next) && <Pagination {...props} />}
 </div>
 
@@ -863,11 +868,11 @@ Click to play
 
       <div style={{display:'flex', gap:'10px', padding:'1vh 1vw'}}>
 
-{frontmatter.scrollable ? (
+{/* {frontmatter.scrollable ? (
   <AnchorLink to="#top" aria-label="Return To TOP" style={{cursor:'pointer', marginTop:'2vh'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999',}} /></AnchorLink>
 ) : (
 ""
-  )}
+  )} */}
         <button onClick={resizeDesk} aria-label="Expand/Collapse menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiMenuUnfoldFill />
         </button>
         </div>
@@ -875,11 +880,17 @@ Click to play
        :
 
       <div style={{display:'flex', gap:'2vw', padding:'1vh 1vw'}}>
-        <button onClick={resizeMobile} aria-label="Expand/Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiCloseCircleFill /> 
+        <button onClick={resizeMobile} aria-label="Expand/Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuUnfoldFill />
         </button>
         </div>
     }
-</div> */}
+</div>
+) : (
+""
+  )}
+
+
+
 
 
 
@@ -1241,7 +1252,7 @@ zindex:'1'
 <header style={{ height:'', display:'grid', placeContent:'center'}}>
 
   <div id="sharethis" style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
-  <ShareSocial style={{}} />
+  {/* <ShareSocial style={{}} /> */}
   </div>
 
   <div className="article-header" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:'', borderRadius:'12px'}}>
@@ -1332,7 +1343,7 @@ zindex:'1'
   {ShareThis ? (
     <header style={{ height:'', display:'grid', placeContent:'center'}}>
     <div id="sharethis1" style={{width:'auto', height:'', padding:'0', display:'grid', placeContent:'center', border:'0px solid'}}>
-    <ShareSocial style={{}} />
+    {/* <ShareSocial style={{}} /> */}
     </div>
     <div className="article-header panel" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:''}}>
             <h1 className="headline" style={{fontSize:''}}>{frontmatter.title}</h1>
@@ -1540,6 +1551,7 @@ export const pageQuery = graphql`
         category
         description
         showZoom
+        showPageNav
         youtube {
           youtuber
           youtuber2

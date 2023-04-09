@@ -20,8 +20,9 @@ youtube:
   youtubersuggestion2: null
   youtubestart: null
 audioend: null
-scrollable: true
+scrollable: false
 showZoom: true
+showPageNav: true
 nftdrop: null
 slug: /test1
 audiostart: null

@@ -21,6 +21,8 @@ youtube:
   youtubestart: null
 audioend: null
 scrollable: true
+showZoom: true
+showPageNav: true
 nftdrop: null
 slug: /test3
 audiostart: null
