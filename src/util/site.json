@@ -28,7 +28,7 @@
     "showPosts": false,
     "title": "A Complete Web Solution",
     "showfooter": true,
-    "showFeature": true,
+    "showFeature": false,
     "showCover": true,
     "image": "/assets/transparent.png",
     "description": "A Complete Web Solution",

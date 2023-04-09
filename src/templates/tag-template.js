@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/siteLayout';
 import useSiteMetadata from '../hooks/SiteMetadata';
@@ -17,7 +17,17 @@ const Tag = ({ data, pageContext }) => {
   const [selectedTag, setSelectedTag] = useState(tag);
 
   const allTags = data.allMarkdownRemark.group.map(tag => tag.fieldValue);
-  const filteredPosts = selectedTag ? posts.filter(({ node }) => node.frontmatter.tags.includes(selectedTag)) : posts;
+  
+  const handleTagChange = e => {
+    setSelectedTag(e.target.value);
+    if (e.target.value === '') {
+      navigate('/tags/');
+    }
+  };
+  
+  const filteredPosts = selectedTag
+    ? posts.filter(({ node }) => node.frontmatter.tags.includes(selectedTag))
+    : posts;
 
   if (posts.length === 0) {
     return <p>No posts found.</p>;
@@ -38,14 +48,14 @@ const Tag = ({ data, pageContext }) => {
 
       <div style={{display:'flex', flexDirection:'column', justifyContent:'center', marginTop:''}}>
         
-      <select className="cattags" style={{}} value={selectedTag} onChange={e => setSelectedTag(e.target.value)}>
-        <option value=''>All tags</option>
-        {allTags.map(tag => (
-          <option key={tag} value={tag}>
-            {tag}
-          </option>
-        ))}
-      </select>
+      <select className="cattags" value={selectedTag} onChange={handleTagChange}>
+  <option value=''>All tags</option>
+  {allTags.map(tag => (
+    <option key={tag} value={tag}>
+      {tag}
+    </option>
+  ))}
+</select>
       </div> 
 
       <section id="showPosts" style={{marginTop:''}}>
