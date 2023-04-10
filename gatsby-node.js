@@ -47,7 +47,7 @@ team.forEach((team) => {
 })
 
 
-const rssTemplate = path.resolve(`src/rss.xml.js`);
+const rssTemplate = path.resolve(`src/pages/rss.xml.js`);
 
   createPage({
     path: "/rss.xml",
