@@ -32,7 +32,7 @@ const RssXml = ({ data }) => {
         url: `${site.siteMetadata.siteUrl}${image.childImageSharp.original.src}`,
         type: "image/jpeg",
         title: node.frontmatter.title,
-        size: image.childImageSharp.original.width,
+        size: image.childImageSharp.original.size,
       },
     ] : [];
     
