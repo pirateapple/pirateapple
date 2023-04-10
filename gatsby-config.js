@@ -246,27 +246,26 @@ module.exports = {
                         url: postUrl,
                         guid: postUrl,
                         custom_elements: [
-                          {
-                            "content:encoded": edge.node.html
-                          },
-                          {
-                            "media:content": imageUrl
-                              ? {
-                                  _attr: {
-                                    url: imageUrl,
-                                    type: "image/jpeg",
-                                    width: 500,
-                                    height: 500,
-                                    xmlns: "http://search.yahoo.com/mrss/"
-                                  }
-                                }
-                              : null
-                          }
+                          { "content:encoded": edge.node.html },
+                          imageUrl
+  ? {
+      [`media:content`]: {
+        _attr: {
+          url: imageUrl,
+          type: "image/jpeg",
+          width: 500,
+          height: 500,
+          xmlns: "http://search.yahoo.com/mrss/"
+        }
+      }
+    }
+  : null
+
                         ]
                       };
                     });
                   },
-                  
+          
                   query: `
                     {
                       allMarkdownRemark(
@@ -284,10 +283,8 @@ module.exports = {
                               date
                               slug
                               featuredImage {
-                                   publicURL
-                                  }
-                                
-                              
+                                publicURL
+                              }
                             }
                           }
                         }
@@ -301,6 +298,7 @@ module.exports = {
               ],
             },
           },
+          
           
 
           `gatsby-remark-responsive-iframe`,
