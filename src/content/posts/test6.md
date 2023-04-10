@@ -52,8 +52,7 @@ category: blooper
 isnftforsale: false
 maratingtx4: null
 ---
-<!-- <div class="contentinside" style="position:relative; aspect-ratio:16/9;  width:100%; border:0px solid white; display:flex; flex-direction:column; justify-content:center;">
-</div> -->
+
 
 <style>
 </style>
@@ -82,8 +81,6 @@ Todd Lambert is a photographer and web developer based in the United States. He 
 In addition to his photography work, Lambert is also an experienced web developer. He has created websites for a wide range of clients, including businesses, nonprofits, and individuals. Lambert's web development work is known for its clean design, intuitive navigation, and user-friendly interface.
 
 Overall, Todd Lambert is a talented photographer and web developer who has made a name for himself in both fields. His work demonstrates a strong commitment to quality and a passion for creativity and innovation.
-<!-- <a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;utm_source=github&amp;utm_medium=nextstarter-cs&amp;utm_campaign=devex-cs&amp;CUSTOM_LOGO=https://completeweb.site/assets/logo.svg" rel="nofollow">
-Deploy to Netlify
-</a> -->
+
 
 </div>

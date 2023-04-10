@@ -50,12 +50,6 @@ maratingtx3: null
 isnftforsale: false
 maratingtx4: null
 ---
-<!-- <div class="contentinside" style="position:relative; aspect-ratio:16/9;  width:100%; border:0px solid white; display:flex; flex-direction:column; justify-content:center;">
-</div> -->
-
-<style>
-</style>
-
 
 <div class="contentbody" style="text-align:left; margin-top:0;">
 
