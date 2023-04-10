@@ -32,7 +32,7 @@ const RssXml = ({ data }) => {
         url: `${site.siteMetadata.siteUrl}${image.childImageSharp.original.src}`,
         type: "image/jpeg",
         title: node.frontmatter.title,
-        size: image.childImageSharp.original.size,
+        size: image.childImageSharp.original.width,
       },
     ] : [];
     
@@ -83,6 +83,8 @@ export const query = graphql`
               }
               original {
                 src
+                width
+                height
               }
             }
           }
