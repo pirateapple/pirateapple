@@ -270,7 +270,7 @@ module.exports = {
                             html
                             fields {
                               slug
-                            }
+                            
                             frontmatter {
                               title
                               date
@@ -278,6 +278,7 @@ module.exports = {
                                 relativePath
                               }
                             }
+                          }
                           }
                         }
                       }
