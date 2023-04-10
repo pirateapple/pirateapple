@@ -77,6 +77,9 @@ export const query = graphql`
                 src
                 width
               }
+              original {
+                src
+              }
             }
           }
         }
@@ -84,5 +87,6 @@ export const query = graphql`
     }
   }
 `;
+
 
 export default RssXml;
