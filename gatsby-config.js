@@ -239,8 +239,8 @@ module.exports = {
                         title: edge.node.frontmatter.title,
                         description: edge.node.excerpt,
                         date: edge.node.frontmatter.date,
-                        url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                        guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                        url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                        guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
                         custom_elements: [
                           {
                             "content:encoded": edge.node.html
@@ -248,7 +248,7 @@ module.exports = {
                           {
                             "media:content": {
                               _attr: {
-                                url: site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.relativePath,
+                                url: site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.publicURL,
                                 type: "image/jpeg",
                                 width: 500,
                                 height: 500
@@ -268,17 +268,14 @@ module.exports = {
                           node {
                             excerpt
                             html
-                            fields {
-                              slug
-                            
                             frontmatter {
+                              slug
                               title
                               date
                               featuredImage {
-                                relativePath
+                                publicURL
                               }
                             }
-                          }
                           }
                         }
                       }
