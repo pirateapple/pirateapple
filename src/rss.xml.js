@@ -26,6 +26,16 @@ const RssXml = ({ data }) => {
   });
 
   allMarkdownRemark.nodes.forEach(node => {
+    const image = node.frontmatter.featuredImage;
+    const attachments = image ? [
+      {
+        url: `${site.siteMetadata.siteUrl}${image.relativePath}`,
+        type: "image/jpeg",
+        title: node.frontmatter.title,
+        size: image.childImageSharp.fixed.width,
+      },
+    ] : [];
+  
     feed.addItem({
       title: node.frontmatter.title,
       id: node.fields.slug,
@@ -33,17 +43,10 @@ const RssXml = ({ data }) => {
       description: node.excerpt,
       content: node.html,
       date: node.frontmatter.date,
-      // Include featuredImage as attachment
-      attachments: [
-        {
-          url: `${site.siteMetadata.siteUrl}${node.frontmatter.featuredImage.childImageSharp.fixed.src}`,
-          type: "image/jpeg",
-          title: node.frontmatter.title,
-          size: node.frontmatter.featuredImage.childImageSharp.fixed.width,
-        },
-      ],
+      attachments: attachments,
     });
   });
+  
 
   return (
     <>
