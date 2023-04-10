@@ -248,7 +248,7 @@ module.exports = {
                           {
                             "media:content": {
                               _attr: {
-                                url: site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.publicURL,
+                                url: site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.relativePath,
                                 type: "image/jpeg",
                                 width: 500,
                                 height: 500
@@ -275,7 +275,7 @@ module.exports = {
                               title
                               date
                               featuredImage {
-                                publicURL
+                                relativePath
                               }
                             }
                           }
