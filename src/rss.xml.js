@@ -1,3 +1,5 @@
+// src/pages/rss.xml.js
+
 import React from "react";
 import { graphql } from "gatsby";
 import { Feed } from "gatsby-plugin-feed";
@@ -93,6 +95,5 @@ export const query = graphql`
     }
   }
 `;
-
 
 export default RssXml;

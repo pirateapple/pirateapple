@@ -2,6 +2,7 @@ const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
+
   const { createPage } = actions
 
   const blogList = path.resolve(`./src/templates/blog-list.js`)
@@ -46,7 +47,15 @@ team.forEach((team) => {
 })
 
 
+const rssTemplate = path.resolve(`src/rss.xml.js`);
 
+  createPage({
+    path: "/rss.xml",
+    component: rssTemplate,
+    context: {
+      // Data passed to context is available in page queries as GraphQL variables.
+    },
+  });
 
 
 
