@@ -47,15 +47,15 @@ team.forEach((team) => {
 })
 
 
-const rssTemplate = path.resolve(`src/pages/rss.xml.js`);
+// const rssTemplate = path.resolve(`src/pages/rss.xml.js`);
 
-  createPage({
-    path: "/rss.xml",
-    component: rssTemplate,
-    context: {
-      // Data passed to context is available in page queries as GraphQL variables.
-    },
-  });
+//   createPage({
+//     path: "/rss.xml",
+//     component: rssTemplate,
+//     context: {
+//       // Data passed to context is available in page queries as GraphQL variables.
+//     },
+//   });
 
 
 

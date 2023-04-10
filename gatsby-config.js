@@ -227,7 +227,6 @@ module.exports = {
                       title
                       description
                       siteUrl
-                      site_url: siteUrl
                     }
                   }
                 }
@@ -235,39 +234,58 @@ module.exports = {
               feeds: [
                 {
                   serialize: ({ query: { site, allMarkdownRemark } }) => {
-                    return allMarkdownRemark.nodes.map(node => {
-                      return Object.assign({}, node.frontmatter, {
-                        description: node.excerpt,
-                        date: node.frontmatter.date,
-                        url: site.siteMetadata.siteUrl + node.fields.slug,
-                        guid: site.siteMetadata.siteUrl + node.fields.slug,
-                        custom_elements: [{ "content:encoded": node.html }],
-                      })
-                    })
+                    return allMarkdownRemark.edges.map(edge => {
+                      return {
+                        title: edge.node.frontmatter.title,
+                        description: edge.node.excerpt,
+                        date: edge.node.frontmatter.date,
+                        url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                        guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                        custom_elements: [
+                          {
+                            "content:encoded": edge.node.html
+                          },
+                          {
+                            "media:content": {
+                              _attr: {
+                                url: site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.publicURL,
+                                type: "image/jpeg",
+                                width: 500,
+                                height: 500
+                              }
+                            }
+                          }
+                        ]
+                      };
+                    });
                   },
-                  query: `{
-                    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-                      nodes {
-                        excerpt
-                        html
-                        fields {
-                          slug
-                        }
-                        frontmatter {
-                          title
-                          date
-                          featuredImage {
-                            relativePath
-                            childImageSharp {
-                              gatsbyImageData(layout: FULL_WIDTH)
+                  query: `
+                    {
+                      allMarkdownRemark(
+                        sort: { order: DESC, fields: [frontmatter___date] },
+                      ) {
+                        edges {
+                          node {
+                            excerpt
+                            html
+                            fields {
+                              slug
+                            }
+                            frontmatter {
+                              title
+                              date
+                              featuredImage {
+                                publicURL
+                              }
                             }
                           }
                         }
                       }
                     }
-                  }`,
+                  `,
                   output: "/rss.xml",
-                  title: "Complete Web RSS Feed",
+                  title: "My RSS Feed",
+                  // ...
                 },
               ],
             },
