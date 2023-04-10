@@ -256,7 +256,8 @@ module.exports = {
                                     url: imageUrl,
                                     type: "image/jpeg",
                                     width: 500,
-                                    height: 500
+                                    height: 500,
+                                    xmlns: "http://search.yahoo.com/mrss/"
                                   }
                                 }
                               : null
