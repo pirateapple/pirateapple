@@ -27,14 +27,15 @@ const RssXml = ({ data }) => {
 
   allMarkdownRemark.nodes.forEach(node => {
     const image = node.frontmatter.featuredImage;
-    const attachments = image ? [
-      {
-        url: `${site.siteMetadata.siteUrl}${image.relativePath}`,
-        type: "image/jpeg",
-        title: node.frontmatter.title,
-        size: image.childImageSharp.fixed.width,
-      },
-    ] : [];
+const attachments = image ? [
+  {
+    url: `${site.siteMetadata.siteUrl}${image.publicURL}`,
+    type: "image/jpeg",
+    title: node.frontmatter.title,
+    size: image.childImageSharp.fixed.width,
+  },
+] : [];
+
   
     feed.addItem({
       title: node.frontmatter.title,
