@@ -82,9 +82,9 @@ scrollable: false
 contentinvideo: false
 nftdrop: x
 ---
-<!-- Do not delete -->
+
 <div>
-<!-- Do not delete -->
+
 
 ## Highlights
 
@@ -123,10 +123,10 @@ Closing collaboration with other marketing channel managers for smooth 360 exper
 
 
 
-<!-- Do not delete -->
+
 </div>
 <div>
-<!-- Do not delete -->
+
 
 ## Experience
 
@@ -155,6 +155,5 @@ Social Media Intern
 
 Experience in search engine marketing, Experience with bid monitoring and adjustment of search media campaigns across multiple sites.
 
-<!-- Do not delete -->
+
 </div>
-<!-- Do not delete -->
