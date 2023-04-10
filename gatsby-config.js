@@ -235,30 +235,37 @@ module.exports = {
                 {
                   serialize: ({ query: { site, allMarkdownRemark } }) => {
                     return allMarkdownRemark.edges.map(edge => {
+                      const postUrl = site.siteMetadata.siteUrl + edge.node.fields.slug;
+                      const imageUrl = edge.node.frontmatter.featuredImage
+                        ? site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.publicURL
+                        : null;
                       return {
                         title: edge.node.frontmatter.title,
                         description: edge.node.excerpt,
                         date: edge.node.frontmatter.date,
-                        url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                        guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                        url: postUrl,
+                        guid: postUrl,
                         custom_elements: [
                           {
                             "content:encoded": edge.node.html
                           },
                           {
-                            "media:content": {
-                              _attr: {
-                                url: site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.publicURL,
-                                type: "image/jpeg",
-                                width: 500,
-                                height: 500
-                              }
-                            }
+                            "media:content": imageUrl
+                              ? {
+                                  _attr: {
+                                    url: imageUrl,
+                                    type: "image/jpeg",
+                                    width: 500,
+                                    height: 500
+                                  }
+                                }
+                              : null
                           }
                         ]
                       };
                     });
                   },
+                  
                   query: `
                     {
                       allMarkdownRemark(

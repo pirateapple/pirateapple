@@ -1001,8 +1001,8 @@ Click to play
             <GatsbyImage
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
-              className="avatar-frame"
-              style={{ maxWidth:'80%', margin:'0 auto', height:'', maxHeight:'150px', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', marginBottom:'0', border:'0'}}
+              className="avatar-frame1"
+              style={{ maxWidth:'80%', margin:'0 auto', height:'', maxHeight:'300px', position:'relative', top:'', objectFit:'contain', backgroundSize:'contain', marginBottom:'0', border:'0'}}
             />
           ) : (
             ""
