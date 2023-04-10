@@ -1002,7 +1002,7 @@ Click to play
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
               className="avatar-frame"
-              style={{ maxWidth:'80%', margin:'0 auto', position:'relative',  top:'', objectFit:'cover', backgroundSize:'cover', marginBottom:'0', border:'0'}}
+              style={{ maxWidth:'80%', margin:'0 auto', height:'', maxHeight:'150px', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', marginBottom:'0', border:'0'}}
             />
           ) : (
             ""
