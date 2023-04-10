@@ -33,6 +33,15 @@ const RssXml = ({ data }) => {
       description: node.excerpt,
       content: node.html,
       date: node.frontmatter.date,
+      // Include featuredImage as attachment
+      attachments: [
+        {
+          url: `${site.siteMetadata.siteUrl}${node.frontmatter.featuredImage.childImageSharp.fixed.src}`,
+          type: "image/jpeg",
+          title: node.frontmatter.title,
+          size: node.frontmatter.featuredImage.childImageSharp.fixed.width,
+        },
+      ],
     });
   });
 
@@ -66,6 +75,7 @@ export const query = graphql`
             childImageSharp {
               fixed(width: 800) {
                 src
+                width
               }
             }
           }
@@ -74,6 +84,5 @@ export const query = graphql`
     }
   }
 `;
-
 
 export default RssXml;
