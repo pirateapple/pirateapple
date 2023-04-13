@@ -30,6 +30,7 @@ const useSiteMetadata = () => {
             showSearch
             showModals
             showSwipe
+            postcount
             menu1
             menu2
             menu3

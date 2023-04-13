@@ -299,7 +299,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       
  
 
-{showInfo ? (
+{/* {showInfo ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
        <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
@@ -311,10 +311,6 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
       ) : (
   ""
 )}
-
-
-
-
 
 {showResume ? (
 <li style={{position:'relative',}}>
@@ -329,9 +325,6 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   ""
 )}
 
-
-
-
 {showSkills ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
@@ -343,7 +336,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 </li>
       ) : (
   ""
-)}
+)} */}
 
 
 <Menu />
@@ -458,7 +451,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
             </AnchorLink>
     </li>
       
-{showInfo ? (
+{/* {showInfo ? (
 <li style={{position:'relative',}}>
       {prefersReducedMotion ? (
        <Link aria-label="Menu 1" className="navbar-item" to="/#info" style={{paddingRight:'',}}>{menu1}</Link>    
@@ -496,7 +489,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 </li>
       ) : (
   ""
-)}
+)} */}
 
 <Menu />
 

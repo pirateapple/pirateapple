@@ -43,6 +43,7 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
 
 .scroll-container {
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-scroll-snap-type: y mandatory;
       -ms-scroll-snap-type: y mandatory;
           scroll-snap-type: y mandatory;

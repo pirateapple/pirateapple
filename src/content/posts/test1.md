@@ -50,6 +50,7 @@ contentinvideo: false
 maratingtx3: null
 isnftforsale: false
 maratingtx4: null
+postLimit: "4"
 ---
 
 <div class="contentbody" style="text-align:left; margin-top:0;">

@@ -81,6 +81,7 @@ coverletter:
 scrollable: false
 contentinvideo: false
 nftdrop: x
+postLimit: "4"
 ---
 
 <div>

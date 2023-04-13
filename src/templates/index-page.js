@@ -32,178 +32,17 @@ import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
 
 
-
-
-
-
-
-
-export const pageQuery = graphql`
-query HomeQuery($id: String!) {
-  site {
-    siteMetadata {
-      title
-      titleDefault
-      siteUrl
-      description
-      image
-      twitterUsername
-      companyname
-      showfooter
-      showInfo
-      showCover
-      showFeature
-      showPosts
-      showSocial
-      showSkills
-      showNav
-      showPopup
-      showDates
-      showResume
-      showSkills
-    }
-  }
-  markdownRemark(id: {eq: $id}) {
-    id
-    html
-    excerpt(pruneLength: 148)
-    frontmatter {
-      date(formatString: "YYYY-MM-DD-HH-MM-SS")
-      slug
-      title
-      description
-      audiostart
-      audiotitle
-      audioend
-      youtube{
-        youtuber
-        youtuber2
-        youtubestart
-        youtubeend
-        youtubeshoworiginal
-        youtubersuggestion1
-        youtubersuggestion2
-        youtubersuggestion3
-        clicktoplay
-        youtubemute
-        youtubecontrols
-        customcontrols
-        youtubeautostart
-      }
-      contentinvideo
-      bumpertext
-      viewerwarning
-      marate
-      marating1
-      marating2
-      marating3
-      marating4
-      maratingtx1
-      maratingtx2
-      maratingtx3
-      maratingtx4
-      profTitle
-      profText
-      addressText
-      addressText2
-      skillsTitle
-      skillsText
-      svgzindex
-      scrollable
-      tagline
-      featuredImage {
-        publicURL
-        relativePath
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-        }
-      }
-      secondaryImage {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-      underlayImage {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-        }
-      }
-      cta {
-        ctaText
-        ctaLink
-      }
-      coverletter {
-        coverText
-        coverLink
-      }
-      portfolio {
-        openText
-        closeText
-      }
-      svgImage {
-        relativePath
-      }
-    }
-  }
-  posts: allMarkdownRemark(
-    sort: {
-      fields: [frontmatter___spotlight, frontmatter___date]
-      order: [ASC, ASC]
-    }
-    filter: {
-      frontmatter: {
-        template: { eq: "blog-post" }
-      }
-    }
-    limit: 6
-  ) {
-    edges {
-      node {
-        id
-        excerpt(pruneLength: 250)
-        frontmatter {
-          date(formatString: "YYYY-MM-DD-HH-MM-SS")
-          slug
-          title
-          tags
-          category
-          youtube {
-            youtubemute
-            youtubeloop
-            youtubecontrols
-            customcontrols
-            youtuber
-          }
-          spotlight
-          featuredImage {
-            relativePath
-            publicURL
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-            }
-          }
-        }
-      }
-    }
-  }
-  
-  
-  
-  
-  
-}
-`;
-
-
-
-
 const HomePage = ({ data }) => {
-  // const { postcount } = useSiteMetadata()
-  const { markdownRemark, posts } = data // data.markdownRemark holds your post data
+
+  const { markdownRemark, posts } = data 
   const { frontmatter, html, excerpt } = markdownRemark
   const FrontImage = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
+
+    const { postcount } = useSiteMetadata()
+    const Postcount = postcount
+
 
     const SecondaryImage = frontmatter.secondaryImage
     ? frontmatter.secondaryImage.childImageSharp.gatsbyImageData
@@ -796,7 +635,7 @@ alt={frontmatter.title + " - Featured image"}
 className="featured-image2 layer12 iiz__img"
 placeholder="blurred"
 loading="eager"
-style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'0px solid !important', objectFit:'cover', margin:'0 auto'}}
+style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'0px solid !important', objectFit:'contain', margin:'0 auto'}}
 />
 
 
@@ -839,7 +678,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'10vh 0 0 0', border:'0px solid blue'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 0 0', border:'0px solid blue'}}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
@@ -1175,11 +1014,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show footer */}
 {showfooter ? (
-  // <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={true} animateOnce={true} animatePreScroll={false} > 
 <div className="scroll-area" style={{scrollSnapAlign:'end'}}>
 <Footer />
 </div>
-// </ScrollAnimation>
 ) : (
   ""
 )}
@@ -1191,6 +1028,169 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 }
 
 export default HomePage
+
+
+
+export const pageQuery = graphql`
+query HomeQuery($id: String!) {
+  site {
+    siteMetadata {
+      title
+      titleDefault
+      siteUrl
+      description
+      image
+      twitterUsername
+      companyname
+      postcount
+      showfooter
+      showInfo
+      showCover
+      showFeature
+      showPosts
+      showSocial
+      showSkills
+      showNav
+      showPopup
+      showDates
+      showResume
+      showSkills
+    }
+  }
+  markdownRemark(id: {eq: $id}) {
+    id
+    html
+    excerpt(pruneLength: 148)
+    frontmatter {
+      date(formatString: "YYYY-MM-DD-HH-MM-SS")
+      slug
+      title
+      description
+      audiostart
+      audiotitle
+      audioend
+      youtube{
+        youtuber
+        youtuber2
+        youtubestart
+        youtubeend
+        youtubeshoworiginal
+        youtubersuggestion1
+        youtubersuggestion2
+        youtubersuggestion3
+        clicktoplay
+        youtubemute
+        youtubecontrols
+        customcontrols
+        youtubeautostart
+      }
+      contentinvideo
+      bumpertext
+      viewerwarning
+      marate
+      marating1
+      marating2
+      marating3
+      marating4
+      maratingtx1
+      maratingtx2
+      maratingtx3
+      maratingtx4
+      profTitle
+      profText
+      addressText
+      addressText2
+      skillsTitle
+      skillsText
+      svgzindex
+      scrollable
+      tagline
+      featuredImage {
+        publicURL
+        relativePath
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+      }
+      secondaryImage {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+      underlayImage {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+      }
+      cta {
+        ctaText
+        ctaLink
+      }
+      coverletter {
+        coverText
+        coverLink
+      }
+      portfolio {
+        openText
+        closeText
+      }
+      svgImage {
+        relativePath
+      }
+    }
+  }
+  posts: allMarkdownRemark(
+    sort: {
+      fields: [frontmatter___spotlight, frontmatter___date]
+      order: [ASC, ASC]
+    }
+    filter: {
+      frontmatter: {
+        template: { eq: "blog-post" }
+      }
+    }
+    limit: 6
+  ) {
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 250)
+        frontmatter {
+          date(formatString: "YYYY-MM-DD-HH-MM-SS")
+          slug
+          title
+          tags
+          category
+          youtube {
+            youtubemute
+            youtubeloop
+            youtubecontrols
+            customcontrols
+            youtuber
+          }
+          spotlight
+          featuredImage {
+            relativePath
+            publicURL
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  
+}
+`;
+
+
+
+
 
 // export const Head = () => (
 //   <body className="flatten" />
