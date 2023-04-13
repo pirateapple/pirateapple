@@ -1,7 +1,7 @@
 ---
 slug: /
 tagline:  Launch Your Web App
-featuredImage: /assets/CW-promo6.webp
+featuredImage: /assets/CW-promo4.webp
 youtube:
   youtuber: 
   youtuber2: https://youtu.be/yBet3jC7Kss
