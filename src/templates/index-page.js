@@ -776,7 +776,7 @@ alt={frontmatter.title + " - Featured image"}
 className="featured-image2 layer12 iiz__img"
 placeholder="blurred"
 loading="eager"
-style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain', }}
+style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'0px solid !important', objectFit:'cover', margin:'0 auto'}}
 />
 
 
@@ -784,12 +784,12 @@ style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'
 
           ) : (
 
-            <StaticImage src="../../static/assets/default-og-image.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
+            <StaticImage src="../../static/assets/default-og-image.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain', margin:'0 auto'}} />
   
           )}
 
 {YouTube ? (
-            <div style={{position:'', top:'0'}}><Iframer /></div>
+            <div style={{position:'absolute', top:'0'}}><Iframer /></div>
        
           ) : (
             ""
