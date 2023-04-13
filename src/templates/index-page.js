@@ -757,14 +757,13 @@ Click to play
      )}
 
 
+<div className="scroll-container" style={{}}>
+
 
 
 {/* show feature */}
 {showFeature ? (   
-
-
-
-<section id="feature" order="1" name="feature" className="print" style={{ display:'', height:'90vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'90vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
   <article>
 
   <div className=""  >
@@ -797,11 +796,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
       </div>
   </article>
 </section>
-
 ) : (
   ""
 )}
-
 {/* end show feature */}
 
 
@@ -816,16 +813,12 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
-<div id="intro" name="container21" className="container21" style={{position:'relative', zIndex:'1', paddingTop:'0', marginTop:'0'}}>
+
 
 
 {/* show Info */}
-
 {showInfo ? (
-
-
-
-<section className="vertical" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 10vh 0', border:'0px solid blue'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 10vh 0', border:'0px solid blue'}}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
@@ -1067,18 +1060,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
-
-
-
+{/* show posts */}
 {showPosts ? (
-  <section id="showPosts" style={{marginTop:''}}>
-
-
-
-
-
-
-
+  <section id="showPosts" className="scroll-area" style={{marginTop:''}}>
   {/* <TwilightLogo className="bglogo darkened" /> */}
 <div className="contentpanel grid-container" style={{}}>
 
@@ -1093,30 +1077,18 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
       ) : (
         ""
       )}
-
-
-
-
-
-
+{/* end show posts */}
 
 
 
 
 {/*  show Resume */}
 {showResume ? (
-  
   // <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={true} >
-
-  
-<section className="vertical" id="resume" order="4" style={{ display:'', minHeight:'', overflow:'', margin:'5vh 0 0 0', position:'relative', border:'0px solid blue'}}>
+<section className="scroll-area" id="resume" order="4" style={{ display:'', minHeight:'', overflow:'', margin:'5vh 0 0 0', position:'relative', border:'0px solid blue'}}>
 
 
-<div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'start', background:'rgba(24, 29, 31, 0.2)', borderRadius:'12px', padding:'5px 0 5px 0', }}>
-<div className="keyboard" order="" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0', lineHeight:'calc(2em + .4vw)'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> &nbsp;OR&nbsp; <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
-  <div className="keyboard" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto', lineHeight:'calc(2em + .4vw)',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'38px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
-  </div>
-<br />
+
 <article className="hasapp"  style={{ display:'', height:'', overflow:'', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff'}}>
 
 <div id="resumename" style={{display:'none', position:'relative', top:'', fontSize:'160%', padding:'0 0 2rem 0', textAlign:'left', width:'100%',}}>{companyname}<br />
@@ -1155,11 +1127,8 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/*  show Skills */}
 {showSkills ? (
-   
   //  <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={true} >
-
-   
-<section className="print vertical" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'', border:'0px solid green', }}>
+<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'', border:'0px solid green', }}>
 <br />
 {/* <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={false} > */}
 <div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
@@ -1176,28 +1145,29 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
- </div>{/* end scooch */}
+
 
 
 
 
  {/* <GoogleMap /> */}
-<div id="bottom" className="usability" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
-  
-{/* <div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://urbanfetish.com">UrbanFetish.com</a></div> */}
-</div>
-<br/><br/><br/>
+{/* <div id="bottom" className="usability scroll-area" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'1px solid blue', textAlign:'center'}}>
+<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://urbanfetish.com">UrbanFetish.com</a></div>
+</div> */}
+
 
 {/* show footer */}
 {showfooter ? (
   // <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={true} animateOnce={true} animatePreScroll={false} > 
-<Footer className="vertical" />
+<div className="scroll-area" style={{scrollSnapAlign:'end'}}>
+<Footer />
+</div>
 // </ScrollAnimation>
 ) : (
   ""
 )}
 {/* end show footer */}
-
+</div>
     </Layout>
 
   )

@@ -196,7 +196,7 @@ export default function Footer() {
 
 
 
-      <footer className="" style={{display:'flex', flexDirection:'column', padding:'1rem 0', marginTop:'0', position:'relative'}}>
+      <footer className="" style={{display:'flex', flexDirection:'column', padding:'1rem 0', marginTop:'0', position:'relative', width:'100vw',textAlign:'center'}}>
 
     {/* <Consent /> */}
 <br />
@@ -204,12 +204,12 @@ export default function Footer() {
     {/* <Install /> */}
 <br />
     
-      <div className="" style={{textAlign:'center'}}>
 
 
-      {/* <Link state={{modal: true}} to="/contact/" className="button fire specialfont" style={{margin:'2rem 2rem', textDecoration:'none', fontSize:'clamp(1rem, 2vw, 2.8rem)', padding:'1rem 2rem', borderRadius:'8px'}}>Contact Us - We &#9825; Feedback!</Link> */}
 
- <div >
+      <Link to="/contact/" className="button fire specialfont" style={{margin:'2rem 2rem', textDecoration:'none', fontSize:'clamp(1rem, 2vw, 2.8rem)', padding:'1rem 2rem', borderRadius:'8px'}}>Contact Us - We &#9825; Feedback!</Link>
+
+
      
 
         { !sIcons ? (
@@ -217,17 +217,21 @@ export default function Footer() {
 
   ) : (
     <div className="social-icons" style={{textAlign:'center', justifyContent:'center', display:'flex', alignItems:'center', margin:'3rem 0'}}>
-       <div className="socialtext" style={{fontSize:'14px',}}>We're<br />Social</div> {sIcons}
+       <div className="socialtext" style={{fontSize:'14px',}}>Social<br />Links</div> {sIcons}
         </div>
   )}
   
         
-        </div>
+
 
         
-      </div>
+
+
+
       <nav className="footerlinks" aria-label="footer">
-      <div style={{textAlign: 'center', margin: '2rem 10px 1rem 10px', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none'}}><Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link></div>
+      <div style={{width:'100%', textAlign: 'center', margin: '2rem 10px 1rem 10px', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none'}}>
+
+<Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link></div>
   
 
 <div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem'}}>Copyright &copy;
