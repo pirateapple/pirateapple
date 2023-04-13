@@ -7,7 +7,7 @@
 *{animation-duration:.01ms;animation-iteration-count:1;scroll-behavior:auto;transition-duration:.01ms}
 }
 
-html, body{height:100vh;}
+html, body{height:100vh; max-width:100vw; overflow-x:hidden;}
 
 // *{
 //   box-shadow:none ;
