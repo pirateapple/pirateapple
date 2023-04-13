@@ -766,13 +766,13 @@ Click to play
      )}
 
 
-<div className="scroll-container" style={{}}>
+<div className="scroll-container">
 
 
 
 {/* show feature */}
 {showFeature ? (   
-<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'90vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'85vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
   <article>
 
   <div className=""  >
@@ -827,10 +827,10 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 0 0', border:'0px solid blue'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 0 0', border:'0px solid blue'}}>
   <article style={{ margin:'0 0 0 0'}}>
 
-  <div className="" style={{maxHeight:'70vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
+  <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
 {UnderlayImage ? (
             <GatsbyImage
             image={UnderlayImage}
@@ -1071,7 +1071,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show posts */}
 {showPosts ? (
-  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 0 0', border:'0px solid blue'}}>
+  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 0 0', border:'0px solid blue'}}>
   {/* <TwilightLogo className="bglogo darkened" /> */}
 <div className="contentpanel grid-container">
 
@@ -1099,7 +1099,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 <article className="hasapp"  style={{ display:'', height:'', overflow:'', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff'}}>
 
-<div id="resumename" style={{display:'none', position:'relative', top:'', fontSize:'160%', padding:'0 0 2rem 0', textAlign:'left', width:'100%',}}>{companyname}<br />
+<div id="resumename" style={{display:'none', position:'relative', top:'', fontSize:'160%', padding:'0 0 0 0', textAlign:'left', width:'100%',}}>{companyname}<br />
 {frontmatter.addressText}
 <br />
 {frontmatter.addressText2}
@@ -1124,6 +1124,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
   <div className="keyboard" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto', lineHeight:'calc(2em + .4vw)',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'38px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
   </div>
 
+
 </article>
 </section>
 // </ScrollAnimation>
@@ -1136,7 +1137,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/*  show Skills */}
 {showSkills ? (
-<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'', border:'0px solid green', }}>
+<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'',  }}>
 <div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
 </div>
   </section>

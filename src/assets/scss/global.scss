@@ -7,7 +7,7 @@
 *{animation-duration:.01ms;animation-iteration-count:1;scroll-behavior:auto;transition-duration:.01ms}
 }
 
-html, body{height:100vh; max-width:100vw; overflow-x:hidden;}
+html, body{height:100vh; max-width:100vw; overflow-x:hidden !important;}
 
 // *{
 //   box-shadow:none ;
@@ -35,6 +35,32 @@ body.homepage #gobacker{display: none;}
 body{overflow-x:hidden; overflow-y:auto !important;}
 body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
 
+.scroll-container{
+  max-width: 100vw;
+  max-height: 100vh;
+  scroll-padding-top: 0px;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  -webkit-scroll-snap-type: y mandatory;
+      -ms-scroll-snap-type: y mandatory;
+          scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+}
+.scroll-area:nth-last-child(2) {
+  scroll-snap-align: end;
+  // border:1px solid red;
+}
+
+
+
+
+
+
 
 .gatsby-image-wrapper {
   position: relative;
@@ -51,7 +77,6 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
   left:10%;
   right:10%;
   margin:0 auto;
-  // display:grid;
   display:none;
   place-content: center;
   place-self:center;
@@ -675,21 +700,7 @@ to{opacity:0;z-index:-3}
 
 
 
-.scroll-container{
-  max-width: 100vw;
-  max-height: 100vh;
-}
 
-.scroll-container {
-  overflow: auto;
-  -webkit-scroll-snap-type: y mandatory;
-      -ms-scroll-snap-type: y mandatory;
-          scroll-snap-type: y mandatory;
-}
-
-.scroll-area {
-  scroll-snap-align: start;
-}
 
 
 
