@@ -24,6 +24,7 @@ audioend: null
 scrollable: false
 nftdrop: null
 category: 
+spotlight: true
 title: Another Test Blog Post
 slug: /test2
 audiostart: null

@@ -29,6 +29,7 @@ audiostart: null
 template: blog-post
 title: Test post with auto advance video playlist
 categories: news
+spotlight: true
 date: 2023-02-10 10:43
 description: example of using video playlists
 comments: false

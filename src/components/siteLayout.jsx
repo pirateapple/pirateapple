@@ -52,14 +52,14 @@ const Layout = ({ children }) => {
       sessionStorage.setItem("scrollPos", window.pageYOffset)
     }, [])
   
-    // useEffect(() => {
-    //   if (window.history.scrollRestoration) {
-    //     const scrollPos = sessionStorage.getItem("scrollPos")
-    //     window.history.scrollRestoration = "manual"
-    //     window.scrollTo(0, scrollPos)
-    //     window.history.scrollRestoration = "auto"
-    //   }
-    // }, [])
+    useEffect(() => {
+      if (window.history.scrollRestoration) {
+        const scrollPos = sessionStorage.getItem("scrollPos")
+        window.history.scrollRestoration = "manual"
+        window.scrollTo(0, scrollPos)
+        window.history.scrollRestoration = "auto"
+      }
+    }, [])
 
 
     useEffect(() => {

@@ -146,8 +146,15 @@ query HomeQuery($id: String!) {
     }
   }
   posts: allMarkdownRemark(
-    sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {template: {eq: "blog-post"}}}
+    sort: {
+      fields: [frontmatter___spotlight, frontmatter___date]
+      order: [ASC, ASC]
+    }
+    filter: {
+      frontmatter: {
+        template: { eq: "blog-post" }
+      }
+    }
     limit: 6
   ) {
     edges {
@@ -160,14 +167,14 @@ query HomeQuery($id: String!) {
           title
           tags
           category
-          youtube{
+          youtube {
             youtubemute
             youtubeloop
             youtubecontrols
             customcontrols
             youtuber
           }
-          
+          spotlight
           featuredImage {
             relativePath
             publicURL
@@ -179,6 +186,11 @@ query HomeQuery($id: String!) {
       }
     }
   }
+  
+  
+  
+  
+  
 }
 `;
 
@@ -827,7 +839,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 0 0', border:'0px solid blue'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'10vh 0 0 0', border:'0px solid blue'}}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
@@ -1071,7 +1083,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show posts */}
 {showPosts ? (
-  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 0 0', border:'0px solid blue'}}>
+  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'10vh 0 0 0', border:'0px solid blue'}}>
   {/* <TwilightLogo className="bglogo darkened" /> */}
 <div className="contentpanel grid-container">
 
