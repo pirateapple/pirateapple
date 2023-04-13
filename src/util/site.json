@@ -6,7 +6,7 @@
     "favicon32x32": "/assets/logo.svg",
     "favicon16x16": "/assets/logo.svg",
     "showSearch": true,
-    "showNav": false,
+    "showNav": true,
     "companyname": "Complete Web",
     "siteUrl": "https://completeweb.site",
     "showDates": true,

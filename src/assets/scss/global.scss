@@ -675,10 +675,9 @@ to{opacity:0;z-index:-3}
 
 
 
-.scroll-container,
-.scroll-area {
+.scroll-container{
   max-width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
 }
 
 .scroll-container {
@@ -692,17 +691,7 @@ to{opacity:0;z-index:-3}
   scroll-snap-align: start;
 }
 
-.scroll-container,
-.scroll-area {
-  margin: 0 auto;
-}
 
-.scroll-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
 
 
 

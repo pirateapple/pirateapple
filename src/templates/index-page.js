@@ -92,6 +92,16 @@ query HomeQuery($id: String!) {
       }
       contentinvideo
       bumpertext
+      viewerwarning
+      marate
+      marating1
+      marating2
+      marating3
+      marating4
+      maratingtx1
+      maratingtx2
+      maratingtx3
+      maratingtx4
       profTitle
       profText
       addressText
@@ -137,8 +147,8 @@ query HomeQuery($id: String!) {
   }
   posts: allMarkdownRemark(
     sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {template: {eq: "blog-post"}, category: {eq: "memes"}}}
-    limit: 30
+    filter: {frontmatter: {template: {eq: "blog-post"}}}
+    limit: 6
   ) {
     edges {
       node {
@@ -156,7 +166,6 @@ query HomeQuery($id: String!) {
             youtubecontrols
             customcontrols
             youtuber
-            youtuber2
           }
           
           featuredImage {
@@ -736,7 +745,7 @@ Click to play
 
 
 {showNav ? (
-  <div className="spacer" style={{height:'70px', border:'0px solid yellow'}}></div>
+  <div className="spacer" style={{height:'', border:'0px solid yellow'}}></div>
       ) : (
         ""
       )}
@@ -818,10 +827,10 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 10vh 0', border:'0px solid blue'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 0 0', border:'0px solid blue'}}>
   <article style={{ margin:'0 0 0 0'}}>
 
-  <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
+  <div className="" style={{maxHeight:'70vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
 {UnderlayImage ? (
             <GatsbyImage
             image={UnderlayImage}
@@ -1062,13 +1071,13 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show posts */}
 {showPosts ? (
-  <section id="showPosts" className="scroll-area" style={{marginTop:''}}>
+  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'100%',  minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 0 0', border:'0px solid blue'}}>
   {/* <TwilightLogo className="bglogo darkened" /> */}
-<div className="contentpanel grid-container" style={{}}>
+<div className="contentpanel grid-container">
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
-                         <BlogListHome data={posts} />
-      {/* <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/2" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
+<BlogListHome data={posts} />
+      {/* <div style={{textAlign:'center', display:'grid', placeContent:'center', padding:'20% 0 0 0'}}><Link className="button " to="/archive/" style={{textDecoration:'none', color:'inherit', textAlign:'center'}}>View More </Link>
       </div> */}
 </div>
 
@@ -1085,8 +1094,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 {/*  show Resume */}
 {showResume ? (
   // <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={true} >
-<section className="scroll-area" id="resume" order="4" style={{ display:'', minHeight:'', overflow:'', margin:'5vh 0 0 0', position:'relative', border:'0px solid blue'}}>
-
+<section className="scroll-area" id="resume" order="4" style={{ display:'', minHeight:'100vh', overflow:'', margin:'0 0 0 0', position:'relative', border:'0px solid blue',}}>
 
 
 <article className="hasapp"  style={{ display:'', height:'', overflow:'', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff'}}>
@@ -1096,7 +1104,8 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 <br />
 {frontmatter.addressText2}
 </div>
-{/* <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={false} >  */}
+
+
 <div id="" className="">
 
 <span
@@ -1108,7 +1117,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
           />
   
 </div>
-{/* </ScrollAnimation> */}
+
 <br />
 <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'start', background:'rgba(24, 29, 31, 0.2)', borderRadius:'12px', padding:'5px 0 5px 0', }}>
 <div className="keyboard" order="" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0', lineHeight:'calc(2em + .4vw)'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> &nbsp;OR&nbsp; <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
@@ -1127,15 +1136,10 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/*  show Skills */}
 {showSkills ? (
-  //  <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={true} >
 <section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'', border:'0px solid green', }}>
-<br />
-{/* <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={false} > */}
 <div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
 </div>
-{/* </ScrollAnimation> */}
   </section>
-// </ScrollAnimation>
           ) : (
             ""
           )}
