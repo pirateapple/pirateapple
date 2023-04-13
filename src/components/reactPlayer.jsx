@@ -53,7 +53,7 @@ const Player = () => (
 
 
 
-      light="../src/img/transparent.png"
+      light="../assets/transparent.png"
     />
 
 

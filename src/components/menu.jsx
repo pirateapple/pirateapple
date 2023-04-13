@@ -8,6 +8,13 @@ import Menu from "../util/menu.json"
 // import { FaHandPointDown } from "react-icons/fa"
 
 
+
+
+
+
+
+
+
 const newMenu = Menu.menuItems.map((menu, index) => (
 
  <Link aria-label={menu.menutitle} to={menu.url} title={menu.menutitle} className="navbar-item">{menu.menutitle}</Link>
@@ -17,18 +24,24 @@ const newMenu = Menu.menuItems.map((menu, index) => (
 
 
 
+
+
+
+ 
+
+
+
 function MenuInc() {
   return (
-    <>
-      {newMenu.map((menuItem, index) => (
-        <li key={index}>
+<>
+      {newMenu.map((menuItem) => (
+        <li key={menuItem.key}>
           {menuItem}
-        </li>
+          </li>
       ))}
-    </>
+</>
   );
 }
-
 
 export default MenuInc
 

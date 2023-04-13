@@ -15,7 +15,7 @@ const PostCard = ({ data }) => {
 
     <div className="post-card1">
 
-      <Link className="postlink" state={showModals ? { modal: true } : {}} to={data.frontmatter.slug}>
+      <Link className="postlink" to={data.frontmatter.slug}>
 
       {data.frontmatter.featuredImage ? (
           <GatsbyImage
@@ -38,7 +38,7 @@ const PostCard = ({ data }) => {
       )}
 
 
-<div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
+<div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
   
         {data.frontmatter.youtube.youtuber ? (
 
@@ -57,7 +57,7 @@ const PostCard = ({ data }) => {
 ""
 )}
 
-      <div className="panel" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'10px auto', width:'auto', maxWidth:'80vw', gap:'.4vw', height:'', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)',  background:'rgba(0, 0, 0, 0.7)', borderRadius:'', color:'#aaa' }}>
+      <div className="panel" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'10px auto', width:'auto', maxWidth:'80vw', gap:'.4vw', height:'', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)',  background:'rgba(0, 0, 0, 0.7)', borderRadius:'', border:'0px solid red', color:'#aaa' }}>
             <h2 className="title" style={{ }}>
               {data.frontmatter.title}
             </h2>

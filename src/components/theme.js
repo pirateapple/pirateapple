@@ -6,10 +6,11 @@ import { FiMoon, FiSun } from "react-icons/fi"
 const Theme = () => {
   const [colorMode, setColorMode] = useColorMode()
   return (
-    <div className="themer">
+    <div className="carto">
       <button style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'0px', textAlign:'center'}}
         onClick={e => {
           setColorMode(colorMode === "default" ? "dark" : "default")
+            window.location.reload()
         }}
         aria-label="Theme Color"
       >
@@ -25,6 +26,7 @@ const Theme = () => {
     </div>
   )
 }
+
 export default Theme
 
 

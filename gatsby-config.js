@@ -400,10 +400,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `MemeGenes`,
-        short_name: `MemeGenes`,
+        name: `Complete Web`,
+        short_name: `Complete Web`,
         start_url: `/?user_mode=app`,
-        description: `MemeGenes`,
+        description: `Complete Web`,
         background_color: `#111`,
         lang: `en`,
         theme_color: `#111`,

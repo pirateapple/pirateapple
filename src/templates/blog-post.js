@@ -392,7 +392,7 @@ const OriginalUrl = frontmatter.youtube.youtuber
           playIcon={
             <button aria-label="Click To Play" className="clickplays" style={{position:'relative', zIndex:'', top:'', border:'0px  solid red', width:'100vw', height:'0', background:'transparent', color:'', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
           
-        <div className="" style={{position:'absolute', top:'-300px', right:'', zIndex:'3', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
+        <div className="audiopopper" style={{position:'absolute', top:'-400px', right:'', zIndex:'3', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
           
       
           {/* <div className="" style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem',}}>Click For Audio</div> */}
@@ -579,7 +579,7 @@ const YouTube = frontmatter.youtube.youtuber
           {/* <img className="homepage-bg" src={iconimage} width="250px" height="150px" alt="UrbanFetish" style={{ width:'', margin:'120px auto 0 auto', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important', position:'relative', top:''}} /> */}
 
 
-          {/* <div className="flex-items" style={{fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', margin:'0 auto 0 auto', textTransform:'uppercase',}}>The following is rated: <strong>{frontmatter.marate}</strong></div>
+          <div className="flex-items" style={{fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', margin:'0 auto 0 auto', textTransform:'uppercase',}}>The following is rated: <strong>{frontmatter.marate}</strong></div>
 
 <ul className="flex-container" style={{display:'flex', flexDirection:'row', gap:'1vh', justifyContent:'center', alignItems:'center',  textAlign:'left', margin:'0 auto', color:'#ddd', background:'rgba(0, 0, 0, .8)', width:'auto', maxWidth:'800px', height:'', border:'1px solid #222', borderRadius:'12px', padding:'2vh 5vw' }}>
 
@@ -633,10 +633,10 @@ const YouTube = frontmatter.youtube.youtuber
 </li>
 
 </ul>
-<div className="flex-items" style={{position:'relative', right:'', top:'', display:'', fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', textTransform:'uppercase', textAlign:'center'}}>{frontmatter.viewerwarning}</div> */}
+<div className="flex-items" style={{position:'relative', right:'', top:'', display:'', fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', textTransform:'uppercase', textAlign:'center'}}>{frontmatter.viewerwarning}</div>
 
 
-         <div style={{display:'grid', placeContent:'center', position:'relative', zindex:'1', fontWeight:'bold', padding:'20% 0 0 0', fontSize:'clamp(.6rem, 1.4vw, 2rem)', width:'100%', maxWidth:'25vw', height:'', border:'0px solid', borderRadius:'12px', margin:'0 auto 0 auto', opacity:'.99', textShadow:'2px 2px 2px black', color:'#fff' }}>
+         <div style={{display:'grid', placeContent:'center', position:'relative', zindex:'1', fontWeight:'bold', padding:'3% 0 0 0', fontSize:'clamp(.6rem, 1.4vw, 2rem)', width:'100%', maxWidth:'25vw', height:'', border:'0px solid', borderRadius:'12px', margin:'0 auto 0 auto', opacity:'.99', textShadow:'2px 2px 2px black', color:'#fff' }}>
 <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'clamp(2rem, 4.4vw, 3rem)', filter:'drop-shadow(0px 0px 12px #fff',}} />
 Click to play
 </div>
@@ -959,13 +959,16 @@ Click to play
       frontmatter.showZoom ? (
         <div className="imageonly" style={{ display: "flex", justifyContent: "center", maxHeight: "" }}>
           <InnerImageZoom
+          // className="featured-image1"
             src={getSrc(FrontImage)}
             loading="eager"
-            zoomSrc={getSrc(FrontImage)}
-            fullscreenOnMobile={true}
+            // zoomSrc={getSrc(FrontImage)}
+            // fullscreenOnMobile={true}
             // moveType="drag"
             zoomScale={0.9}
             zoomPreload={true}
+            style={{  maxHeight:'75vh', objectFit:'scale-down'}}
+            
             // height={300}
           />
         </div>
@@ -973,9 +976,10 @@ Click to play
         <GatsbyImage
         image={FrontImage}
         alt={frontmatter.title + " - Featured image"}
-        className="featured-image12 layer12 iiz__img"
+        // className="featured-image11 layer12 iiz__img"
         placeholder="blurred"
         loading="eager"
+        style={{  maxHeight:'100vh', objectFit:'scale-down', margin:'0 auto'}}
       />
           
       )
@@ -1496,6 +1500,8 @@ Click to play original video
     ) : (
             ""
           )}
+
+
 
 
 

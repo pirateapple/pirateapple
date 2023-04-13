@@ -1,12 +1,8 @@
 {
   "menuItems": [
     {
-      "menutitle": "Category",
-      "url": "/category/news"
-    },
-    {
       "menutitle": "Tags",
-      "url": "/tag/test"
+      "url": "/tags"
     },
     {
       "menutitle": "Archive",

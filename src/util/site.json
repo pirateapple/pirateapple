@@ -30,7 +30,7 @@
     "showfooter": true,
     "showFeature": false,
     "showCover": true,
-    "image": "/assets/transparent.png",
+    "image": "",
     "description": "A Complete Web Solution",
     "icon512": "/assets/logo.svg",
     "showSwipe": true,

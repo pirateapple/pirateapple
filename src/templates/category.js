@@ -123,8 +123,8 @@ placeholder="blurred"
 
 
 export const query = graphql`
-query($category: String!) {
-  allMarkdownRemark {
+query ($category: String!) {
+  allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
     edges {
       node {
         frontmatter {
@@ -132,11 +132,11 @@ query($category: String!) {
         }
       }
     }
-    group(field: {frontmatter: {category: SELECT}}) {
+    group(field: frontmatter___category) {
       fieldValue
     }
   }
-  posts: allMarkdownRemark(filter: {frontmatter: {category: {eq: $category}}}) {
+  posts: allMarkdownRemark(filter: {frontmatter: {category: {eq: $category}}}, sort: { fields: frontmatter___date, order: DESC }) {
     edges {
       node {
         id
@@ -145,7 +145,7 @@ query($category: String!) {
           title
           date(formatString: "MMMM DD, YYYY")
           category
-          youtube{
+          youtube {
             youtuber
           }
           featuredImage {
@@ -158,6 +158,7 @@ query($category: String!) {
     }
   }
 }
+
 
 `
 

@@ -30,9 +30,12 @@ export default function Seo({
   `)
 
   const {
+    // siteTitle,
     titleDefault,
+    // siteUrl,
     siteDescription,
     siteImage,
+    // hrefLang,
     twitterUsername,
   } = siteMetadata
 
@@ -69,7 +72,7 @@ export default function Seo({
 
       <meta name="apple-mobile-web-app-capable" content="yes" />
       
-      {/* <link
+      <link
         rel="icon"
         type="image/png"
         sizes="32x32"
@@ -85,9 +88,9 @@ export default function Seo({
         rel="apple-touch-icon"
         sizes="180x180"
         href="/icons/manifest-192x192.png"
-      /> */}
+      />
 
-{/* <link rel="apple-touch-icon" sizes="180x180" href="/siteimages/apple-splashapple-icon-180.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/siteimages/apple-splashapple-icon-180.png" />
 <link rel="apple-touch-icon" sizes="167x167" href="/siteimages/apple-splashapple-icon-167.png" />
 <link rel="apple-touch-icon" sizes="152x152" href="/siteimages/apple-splashapple-icon-152.png" />
 <link rel="apple-touch-icon" sizes="120x120" href="/siteimages/apple-splashapple-icon-120.png" />
@@ -153,7 +156,7 @@ export default function Seo({
     media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
 <link rel="apple-touch-startup-image"
     href="/siteimages/apple-splash-1136-640.png"
-    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" /> */}
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
 
 
 

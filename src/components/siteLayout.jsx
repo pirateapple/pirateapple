@@ -423,7 +423,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-<header id="top" name="pagetop" style={{}} >
+<header style={{}} >
 {showNav2 ? (
 
 <>
@@ -600,14 +600,19 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-<div style={{maxWidth:'100vw', overflowX:'hidden', position:'relative'}}>
+<div id="top" name="pagetop" style={{maxWidth:'100vw', overflowX:'hidden', position:'relative'}}>
 {children}
 </div>
       
 
 
-<img className="backimage" src={image} alt="Default Background" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" />
+ 
 
+{image ? (
+<img className="backimage" src={image} alt="Default Background" style={{height:'100vh', width:'100vw', position:'fixed', zIndex:'-2', top:'0', objectFit:'cover',}} width="10" height="10" />
+) : (
+  ""
+)}
 
       
       {/* <Consent /> */}

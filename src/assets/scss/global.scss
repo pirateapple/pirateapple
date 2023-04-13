@@ -16,7 +16,7 @@ html, body{height:100vh;}
 
 // .frame-content *{color:red ;}
 
-#gatsby-focus-wrapper{height:100vh;}
+// #gatsby-focus-wrapper{height:100vh;}
 
 :root{--button-alternate-color:#e3272d;--button-color:#e5c3d3;--font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;--font-family-mono:Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;--font-size-small:12px;--grid-gap:30px;--home-link-color:#d4d4d4;--home-link-hover-color:var(--primary-color);--home-link-hover-color:#e3272d;--input-focus-border:#83aaac;--label-text:#777;--nav-link-hover-bg:#111;--post-link-color:#0f070b;--text-color-meta:rgba(0,0,0,.5), height:100vh;}
 
@@ -35,6 +35,13 @@ body.homepage #gobacker{display: none;}
 body{overflow-x:hidden; overflow-y:auto !important;}
 body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
 
+
+.gatsby-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  margin:0 auto;
+}
 
 .bglogo{
   max-width:50vw;
@@ -69,9 +76,14 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
 
 body.homepage #showPosts { display: block; position:relative; }
 
-body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scroll .gatsby-image-wrapper {max-height: 55vh; overflow: hidden;}
+// body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scroll .gatsby-image-wrapper {max-height: 55vh; overflow: hidden;}
 
-
+body.blogpost .gatsby-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: inherit !important;
+  margin: 0 auto;
+}
 
   .header {
     transform: translateY(0);
@@ -101,10 +113,28 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
 
 
 
+// .effects::after{
+//       top:0;
+//       content:"  ";
+//       left:0;
+//       opacity:.99;
+//       z-index: 0;
+//       position:absolute;
+//       height:50px;
+//       width:100%;
+//       display: block;
+//       background-size: 100%;
+//       background-color: #000000;
+//       animation:fadeout 4s forwards;
+//       animation-delay: 6s;
+// }
+
+// .effects iframe{
+//   border:20px solid blue !important;
+// }
 
 
-
-
+.audiopopper{border:1px solid #222;}
 
 
 
@@ -120,23 +150,24 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
   column-count: 1;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3vw;
+  padding-bottom: 30vh !important;
 }
 
 
 
 .grid-container .featured-image1{
-  max-height: 30vh;
+  max-height: 20vh !important;
 }
 
 
 
-.postlink:hover h2{color:var(--theme-ui-colors-siteColor); outline:1px solid var(--theme-ui-colors-siteColor); border-radius: 12px;}
+.postlink:hover h2{color:var(--theme-ui-colors-siteColor); outline:0px solid var(--theme-ui-colors-siteColor); border-radius: 12px;}
 
 .post-card1{
   display: flex;
   flex-direction: column;
   height: auto;
-  max-height: 70vh;
+  // max-height: 70vh;
   justify-content: start;
 }
 
@@ -230,6 +261,42 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
 
 
 
+.iiz__img {
+  max-width: 98vw;
+  height: auto;
+  max-height:70vh!important;
+  object-fit:scale-down !important; 
+  color:rgb(183, 8, 246)
+}
+
+
+.iiz__close {
+//   top:inherit !important;
+// bottom: 10px !important;
+//   right: 10px !important;
+  visibility: inherit !important;
+  opacity: 1 !important;
+  color: #fff !important;
+}
+
+.iiz__close--visible {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.iiz__close::before {
+  content: " ";
+  width: 29px;
+  height: 29px;
+  background-image:
+    -webkit-gradient(linear, left top, left bottom, from(#222), to(#222)),
+    -webkit-gradient(linear, left top, left bottom, from(#222), to(#222));
+  background-image: linear-gradient(#222, #222), linear-gradient(#222, #222);
+  background-size: 100% 1px, 1px 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 
 
@@ -273,8 +340,8 @@ body.homepage .horizontal-scroll .featured-image1, body.homepage .horizontal-scr
 to{display:none;opacity:0;z-index:-5}
 }
 
-#contentvideo .contentbody{color:red;display:none;}
-.bodycontent .contentinside{border:0 solid blue;display:none;}
+#contentvideo .contentbody{color:red;display:none !important;}
+.bodycontent .contentinside{border:0 solid blue;display:none !important;}
 .contentbody{font-size:clamp(1.2rem,2.8vw,1.8rem)}
 
 @keyframes movingBG {
@@ -496,15 +563,15 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
   position:absolute;
   left:0;
   right:0;
-  top:-100px;
+  bottom:100%;
   z-index:1;
-  min-height: 300px;
+  // min-height: 300px;
   border:0px solid blue;
   padding:0;pointer-events:pointer; margin:0 auto;
 }
 
 
-  .horizontal-scroll .spotlight{ height:100vh; top:-140%; border:0px solid red;}
+  // .horizontal-scroll .spotlight{ position:absolute; height:100%; top:0; border:0px solid red !important; display:grid; place-content: center;}
 
 
   // .post-content{ height:100vh;}
@@ -707,9 +774,11 @@ body.blogpost #menu li .fullscreenButt{display:flex}
   background-size:contain;
   border-radius:5px;
   // margin:0 auto;
-  max-height:70vh;
-  object-fit:scale-down;
+  max-height:75vh;
+  object-fit:scale-down !important;
   overflow:hidden;width:100%;
+  max-width: 90vw;
+  max-height: 70vh;
 }
 
 [data-rmiz-modal-overlay="visible"] {
@@ -904,7 +973,7 @@ body.homepage:before{display:none}
 //   height:100%; min-height: 400px; display: block;}
 // .pane2{top:70px ;}
 // .pane3{top:150px ; min-height:300px; display: block;}
-.cattags{top:140px ; }
+.cattags{top:140px ; color:#b300ff }
 
 }
 @media(min-width:1300px) {
@@ -936,7 +1005,7 @@ body.homepage:before{display:none}
 // max-height:365px ; overflow:hidden}
 
 // body.blogpost .effects{aspect-ratio:inherit;overflow:hidden}
-body.blogpost .featured-image1{border:0 solid red;max-height:70vh;max-width:100vw}
+body.blogpost .featured-image1{border:0 solid red;max-height:70vh !important;max-width:100vw}
 
 // body.blogpost .wrap-element iframe, body.homepage .wrap-element iframe{border:0;height:inherit;left:0;overflow:hidden;position:absolute;width:100vw}
 
