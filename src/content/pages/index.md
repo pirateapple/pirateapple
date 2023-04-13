@@ -21,14 +21,37 @@ audiostart: x
 audioend: x
 audiotitle: x
 underlayImage: /assets/transparent.png
-profText: ""
+profText:
+ <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
+  <p>Please enjoy(and share) the memes! <br /><br />Stay tuned for really big news about the platform that we're building and that we'll soon be offering to everyone. </p>
 addressText: ""
 portfolio:
   openText: ""
   closeText: ""
 addressText2: ""
-skillsTitle: ""
-skillsText: ""
+skillsTitle: "Mad Skills Yo!"
+skillsText: 
+  <dl>
+  <dt>
+  <h2>Overall Skills</h2><div>100%</div>
+  </dt>
+  <dd class="percentage percentage-90"><span class="text">Organization</span> <span class="percent">90%</span></dd>
+  <dd class="percentage percentage-75"><span class="text">Problem Solving</span> <span class="percent">75%</span></dd>
+  <dd class="percentage percentage-85"><span class="text">Outgoing</span> <span class="percent">85%</span></dd>
+  <dd class="percentage percentage-75"><span class="text">Javascript</span> <span class="percent">75%</span></dd>
+  <dd class="percentage percentage-80"><span class="text">UI Design</span> <span class="percent">80%</span></dd>
+  <dd class="percentage percentage-85"><span class="text">UX Design</span> <span class="percent">85%</span></dd>
+  </dl>
+
+  <dl>
+  <dt>
+  <h2>Detailed Skills</h2><div>100%</div>
+  </dt>
+  <dd class="percentage percentage-90"><span class="text">Word Perfect</span> <span class="percent">90%</span></dd>
+  <dd class="percentage percentage-85"><span class="text">MS Paint</span> <span class="percent">85%</span></dd>
+  <dd class="percentage percentage-75"><span class="text">Photoshop</span> <span class="percent">75%</span></dd>
+  <dd class="percentage percentage-99"><span class="text">Hacking</span> <span class="percent">99%</span></dd>
+  </dl>
 cta:
   ctaText: Contact
   ctaLink: x

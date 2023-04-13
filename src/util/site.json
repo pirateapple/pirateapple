@@ -13,7 +13,7 @@
     "twitterUsername": "CompleteWeb",
     "titleDefault": "A CompleteWeb Solution",
     "showSocial": true,
-    "showResume": false,
+    "showResume": true,
     "showInfo": true,
     "showNav2": true,
     "postcount": "1",
@@ -34,7 +34,7 @@
     "description": "A Complete Web Solution",
     "icon512": "/assets/logo.svg",
     "showSwipe": true,
-    "showSkills": false
+    "showSkills": true
   },
   "ga": "UA-89654528-2",
   "comments": "5639031584980992-proj"
