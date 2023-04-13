@@ -92,16 +92,6 @@ query HomeQuery($id: String!) {
       }
       contentinvideo
       bumpertext
-      viewerwarning
-      marate
-      marating1
-      marating2
-      marating3
-      marating4
-      maratingtx1
-      maratingtx2
-      maratingtx3
-      maratingtx4
       profTitle
       profText
       addressText
@@ -166,6 +156,7 @@ query HomeQuery($id: String!) {
             youtubecontrols
             customcontrols
             youtuber
+            youtuber2
           }
           
           featuredImage {
@@ -206,11 +197,11 @@ const HomePage = ({ data }) => {
     const { siteUrl } = useSiteMetadata()
 		
 
-    const YouTubeStart = frontmatter.youtubestart
-    const YouTubeEnd = frontmatter.youtubeend
-    const YouTubeMute = frontmatter.youtubemute
-    const YouTubeControls = frontmatter.youtubecontrols
-    const YouTubeAutostart = frontmatter.youtubeautostart
+    const YouTubeStart = frontmatter.youtube.youtubestart
+    const YouTubeEnd = frontmatter.youtube.youtubeend
+    const YouTubeMute = frontmatter.youtube.youtubemute
+    const YouTubeControls = frontmatter.youtube.youtubecontrols
+    const YouTubeAutostart = frontmatter.youtube.youtubeautostart
     const SkillsText = frontmatter.skillsText
     const coverText = frontmatter.coverletter.coverText
     const { showNav } = useSiteMetadata()
@@ -223,14 +214,14 @@ const HomePage = ({ data }) => {
     const { showCover } = useSiteMetadata()
     const { showfooter } = useSiteMetadata()
 
-const CustomControls = frontmatter.customcontrols
-const Suggestion1 = frontmatter.youtubersuggestion1
+const CustomControls = frontmatter.youtube.customcontrols
+const Suggestion1 = frontmatter.youtube.youtubersuggestion1
 // const Suggestion2 = frontmatter.youtubersuggestion2
 // const Suggestion3 = frontmatter.youtubersuggestion3
 
-const YoutubeLoop = frontmatter.youtubeloop
+const YoutubeLoop = frontmatter.youtube.youtubeloop
 
-const ClickToPlay = frontmatter.clicktoplay
+const ClickToPlay = frontmatter.youtube.clicktoplay
 
 
 
@@ -260,13 +251,13 @@ const ContentinVideo = frontmatter.contentinvideo
   let iframeFiltered;
 if (Suggestion1) {
   iframeFiltered = [
-    frontmatter.youtuber,
-    frontmatter.youtubersuggestion1,
-    frontmatter.youtubersuggestion2,
-    frontmatter.youtubersuggestion3,
+    frontmatter.youtube.youtuber,
+    frontmatter.youtube.youtubersuggestion1,
+    frontmatter.youtube.youtubersuggestion2,
+    frontmatter.youtube.youtubersuggestion3,
   ];
 } else {
-  iframeFiltered = frontmatter.youtuber;
+  iframeFiltered = frontmatter.youtube.youtuber;
 }
 
 
@@ -293,7 +284,7 @@ if (Suggestion1) {
 
 
 
-const YouTube = frontmatter.youtuber
+const YouTube = frontmatter.youtube.youtuber
 
   if (!YouTube) {
 
@@ -306,7 +297,7 @@ const YouTube = frontmatter.youtuber
 function Iframer() {
   
     return (
-      <div className="wrap-element effects" style={{aspectRatio:'', minHeight:'300px', width:'100vw', maxHeight:'90vh', overFlow:'hidden'}}>
+      <div className="wrap-element effects" style={{aspectRatio:'16/9', minHeight:'300px', width:'100vw', maxHeight:'90vh', overFlow:'hidden'}}>
 
 
 {YouTube ? (
@@ -331,8 +322,8 @@ function Iframer() {
               config={{
                 file: {
                   attributes: {
-                    sameSite: "none",
-                    crossorigin: "anonymous",
+                    samesite: "none",
+                    crossOrigin: "anonymous",
                   },
                 },
                   youtube: {
@@ -342,8 +333,8 @@ function Iframer() {
               playIcon={
                 <div style={{position:'absolute',
                 // backgroundColor:'var(--theme-ui-colors-bodyBg)',
-                backgroundColor:'rgba(0,0,0,0.6)',
-                 width:'100vw', height:'100vh', minHeight:'40vh', maxHeight:'', zIndex:'0', top:'0', right:'0', textAlign:'center', display:'', placeContent:'center', justifyContent:'', 
+                // backgroundColor:'rgba(0,0,0,0.6)',
+                 width:'100vw', height:'100vh', minHeight:'40vh', maxHeight:'', zIndex:'0', top:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center', justifyContent:'', 
                 color:'#ddd',
                 fontFamily:'Verdana, Sans-Serif, System' }}>
 
@@ -352,54 +343,8 @@ function Iframer() {
 <button aria-label="Click To Play" name="Click to play" className="clickplays videohide" style={{position:'relative', zIndex:'0', top:'', border:'0px  solid red', width:'100vw', background:'transparent', color:'', fontSize:'18px', textAlign:'center', display:'', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center',}}>
 
 
-                <div className="flex-items" style={{fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', margin:'2vh auto 0 auto', textTransform:'uppercase',}}>The following is rated: <strong>{frontmatter.marate}</strong></div>
+                
 
-<ul className="flex-container" style={{display:'flex', flexDirection:'row', gap:'1vh', justifyContent:'center', alignItems:'center',  textAlign:'left', margin:'0 auto', color:'#ddd', background:'rgba(0, 0, 0, .8)', width:'auto', maxWidth:'800px', height:'', border:'1px solid #222', borderRadius:'12px', padding:'2vh 5vw' }}>
-
-
-{frontmatter.marate ? (
-            <li className="flex-items" style={{display:'grid', placeContent:'center', width:'', height:'', aspectRatio:'1/1', padding:'0 20px', border:'6.5px solid #fff', margin:'0 auto 0 auto 0', fontSize:'clamp(4rem, 12vw, 5rem)', fontFamily:'Verdana, Sans-Serif, System', fontWeight:'800'}}>{frontmatter.marate}</li>
-            ) : (
-              <li className="flex-items" style={{display:'grid', placeContent:'center', width:'', height:'', aspectRatio:'1/1', padding:'0 20px', border:'6.5px solid #fff', margin:'0 auto 0 auto 0', fontSize:'clamp(4rem, 15vw, 5rem)', fontFamily:'Verdana, Sans-Serif, System', fontWeight:'800'}}>PG</li>
-            )}
-
-<div style={{display:'flex', flexDirection:'column', position:'relative', left:'', top:'', gap:'.8vh', justifyContent:'space-around', alignContent:'', alignItems:'start', border:'0px solid red', fontSize:'clamp(.5rem, 1.2vw, 2rem)'}}>
-
-
-{frontmatter.maratingtx1 ? (
-            <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
-            {frontmatter.marating1}</strong> {frontmatter.maratingtx1}</li>
-            ) : (
-              ""
-            )}
-
-
-{frontmatter.maratingtx2 ? (
-            <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
-{frontmatter.marating2}</strong> {frontmatter.maratingtx2} </li>
-            ) : (
-              ""
-            )}
-
-
-{frontmatter.maratingtx3 ? (
-         <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
-{frontmatter.marating3}</strong> {frontmatter.maratingtx3} </li>   
-            ) : (
-              ""
-            )} 
-
-
-{frontmatter.maratingtx4 ? (
-       <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
-{frontmatter.marating4}</strong> {frontmatter.maratingtx4} </li>           
-            ) : (
-              ""
-            )} 
-</div>
-
-</ul>
-<div className="flex-items" style={{position:'relative', right:'', top:'', display:'', fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', textTransform:'uppercase', textAlign:'center'}}>{frontmatter.viewerwarning}</div>
 
 <div style={{display:'grid', placeContent:'center', position:'relative', zindex:'1', fontWeight:'bold', padding:'1vh 0', fontSize:'clamp(.6rem, 1.4vw, 2rem)', width:'100%', maxWidth:'25vw', height:'', border:'0px solid', borderRadius:'12px', background:'linear-gradient(180deg, rgba(24, 23, 30, 0.2) 1%, rgba(0, 0, 0, .7) 99%)', margin:'0 auto 0 auto', opacity:'.99', textShadow:'2px 2px 2px black', color:'#fff' }}>
 <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'clamp(2rem, 4.4vw, 3rem)', filter:'drop-shadow(0px 0px 12px #fff',}} />
@@ -453,7 +398,7 @@ zindex:'1'
                 alt={frontmatter.title + " - image"}
                 className="mcboaty1"
                 style={{height:'auto', width:'', maxHeight:'100vh', overflow:'hidden', position:'absolute', left:'0', right:'0', bottom:'0', top:'', zIndex:'0',
-               objectFit:'cover', border:'0px solid red !important', background:'transparent',}}
+               objectFit:'cover', border:'1px solid red !important', background:'transparent',}}
               />
               
             ) : (
@@ -489,13 +434,13 @@ zindex:'1'
   
 
 
-  const YouTube2 = frontmatter.youtuber2
+  const YouTube2 = frontmatter.youtube.youtuber2
   const AudioStart = frontmatter.audiostart
   const AudioEnd = frontmatter.audioend
   const AudioTitle = frontmatter.audiotitle
 
   function Iframer3() {
-    const iframeUrl3 = "https://www.youtube.com/embed/" + frontmatter.youtuber2
+    const iframeUrl3 = "https://www.youtube.com/embed/" + frontmatter.youtube.youtuber2
     return (
       
 <div style={{marginTop:'10px', position:'relative', zIndex:'1',
@@ -547,7 +492,7 @@ display:'flex', justifyContent:'center', maxHeight:'80px !important', height:'15
           </div>
           </button>}
    
-            light="../src/img/transparent.png"
+            light="/assets/transparent.png"
           />
      </div>
 
@@ -626,37 +571,12 @@ display:'flex', justifyContent:'center', maxHeight:'80px !important', height:'15
 ""
         ) : (
 
-<div style={{position:'absolute', height:'', width:'100vw', zIndex:'3', top:'0', right:'0', textAlign:'center', display:'grid', placeContent:'', justifyContent:'', color:'var(--theme-ui-colors-text)', fontFamily:'Verdana, Sans-Serif, System' }}>
+<div style={{position:'absolute', height:'100vh', width:'100vw', zIndex:'3', top:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center', justifyContent:'center', color:'var(--theme-ui-colors-text)', fontFamily:'Verdana, Sans-Serif, System' }}>
 
 <button aria-label="Click To Play" name="Click to play"  className="clickplays videohide" style={{position:'relative', zIndex:'', top:'70px', border:'0px  solid red', width:'100vw', height:'', backgroundColor:'var(--theme-ui-colors-bodyBg)', color:'', fontSize:'', textAlign:'center', display:'', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', padding:'2vh 0 0 0'}}>
 
 
-          <div className="flex-items" style={{fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', margin:'0 auto 0 auto', textTransform:'uppercase',}}>The following content is rated: </div>
-
-          <ul className="flex-container" style={{display:'flex', flexDirection:'row', gap:'1vh', justifyContent:'center', alignItems:'center',  textAlign:'left', margin:'0 auto', color:'#ddd', background:'rgba(0, 0, 0, .8)', width:'auto', maxWidth:'800px', height:'', border:'1px solid #222', borderRadius:'12px', padding:'2vh 5vw' }}>
-
-
-<li className="flex-items" style={{display:'grid', placeContent:'center', width:'', height:'', aspectRatio:'1/1', padding:'0 1vw', border:'6.5px solid #fff', margin:'0 auto 0 auto 0', fontSize:'clamp(3.5rem, 13vw, 5rem)', fontFamily:'Verdana, Sans-Serif, System', fontWeight:'800'}}><strong style={{}}>MA</strong></li>
-
-
-
-
-<li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{border:'2px solid', padding:'.8em', aspectRatio:'1/1', overFlow:'', marginRight:'1.5vw', textAlign:'center'}}>
-  {frontmatter.marating1}</strong> {frontmatter.maratingtx1}</li>
-
-  <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{border:'2px solid', padding:'.8em', aspectRatio:'1/1', overFlow:'', marginRight:'1.5vw', textAlign:'center'}}>
-  {frontmatter.marating2}</strong> {frontmatter.maratingtx2} </li>
-
-  <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{border:'2px solid', padding:'.8em', aspectRatio:'1/1', overFlow:'', marginRight:'1.5vw', textAlign:'center'}}>
-  {frontmatter.marating3}</strong> {frontmatter.maratingtx3} </li>
-
-  <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{border:'2px solid', padding:'.8em', aspectRatio:'1/1', overFlow:'', marginRight:'1.5vw', textAlign:'center'}}>
-  {frontmatter.marating4}</strong> {frontmatter.maratingtx4} </li>
-
-
-
-</ul>
-<div className="flex-items" style={{position:'relative', right:'', top:'', display:'', fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', textTransform:'uppercase', textAlign:'center'}}>Viewer Discretion Strongly Advised</div>
+          
          <div style={{display:'grid', placeContent:'center', position:'relative', zindex:'1', fontWeight:'bold', padding:'1vh 0', fontSize:'clamp(.6rem, 1.4vw, 2rem)', width:'100%', maxWidth:'25vw', height:'', border:'0px solid', borderRadius:'12px', background:'linear-gradient(180deg, rgba(24, 23, 30, 0.2) 1%, rgba(0, 0, 0, .7) 99%)', margin:'0 auto 0 auto', opacity:'.99', textShadow:'2px 2px 2px black', color:'#fff' }}>
 <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'clamp(2rem, 4.4vw, 3rem)', filter:'drop-shadow(0px 0px 12px #fff',}} />
 Click to play
@@ -844,19 +764,20 @@ Click to play
 
 
 
-<section id="feature" order="1" name="feature" className="print" style={{ display:'', height:'auto', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print" style={{ display:'', height:'90vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
   <article>
 
-  <div className='stack-layout' style={{ display:'flex',justifyContent:'center', position:'relative', top:'0', zIndex:'0', minHeight:'250px', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
+  <div className=""  >
 {FrontImage ? (
 
-            <GatsbyImage
-            image={FrontImage}
-            alt={frontmatter.title + " - Featured image"}
-            className="featured-image12 layer12 iiz__img"
-            placeholder="blurred"
-            // loading="eager"
-          />
+<GatsbyImage
+image={FrontImage}
+alt={frontmatter.title + " - Featured image"}
+className="featured-image2 layer12 iiz__img"
+placeholder="blurred"
+loading="eager"
+style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain', }}
+/>
 
 
 
@@ -868,7 +789,7 @@ Click to play
           )}
 
 {YouTube ? (
-            <Iframer />
+            <div style={{position:'', top:'0'}}><Iframer /></div>
        
           ) : (
             ""
@@ -1117,7 +1038,7 @@ Click to play
 
 
 { !YouTube2 ? (
-            ""
+            "nope"
        
           ) : (
             

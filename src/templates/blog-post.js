@@ -345,7 +345,7 @@ const OriginalUrl = frontmatter.youtube.youtuber
             config={{
               file: {
                 attributes: {
-                  crossorigin: "anonymous",
+                  crossOrigin: "anonymous",
                 },
               },
               youtube: {
@@ -415,7 +415,7 @@ const OriginalUrl = frontmatter.youtube.youtuber
       </div>
           </button>}
    
-            light="../src/img/transparent.png"
+            light="/assets/transparent.png"
           />
      
 
@@ -1031,8 +1031,8 @@ Click to play
               config={{
                 file: {
                   attributes: {
-                    sameSite: "none",
-                    crossorigin: "anonymous",
+                    samesite: "none",
+                    crossOrigin: "anonymous",
                   },
                 },
                   youtube: {

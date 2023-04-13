@@ -28,8 +28,7 @@ slug: /test6
 audiostart: null
 template: blog-post
 title: Test post with auto advance video playlist
-categories:
-  - testing
+categories: news
 date: 2023-02-10 10:43
 description: example of using video playlists
 comments: false

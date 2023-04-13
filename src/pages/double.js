@@ -81,7 +81,7 @@ Todd
             config={{
               file: {
                 attributes: {
-                  crossorigin: "anonymous",
+                  crossOrigin: "anonymous",
                 },
               },
               youtube: {

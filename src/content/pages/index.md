@@ -1,34 +1,34 @@
 ---
 slug: /
 tagline:  Launch Your Web App
-featuredImage: /assets/default-og-image.webp
+featuredImage: /assets/CW-promo6.webp
 youtube:
-  youtuber: x
-  youtuber2: x
+  youtuber: 
+  youtuber2: https://youtu.be/yBet3jC7Kss
   youtubeautostart: false
   youtubemute: false
   youtubecontrols: false
   clicktoplay: false
   customcontrols: false
-  youtubestart: x
-  youtubeend: x
+  youtubestart: ""
+  youtubeend: ""
   youtubeloop: true
   youtubeshoworiginal: false
-  youtubersuggestion1: x
-  youtubersuggestion2: x
-  youtubersuggestion3: x
-audiostart: x
-audioend: x
-audiotitle: x
-underlayImage: /assets/transparent.png
+  youtubersuggestion1: ""
+  youtubersuggestion2: ""
+  youtubersuggestion3: ""
+audiostart: "0"
+audioend: ""
+audiotitle: "Shoop"
+underlayImage: 
 profText:
  <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
   <p>Please enjoy(and share) the memes! <br /><br />Stay tuned for really big news about the platform that we're building and that we'll soon be offering to everyone. </p>
-addressText: ""
+addressText: "1234 Main Street"
 portfolio:
   openText: ""
   closeText: ""
-addressText2: ""
+addressText2: "Anywhere, Planet Earth"
 skillsTitle: "Mad Skills Yo!"
 skillsText: 
   <dl>
@@ -54,13 +54,13 @@ skillsText:
   </dl>
 cta:
   ctaText: Contact
-  ctaLink: x
-svgImage: /assets/null.svg
+  ctaLink: "https://google.com/contact"
+svgImage: 
 secondaryImage: /assets/default-user.webp
 title: Complete Web Solutions
 sharethis: false
 liarliar: false
-bumpertext: x
+bumpertext: "Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha"
 marate: x
 viewerwarning: x
 marating1: x
