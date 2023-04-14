@@ -57,6 +57,15 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
   // border:1px solid red;
 }
 
+@media(max-width:48rem) {
+  .scroll-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-scroll-snap-type: y proximity;
+        -ms-scroll-snap-type: y proximity;
+            scroll-snap-type: y proximity;
+  }
+}
 
 
 
@@ -290,7 +299,7 @@ body.blogpost .gatsby-image-wrapper {
 .iiz__img {
   max-width: 98vw;
   height: auto;
-  max-height:70vh!important;
+  // max-height:70vh!important;
   object-fit:scale-down !important; 
   color:rgb(183, 8, 246)
 }

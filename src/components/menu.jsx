@@ -35,7 +35,7 @@ function MenuInc() {
   return (
 <>
       {newMenu.map((menuItem) => (
-        <li key={menuItem.key}>
+        <li key={menuItem.menutitle}>
           {menuItem}
           </li>
       ))}
