@@ -662,7 +662,7 @@ body.homepage .pleaseshare{display:none}
 #secondMenu{background:transparent;display:block;left:0;padding:0;transform:translateX(-250px);width:250px;z-index:5}
 #secondMenu .sidebarMenuInner{border-radius:0 12px 12px 0}
 #secondMenu,#sidebarMenu{position:fixed;top:0;transition:transform .25s ease-in-out}
-#sidebarMenu{display:flex;flex-direction:column;height:80vh;justify-content:flex-end;padding:90vh 0 0;right:0;transform:translateX(100vw);z-index:10}
+#sidebarMenu{display:flex;flex-direction:column;height:80vh;justify-content:flex-end;padding:75vh 0 0;right:0;transform:translateX(100vw);z-index:10}
 #sidebarMenu input[type=checkbox]:checked~.sidebarIconToggle{display:none}
 // .header{background:transparent;width:auto}
 .homepage .sidebarIconToggle div span{animation-delay:4s;border-radius:20px;color:var(--primary-color)}

@@ -18,57 +18,27 @@ import Theme from "./theme"
 import SearchIcon from "../../src/img/search"
 // import SearchForm from "./searchbox"
 import useSiteMetadata from "../hooks/SiteMetadata"
-
 import { RiArrowUpFill } from "react-icons/ri"
-
 import GoBack from "../components/goBack"
 import { BiLeftArrow } from "react-icons/bi"
-
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-4'
 // import { AiOutlineClose } from "react-icons/ai"
-
-
 import { BiGridHorizontal } from "react-icons/bi"
 import { MdOutlineRectangle } from "react-icons/md"
-
 import Menu from "../components/menu"
-
 import { userStyles } from "../util/userStyles.json"
-
-
-// import Fullscreen from "../components/FullScreen"
-// import ss from "../../static/assets/pagebg.webp"
-// import { Link } from "gatsby-plugin-anchor-links"
-// import { StaticImage } from "gatsby-plugin-image"
-// import styled from "styled-components"
 import SignUp from "../components/newssign"
-// import Install from './install-discount'
-// import { navigate } from "gatsby";
+
 const Layout = ({ children }) => {
 
-
-  
-       useEffect(() => {
-      sessionStorage.setItem("scrollPos", window.pageYOffset)
-    }, [])
-  
     useEffect(() => {
-      if (window.history.scrollRestoration) {
-        const scrollPos = sessionStorage.getItem("scrollPos")
-        window.history.scrollRestoration = "manual"
-        window.scrollTo(0, scrollPos)
-        window.history.scrollRestoration = "auto"
-      }
-    }, [])
-
-
-    useEffect(() => {
+      sessionStorage.setItem("currentScrollPos", window.pageYOffset)
       let prevScrollpos = window.pageYOffset;
     
       window.onscroll = function() {
         const currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos && prevScrollpos - currentScrollPos > 75) {
-          // document.querySelector('.header').style.transform = 'translateY(0)';
+          document.querySelector('.header').style.transform = 'translateY(0)';
           if (showNav2) {
             document.querySelector('#menuicon').style.transform = 'translateX(0)';
           }
@@ -76,7 +46,7 @@ const Layout = ({ children }) => {
           // document.body.classList.remove('scroll');
           // document.body.classList.add('scroll');
         } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
-          // document.querySelector('.header').style.transform = 'translateY(-100%)';
+          document.querySelector('.header').style.transform = 'translateY(-100%)';
           if (showNav2) {
             document.querySelector('#menuicon').style.transform = 'translateX(110%)';
           }
@@ -239,7 +209,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   
 
 
-<div className="pagemenu upbar panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw',	background:'rgba(0, 0, 0, .9)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
+<div className="pagemenu upbar panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw', background:'rgba(0, 0, 0, .9)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
 
 <div className="menusnapp" style={{display:'flex', gap:'10px', padding:'1vh 1vw', alignItems:'center', textAlign:'center'}}>
   <AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', height:'2vh', fontSize:'.2rem'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999', fontSize:'2rem'}} />top</AnchorLink>
@@ -254,8 +224,6 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 {showNav ? (
 <div id="menu" className="menu print panel1 header" style={{position:'fixed', width:'100vw', top:'0', zIndex:'10', maxHeight:'', overFlow:'', boxShadow:'0 0 2px rgba(0,0,0,.7)', padding:'0 2%', alignItems:'start', borderRadius:'0', display:'flex', justifyContent:'space-around', gap:'10px', color:'#fff',  borderBottom:'1px solid #222',
-// backgroundColor:'#111111',
-// background:'linear-gradient(180deg,rgba(0, 0, 0, .9) 1%,rgba(0, 0, 0, .6) 80%)',
 
   }}>
 
