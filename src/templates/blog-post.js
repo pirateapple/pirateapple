@@ -39,7 +39,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 
 import { ImCross } from "react-icons/im"
 
-import { RiCloseCircleFill, RiMenuUnfoldFill, RiArrowUpFill } from "react-icons/ri"
+import { RiCloseCircleFill, RiMenuUnfoldFill } from "react-icons/ri"
 
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -49,12 +49,12 @@ import Footer from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import YouTubed from "../components/youtube"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
 import ShareSocial from '../components/share' 
-import GoBack from "../components/goBack"
+// import GoBack from "../components/goBack"
 import { ImPlay } from "react-icons/im"
 // import TimeAgo from 'react-timeago'
 import styled from "styled-components"
@@ -139,13 +139,13 @@ const Pagination = props => (
 const Post = ({ data, pageContext }) => {
 
 
-  const { showModals } = useSiteMetadata()
+  // const { showModals } = useSiteMetadata()
 
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark
 
   const post = data.markdownRemark
-  const tags = post.frontmatter.tags
+  // const tags = post.frontmatter.tags
   const categories = post.frontmatter.categories
 
   const FrontImage = frontmatter.featuredImage
@@ -567,7 +567,7 @@ const YouTube = frontmatter.youtube.youtuber
 
 
 
-<button aria-label="Click To Play" className="clickplays videohide 555" style={{position:'relative', zIndex:'', top:'0', border:'0px  solid red', width:'100vw', height:'', minHeight:'300px', aspectRatio:'16/9', maxHeight:'', color:'', fontSize:'', textAlign:'center', display:'grid', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', padding:'2vh 0 0 0', background:'#111', color:'#ddd', transition:'all 2s ease-in-out', cursor:'pointer'}}>
+<button aria-label="Click To Play" className="clickplays videohide 555" style={{position:'relative', zIndex:'', top:'0', border:'0px  solid red', width:'100vw', height:'', minHeight:'300px', aspectRatio:'16/9', maxHeight:'', fontSize:'', textAlign:'center', display:'grid', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', padding:'2vh 0 0 0', background:'#111', color:'#ddd', transition:'all 2s ease-in-out', cursor:'pointer'}}>
 
 
 

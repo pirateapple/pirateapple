@@ -11,7 +11,7 @@ import { AiOutlinePicLeft } from "react-icons/ai"
 import { Helmet } from "react-helmet"
 
 
-const Tag = ({ data, pageContext }) => {
+export const Tag = ({ data, pageContext }) => {
   const { tag } = pageContext
   const posts = data.allMarkdownRemark.edges
 
@@ -56,7 +56,8 @@ const Tag = ({ data, pageContext }) => {
       
         {posts.map(({ node }) => (
           <div key={node.id}>
-            <Link className="postlink" to={data.frontmatter.slug}>
+            <Link className="postlink" to={node.frontmatter.slug}>
+
 
 {data.frontmatter.featuredImage ? (
     <GatsbyImage

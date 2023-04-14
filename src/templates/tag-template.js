@@ -65,7 +65,7 @@ const Tag = ({ data, pageContext }) => {
         <div className='sliderSpacer' style={{ height: '', paddingTop: '0', display: 'none' }}></div>
 
         {filteredPosts.map(({ node }) => {
-          const featuredImg = node.frontmatter.featuredImage;
+          // const featuredImg = node.frontmatter.featuredImage;
           return (
             <div className='post-card1' style={{ justifyContent: 'center', alignItems: 'center' }} key={node.id}>
               {/* Render featured image thumbnail if it exists */}

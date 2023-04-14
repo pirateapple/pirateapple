@@ -33,7 +33,8 @@ const SearchPage = ({ data }) => {
   const handleSearch = event => {
     const query = event.target.value
     setQuery(query)
-
+    console.log(query);
+  
     const filteredPosts = allPosts.filter(({ node }) => {
       const { title, tags } = node.frontmatter
       return (
@@ -44,6 +45,7 @@ const SearchPage = ({ data }) => {
     setFilteredPosts(filteredPosts)
   }
   
+  
 
   return (
 <Layout>
@@ -53,7 +55,7 @@ const SearchPage = ({ data }) => {
 </Helmet>
 
 
-<div className="spacer" style={{height:'80px', border:'0px solid yellow'}}></div>
+<div className="spacer" style={{height:'80px', border:'0px solid yellow'}}>{query}</div>
 
       <div className="searchform" style={{
 
@@ -77,8 +79,7 @@ const SearchPage = ({ data }) => {
 
   {/* {filteredPosts.length} result{filteredPosts.length !== 1 && 's'} */}
 
-
-        {filteredPosts.map(({ node }) => (
+  {filteredPosts.map(({ node }, index) => (
  
 
 
@@ -88,7 +89,8 @@ const SearchPage = ({ data }) => {
 
 
 
-<div
+
+<div  key={index}
     className="post-card1"
     style={{  alignItems:'center'}}
   >

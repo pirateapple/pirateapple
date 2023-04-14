@@ -50,7 +50,7 @@ const TagIndex = ({ data }) => {
               .filter(({ node }) => !selectedTag || (node.frontmatter.tags && node.frontmatter.tags.includes(selectedTag)))
               .reverse()
               .map(({ node }) => {
-                const { featuredImage } = node.frontmatter;
+                // const { featuredImage } = node.frontmatter;
 
                 return (
                   <div key={node.fields.slug} className="post-card1" style={{ justifyContent: "center", alignItems: "center" }}>
@@ -127,7 +127,10 @@ Play Multimedia
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {template: {eq: "blog-post"}}}, sort: { fields: frontmatter___date, order: ASC }) {
+    allMarkdownRemark(
+      filter: {frontmatter: {template: {eq: "blog-post"}}}
+      sort: {frontmatter: {date: ASC}}
+    ) {
       edges {
         node {
           fields {
@@ -136,7 +139,7 @@ export const query = graphql`
           frontmatter {
             title
             tags
-            youtube{
+            youtube {
               youtuber
             }
             featuredImage {
@@ -152,7 +155,7 @@ export const query = graphql`
           }
         }
       }
-      group(field: frontmatter___tags) {
+      group(field: {frontmatter: {tags: SELECT}}) {
         fieldValue
       }
     }

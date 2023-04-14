@@ -40,8 +40,8 @@ const HomePage = ({ data }) => {
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
 
-    const { postcount } = useSiteMetadata()
-    const Postcount = postcount
+    // const { postcount } = useSiteMetadata()
+    // const Postcount = postcount
 
 
     const SecondaryImage = frontmatter.secondaryImage
@@ -1069,7 +1069,7 @@ query HomeQuery($id: String!) {
       audiostart
       audiotitle
       audioend
-      youtube{
+      youtube {
         youtuber
         youtuber2
         youtubestart
@@ -1140,15 +1140,8 @@ query HomeQuery($id: String!) {
     }
   }
   posts: allMarkdownRemark(
-    sort: {
-      fields: [frontmatter___spotlight, frontmatter___date]
-      order: [ASC, ASC]
-    }
-    filter: {
-      frontmatter: {
-        template: { eq: "blog-post" }
-      }
-    }
+    sort: [{frontmatter: {spotlight: ASC}}, {frontmatter: {date: ASC}}]
+    filter: {frontmatter: {template: {eq: "blog-post"}}}
     limit: 6
   ) {
     edges {
@@ -1180,11 +1173,6 @@ query HomeQuery($id: String!) {
       }
     }
   }
-  
-  
-  
-  
-  
 }
 `;
 

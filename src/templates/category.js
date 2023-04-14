@@ -123,8 +123,8 @@ placeholder="blurred"
 
 
 export const query = graphql`
-query ($category: String!) {
-  allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+query pageUserstoddlambertSitesbasesrctemplatescategoryJs4001253895($category: String!) {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
     edges {
       node {
         frontmatter {
@@ -132,11 +132,14 @@ query ($category: String!) {
         }
       }
     }
-    group(field: frontmatter___category) {
+    group(field: {frontmatter: {category: SELECT}}) {
       fieldValue
     }
   }
-  posts: allMarkdownRemark(filter: {frontmatter: {category: {eq: $category}}}, sort: { fields: frontmatter___date, order: DESC }) {
+  posts: allMarkdownRemark(
+    filter: {frontmatter: {category: {eq: $category}}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
     edges {
       node {
         id

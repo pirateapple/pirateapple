@@ -6,10 +6,10 @@ import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
 import { StaticImage } from "gatsby-plugin-image"
-import useSiteMetadata from "../hooks/SiteMetadata"
+// import useSiteMetadata from "../hooks/SiteMetadata"
 
 const PostCard = ({ data }) => {
-  const { showModals } = useSiteMetadata();
+  // const { showModals } = useSiteMetadata();
 
   return (
 

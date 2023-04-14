@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { StaticImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/siteLayout"
 import { Helmet } from "react-helmet"
 

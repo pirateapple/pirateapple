@@ -46,14 +46,18 @@ const BlogList = ({ data, pageContext }) => {
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
 
 
-        {posts.map(({ node }) => {
+{posts.map(({ node }, index) => {
           // const title = node.frontmatter.title || node.fields.slug
           // const tags = node.frontmatter.tags || []
           // const excerpt = node.frontmatter.excerpt || node.excerpt
-          const featuredImg = node.frontmatter.featuredImage
+          // const featuredImg = node.frontmatter.featuredImage
+
+
+
+
 
           return (
-            <div className="post-card1">
+            <div className="post-card1" key={index}>
 
 <Link className="postlink" to={node.frontmatter.slug}>
 

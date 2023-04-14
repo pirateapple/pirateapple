@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+// import React, { useState, useRef } from "react";
+import React from "react";
 // import useSiteMetadata from "../hooks/SiteMetadata"
-import ReactPlayer from "react-player/lazy";
+// import ReactPlayer from "react-player/lazy";
 // import { ImPlay } from "react-icons/im"
 // import { StaticImage } from "gatsby-plugin-image"
-import Controls from "../components/Controls";
+// import Controls from "../components/Controls";
 // import {Link} from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/siteLayout"
@@ -61,33 +62,33 @@ const CustomBox = styled.div`
 function Double() {
 
   
-  const [state, setState] = useState({
-    playing: true,
-    controls: true,
-    light: false,
-    muted: true,
-    loop: true,
-  });
+  // const [state, setState] = useState({
+  //   playing: true,
+  //   controls: true,
+  //   light: false,
+  //   muted: true,
+  //   loop: true,
+  // });
 
-  const playerRef = useRef(null);
-  const controlsRef = useRef(null);
+  // const playerRef = useRef(null);
+  // const controlsRef = useRef(null);
 
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
+  // const {
+  //   playing,
+  //   controls,
+  //   light,
+  //   muted,
+  //   loop,
+  //   played,
+  // } = state;
 
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
+  // const handlePlayPause = () => {
+  //   setState({ ...state, playing: !state.playing });
+  // };
 
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  // const hanldeMute = () => {
+  //   setState({ ...state, muted: !state.muted });
+  // };
 
 
 

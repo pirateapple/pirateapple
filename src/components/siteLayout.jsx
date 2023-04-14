@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Seo from "./seo"
 import { Link } from 'gatsby-plugin-modal-routing-4'
 // import { ModalRoutingContext } from '@decantyme/gatsby-plugin-modal-routing'
@@ -26,94 +26,13 @@ import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-4'
 import { BiGridHorizontal } from "react-icons/bi"
 import { MdOutlineRectangle } from "react-icons/md"
 import Menu from "../components/menu"
-import { userStyles } from "../util/userStyles.json"
+import userStyles from "../util/userStyles.json"
 import SignUp from "../components/newssign"
 
+
+
+
 const Layout = ({ children }) => {
-
-    useEffect(() => {
-      sessionStorage.setItem("currentScrollPos", window.pageYOffset)
-      let prevScrollpos = window.pageYOffset;
-    
-      window.onscroll = function() {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos && prevScrollpos - currentScrollPos > 75) {
-          document.querySelector('.header').style.transform = 'translateY(0)';
-          if (showNav2) {
-            document.querySelector('#menuicon').style.transform = 'translateX(0)';
-          }
-          document.querySelector('.pagemenu').style.transform = 'translateY(220%)';
-          // document.body.classList.remove('scroll');
-          // document.body.classList.add('scroll');
-        } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
-          document.querySelector('.header').style.transform = 'translateY(-100%)';
-          if (showNav2) {
-            document.querySelector('#menuicon').style.transform = 'translateX(110%)';
-          }
-          document.querySelector('.pagemenu').style.transform = 'translateY(-200%)';
-          // document.body.classList.add('scroll');
-        }
-        prevScrollpos = currentScrollPos;
-      };
-    }, []);
-  
-
-    const { showSwipe } = useSiteMetadata()
-    const [archiveView, setArchiveView] = useState('');
-
-    
-    useEffect(() => {
-      if (showSwipe) {
-        // Retrieve the selected option from local storage or default to 'grid' or 'swipe'
-        const storedArchiveView = localStorage.getItem("archiveView");
-        setArchiveView(
-          storedArchiveView || (showSwipe ? "swipe" : "grid")
-        );
-      }
-    }, [showSwipe]);
-    
-    useEffect(() => {
-      // Apply the selected option on page load
-      applyArchiveView();
-    }, [archiveView]);
-    
-    const applyArchiveView = () => {
-      const elements = document.querySelectorAll(".contentpanel");
-      elements.forEach((el) => {
-        if (archiveView === "grid") {
-          el.classList.remove("horizontal-scroll", "panels");
-          el.classList.add("grid-container");
-          // document.body.classList.add("scrollable");
-          // document.querySelector('#showPosts').style.height = 'auto';
-          window.scrollTo(0, 0);
-        } else if (archiveView === "swipe") {
-          el.classList.remove("grid-container");
-          el.classList.add("horizontal-scroll", "panels");
-          // document.body.classList.remove("scrollable");
-    
-          document.querySelector('.contentpanel').style.transition = 'all .5s ease-in-out';
-          // document.querySelector('#showPosts').style.height = '600px';
-          // window.scrollTo(0, 0);
-        }
-      });
-      localStorage.setItem("archiveView", archiveView);
-    };
-    
-    const toggleArchiveView = () => {
-      const newArchiveView = archiveView === "grid" ? "swipe" : "grid";
-      setArchiveView(newArchiveView);
-      applyArchiveView();
-    };
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -127,23 +46,119 @@ const { image } = useSiteMetadata()
 
 const { showNav } = useSiteMetadata()
 const { showNav2 } = useSiteMetadata()
-const { showInfo } = useSiteMetadata()
+// const { showInfo } = useSiteMetadata()
 // const { showFeature } = useSiteMetadata()
 // const { showPosts } = useSiteMetadata()
 const { showSearch } = useSiteMetadata()
 
-const { showResume } = useSiteMetadata()
+// const { showResume } = useSiteMetadata()
 // const { showSocial } = useSiteMetadata()
-const { showSkills } = useSiteMetadata()
+// const { showSkills } = useSiteMetadata()
 // const { showCover } = useSiteMetadata()
 // const { showfooter } = useSiteMetadata()
 const { showPopup } = useSiteMetadata()
-const { menu1 } = useSiteMetadata()
+// const { menu1 } = useSiteMetadata()
 // const { menu2 } = useSiteMetadata()
-const { menu3 } = useSiteMetadata()
-const { menu4 } = useSiteMetadata()
+// const { menu3 } = useSiteMetadata()
+// const { menu4 } = useSiteMetadata()
 const { font1 } = useSiteMetadata()
 // const { userStyles } = useSiteMetadata()
+
+
+
+const { showSwipe } = useSiteMetadata()
+const [archiveView, setArchiveView] = useState('');
+
+const applyArchiveView = useCallback(() => {
+  const elements = document.querySelectorAll(".contentpanel");
+  elements.forEach((el) => {
+    if (archiveView === "grid") {
+      el.classList.remove("horizontal-scroll", "panels");
+      el.classList.add("grid-container");
+      // document.body.classList.add("scrollable");
+      // document.querySelector('#showPosts').style.height = 'auto';
+      window.scrollTo(0, 0);
+    } else if (archiveView === "swipe") {
+      el.classList.remove("grid-container");
+      el.classList.add("horizontal-scroll", "panels");
+      // document.body.classList.remove("scrollable");
+
+      document.querySelector('.contentpanel').style.transition = 'all .5s ease-in-out';
+      // document.querySelector('#showPosts').style.height = '600px';
+      // window.scrollTo(0, 0);
+    }
+  });
+  localStorage.setItem("archiveView", archiveView);
+}, [archiveView]);
+
+useEffect(() => {
+  sessionStorage.setItem("currentScrollPos", window.pageYOffset)
+  let prevScrollpos = window.pageYOffset;
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos && prevScrollpos - currentScrollPos > 75) {
+      document.querySelector('.header').style.transform = 'translateY(0)';
+      if (showNav2) {
+        document.querySelector('#menuicon').style.transform = 'translateX(0)';
+      }
+      document.querySelector('.pagemenu').style.transform = 'translateY(220%)';
+      // document.body.classList.remove('scroll');
+      // document.body.classList.add('scroll');
+    } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
+      document.querySelector('.header').style.transform = 'translateY(-100%)';
+      if (showNav2) {
+        document.querySelector('#menuicon').style.transform = 'translateX(110%)';
+      }
+      document.querySelector('.pagemenu').style.transform = 'translateY(-200%)';
+      // document.body.classList.add('scroll');
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  }
+}, [showNav2]);
+
+useEffect(() => {
+  if (showSwipe) {
+    // Retrieve the selected option from local storage or default to 'grid' or 'swipe'
+    const storedArchiveView = localStorage.getItem("archiveView");
+    setArchiveView(
+      storedArchiveView || (showSwipe ? "swipe" : "grid")
+    );
+  }
+}, [showSwipe]);
+
+useEffect(() => {
+  // Apply the selected option on page load
+  applyArchiveView();
+}, [applyArchiveView]);
+
+const toggleArchiveView = () => {
+  const newArchiveView = archiveView === "grid" ? "swipe" : "grid";
+  setArchiveView(newArchiveView);
+  applyArchiveView();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   const QUERY = '(prefers-reduced-motion: no-preference)';
@@ -179,6 +194,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   `}</style>
   <style>{`${userStyles}`}</style>
 </Helmet>
+
 
 
 

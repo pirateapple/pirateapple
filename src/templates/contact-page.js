@@ -1,7 +1,7 @@
-import { jsx } from "theme-ui";
+// import { jsx } from "theme-ui";
 import React from "react";
 import { useState } from "react";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import Seo from "../components/seo";
 import Layout from "../components/siteLayout";
 import useSiteMetadata from "../hooks/SiteMetadata";
@@ -84,11 +84,11 @@ const handleSubmit = e => {
 
 
 
-  const FileUploadMessage = () => (
-    <p style={{ textAlign: "right", margin: "auto", color: "#fff" }}>
-      {frontmatter.uploadtext}
-    </p>
-  );
+  // const FileUploadMessage = () => (
+  //   <p style={{ textAlign: "right", margin: "auto", color: "#fff" }}>
+  //     {frontmatter.uploadtext}
+  //   </p>
+  // );
   
   
   
