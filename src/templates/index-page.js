@@ -623,7 +623,7 @@ Click to play
 
 {/* show feature */}
 {showFeature ? (   
-<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'85vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'90vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
   <article>
 
   <div className=""  >
