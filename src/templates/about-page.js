@@ -45,6 +45,7 @@ const AboutPage = () => {
         <article dangerouslySetInnerHTML={{ __html: html }} />
 
         <GoBack />
+        
       </div>
 
       <br />

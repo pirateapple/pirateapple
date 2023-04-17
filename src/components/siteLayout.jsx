@@ -98,7 +98,7 @@ useEffect(() => {
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos && prevScrollpos - currentScrollPos > 75) {
-      document.querySelector('.header').style.transform = 'translateY(0)';
+      // document.querySelector('.header').style.transform = 'translateY(0)';
       if (showNav2) {
         document.querySelector('#menuicon').style.transform = 'translateX(0)';
       }
@@ -106,7 +106,7 @@ useEffect(() => {
       // document.body.classList.remove('scroll');
       // document.body.classList.add('scroll');
     } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
-      document.querySelector('.header').style.transform = 'translateY(-100px)';
+      // document.querySelector('.header').style.transform = 'translateY(-100px)';
       if (showNav2) {
         document.querySelector('#menuicon').style.transform = 'translateX(200px)';
       }
@@ -204,12 +204,12 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 <Seo />
 
 
-
+<div id="top" name="pagetop"></div>
 
 
 <ModalRoutingContext.Consumer >
 {({ modal, closeTo }) => (
-<div style={{overflow:''}}>
+<>
   {modal ? (
     <div style={{display:'', position:'fixed', top:'80px', right:'3%', padding:'0px', fontSize:'', opacity:'1 !important', zIndex:'105', filter:' drop-shadow(0px 4px 3px #000)', color:'#fff', border:'1px solid red !important'}}>
     <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'#fff', cursor:'pointer'}}>
@@ -220,7 +220,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
   ) : (
 ''
   )}
-</div>
+</>
 )}
 </ModalRoutingContext.Consumer>
   
@@ -228,7 +228,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
 <div className="upbar panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw', background:'rgba(0, 0, 0, .9)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
 
-<div className="menusnapp" style={{display:'flex', gap:'10px', padding:'1vh 1vw', alignItems:'center', textAlign:'center'}}>
+<div className="" style={{display:'flex', gap:'10px', padding:'1vh 1vw', alignItems:'center', textAlign:'center'}}>
   <AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', height:'2vh', fontSize:'.2rem'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999', fontSize:'2rem'}} />top</AnchorLink>
 </div>
 </div>
@@ -401,7 +401,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
 
 
-<header style={{}} >
+<header>
 {showNav2 ? (
 
 <>
@@ -578,7 +578,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
 
 
-<div id="top" name="pagetop" style={{maxWidth:'', overflowX:'hidden', position:'relative'}}>
+<div style={{maxWidth:'', overflowX:'hidden', position:'relative'}}>
 {children}
 </div>
       
@@ -593,9 +593,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 )}
 
       
-      {/* <Consent /> */}
-     {/* <Install /> */}
-      {/* <Footer /> */}
+
       
       </>
 

@@ -30,6 +30,7 @@ import Social from "../components/social"
 import BlogListHome from "../components/blog-list-home"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
 const HomePage = ({ data }) => {
@@ -987,15 +988,15 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 {/*  show Skills */}
 {showSkills ? (
 <section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'0', display:'', placeContent:'',  }}>
-{/* <div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
-</div> */}
-<Experience
+<div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
+</div>
+{/* <Experience
       id="kmlMap"
       options={{
         center: { lat: 39.92483, lng: -86.10551 },
         zoom: 8,
       }}
-    />
+    /> */}
   </section>
           ) : (
             ""
@@ -1005,7 +1006,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
-
+<AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', height:'2vh', fontSize:'.2rem'}}>top</AnchorLink>
 
 
 
