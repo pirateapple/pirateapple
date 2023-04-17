@@ -7,7 +7,7 @@ import Layout from "../components/siteLayout";
 import useSiteMetadata from "../hooks/SiteMetadata";
 import { Helmet } from "react-helmet";
 import Footer from "../components/footer";
-
+import Map from "../components/contact-map"
 export const pageQuery = graphql`
   query ContactQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
@@ -110,13 +110,23 @@ const handleSubmit = e => {
         <div className="description" style={{ padding: "2vh 6%" }} dangerouslySetInnerHTML={{ __html: html }} />
 
         <div
-          className="wrapper"
-          style={{ padding: "0 10%", maxWidth: "900px", margin: "0 auto", display: "flex", flexDirection: "column", justifyContent: "center" }}
+          className="wrapper flexbutt"
+          style={{ padding: "0 10%", maxWidth: "", margin: "0 auto", display: "flex", flexDirection: "", justifyContent: "center" }}
         >
 
 
+<div className="flexcheek" style={{display:'flex', justifyContent:'center', maxWidth:'300px', maxHeight:'40vh', width:'300px', margin:'40px auto 0 auto'}}>
+
+<Map id="contactMap" options={{
+                  center: { lat: 39.92483, lng: -86.10551 },
+                  zoom: 15,
+                }}
+/>
+</div>
+
+
 <form
-  className={`contact-form ${submitted ? "submitted" : ""}`}
+  className={`contact-form flexcheek ${submitted ? "submitted" : ""}`}
   // action="/thanks"
   name="contact"
   method="POST"
