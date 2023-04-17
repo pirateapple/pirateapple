@@ -77,9 +77,9 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
   scroll-padding-top: 0px;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-scroll-snap-type: y mandatory;
-      -ms-scroll-snap-type: y mandatory;
-          scroll-snap-type: y mandatory;
+  -webkit-scroll-snap-type: y proximity;
+      -ms-scroll-snap-type: y proximity;
+          scroll-snap-type: y proximity;
 }
 
 .scroll-area {
@@ -402,9 +402,11 @@ to{opacity:1}
 .title1, .title{font-size:clamp(1rem, 1.5vw, 2rem);padding-bottom:5px;text-align:center}
 p{margin-bottom:1rem}
 
-#resume{border:0 solid green;border:0 solid #ff0;margin:0 auto;padding:0 4%;padding:0 10px;width:100%}
-#resume span{display:flex;flex-direction:row;gap:40px;position:-webkit-sticky;position:sticky;top:0}
-#resume span div{border:0 solid green;display:flex;flex-direction:column;text-align:left;width:50%}
+#resume{border:0px solid #ff0;margin:0 auto;padding:0 4%;padding:0 10px;width:100%}
+
+#resume .doscol{display:flex;flex-direction:row;gap:40px;position:-webkit-sticky;position:sticky;top:0; border:0px solid red;}
+
+#resume .doscol div{border:0px solid green;text-align:left;width:50%;position:-webkit-sticky;position:sticky;}
 
 
 
@@ -557,8 +559,8 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
 
 .searchform ::placeholder{color:#fff}
 .signbox{align-items:center;align-self:center;display:flex;flex-direction:column;gap:10px;justify-content:center;overflow:hidden;padding:0 10px;width:100%}
-.spacer33{height:8vh}
-.spacer66{height:33vh}
+.spacer33{height:33vh}
+.spacer66{height:66vh}
 .spacer99{height:99vh}
 
 .spotlight{color:#fff;cursor:pointer;

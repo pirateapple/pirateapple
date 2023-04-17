@@ -84,7 +84,7 @@ nftdrop: x
 postLimit: "4"
 ---
 
-<div>
+<div style="border:px solid purple;">
 
 
 ## Highlights
