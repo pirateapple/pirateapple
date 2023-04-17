@@ -39,7 +39,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 
 import { ImCross } from "react-icons/im"
 
-import { RiCloseCircleFill, RiMenuUnfoldFill } from "react-icons/ri"
+import { RiMenuUnfoldFill, RiMenuFoldFill } from "react-icons/ri"
 
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -852,7 +852,7 @@ Click to play
       </div>
     :
       <div style={{display:'flex', gap:'2vw', padding:'1vh 1vw'}}>
-        <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiCloseCircleFill /></button>
+        <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuFoldFill /></button>
       </div>
     }
     

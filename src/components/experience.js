@@ -250,8 +250,8 @@ class Map extends Component {
     )
 
     var src =
-      // "https://github.com/venkateshcp/frpincstatic/blob/56dfc6d28a1d78fb7baf222b90229988407421f1/frp.kmz?raw=true"
-      "https://github.com/completeweb-site/base/blob/decap/static/content/map/frp.kmz?raw=true"
+      "https://github.com/venkateshcp/frpincstatic/blob/56dfc6d28a1d78fb7baf222b90229988407421f1/frp.kmz?raw=true"
+      // "https://github.com/completeweb-site/base/blob/decap/static/content/map/frp.kmz?raw=true"
       
     //this.addMarker(map)
 
