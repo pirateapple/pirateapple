@@ -142,39 +142,27 @@ const Post = ({ data, pageContext }) => {
 
 
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(
+    localStorage.getItem("isMenuOpen") === "true" || false // Load value from localStorage, default to true if not set
+  );
   const [isMobile, setIsMobile] = useState(false);
-
-
+  
   const resizeMobile = () => {
     setIsMenuOpen(false);
     setIsMobile(true);
     const elements = document.querySelectorAll('.menusnapp');
     elements.forEach(el => el.style.display = 'none', el => el.style.overflow = 'hidden', el => el.style.transition = 'transform 1550ms ease-in-out');
   };
-
+  
   const resizeDesk = () => {
     setIsMenuOpen(true);
     setIsMobile(false);
     const elements = document.querySelectorAll('.menusnapp');
     elements.forEach(el => el.style.display = 'flex', el => el.style.transition = 'transform 1550ms ease-in-out');
   };
-
-
-
+  
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedIsMenuOpen = window.localStorage.getItem("isMenuOpen");
-      if (storedIsMenuOpen) {
-        setIsMenuOpen(storedIsMenuOpen === "true");
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("isMenuOpen", isMenuOpen);
-    }
+    localStorage.setItem("isMenuOpen", isMenuOpen); // Store value in localStorage
   }, [isMenuOpen]);
 
   // const { showModals } = useSiteMetadata()
