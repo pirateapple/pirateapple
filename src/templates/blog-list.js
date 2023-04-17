@@ -8,6 +8,7 @@ import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
 import { StaticImage } from 'gatsby-plugin-image';
 import { Helmet } from "react-helmet"
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 // import TimeAgo from 'react-timeago'
 
 const BlogList = ({ data, pageContext }) => {
@@ -131,6 +132,12 @@ Play Multimedia
         
       </div>
       </div>
+
+
+
+
+
+<div className="spacer66"></div>
 
       {/* Render pagination links */}
 <div style={{position:'fixed', bottom:'0', zIndex:'5', width:'100vw',  background:'rgba(0, 0, 0, 0.7)', padding:'.2vh 2vw .2vh 2vw', textAlign:'center', color:'#fff', display:'flex', justifyContent:'center'}}>
