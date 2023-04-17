@@ -142,10 +142,9 @@ const Post = ({ data, pageContext }) => {
 
 
 
-  const [isMenuOpen, setIsMenuOpen] = useState(
-    localStorage.getItem("isMenuOpen") === "true"
-  );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
 
   const resizeMobile = () => {
     setIsMenuOpen(false);
@@ -164,7 +163,18 @@ const Post = ({ data, pageContext }) => {
 
 
   useEffect(() => {
-    localStorage.setItem("isMenuOpen", isMenuOpen);
+    if (typeof window !== "undefined") {
+      const storedIsMenuOpen = window.localStorage.getItem("isMenuOpen");
+      if (storedIsMenuOpen) {
+        setIsMenuOpen(storedIsMenuOpen === "true");
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("isMenuOpen", isMenuOpen);
+    }
   }, [isMenuOpen]);
 
   // const { showModals } = useSiteMetadata()
@@ -837,7 +847,7 @@ Click to play
 
     {isMobile ? 
       <div style={{display:'flex', gap:'10px', padding:'1vh 1vw'}}>
-        <button onClick={resizeDesk} aria-label="Expand menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiMenuUnfoldFill /></button>
+        <button onClick={resizeDesk} aria-label="Expand menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiCloseCircleFill /></button>
       </div>
     :
       <div style={{display:'flex', gap:'2vw', padding:'1vh 1vw'}}>
