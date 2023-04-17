@@ -140,11 +140,11 @@ const Pagination = props => (
 
 const Post = ({ data, pageContext }) => {
 
-
-
   const [isMenuOpen, setIsMenuOpen] = useState(
-    localStorage.getItem("isMenuOpen") === "true" || false // Load value from localStorage, default to true if not set
+    typeof window !== "undefined" && localStorage.getItem("isMenuOpen") === "true" || false
   );
+
+
   const [isMobile, setIsMobile] = useState(false);
   
   const resizeMobile = () => {
