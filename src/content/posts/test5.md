@@ -32,7 +32,7 @@ featuredImage: /assets/CW-promo4.webp
 svgImage: 
 scrollable: true
 showZoom: false
-showPageNav: false
+showPageNav: true
 nftdrop: 
 contentinvideo: false
 bumpertext: 

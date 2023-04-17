@@ -811,7 +811,7 @@ ul li{display:inline-block}
 .flex-container li strong{aspect-ratio:1/1;border:2px solid;margin-right:1.5vw;padding:.8em;text-align:center}
 .font{font-family:var(--theme-ui-colors-fontFamily-meta-font1);font-size:clamp(2.5rem,5vw,5rem);line-height:100%}
 .normal{font-family:sans-serif}
-.pagemenu{background:rgba(0,0,0,.5);transition:all .3s ease-in-out}
+.pagemenu, .upbar{background:rgba(0,0,0,.5);transition:all .3s ease-in-out}
 .pagemenu svg:hover,.pagemenu:hover{color:#fff;fill:#fff}
 .pagemenu,.pagemenu svg{color:#ddd;fill:#ddd}
 

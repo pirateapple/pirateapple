@@ -102,15 +102,15 @@ useEffect(() => {
       if (showNav2) {
         document.querySelector('#menuicon').style.transform = 'translateX(0)';
       }
-      document.querySelector('.pagemenu').style.transform = 'translateY(140px)';
+      document.querySelector('.upbar').style.transform = 'translateY(140px)';
       // document.body.classList.remove('scroll');
       // document.body.classList.add('scroll');
     } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
       document.querySelector('.header').style.transform = 'translateY(-100px)';
       if (showNav2) {
-        document.querySelector('#menuicon').style.transform = 'translateX(100px)';
+        document.querySelector('#menuicon').style.transform = 'translateX(200px)';
       }
-      document.querySelector('.pagemenu').style.transform = 'translateY(-100px)';
+      document.querySelector('.upbar').style.transform = 'translateY(-100px)';
       // document.body.classList.add('scroll');
     }
     prevScrollpos = currentScrollPos;
@@ -226,7 +226,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
   
 
 
-<div className="pagemenu upbar panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw', background:'rgba(0, 0, 0, .9)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
+<div className="upbar panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw', background:'rgba(0, 0, 0, .9)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
 
 <div className="menusnapp" style={{display:'flex', gap:'10px', padding:'1vh 1vw', alignItems:'center', textAlign:'center'}}>
   <AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', height:'2vh', fontSize:'.2rem'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999', fontSize:'2rem'}} />top</AnchorLink>
