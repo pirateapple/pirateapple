@@ -140,7 +140,7 @@ const Pagination = props => (
 
 const Post = ({ data, pageContext }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true); // set default value to true
   const [isMobile, setIsMobile] = useState(false);
 
   const resizeMobile = () => {
@@ -169,15 +169,18 @@ const Post = ({ data, pageContext }) => {
       const storedIsMenuOpen = window.localStorage.getItem("isMenuOpen");
       if (storedIsMenuOpen) {
         setIsMenuOpen(storedIsMenuOpen === "true");
+      } else {
+        setIsMenuOpen(true); // set default value to true if no value found in local storage
       }
     }
   }, []);
-
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.localStorage.setItem("isMenuOpen", isMenuOpen);
     }
   }, [isMenuOpen]);
+  
 
   const MenuIcon = isMenuOpen ? RiCloseCircleFill : RiMenuUnfoldFill;
 
