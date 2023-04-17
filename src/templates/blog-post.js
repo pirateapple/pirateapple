@@ -844,14 +844,15 @@ Click to play
     <div className="menusnapp" style={{gap:'10px', padding:'1vh 1vw', alignItems:'center', display: isMenuOpen ? 'block' : 'none',}}>
       {(previous || next) && <Pagination {...props} />}
     </div>
+    {/* <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuUnfoldFill /></button> */}
 
     {isMobile ? 
       <div style={{display:'flex', gap:'10px', padding:'1vh 1vw'}}>
-        <button onClick={resizeDesk} aria-label="Expand menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiCloseCircleFill /></button>
+        <button onClick={resizeDesk} aria-label="Expand menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiMenuUnfoldFill /></button>
       </div>
     :
       <div style={{display:'flex', gap:'2vw', padding:'1vh 1vw'}}>
-        <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuUnfoldFill /></button>
+        <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiCloseCircleFill /></button>
       </div>
     }
     
