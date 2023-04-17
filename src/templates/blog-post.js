@@ -39,7 +39,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 
 import { ImCross } from "react-icons/im"
 
-import { RiMenuUnfoldFill, RiMenuFoldFill } from "react-icons/ri"
+import { RiMenuUnfoldFill, RiCloseCircleFill } from "react-icons/ri"
 
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -140,30 +140,46 @@ const Pagination = props => (
 
 const Post = ({ data, pageContext }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(
-    typeof window !== "undefined" && localStorage.getItem("isMenuOpen") === "true" || false
-  );
-
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   const resizeMobile = () => {
     setIsMenuOpen(false);
     setIsMobile(true);
-    const elements = document.querySelectorAll('.menusnapp');
-    elements.forEach(el => el.style.display = 'none', el => el.style.overflow = 'hidden', el => el.style.transition = 'transform 1550ms ease-in-out');
+    const elements = document.querySelectorAll(".menusnapp");
+    elements.forEach((el) => {
+      el.style.display = "none";
+      el.style.overflow = "hidden";
+      el.style.transition = "transform 1550ms ease-in-out";
+    });
   };
-  
+
   const resizeDesk = () => {
     setIsMenuOpen(true);
     setIsMobile(false);
-    const elements = document.querySelectorAll('.menusnapp');
-    elements.forEach(el => el.style.display = 'flex', el => el.style.transition = 'transform 1550ms ease-in-out');
+    const elements = document.querySelectorAll(".menusnapp");
+    elements.forEach((el) => {
+      el.style.display = "flex";
+      el.style.transition = "transform 1550ms ease-in-out";
+    });
   };
-  
+
   useEffect(() => {
-    localStorage.setItem("isMenuOpen", isMenuOpen); // Store value in localStorage
+    if (typeof window !== "undefined") {
+      const storedIsMenuOpen = window.localStorage.getItem("isMenuOpen");
+      if (storedIsMenuOpen) {
+        setIsMenuOpen(storedIsMenuOpen === "true");
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("isMenuOpen", isMenuOpen);
+    }
   }, [isMenuOpen]);
+
+  const MenuIcon = isMenuOpen ? RiCloseCircleFill : RiMenuUnfoldFill;
 
   // const { showModals } = useSiteMetadata()
 
@@ -826,32 +842,51 @@ Click to play
 
 
 {frontmatter.showPageNav ? (
-  
-<div className="pagemenu panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'1vw', right:'', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw',	background:'rgba(0, 0, 0, .5)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'clamp(2rem, 3vw, 3rem)', verticalAlign:'center' }}>
-
-    <div className="menusnapp" style={{gap:'10px', padding:'1vh 1vw', alignItems:'center', display: isMenuOpen ? 'block' : 'none',}}>
-      {(previous || next) && <Pagination {...props} />}
-    </div>
-    {/* <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuUnfoldFill /></button> */}
-
-    {isMobile ? 
-      <div style={{display:'flex', gap:'10px', padding:'1vh 1vw'}}>
-        <button onClick={resizeDesk} aria-label="Expand menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiMenuUnfoldFill /></button>
-      </div>
-    :
-      <div style={{display:'flex', gap:'2vw', padding:'1vh 1vw'}}>
-        <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuFoldFill /></button>
-      </div>
-    }
-    
-  </div>
-) : (
-""
-  )}
-
-
-
-
+        <div
+          className="pagemenu panel"
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            zIndex: "4",
+            left: "1vw",
+            right: "",
+            display: "flex",
+            justifyContent: "center",
+            width: "auto",
+            maxWidth: "80vw",
+            margin: "0 auto",
+            gap: "5vw",
+            background: "rgba(0, 0, 0, .5)",
+            padding: "",
+            border: "1px solid #666",
+            borderRadius: "",
+            textShadow: "0 1px 1px rgba(0, 0, 0, .7)",
+            fontSize: "clamp(2rem, 3vw, 3rem)",
+            verticalAlign: "center",
+          }}
+        >
+          <div
+            className="menusnapp"
+            style={{
+              gap: "10px",
+              padding: "1vh 1vw",
+              alignItems: "center",
+              display: isMenuOpen ? "block" : "none",
+            }}
+          >
+            {(previous || next) && <Pagination {...props} />}
+          </div>
+          <button
+            onClick={isMenuOpen ? resizeMobile : resizeDesk}
+            aria-label={isMenuOpen ? "Collapse menu" : "Expand menu"}
+            style={{ cursor: "pointer", padding: "8px", color: "#999" }}
+          >
+            <MenuIcon />
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
 
 
 
