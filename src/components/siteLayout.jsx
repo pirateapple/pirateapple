@@ -102,15 +102,15 @@ useEffect(() => {
       if (showNav2) {
         document.querySelector('#menuicon').style.transform = 'translateX(0)';
       }
-      document.querySelector('.pagemenu').style.transform = 'translateY(220%)';
+      document.querySelector('.pagemenu').style.transform = 'translateY(140px)';
       // document.body.classList.remove('scroll');
       // document.body.classList.add('scroll');
     } else if (prevScrollpos < currentScrollPos && currentScrollPos - prevScrollpos > 75) {
-      document.querySelector('.header').style.transform = 'translateY(-100%)';
+      document.querySelector('.header').style.transform = 'translateY(-100px)';
       if (showNav2) {
-        document.querySelector('#menuicon').style.transform = 'translateX(110%)';
+        document.querySelector('#menuicon').style.transform = 'translateX(100px)';
       }
-      document.querySelector('.pagemenu').style.transform = 'translateY(-200%)';
+      document.querySelector('.pagemenu').style.transform = 'translateY(-100px)';
       // document.body.classList.add('scroll');
     }
     prevScrollpos = currentScrollPos;
@@ -171,8 +171,8 @@ const navStyle = {
   bg: "",
 }
 
-const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=swap"
-// const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(' ', '+') + "&display=swap";
+const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/g, '+') + "&display=swap";
+
 
 
 
@@ -187,13 +187,14 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
   <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
   {font1 ? (
-    <link id="yyy" rel="stylesheet" href={fontUrl} crossOrigin="anonymous" />
+    <link id="yyy" rel="stylesheet" href={fontUrl} crossOrigin="anonymous" referrerPolicy="no-referrer-when-downgrade" />
   ) : null}
   <style>{`
-  #menu,.font,.full-width-image:after,.h1,.h2,.h3,.h4,.header .menu-icon:before,.horizontal-scroll:before,.intro:after,.intro:before,.scrolldown,h1,h2,h3,h4,input.special{font-family:${font1}, sans-serif}
+    #menu,.font,.full-width-image:after,.h1,.h2,.h3,.h4,.header .menu-icon:before,.horizontal-scroll:before,.intro:after,.intro:before,.scrolldown,h1,h2,h3,h4,input.special{font-family:${font1}, sans-serif}
+    ${userStyles.userStyles}
   `}</style>
-  <style>{`${userStyles}`}</style>
 </Helmet>
+
 
 
 
@@ -256,7 +257,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
           
           ) : (
           
-                        <AnchorLink to="/#top" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
+                        <AnchorLink to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
       <img className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', padding:'0', maxHeight:''}} src={iconimage} alt={companyname} width="117" height="60" />
                 ) : (
@@ -577,7 +578,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1 + "&display=s
 
 
 
-<div id="top" name="pagetop" style={{maxWidth:'100vw', overflowX:'hidden', position:'relative'}}>
+<div id="top" name="pagetop" style={{maxWidth:'', overflowX:'hidden', position:'relative'}}>
 {children}
 </div>
       

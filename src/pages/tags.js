@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/siteLayout"
 import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
-import { AiOutlinePicLeft } from "react-icons/ai"
+import { AiOutlinePicLeft, AiFillDownSquare } from "react-icons/ai"
 import { Helmet } from "react-helmet"
 
 const TagIndex = ({ data }) => {
@@ -31,18 +31,25 @@ const TagIndex = ({ data }) => {
         <Helmet>
         <body className="tagpage utilitypage" />
       </Helmet>
-      <div className="spacer" style={{ height: '70px', border: '0px solid yellow' }}></div>
-      <div style={{textAlign:'center', paddingTop:'1rem'}}>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
+      <div className="spacer" style={{ height: '80px', border: '0px solid yellow',    maxWidth:'380px' }}></div>
+
+
+        
+
+
+        <div className="selectArrow" style={{position:'fixed', left:'1%', right:'1%',  margin:'1vh auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
           <select className="cattags" id="tag-select" value={selectedTag} onChange={handleTagChange}>
-            <option value="">All tags</option>
+            <option value="">View All tags</option>
             {tags.map(tag => (
               <option key={tag} value={tag}>{tag}</option>
             ))}
           </select>
+          <div style={{position:'absolute', right:'10px', top:'8px', height:'100%', color:'#fff', zIndex:'-1', fontSize:'30px'}}><AiFillDownSquare /></div>
         </div>
 
-        <div className="contentpanel grid-container" style={{ marginTop: "5vh" }}>
+       
+
+        <div className="contentpanel grid-container" style={{ marginTop: "8vh" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
    
           {data.allMarkdownRemark.edges &&
@@ -120,7 +127,7 @@ Play Multimedia
               })
           }
         </div>
-      </div>
+
     </Layout>
   );
 };

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 
-import { useState, useRef,forwardRef } from "react";
+import { useState, useRef, useEffect, forwardRef } from "react";
 
 // import Zoom from 'react-medium-image-zoom'
 // import 'react-medium-image-zoom/dist/styles.css'
@@ -136,8 +136,36 @@ const Pagination = props => (
 
 
 
+
+
 const Post = ({ data, pageContext }) => {
 
+
+
+  const [isMenuOpen, setIsMenuOpen] = useState(
+    localStorage.getItem("isMenuOpen") === "true"
+  );
+  const [isMobile, setIsMobile] = useState(false);
+
+  const resizeMobile = () => {
+    setIsMenuOpen(false);
+    setIsMobile(true);
+    const elements = document.querySelectorAll('.menusnapp');
+    elements.forEach(el => el.style.display = 'flex', el => el.style.overflow = 'hidden', el => el.style.transition = 'transform 1550ms ease-in-out');
+  };
+
+  const resizeDesk = () => {
+    setIsMenuOpen(true);
+    setIsMobile(false);
+    const elements = document.querySelectorAll('.menusnapp');
+    elements.forEach(el => el.style.display = 'flex', el => el.style.transition = 'transform 1550ms ease-in-out');
+  };
+
+
+
+  useEffect(() => {
+    localStorage.setItem("isMenuOpen", isMenuOpen);
+  }, [isMenuOpen]);
 
   // const { showModals } = useSiteMetadata()
 
@@ -178,19 +206,8 @@ const Post = ({ data, pageContext }) => {
 
 
 
-  const [isMobile, setIsMobile] = useState(true);
 
-const resizeMobile = () => {
-  setIsMobile(true);
-  const elements = document.querySelectorAll('.menusnapp');
-  elements.forEach(el => el.style.display = 'none', el => el.style.overflow = 'hidden', el => el.style.transition = 'transform 1550ms ease-in-out');
-}
 
-const resizeDesk = () => {
-  setIsMobile(false);
-  const elements = document.querySelectorAll('.menusnapp');
-  elements.forEach(el => el.style.display = 'flex', el => el.style.transition = 'transform 1550ms ease-in-out');
-}
 
   const Svg = frontmatter.svgImage
   // const svgZindex = frontmatter.svgzindex
@@ -814,39 +831,21 @@ Click to play
   
 <div className="pagemenu panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'1vw', right:'', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw',	background:'rgba(0, 0, 0, .5)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'clamp(2rem, 3vw, 3rem)', verticalAlign:'center' }}>
 
-<div className="menusnapp" style={{display:'none', gap:'10px', padding:'1vh 1vw', alignItems:'center'}}>
+    <div className="menusnapp" style={{gap:'10px', padding:'1vh 1vw', alignItems:'center', display: isMenuOpen ? 'block' : 'none',}}>
+      {(previous || next) && <Pagination {...props} />}
+    </div>
 
-{/* {frontmatter.scrollable ? (
-  <AnchorLink to="#top" style={{cursor:'pointer', height:'2vh'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999'}} /></AnchorLink>
-) : (
-""
-  )} */}
-
-
-{(previous || next) && <Pagination {...props} />}
-</div>
-
-{isMobile ? 
-
+    {isMobile ? 
       <div style={{display:'flex', gap:'10px', padding:'1vh 1vw'}}>
-
-{/* {frontmatter.scrollable ? (
-  <AnchorLink to="#top" aria-label="Return To TOP" style={{cursor:'pointer', marginTop:'2vh'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999',}} /></AnchorLink>
-) : (
-""
-  )} */}
-        <button onClick={resizeDesk} aria-label="Expand/Collapse menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiMenuUnfoldFill />
-        </button>
-        </div>
-
-       :
-
+        <button onClick={resizeDesk} aria-label="Expand menu" style={{cursor:'pointer', padding:'0 0 0 0', color:'#999'}}><RiMenuUnfoldFill /></button>
+      </div>
+    :
       <div style={{display:'flex', gap:'2vw', padding:'1vh 1vw'}}>
-        <button onClick={resizeMobile} aria-label="Expand/Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiCloseCircleFill />
-        </button>
-        </div>
+        <button onClick={resizeMobile} aria-label="Collapse menu" style={{cursor:'pointer', padding:'0', color:'#999'}}><RiMenuUnfoldFill /></button>
+      </div>
     }
-</div>
+    
+  </div>
 ) : (
 ""
   )}

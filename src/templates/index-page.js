@@ -22,7 +22,7 @@ import { MdVolumeUp } from "react-icons/md"
 // import { RiArrowRightDownFill } from "react-icons/ri"
 // import TwilightLogo from "../../static/assets/logo.svg"
 
-
+import Experience from "../components/experience"
 // import SearchSlider from "../components/search1"
 
 // import styled from "styled-components"
@@ -674,8 +674,6 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
-
-
 {/* show Info */}
 {showInfo ? (
 <section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'100vh', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 0 0', border:'0px solid blue'}}>
@@ -804,7 +802,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 <br />
 {frontmatter.addressText2}
 <br />
-<Link to="/contact" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center' }}>Contact Me</Link>
+<Link to="/contact" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center' }}>{frontmatter.cta.ctaText}</Link>
 
 <br />
 {showCover ? (
@@ -988,9 +986,16 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/*  show Skills */}
 {showSkills ? (
-<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'',  }}>
-<div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
-</div>
+<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'0', display:'', placeContent:'',  }}>
+{/* <div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
+</div> */}
+<Experience
+      id="kmlMap"
+      options={{
+        center: { lat: 39.92483, lng: -86.10551 },
+        zoom: 8,
+      }}
+    />
   </section>
           ) : (
             ""
@@ -1140,9 +1145,9 @@ query HomeQuery($id: String!) {
     }
   }
   posts: allMarkdownRemark(
-    sort: [{frontmatter: {spotlight: ASC}}, {frontmatter: {date: ASC}}]
+    sort: [{frontmatter: {spotlight: ASC}}, {frontmatter: {date: DESC}}]
     filter: {frontmatter: {template: {eq: "blog-post"}}}
-    limit: 6
+    limit: 30
   ) {
     edges {
       node {
