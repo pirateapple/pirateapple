@@ -151,7 +151,7 @@ const Post = ({ data, pageContext }) => {
     setIsMenuOpen(false);
     setIsMobile(true);
     const elements = document.querySelectorAll('.menusnapp');
-    elements.forEach(el => el.style.display = 'flex', el => el.style.overflow = 'hidden', el => el.style.transition = 'transform 1550ms ease-in-out');
+    elements.forEach(el => el.style.display = 'none', el => el.style.overflow = 'hidden', el => el.style.transition = 'transform 1550ms ease-in-out');
   };
 
   const resizeDesk = () => {
