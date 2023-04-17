@@ -1009,7 +1009,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 {/* <div className="spacer99" style={{textAlign:'center'}}><AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', fontSize:''}}>back to top</AnchorLink></div> */}
-</div>
+
 
 
  {/* <GoogleMap /> */}
@@ -1027,7 +1027,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
   ""
 )}
 {/* end show footer */}
-
+</div>
     </Layout>
 
   )
