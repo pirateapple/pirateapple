@@ -1007,14 +1007,13 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 <div className="spacer33"></div>
 
 
-{/* <div className="spacer99" style={{textAlign:'center'}}><AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', fontSize:''}}>back to top</AnchorLink></div> */}
+
 
 
 
  {/* <GoogleMap /> */}
-{/* <div id="bottom" className="usability scroll-area" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'1px solid blue', textAlign:'center'}}>
-<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://urbanfetish.com">UrbanFetish.com</a></div>
-</div> */}
+
+
 
 
 {/* show footer */}
@@ -1023,7 +1022,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 <Footer />
 </div>
 ) : (
-  ""
+  <div id="bottom" className="usability scroll-area" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'1px solid blue', textAlign:'center'}}>
+<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href={ siteUrl }>{companyname}</a></div>
+</div>
 )}
 {/* end show footer */}
 </div>
