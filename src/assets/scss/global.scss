@@ -71,16 +71,16 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
 
 
 
-.scroll-container {
-  max-width: 100vw;
-  max-height: 100vh;
-  scroll-padding-top: 0px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-scroll-snap-type: y proximity;
-      -ms-scroll-snap-type: y proximity;
-          scroll-snap-type: y proximity;
-}
+// .scroll-container {
+//   max-width: 100vw;
+//   max-height: 100vh;
+//   scroll-padding-top: 0px;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+//   -webkit-scroll-snap-type: y mandatory;
+//       -ms-scroll-snap-type: y mandatory;
+//           scroll-snap-type: y mandatory;
+// }
 
 .scroll-area {
   scroll-snap-align: start;
@@ -90,13 +90,13 @@ body.scroll{overflow-x:hidden; overflow-y:hidden !important;}
   // border:1px solid red;
 }
 
-@media(max-width:48rem) {
-  .scroll-container {
-    -webkit-scroll-snap-type: y proximity;
-        -ms-scroll-snap-type: y proximity;
-            scroll-snap-type: y proximity;
-  }
-}
+// @media(max-width:48rem) {
+//   .scroll-container {
+//     -webkit-scroll-snap-type: y proximity;
+//         -ms-scroll-snap-type: y proximity;
+//             scroll-snap-type: y proximity;
+//   }
+// }
 
 
 
@@ -190,7 +190,7 @@ body.blogpost .gatsby-image-wrapper {
   display: grid;
   list-style: none;
   column-gap: 3vw;
-  padding: 2vh 3%;
+  padding: 0 3%;
   column-count: 1;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3vw;
@@ -225,7 +225,7 @@ body.blogpost .gatsby-image-wrapper {
 }
 
 .grid-container .panel, .grid-container .title1, .horizontal-scroll .title1{
-  font-family: sans-serif;
+  // font-family: sans-serif;
   background: none;
   color:#ddd;
   text-shadow: 1px 1px 1px #222;
@@ -328,9 +328,15 @@ bottom: 10px !important;
 
 
 
+body.tagpage .spacer, body.category .spacer{
+  height:130px !important;
+}
 
+body.homepage .spacer, body.archivepage .spacer{
+  height:80px !important;
+}
 
-
+.uparrow::after{content:" top "; color:#fff;}
 
 
 
@@ -549,12 +555,16 @@ body.homepage .resp-sharing-button__icon svg{height:5vh;width:5vw}
 .contentpanel{
   // mask-image: linear-gradient (black, transparent);
   // -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
   transition:all 1s ease-in-out;
 }
+
 
 .horizontal-scroll{
   transition:all 1s ease-in-out;
 }
+
+
 
 
 .searchform ::placeholder{color:#fff}
@@ -830,7 +840,7 @@ ul li{display:inline-block}
 @media(max-width:48rem) {
   .button{background:linear-gradient(180deg,rgba(23,23,24,.5) 1%,rgba(0,0,0,.7) 99%);font-size:92%}
   .mobilehide{display:none}
-  #menu {font-family: inherit ;}
+  // #menu {font-family: inherit ;}
   
   #menu {flex-direction: column ; min-height: 70px;}
   
@@ -840,7 +850,16 @@ ul li{display:inline-block}
 
   .cornerlogo{ left:18%; top:2px; width:117; height:60px; }
   
-  .spacer{display:block; height:130px !important;}
+
+  // body.archivepage .spacer, body.homepage .spacer, body.tagpage .spacer{
+  //   height:160px !important;
+  // }
+
+  body .spacer{height:135px !important;}
+  body.archivepage .spacer, body.homepage .spacer, body.tagpage .spacer, body.category .spacer, body.search .spacer{
+    display:block;
+    height:220px !important;
+  }
   
   .topmenu {gap:1vw ; padding:0 ;}
   .topmenu li {margin-top:2vh ;
@@ -863,11 +882,11 @@ ul li{display:inline-block}
     border-radius: 3px;
     // display:grid;
     // place-self:center;
+    text-transform:capitalize;
     outline:1px solid #999;
     padding:1vh 4vw;
     background:rgba(0, 0, 0, 0.6);
     color:#fff;
-    text-transform:capitalize;
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
@@ -876,6 +895,13 @@ ul li{display:inline-block}
 
      border:1px solid #666; color:#fff;font-size:18px;font-weight:600;margin:0;max-width:100%;opacity:.8;padding:1vh;width:100%
   }
+  // option{
+  
+  //   text-transform:capitalize;
+  //   border: 2px solid red !important;
+  //   background:#37f8f8 !important;
+  //   padding-left: 100px !important;
+  // }
 
 .selectArrow{
     max-width:380px;
@@ -983,3 +1009,5 @@ body.homepage:before{display:none}
 .modeText{display:none}
 body.blogpost .featured-image1{border:0 solid red;max-height:70vh !important;max-width:100vw}
 }
+
+

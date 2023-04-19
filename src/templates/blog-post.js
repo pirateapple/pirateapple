@@ -56,7 +56,7 @@ import Layout from "../components/siteLayout"
 import ShareSocial from '../components/share' 
 // import GoBack from "../components/goBack"
 import { ImPlay } from "react-icons/im"
-// import TimeAgo from 'react-timeago'
+import TimeAgo from 'react-timeago'
 import styled from "styled-components"
 const CustomBox = styled.div`
 
@@ -106,32 +106,9 @@ const Pagination = props => (
           </Link>
         </li>
       )}
-
-
-
     </ul>
-
-    
   </div>
-
-
-
-  
-
-  
-    
-  
-  
-  
-  
-  
-    
-
-
-
 )
-
-
 
 
 
@@ -140,8 +117,10 @@ const Pagination = props => (
 
 const Post = ({ data, pageContext }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(true); // set default value to true
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  /* eslint-disable-next-line no-unused-vars */
   const [isMobile, setIsMobile] = useState(false);
+  
 
   const resizeMobile = () => {
     setIsMenuOpen(false);
@@ -207,6 +186,7 @@ const Post = ({ data, pageContext }) => {
       <div style={{ maxWidth: '300px', margin: '3vh auto', paddingBottom: '2vh', borderBottom: '1px solid' }}>
         <h4>Category:</h4>
         {categories.map((category, index) => (
+          
           <React.Fragment key={category}>
             {index > 0 && ', '}
             <Link to={`/category/${category}`}>{category}</Link>
@@ -220,7 +200,6 @@ const Post = ({ data, pageContext }) => {
   //   const scrollable = frontmatter.scrollable
 
     // const NftDrop = frontmatter.nftdrop
-
 
 
 
@@ -495,6 +474,7 @@ const YouTube = frontmatter.youtube.youtuber
 
 
   const { showNav } = useSiteMetadata()
+  const { showDates } = useSiteMetadata()
 
 
 
@@ -613,10 +593,61 @@ const YouTube = frontmatter.youtube.youtuber
           {/* <img className="homepage-bg" src={iconimage} width="250px" height="150px" alt="UrbanFetish" style={{ width:'', margin:'120px auto 0 auto', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important', position:'relative', top:''}} /> */}
 
 
+          <div className="flex-items" style={{fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', margin:'0 auto 0 auto', textTransform:'uppercase',}}>The following is rated: <strong>{frontmatter.marate}</strong></div>
+
+<ul className="flex-container" style={{display:'flex', flexDirection:'row', gap:'1vh', justifyContent:'center', alignItems:'center',  textAlign:'left', margin:'0 auto', color:'#ddd', background:'rgba(0, 0, 0, .8)', width:'auto', maxWidth:'800px', height:'', border:'1px solid #222', borderRadius:'12px', padding:'2vh 5vw' }}>
+
+
+{frontmatter.marate ? (
+            <li className="flex-items" style={{display:'grid', placeContent:'center', width:'', height:'', aspectRatio:'1/1', padding:'0 20px', border:'6.5px solid #fff', margin:'0 auto 0 auto 0', fontSize:'clamp(4rem, 15vw, 5rem)', fontFamily:'Verdana, Sans-Serif, System', fontWeight:'800'}}>{frontmatter.marate}</li>
+            ) : (
+              <li className="flex-items" style={{display:'grid', placeContent:'center', width:'', height:'', aspectRatio:'1/1', padding:'0 20px', border:'6.5px solid #fff', margin:'0 auto 0 auto 0', fontSize:'clamp(4rem, 15vw, 5rem)', fontFamily:'Verdana, Sans-Serif, System', fontWeight:'800'}}>PG</li>
+            )}
 
 
 
 
+
+<li style={{display:'flex', flexDirection:'column', position:'relative', left:'', top:'', gap:'.8vh', justifyContent:'space-around', alignContent:'', alignItems:'start', border:'0px solid red', fontSize:'clamp(.5rem, 1.2vw, 2rem)'}}>
+
+
+{frontmatter.maratingtx1 ? (
+            <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
+            {frontmatter.marating1}</strong> {frontmatter.maratingtx1}</li>
+            ) : (
+              ""
+            )}
+
+
+{frontmatter.maratingtx2 ? (
+            <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
+{frontmatter.marating2}</strong> {frontmatter.maratingtx2} </li>
+            ) : (
+              ""
+            )}
+
+
+{frontmatter.maratingtx3 ? (
+         <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
+{frontmatter.marating3}</strong> {frontmatter.maratingtx3} </li>   
+            ) : (
+              ""
+            )} 
+
+
+{frontmatter.maratingtx4 ? (
+       <li className="flex-items" style={{display:'flex', justifyContent:'center', alignItems:'center', alignContent:'end'}}><strong style={{ }}>
+{frontmatter.marating4}</strong> {frontmatter.maratingtx4} </li>           
+            ) : (
+              ""
+            )} 
+
+
+
+</li>
+
+</ul>
+<div className="flex-items" style={{position:'relative', right:'', top:'', display:'', fontSize:'clamp(.6rem, 1.4vw, 2rem)', fontWeight:'bold', textTransform:'uppercase', textAlign:'center'}}>{frontmatter.viewerwarning}</div>
 
 
          <div style={{display:'grid', placeContent:'center', position:'relative', zindex:'1', fontWeight:'bold', padding:'3% 0 0 0', fontSize:'clamp(.6rem, 1.4vw, 2rem)', width:'100%', maxWidth:'25vw', height:'', border:'0px solid', borderRadius:'12px', margin:'0 auto 0 auto', opacity:'.99', textShadow:'2px 2px 2px black', color:'#fff' }}>
@@ -894,6 +925,10 @@ Click to play
 
 
 
+
+
+
+
 {CustomControls ? (
          <Controls
          ref={controlsRef}
@@ -1016,8 +1051,8 @@ Click to play
               config={{
                 file: {
                   attributes: {
-                    samesite: "none",
-                    crossOrigin: "anonymous",
+                    sameSite: "none",
+                    crossorigin: "anonymous",
                   },
                 },
                   youtube: {
@@ -1260,8 +1295,8 @@ zindex:'1'
   <div className="article-header" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:'', borderRadius:'12px'}}>
     
             <h1 className="headline panel" style={{color:'#ddd', borderRadius:''}}>{frontmatter.title}</h1>
-            {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
-           {/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
+            <time sx={{color: "muted"}}>{frontmatter.date}</time>
+            Posted: <TimeAgo date={frontmatter.date} style={{color:''}} />
            
            {/* <Link to={`/category/${frontmatter.category}`}>Category:{frontmatter.category}</Link>
 
@@ -1270,7 +1305,7 @@ zindex:'1'
       {frontmatter.tags && frontmatter.tags.length > 0 && (
         <>
   
-          <div style={{ position: 'relative', zindex: '2', margin: '1vh auto', width: '100%', display: 'flex', justifyContent: 'center', gap: '1vw' }}>
+          <div style={{ position: 'relative', zindex: '2', margin: '1vh auto', width: '100%', display: 'flex', justifyContent: 'center', gap: '1vw' }}>xx
             {frontmatter.tags.map((tag) => (
               <Link to={`/tag/${tag}`} key={tag}>{tag}</Link>
             ))}
@@ -1284,8 +1319,8 @@ zindex:'1'
               <header style={{ height:'', display:'grid', placeContent:'center'}}>
                 <div className="article-header panel" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:'', borderRadius:'', marginTop:'0'}}>
             <h1 className="headline" style={{color:'#ddd', borderRadius:'12px'}}>{frontmatter.title}</h1>
-            {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
-           {/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
+            <time sx={{color: "muted"}}>{frontmatter.date}</time>
+           Posted: <TimeAgo date={frontmatter.date} style={{color:''}} />
            
 
            {categoryList}
@@ -1337,7 +1372,18 @@ zindex:'1'
 <div className="article-header panel" style={{textAlign:'center', paddingTop:'1rem', height:'auto', color:'', borderRadius:'', marginTop:'0'}}>
 <h1 className="headline" style={{color:'#ddd', borderRadius:'12px'}}>{frontmatter.title}</h1>
 {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
-{/* Posted: <TimeAgo date={frontmatter.date} style={{color:''}} /> */}
+
+{showDates ? (
+  <div>
+    Posted:{" "}
+    <time title={frontmatter.date} sx={{ color: "muted" }}>
+      <TimeAgo date={frontmatter.date} style={{ color: "" }} />
+    </time>
+  </div>
+) : (
+  ""
+)}
+
 
 
 
@@ -1492,7 +1538,21 @@ Click to play original video
 
 
 
+<div className="panel legal" style={{textAlign: 'center', padding:'1rem',  justifyContent: 'center', fontSize: '.95rem', textDecoration:'none', maxWidth:'90vw'}}>
+            Legal:<br />
+            <Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link>
+      <br /> <br />
+    <div style={{display:'grid', placeContent:'center'}}>
+      <p style={{textAlign:'left'}}>
+        <strong>*This is a parody website meant for education and entertainment purposes.</strong> <br /><br />
+        All characters, and events portrayed in this production are fictitious or are being portrayed in a satirical manner.<br /><br />There is no identification with actual persons (living or deceased), <br />places, buildings, and/or products. There is no harm/insult intended and/or none should be inferred. 
+        <br /><br /> No Celebrities or Politicians were harmed.
 
+        <br /><br />
+        Video footage public youtube.com | Some imagery provided from <a rel="noopener noreferrer" href="https://www.flickr.com/photos/donkeyhotey/" >DonkeyHotey</a>, Wikipedia and other public sourced materials.
+        </p>
+    </div>
+</div>
 
 
 

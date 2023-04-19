@@ -77,7 +77,7 @@ const applyArchiveView = useCallback(() => {
       el.classList.add("grid-container");
       // document.body.classList.add("scrollable");
       // document.querySelector('#showPosts').style.height = 'auto';
-      window.scrollTo(0, 0);
+      // window.scrollTo(0, 0);
     } else if (archiveView === "swipe") {
       el.classList.remove("grid-container");
       el.classList.add("horizontal-scroll", "panels");
@@ -85,7 +85,7 @@ const applyArchiveView = useCallback(() => {
 
       document.querySelector('.contentpanel').style.transition = 'all .5s ease-in-out';
       // document.querySelector('#showPosts').style.height = '600px';
-      // window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
     }
   });
   localStorage.setItem("archiveView", archiveView);
@@ -226,10 +226,15 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
   
 
 
-<div className="upbar panel" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw', background:'rgba(0, 0, 0, .9)', padding:'', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
+<div className="upbar button" style={{position:'fixed', bottom:'20px', zIndex:'4', left:'', right:'1vw', display:'flex', justifyContent:'center', width:'auto', maxWidth:'80vw', margin:'0 auto', gap:'5vw', padding:'0', border:'1px solid #666', borderRadius:'', textShadow:'0 1px 1px rgba(0, 0, 0, .7)', fontSize:'', verticalAlign:'center', transform: 'translateY(200%)' }}>
 
-<div className="" style={{display:'flex', gap:'10px', padding:'1vh 1vw', alignItems:'center', textAlign:'center'}}>
-  <AnchorLink to="#top" aria-label="Link to Top" style={{cursor:'pointer', height:'2vh', fontSize:'.2rem'}}><RiArrowUpFill style={{cursor:'pointer', color:'#999', fontSize:'2rem'}} />top</AnchorLink>
+<div className="uparrow" style={{display:'flex', flexDirection:'column', gap:'0', padding:'1vh 1vw', alignItems:'center', textAlign:'center'}}>
+  <a href="#top" onClick={(e) => {
+  e.preventDefault();
+  document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+}} aria-label="Link to Top" style={{cursor:'pointer', height:'', fontSize:''}}>
+  <RiArrowUpFill className="" style={{cursor:'pointer', color:'#ddd', fontSize:'3rem'}} />
+</a>
 </div>
 </div>
 
@@ -246,7 +251,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
 
 {prefersReducedMotion ? (
-    
+    <Link to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
             <button className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', borderBottom:'0px solid transparent'}} aria-label="Return to Home">
             {iconimage ? (
       <img className="" src={iconimage} alt={companyname} style={{maxHeight:'', border:'none'}} width="117" height="60" />
@@ -254,16 +259,16 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
             </button>
-          
+            </Link>
           ) : (
           
-                        <AnchorLink to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
+                        <Link to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
       <img className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', padding:'0', maxHeight:''}} src={iconimage} alt={companyname} width="117" height="60" />
                 ) : (
                   <div style={{fontWeight:'bold',}}>{companyname}</div>
                 )}
-            </AnchorLink>
+            </Link>
                         
           )}
 

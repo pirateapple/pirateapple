@@ -22,7 +22,7 @@ import { MdVolumeUp } from "react-icons/md"
 // import { RiArrowRightDownFill } from "react-icons/ri"
 // import TwilightLogo from "../../static/assets/logo.svg"
 
-import Experience from "../components/experience"
+
 // import SearchSlider from "../components/search1"
 
 // import styled from "styled-components"
@@ -30,7 +30,6 @@ import Social from "../components/social"
 import BlogListHome from "../components/blog-list-home"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
 const HomePage = ({ data }) => {
@@ -618,6 +617,7 @@ Click to play
      )}
 
 
+
 <div className="scroll-container">
 
 
@@ -661,6 +661,8 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
   ""
 )}
 {/* end show feature */}
+
+
 
 
 
@@ -890,7 +892,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 { !YouTube2 ? (
-            "nope"
+            ""
        
           ) : (
             
@@ -921,7 +923,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/* show posts */}
 {showPosts ? (
-  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'10vh 0 0 0', border:'0px solid blue'}}>
+  <section id="showPosts" order="3" className="scroll-area" style={{display:'block', height:'',  minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 0 0', border:'0px solid blue'}}>
   {/* <TwilightLogo className="bglogo darkened" /> */}
 <div className="contentpanel grid-container">
 
@@ -944,7 +946,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 {/*  show Resume */}
 {showResume ? (
   // <ScrollAnimation className="animate" animateIn="bounceInUp" animateOut="" initiallyVisible={false} animateOnce={false} animatePreScroll={true} >
-<section className="scroll-area" id="resume" order="4" style={{ display:'', minHeight:'100vh', overflow:'', margin:'0 0 0 0', position:'relative', }}>
+<section className="scroll-area" id="resume" order="4" style={{ display:'', minHeight:'100vh', overflow:'', margin:'0 0 0 0', position:'relative', border:'0px solid blue',}}>
 
 
 <article className="hasapp"  style={{ display:'', height:'', overflow:'', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff'}}>
@@ -956,25 +958,26 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 </div>
 
 
+<div id="" className="">
 
-
-<div
+<span
           style={{  columnCount:'',
             columnGap:'',
             columnWidth:''}}
-            className="doscol"
+            className=""
             dangerouslySetInnerHTML={{ __html: html }}
           />
   
+</div>
 
-
+<br />
+<div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'start', background:'rgba(24, 29, 31, 0.2)', borderRadius:'12px', padding:'5px 0 5px 0', }}>
+<div className="keyboard" order="" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0', lineHeight:'calc(2em + .4vw)'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> &nbsp;OR&nbsp; <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
+  <div className="keyboard" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto', lineHeight:'calc(2em + .4vw)',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'38px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
+  </div>
 
 
 </article>
-<div className="toolbar noapp print flexbutt" style={{display:'flex', flexDirection:'', gap:'', width:'90vw', margin:'0 auto', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'start', background:'rgba(24, 29, 31, 0.2)', borderRadius:'12px', padding:'5px 0 5px 0', }}>
-<div className="keyboard flexcheek" order="" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0', lineHeight:'calc(2em + .4vw)'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> &nbsp;OR&nbsp; <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
-  <div className="keyboard flexcheek" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto', lineHeight:'calc(2em + .4vw)',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'38px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
-  </div>
 </section>
 // </ScrollAnimation>
 ) : (
@@ -986,16 +989,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 {/*  show Skills */}
 {showSkills ? (
-<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto 0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'0', display:'', placeContent:'',  }}>
+<section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'',  }}>
 <div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
 </div>
-{/* <Experience
-      id="kmlMap"
-      options={{
-        center: { lat: 39.92483, lng: -86.10551 },
-        zoom: 8,
-      }}
-    /> */}
   </section>
           ) : (
             ""
@@ -1004,7 +1000,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
-<div className="spacer33"></div>
+
 
 
 
@@ -1012,8 +1008,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
  {/* <GoogleMap /> */}
-
-
+{/* <div id="bottom" className="usability scroll-area" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'1px solid blue', textAlign:'center'}}>
+<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href="https://urbanfetish.com">UrbanFetish.com</a></div>
+</div> */}
 
 
 {/* show footer */}
@@ -1022,9 +1019,7 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 <Footer />
 </div>
 ) : (
-  <div id="bottom" className="usability scroll-area" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'2vh auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'1px solid blue', textAlign:'center'}}>
-<div id="branding" style={{position:'relative', left:'0', bottom:'5px', fontSize:'90%'}}><a href={ siteUrl }>{companyname}</a></div>
-</div>
+  ""
 )}
 {/* end show footer */}
 </div>

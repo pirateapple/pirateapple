@@ -7,12 +7,12 @@ import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
 import Layout from "../../components/siteLayout"
 import { Helmet } from "react-helmet"
-import TwilightLogo from "../../../static/assets/logo.svg"
+// import TwilightLogo from "../../../static/assets/logo.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
 import useSiteMetadata from "../../hooks/SiteMetadata"
 
-// import TimeAgo from 'react-timeago'
+import TimeAgo from 'react-timeago'
 
 function clearfield() {  
   document.querySelector('#clearme').value = ''
@@ -25,6 +25,7 @@ function clearfield() {
 const SearchPage = ({ data }) => {
 
   const { showModals } = useSiteMetadata();
+  const { showDates } = useSiteMetadata()
 
   const allPosts = data.allMarkdownRemark.edges
   const [query, setQuery] = React.useState("")
@@ -57,12 +58,14 @@ const SearchPage = ({ data }) => {
 
 <div className="spacer" style={{height:'80px', border:'0px solid yellow'}}>{query}</div>
 
+
+
       <div className="searchform" style={{
 
-    position:'fixed', left:'1%', right:'1%', maxWidth:'380px', margin:'1vh auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center', outline:'1px solid #999', borderRadius:'3px', padding:'', background:'rgba(0, 0, 0, 0.6)', color:'#ddd'}}>
+    position:'fixed', top:'', left:'1%', right:'1%', maxWidth:'380px', margin:'15px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center', outline:'1px solid #999', borderRadius:'3px', padding:'', background:'rgba(0, 0, 0, 0.6)', color:'#ddd'}}>
 
       <label style={{}}>
-        <input id="clearme" type="text" placeholder="filter by keyword" onChange={handleSearch} style={{maxWidth:'80vw', background:'transparent'}} /> 
+        <input id="clearme" type="text" placeholder="Search:" onChange={handleSearch} style={{maxWidth:'80vw', background:'transparent'}} /> 
 <button type="reset" value="reset" onClick={() => clearfield()} style={{position:'absolute', right:'20px', top:'10px', color:'#fff'}}>clear</button>
 
               <div style={{position:'absolute', right:'100px', top:'10px', textAlign:'center', fontSize:'10px', color:'#fff'}}>{filteredPosts.length} <br />result{filteredPosts.length !== 1 && 's'}</div>
@@ -71,7 +74,7 @@ const SearchPage = ({ data }) => {
 
       </div>
 
-      <TwilightLogo className="bglogo darkened" />
+      {/* <TwilightLogo className="bglogo darkened" /> */}
       <div className="contentpanel grid-container" style={{justifyContent:'center', alignItems:'center', marginTop:'70px'}}>
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
@@ -160,6 +163,13 @@ Play Multimedia
 
             </div>
 </Link>
+{showDates ? (
+            <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
+            <TimeAgo date={node.frontmatter.date}/>
+          </p>
+          ) : (
+            ""
+          )}
 </div>
 
           

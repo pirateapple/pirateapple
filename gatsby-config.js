@@ -267,28 +267,28 @@ module.exports = {
                   },
           
                   query: `
-                    {
-                      allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-                        edges {
-                          node {
-                            excerpt
-                            html
-                            fields {
-                              slug
-                            }
-                            frontmatter {
-                              title
-                              date
-                              slug
-                              featuredImage {
-                                publicURL
-                              }
+                  {
+                    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+                      edges {
+                        node {
+                          excerpt
+                          html
+                          fields {
+                            slug
+                          }
+                          frontmatter {
+                            title
+                            date
+                            slug
+                            featuredImage {
+                              publicURL
                             }
                           }
                         }
                       }
-                      
                     }
+                  }
+                  
                   `,
                   output: "/rss.xml",
                   title: "My RSS Feed",
@@ -297,6 +297,20 @@ module.exports = {
               ],
             },
           },
+
+          {
+            resolve: `gatsby-source-rss-feed`,
+            options: {
+              url: `https://urbanfetish.com/public/rss.xml`,
+              name: `UrbanFetish`,
+              parserOption: {
+                customFields: {
+                  item: ['media:content', 'description'],
+                },
+              },
+            },
+          },
+          
           
           
 
@@ -333,11 +347,11 @@ module.exports = {
         htmlTitle: `Complete Web CMS`,
         htmlFavicon: `static/assets/logo.svg`,
         includeRobots: false,
-        logo_url: 'https://completeweb.site/assets/logo.svg'
+        logo_url: 'https://memegenes.com/assets/logo.svg'
       },
     },
 
-
+    
 
     // {
     //   resolve: `gatsby-source-filesystem`,
@@ -380,29 +394,30 @@ module.exports = {
 
     
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     host: 'https://memegenes.com',
-    //     sitemap: 'https://memegenes.com/sitemap.xml',
-    //     resolveEnv: () => process.env.GATSBY_ENV,
-    //     env: {
-    //       development: {
-    //         policy: [{ userAgent: '*', allow: ['/'] }]
-    //       },
-    //       production: {
-    //         policy: [{ userAgent: '*', allow: '/' }]
-    //       }
-    //     }
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: settings.meta.siteUrl,
+        sitemap: `${settings.meta.siteUrl}/sitemap.xml`,
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', allow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Complete Web`,
-        short_name: `Complete Web`,
+        name: settings.meta.companyname,
+        short_name: settings.meta.companyname,
         start_url: `/?user_mode=app`,
-        description: `Complete Web`,
+        description: settings.meta.companyname,
         background_color: `#111`,
         lang: `en`,
         theme_color: `#111`,
@@ -428,4 +443,3 @@ module.exports = {
     "gatsby-plugin-offline",
   ],
 }
-

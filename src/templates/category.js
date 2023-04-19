@@ -5,10 +5,10 @@ import Layout from "../components/siteLayout"
 import useSiteMetadata from "../hooks/SiteMetadata"
 import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
-import { AiOutlinePicLeft } from "react-icons/ai"
+import { AiOutlinePicLeft, AiFillDownSquare } from "react-icons/ai"
 import { StaticImage } from 'gatsby-plugin-image';
 import { Helmet } from "react-helmet"
-
+import TimeAgo from 'react-timeago'
 
 const Category = ({ data, pageContext }) => {
   const { category } = pageContext
@@ -16,6 +16,7 @@ const Category = ({ data, pageContext }) => {
   const categories = data.allMarkdownRemark.group.map((group) => group.fieldValue)
 
   const { showNav } = useSiteMetadata()
+  const { showDates } = useSiteMetadata()
 
   return (
     <Layout>
@@ -30,7 +31,7 @@ const Category = ({ data, pageContext }) => {
       )}
 
       <div>
-<div style={{display:'flex', flexDirection:'column', justifyContent:'center', marginTop:''}}>
+      <div className="selectArrow" style={{position:'fixed', top:'', left:'1%', right:'1%',  margin:'-55px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
         {/* <h1 style={{ textAlign: "center" }}>{category}</h1> */}
         <select className="cattags"
   style={{}}
@@ -40,16 +41,18 @@ const Category = ({ data, pageContext }) => {
   }}
   value={category}
 >
+<option value="">Categories:</option>
   {categories.map((category) => (
     <option key={category} value={category} selected={category === pageContext.category}>
       {category}
     </option>
   ))}
 </select>
+<div style={{position:'absolute', right:'10px', top:'8px', height:'100%', color:'#fff', zIndex:'-1', fontSize:'30px'}}><AiFillDownSquare /></div>
  </div>       
         
 
-        <div className="contentpanel grid-container" style={{ marginTop: "5vh" }}>
+ <div className="contentpanel grid-container" style={{ marginTop: "" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
 
           {posts.map(({ node }) => {
@@ -65,19 +68,21 @@ const Category = ({ data, pageContext }) => {
 {featuredImg ? (
 
 <GatsbyImage
-image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-alt={node.frontmatter.title + " - Featured image"}
-className="featured-image12 layer12 iiz__img"
-placeholder="blurred"
-// loading="eager"
-/>
+      image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+      alt={node.frontmatter.title + " - Featured image"}
+      className="featured-image1"
+      placeholder="blurred"
+      // loading="eager"
+      style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
+    />
 ) : (
-<StaticImage
-            className="featured-image1"
-            src="../../static/assets/default-og-image.webp"
-            alt="Default Image"
-            style={{ position: 'relative', zIndex: '' }}
-          />
+
+    <StaticImage
+      className="featured-image1"
+      src="../../static/assets/default-og-image.webp"
+      alt="Default Image"
+      style={{ position: 'relative', zIndex: '' }}
+    />
 )}
 
 <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
@@ -111,7 +116,13 @@ placeholder="blurred"
 
 
                   </Link>
-
+{showDates ? (
+            <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
+            <TimeAgo date={node.frontmatter.date}/>
+          </p>
+          ) : (
+            ""
+          )}
               </div>
             );
           })}

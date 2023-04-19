@@ -6,7 +6,7 @@ import useSiteMetadata from "../hooks/SiteMetadata"
 import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
-// import TimeAgo from 'react-timeago'
+import TimeAgo from 'react-timeago'
 
 import { Helmet } from "react-helmet"
 
@@ -16,7 +16,7 @@ export const Tag = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
 
   const { showNav } = useSiteMetadata()
-
+  const { showDates } = useSiteMetadata()
 
 
 
@@ -117,6 +117,13 @@ Play Multimedia
 </div>
 
 </Link>
+{showDates ? (
+            <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
+            <TimeAgo date={node.frontmatter.date}/>
+          </p>
+          ) : (
+            ""
+          )}
           </div>
         ))}
       

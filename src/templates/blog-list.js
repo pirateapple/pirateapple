@@ -8,13 +8,13 @@ import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft } from "react-icons/ai"
 import { StaticImage } from 'gatsby-plugin-image';
 import { Helmet } from "react-helmet"
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
-// import TimeAgo from 'react-timeago'
+// import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import TimeAgo from 'react-timeago'
 
 const BlogList = ({ data, pageContext }) => {
 
   const { showNav } = useSiteMetadata()
-
+  const { showDates } = useSiteMetadata()
 
 
 
@@ -47,7 +47,7 @@ const BlogList = ({ data, pageContext }) => {
         {/* <h1 style={{textAlign:'center'}}>Archive</h1> */}
 
 
-        <div className="contentpanel grid-container" style={{padding:''}}>
+        <div className="contentpanel grid-container" style={{}}>
 
 <div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
 
@@ -63,7 +63,7 @@ const BlogList = ({ data, pageContext }) => {
 
 
           return (
-            <div className="post-card1" key={index}>
+            <div className="post-card1" key={node.fields.slug} style={{marginTop:''}}>
 
 <Link className="postlink" to={node.frontmatter.slug}>
 
@@ -111,20 +111,19 @@ Play Multimedia
       <h2 className="title" style={{ }}>
         {node.frontmatter.title}
       </h2>
-    {/* <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
-      <TimeAgo date={node.frontmatter.date}/>
-    </p> */}
+
   </div>
-
-
-
-
-
-
 
 </div>
 
 </Link>
+{showDates ? (
+            <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
+            <TimeAgo date={node.frontmatter.date}/>
+          </p>
+          ) : (
+            ""
+          )}
     </div>
           )
         })}

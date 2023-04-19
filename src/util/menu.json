@@ -1,15 +1,19 @@
 {
   "menuItems": [
     {
-      "menutitle": "Tags",
+      "menutitle": "View by Category",
+      "url": "/category"
+    },
+    {
+      "menutitle": "Sort by Keyword",
       "url": "/tags"
     },
     {
-      "menutitle": "Archive",
+      "menutitle": "View Archives",
       "url": "/archive"
     },
     {
-      "menutitle": "Contact",
+      "menutitle": "Contact Us",
       "url": "/contact"
     }
   ]

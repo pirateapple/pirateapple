@@ -7,9 +7,10 @@ import { ImPlay } from "react-icons/im"
 import { FaImage } from "react-icons/fa"
 import { AiOutlinePicLeft, AiFillDownSquare } from "react-icons/ai"
 import { Helmet } from "react-helmet"
-
+import TimeAgo from 'react-timeago'
+import useSiteMetadata from "../hooks/SiteMetadata"
 const TagIndex = ({ data }) => {
-
+  const { showDates } = useSiteMetadata()
   const [selectedTag, setSelectedTag] = useState(''); // State to keep track of selected tag
 
   const handleTagChange = (event) => { // Handler for select change
@@ -23,7 +24,7 @@ const TagIndex = ({ data }) => {
   ).map(group => group.fieldValue);
 
   if (!tags || tags.length === 0) {
-    return <div>No tags found.</div>;
+    return <div>No keywords found.</div>;
   }
 
   return (
@@ -31,15 +32,15 @@ const TagIndex = ({ data }) => {
         <Helmet>
         <body className="tagpage utilitypage" />
       </Helmet>
-      <div className="spacer" style={{ height: '80px', border: '0px solid yellow',    maxWidth:'380px' }}></div>
+      <div className="spacer" style={{ height: '70px', border: '0px solid yellow', }}></div>
 
 
         
 
 
-        <div className="selectArrow" style={{position:'fixed', left:'1%', right:'1%',  margin:'1vh auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
+        <div className="selectArrow" style={{position:'fixed', top:'', left:'1%', right:'1%',  margin:'-55px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
           <select className="cattags" id="tag-select" value={selectedTag} onChange={handleTagChange}>
-            <option value="">View All tags</option>
+            <option value="">keyword:</option>
             {tags.map(tag => (
               <option key={tag} value={tag}>{tag}</option>
             ))}
@@ -49,7 +50,7 @@ const TagIndex = ({ data }) => {
 
        
 
-        <div className="contentpanel grid-container" style={{ marginTop: "8vh" }}>
+        <div className="contentpanel grid-container" style={{ marginTop: "" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
    
           {data.allMarkdownRemark.edges &&
@@ -108,10 +109,8 @@ Play Multimedia
       <h2 className="title" style={{ }}>
         {node.frontmatter.title}
       </h2>
-    {/* <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
-      <TimeAgo date={node.frontmatter.date}/>
-    </p> */}
   </div>
+
 
 
 
@@ -122,6 +121,13 @@ Play Multimedia
 </div>
 
 </Link>
+{showDates ? (
+            <p style={{position:'', textAlign:'center', border:'0px solid red', fontSize:'70%', minWidth:'100px'}}>
+            <TimeAgo date={node.frontmatter.date}/>
+          </p>
+          ) : (
+            ""
+          )}
                   </div>
                 )
               })
@@ -144,6 +150,7 @@ export const query = graphql`
             slug
           }
           frontmatter {
+            date
             title
             tags
             youtube {
