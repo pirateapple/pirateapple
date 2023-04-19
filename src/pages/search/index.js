@@ -60,18 +60,13 @@ const SearchPage = ({ data }) => {
 
 
 
-      <div className="searchform" style={{
-
-    position:'fixed', top:'', left:'1%', right:'1%', maxWidth:'380px', margin:'15px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center', outline:'1px solid #999', borderRadius:'3px', padding:'', background:'rgba(0, 0, 0, 0.6)', color:'#ddd'}}>
-
+      <div className="cattags" style={{position:'fixed', top:'', left:'1%', right:'1%', maxWidth:'380px', margin:'15px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center', outline:'1px solid #999', borderRadius:'3px', padding:'', color:''}}>
       <label style={{}}>
         <input id="clearme" type="text" placeholder="Search:" onChange={handleSearch} style={{maxWidth:'80vw', background:'transparent'}} /> 
 <button type="reset" value="reset" onClick={() => clearfield()} style={{position:'absolute', right:'20px', top:'10px', color:'#fff'}}>clear</button>
 
               <div style={{position:'absolute', right:'100px', top:'10px', textAlign:'center', fontSize:'10px', color:'#fff'}}>{filteredPosts.length} <br />result{filteredPosts.length !== 1 && 's'}</div>
       </label>
-              
-
       </div>
 
       {/* <TwilightLogo className="bglogo darkened" /> */}
