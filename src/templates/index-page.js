@@ -95,7 +95,7 @@ const seoProps = {
 
 
 const CommonElements = ({ title, tagline, description }) => (
-  <div className=" mob print" style={{ position:'-webkit-sticky',position:'sticky', top:'0', fontSize: 'clamp(1rem, 1.5vw, 3.2rem)' }}>
+  <div className=" mob print" style={{ position:'sticky', top:'0', fontSize: 'clamp(1rem, 1.5vw, 3.2rem)' }}>
     <h1 className="title1" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)' }}>{title}</h1>
     <h2 className="tagline1">
       {tagline}
@@ -110,6 +110,7 @@ const CommonElements = ({ title, tagline, description }) => (
 
 const ContentinVideo = frontmatter.contentinvideo
 // const LiarLiar = frontmatter.liarliar
+
   /* eslint-disable-next-line no-unused-vars */
     const CtaLink = frontmatter.cta.ctaLink
 
@@ -584,23 +585,7 @@ Click to play
   )}
 
 
-{/* {FrontImage ? (
-  <Seo
-        title={frontmatter.title}
-        description={
-          frontmatter.description ? frontmatter.description : excerpt
-        }
-   image={ siteUrl + getSrc(frontmatter.featuredImage) }
-      />
-) : (
-  <Seo
-        title={frontmatter.title}
-        description={
-          frontmatter.description ? frontmatter.description : excerpt
-        }
-  //  image={ siteUrl + getSrc(frontmatter.featuredImage) }
-      />
-)} */}
+
        
        <Seo {...seoProps} />
 
@@ -675,18 +660,6 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 {/* show Info */}
 {showInfo ? (
 <section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 10vh 0', border:'0px solid blue'}}>
@@ -706,24 +679,24 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
           )}
 </div>
 
-<div id="profiletop" className="flexbutt" style={{display:'flex', gap:'10px', justifyContent:'center', alignItems:"center",margin:'0 0',
-  padding:'0 2% 0 2%',}}>
+<div id="profiletop" className="flexbutt" style={{display:'', gap:'10px', justifyContent:'center', alignItems:"center", margin:'0 0',
+  padding:'0 2% 0 2%', position:'relative'}}>
 
 
 
 {UnderlayImage ? (
-  <div className="nameblock flexcheek" style={{position:'-webkit-sticky',position:'sticky', top:'0', marginTop: '', width:'100%', padding: '1rem 2rem 0 2rem', maxHeight: '', fontSize: 'clamp(1rem, 1.4vw, 3.2rem)', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+  <div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '1rem 2rem 0 2rem', maxHeight: '', fontSize: 'clamp(1rem, 1.4vw, 3.2rem)', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
     <CommonElements title={frontmatter.profTitle} tagline={frontmatter.tagline} description={ProfText} />
   </div>
 ) : (
-  <div className="nameblock flexcheek" style={{position:'-webkit-sticky',position:'sticky', top:'0', marginTop: '', padding: '1rem 2rem 0 2rem', maxHeight: '', fontSize: 'clamp(1rem, 1.4vw, 3.2rem)',  borderRadius: '10px' }}>
+  <div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', padding: '1rem 2rem 0 2rem', maxHeight: '', fontSize: 'clamp(1rem, 1.4vw, 3.2rem)',  borderRadius: '10px' }}>
   <CommonElements title={frontmatter.profTitle} tagline={frontmatter.tagline} description={ProfText} />
   </div>
 )}
 
 
 
-      <div className="flexcheek mob2 print" style={{position:'-webkit-sticky',position:'sticky', top:'0', minWidth:'500px', overflow:'', marginBottom:'', paddingTop:'2vh', borderRadius:'0 0 10px 10px',
+      <div className="flexcheek mob2 print" style={{position:'sticky', top:'0', minWidth:'500px', overflow:'', marginBottom:'', paddingTop:'2vh', borderRadius:'0 0 10px 10px',
       }}>
 {SecondaryImage ? (
             <GatsbyImage
@@ -1049,11 +1022,3 @@ query HomeQuery($id: String!) {
   }
 }
 `;
-
-
-
-
-
-// export const Head = () => (
-//   <body className="flatten" />
-// )
