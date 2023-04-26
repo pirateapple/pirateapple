@@ -6,7 +6,7 @@ import TimeAgo from "react-timeago";
 import userRssData from "../util/userRss.json";
 import Menu from "../components/menu"
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
-
+import userDetails from '../components/userDetails'
 const AuthenticatedTimeline = () => {
     const { showNav } = useSiteMetadata();
     const { showDates } = useSiteMetadata();
@@ -151,7 +151,7 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
 
   <div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px', letterSpacing:'2px', fontSize:'clamp(1.2rem,2.2vw,1.8rem)'}}><h3>Profile</h3></div>
 
-  
+  <userDetails />
 
   {loggedIn ? (
       <ul style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',}}><Menu /></ul>
