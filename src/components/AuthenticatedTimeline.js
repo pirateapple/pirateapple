@@ -4,7 +4,8 @@ import Layout from "../components/siteLayout";
 import { Helmet } from "react-helmet";
 import TimeAgo from "react-timeago";
 import userRssData from "../util/userRss.json";
-
+import Menu from "../components/menu"
+import useNetlifyIdentity from '../components/useNetlifyIdentity';
 
 const AuthenticatedTimeline = () => {
     const { showNav } = useSiteMetadata();
@@ -14,6 +15,11 @@ const AuthenticatedTimeline = () => {
     const [visibleItems, setVisibleItems] = useState(postcount);
     const [favorites, setFavorites] = useState([]);
   
+
+    const [loggedIn, setLoggedIn] = useState(false);
+    useNetlifyIdentity(setLoggedIn);
+
+
     const combinedFeed = [
       ...favorites,
       ...feed.filter((item) => !favorites.some((fav) => fav.link === item.link)),
@@ -142,6 +148,15 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
 <div className="flexcheek" style={{maxWidth:'20%', position:'sticky', top:'0', zIndex:'1'}}>
   <div className="post-card controlpanel" style={{display:'flex', height:'100vh', minWidth:'20%', position:'fixed', alignItems:'center', justifyContent:'start', padding:'1vh 2vw',}}>
   <h3>Controls</h3>
+
+  {loggedIn ? (
+      <Menu />
+                ) : (
+                  <Menu />
+                  
+                )}
+
+
   </div>
 </div>
 
