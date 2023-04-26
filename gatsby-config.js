@@ -218,8 +218,18 @@ module.exports = {
 
 
           {
-            resolve: `gatsby-plugin-feed`,
+            resolve: 'gatsby-plugin-feed',
             options: {
+              custom_namespaces: {
+                media: "http://search.yahoo.com/mrss/",
+              },
+              custom_elements: [
+                {
+                  _attr: {
+                    "xmlns:media": "http://search.yahoo.com/mrss/",
+                  },
+                },
+              ],
               query: `
                 {
                   site {
@@ -227,6 +237,7 @@ module.exports = {
                       title
                       description
                       siteUrl
+                      site_url: siteUrl
                     }
                   }
                 }
@@ -234,80 +245,65 @@ module.exports = {
               feeds: [
                 {
                   serialize: ({ query: { site, allMarkdownRemark } }) => {
-                    return allMarkdownRemark.edges.map(edge => {
-                      const postUrl = site.siteMetadata.siteUrl + edge.node.fields.slug;
-                      const imageUrl = edge.node.frontmatter.featuredImage
-                        ? site.siteMetadata.siteUrl + edge.node.frontmatter.featuredImage.publicURL
+                    return allMarkdownRemark.nodes.map(node => {
+                      const imageUrl = node.frontmatter.featuredImage
+                        ? site.siteMetadata.siteUrl + node.frontmatter.featuredImage.childImageSharp.fixed.src
                         : null;
-                      return {
-                        title: edge.node.frontmatter.title,
-                        description: edge.node.excerpt,
-                        date: edge.node.frontmatter.date,
-                        url: postUrl,
-                        guid: postUrl,
+          
+                      const mediaContent = imageUrl
+                        ? {
+                            "media:content": {
+                              _attr: {
+                                url: imageUrl,
+                                medium: "image",
+                              },
+                            },
+                          }
+                        : null;
+          
+                      return Object.assign({}, node.frontmatter, {
+                        description: node.excerpt,
+                        date: node.frontmatter.date,
+                        url: site.siteMetadata.siteUrl + node.fields.slug,
+                        guid: site.siteMetadata.siteUrl + node.fields.slug,
                         custom_elements: [
-                          { "content:encoded": edge.node.html },
-                          imageUrl
-  ? {
-      [`media:content`]: {
-        _attr: {
-          url: imageUrl,
-          type: "image/jpeg",
-          width: 500,
-          height: 500,
-          xmlns: "http://search.yahoo.com/mrss/"
-        }
-      }
-    }
-  : null
-
-                        ]
-                      };
+                          { "content:encoded": node.html },
+                          mediaContent,
+                        ].filter(Boolean),
+                      });
                     });
                   },
-          
                   query: `
                   {
-                    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-                      edges {
-                        node {
-                          excerpt
-                          html
-                          fields {
-                            slug
-                          }
-                          frontmatter {
-                            title
-                            date
-                            slug
-                            featuredImage {
-                              publicURL
+                    allMarkdownRemark(
+                      sort: { fields: [frontmatter___date], order: DESC }
+                      filter: { frontmatter: { excludeFromRSS: { ne: true } } }
+                    ) {
+                      nodes {
+                        excerpt
+                        html
+                        fields {
+                          slug
+                        }
+                        frontmatter {
+                          title
+                          date
+                          featuredImage {
+                            childImageSharp {
+                              fixed(width: 800) {
+                                src
+                              }
                             }
                           }
                         }
                       }
                     }
                   }
-                  
-                  `,
-                  output: "/rss.xml",
-                  title: "My RSS Feed",
-                  // ...
+                `,
+                output: '/rss.xml',
+                  title: 'Feed Title',
                 },
               ],
-            },
-          },
-
-          {
-            resolve: `gatsby-source-rss-feed`,
-            options: {
-              url: `https://urbanfetish.com/public/rss.xml`,
-              name: `UrbanFetish`,
-              parserOption: {
-                customFields: {
-                  item: ['media:content', 'description'],
-                },
-              },
             },
           },
           
@@ -344,7 +340,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
         enableIdentityWidget: true,
         publicPath: `admin`,
-        htmlTitle: `Complete Web CMS`,
+        htmlTitle: `Pirate Social CMS`,
         htmlFavicon: `static/assets/logo.svg`,
         includeRobots: false,
         logo_url: 'https://memegenes.com/assets/logo.svg'

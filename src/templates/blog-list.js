@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, Link, navigate } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/siteLayout"
@@ -15,7 +15,12 @@ const BlogList = ({ data, pageContext }) => {
 
   const { showNav } = useSiteMetadata()
   const { showDates } = useSiteMetadata()
+  const { postcount } = useSiteMetadata()
+  const [visibleItems, setVisibleItems] = useState(postcount);
 
+  const showMoreItems = () => {
+    setVisibleItems(visibleItems + postcount);
+  };
 
 
 
@@ -25,7 +30,10 @@ const BlogList = ({ data, pageContext }) => {
 
   
   const posts = data.allMarkdownRemark.edges
-  const { numPages } = pageContext
+  const { numPages, currentPage } = pageContext
+
+  const showEndOfResults = currentPage === numPages && posts.length > 0;
+  const showShowMore = currentPage < numPages && posts.length >= postcount;
 
   return (
     <Layout>
@@ -125,11 +133,24 @@ Play Multimedia
             ""
           )}
     </div>
+    
+
           )
         })}
 
-        
+{showShowMore && (
+          <button onClick={() => navigate(`/archive/${currentPage + 1}`)}>
+            Show more
+          </button>
+        )}
+        {showEndOfResults && (
+          <div>End of results</div>
+        )}
+        {!showShowMore && !showEndOfResults && (
+          <div>{posts.length} posts</div>
+        )}
       </div>
+      
       </div>
 
 
@@ -139,7 +160,7 @@ Play Multimedia
 <div className="spacer66"></div>
 
       {/* Render pagination links */}
-<div style={{position:'fixed', bottom:'0', zIndex:'5', width:'100vw',  background:'rgba(0, 0, 0, 0.7)', padding:'.2vh 2vw .2vh 2vw', textAlign:'center', color:'#fff', display:'flex', justifyContent:'center'}}>
+{/* <div style={{position:'fixed', bottom:'0', zIndex:'5', width:'100vw',  background:'rgba(0, 0, 0, 0.7)', padding:'.2vh 2vw .2vh 2vw', textAlign:'center', color:'#fff', display:'flex', justifyContent:'center'}}>
   <button onClick={() => navigate(pageContext.currentPage > 2 ? `/archive/${pageContext.currentPage - 1}` : '/archive')} disabled={pageContext.currentPage === 1}>
     Previous
   </button>
@@ -160,7 +181,7 @@ Play Multimedia
   <button onClick={() => navigate(`/archive/${pageContext.currentPage + 1}`)} disabled={pageContext.currentPage === numPages}>
     Next
   </button>
-</div>
+</div> */}
 
 
 
@@ -176,7 +197,6 @@ export const query = graphql`
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { template: { eq: "blog-post" } } }
-      limit: 30
       skip: $skip
     ) {
       edges {

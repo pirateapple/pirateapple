@@ -1,0 +1,21 @@
+{
+  "rssFeeds": [
+    {
+      "name": "Urban Fetish",
+      "rssFeedUrl": "https://urbanfetish.com/rss.xml"
+    },
+    {
+      "name": "simplecast",
+      "rssFeedUrl": "https://feeds.simplecast.com/54nAGcIl"
+    },
+    {
+      "name": "The Verge",
+      "rssFeedUrl": "https://www.theverge.com/rss/index.xml"
+    },
+    {
+      "name": "Meme Genes",
+      "rssFeedUrl": "https://memegenes.com/rss.xml"
+    }
+  ],
+  "favorites": []
+}

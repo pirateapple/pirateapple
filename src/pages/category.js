@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link, navigate } from "gatsby"
 import useSiteMetadata from "../hooks/SiteMetadata"
 // import { GatsbyImage } from "gatsby-plugin-image"
@@ -10,9 +10,16 @@ import { Helmet } from "react-helmet"
 const CategoryIndex = ({ data, pageContext }) => {
   const { category } = pageContext
   const categories = data.allMarkdownRemark.group.map((group) => group.fieldValue)
-
+  const { postcount } = useSiteMetadata()
   const { showNav } = useSiteMetadata()
   // const { showDates } = useSiteMetadata()
+
+  const [visibleItems, setVisibleItems] = useState(postcount);
+
+  const showMoreItems = () => {
+    setVisibleItems(visibleItems + postcount);
+  };
+
 
   return (
 
@@ -30,7 +37,8 @@ const CategoryIndex = ({ data, pageContext }) => {
 
 <div className="selectArrow" style={{position:'fixed', top:'', left:'1%', right:'1%',  margin:'-55px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
         {/* <h1 style={{ textAlign: "center" }}>{category}</h1> */}
-        <select className="cattags"
+        <select
+  className="cattags"
   style={{}}
   onChange={(e) => {
     const selectedCategory = e.target.value;
@@ -38,10 +46,9 @@ const CategoryIndex = ({ data, pageContext }) => {
   }}
   value={category}
 >
-<option value="">Category:</option>
+  <option value="">Categories:</option>
   {categories.map((category) => (
-    
-    <option key={category} value={category} selected={category === pageContext.category}>
+    <option key={category} value={category}>
       {category}
     </option>
   ))}
@@ -55,13 +62,18 @@ const CategoryIndex = ({ data, pageContext }) => {
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
 
    
-        {categories.map(category => (
+          {categories.slice(0, visibleItems).map(category => (
           <div className="post-card12 font" key={category} style={{border:'0px solid red', display:'grid', width:'100%', maxWidth:'', height:'70vh', placeContent:'center', textTransform:'capitalize' }}>
 
             <Link style={{display:'grid', placeContent:'center', maxHeight:'250px', width:'100%', maxWidth:'350px', overFlow:'hidden', margin:'0 auto', padding:'18vh 20vw', border:'1px solid #999',fontSize:'clamp(3rem, 3.4vw, 3.2rem)',  background:'rgba(0, 0, 0, 0.5)', color:'#fff', textShadow:'2px 2px 0 #222',  backdropFilter:'blur(12px)', borderRadius:'8px', opacity:'.8'}} to={`/category/${category}`}>view<br />{category}</Link>
 
           </div>
         ))}
+        {visibleItems < categories.length && (
+  <button className="post-card1" style={{ justifyContent: "center", alignItems: "center" }} onClick={showMoreItems}>
+    Show more
+  </button>
+)}
       </div>
   
   

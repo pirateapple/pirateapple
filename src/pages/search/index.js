@@ -24,8 +24,10 @@ function clearfield() {
 
 const SearchPage = ({ data }) => {
 
+
   const { showModals } = useSiteMetadata();
   const { showDates } = useSiteMetadata()
+  const { postcount } = useSiteMetadata()
 
   const allPosts = data.allMarkdownRemark.edges
   const [query, setQuery] = React.useState("")
@@ -42,9 +44,17 @@ const SearchPage = ({ data }) => {
         title.toLowerCase().includes(query.toLowerCase()) ||
         (tags && tags.join("").toLowerCase().includes(query.toLowerCase()))
       )
-    })
+    }).slice(0, postcount); // limit the results to 10
+    
+  
     setFilteredPosts(filteredPosts)
   }
+  
+  const [visibleItems, setVisibleItems] = React.useState(postcount);
+
+const showMoreItems = () => {
+  setVisibleItems(visibleItems + postcount);
+};
   
   
 
@@ -77,7 +87,7 @@ const SearchPage = ({ data }) => {
 
   {/* {filteredPosts.length} result{filteredPosts.length !== 1 && 's'} */}
 
-  {filteredPosts.map(({ node }, index) => (
+  {filteredPosts.slice(0, visibleItems).map(({ node }, index) => (
  
 
 
@@ -170,6 +180,19 @@ Play Multimedia
           
         ))}
         
+        {visibleItems === data.allMarkdownRemark.edges.length && (
+  <div className="post-card1" style={{ justifyContent: "center", alignItems: "center" }}>End of Results Reached</div>
+)}
+
+{visibleItems < data.allMarkdownRemark.edges.length && (
+  <button className="post-card1" style={{ justifyContent: "center", alignItems: "center" }} onClick={showMoreItems}>
+    Show more
+  </button>
+)}
+
+{visibleItems >= data.allMarkdownRemark.edges.length && (
+  <div className="post-card1" style={{ justifyContent: "center", alignItems: "center" }}>End of Results Reached</div>
+)}
       </div>
 
       </Layout>

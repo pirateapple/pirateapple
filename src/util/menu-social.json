@@ -1,0 +1,24 @@
+{
+  "menuItems": [
+    {
+      "menutitle": "Timeline",
+      "url": "/timeline"
+    },
+    {
+      "menutitle": "Favorites",
+      "url": "/favorites"
+    },
+    {
+      "menutitle": "Discover",
+      "url": "/tags"
+    },
+    {
+      "menutitle": "Friends",
+      "url": "/archive"
+    },
+    {
+      "menutitle": "Create",
+      "url": "/test2"
+    }
+  ]
+}

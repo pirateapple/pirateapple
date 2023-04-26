@@ -39,7 +39,7 @@ const Tag = ({ data, pageContext }) => {
   return (
     <Layout>
       <Helmet>
-        <body id='body' className='tag' style={{}} />
+        <body id='body' className='tagpage' style={{}} />
       </Helmet>
 
       {showNav ? (
@@ -49,7 +49,7 @@ const Tag = ({ data, pageContext }) => {
       )}
       {/* <h1 style={{ textAlign: 'center' }}>{tag}</h1> */}
 
-      <div style={{display:'flex', flexDirection:'column', justifyContent:'center', marginTop:''}}>
+      <div className="selectArrow" style={{position:'fixed', top:'', left:'1%', right:'1%',  margin:'-55px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
         
       <select className="cattags" value={selectedTag} onChange={handleTagChange}>
   <option value=''>All Keywords</option>

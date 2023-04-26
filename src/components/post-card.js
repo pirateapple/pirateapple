@@ -25,7 +25,8 @@ const PostCard = ({ data, index }) => {
             alt={data.frontmatter.title + " - Featured image"}
             className="featured-image1"
             placeholder="blurred"
-            loading={index === 0 ? "auto" : "eager"} // Only the first PostCard has loading="auto"
+            loading={index < 3 ? "eager" : "lazy"}
+            // loading={index === 0 ? "eager" : "lazy"} 
             style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
           />
         ) : (

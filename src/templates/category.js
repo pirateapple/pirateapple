@@ -33,7 +33,8 @@ const Category = ({ data, pageContext }) => {
       <div>
       <div className="selectArrow" style={{position:'fixed', top:'', left:'1%', right:'1%',  margin:'-55px auto 0 auto', zIndex:'3', display:'grid', placeSelf:'center',  padding:'',}}>
         {/* <h1 style={{ textAlign: "center" }}>{category}</h1> */}
-        <select className="cattags"
+        <select
+  className="cattags"
   style={{}}
   onChange={(e) => {
     const selectedCategory = e.target.value;
@@ -41,13 +42,14 @@ const Category = ({ data, pageContext }) => {
   }}
   value={category}
 >
-<option value="">Categories:</option>
+  <option value="">Categories:</option>
   {categories.map((category) => (
-    <option key={category} value={category} selected={category === pageContext.category}>
+    <option key={category} value={category}>
       {category}
     </option>
   ))}
 </select>
+
 <div style={{position:'absolute', right:'10px', top:'8px', height:'100%', color:'#fff', zIndex:'-1', fontSize:'30px'}}><AiFillDownSquare /></div>
  </div>       
         
