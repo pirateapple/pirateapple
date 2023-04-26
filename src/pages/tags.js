@@ -141,19 +141,14 @@ Play Multimedia
               })
           }
 
-{visibleItems === data.allMarkdownRemark.edges.length && (
+{/* {visibleItems === data.allMarkdownRemark.edges.length && (
   <div className="post-card1" style={{ justifyContent: "center", alignItems: "center" }}>End of Results Reached</div>
-)}
+)} */}
 
 {visibleItems < data.allMarkdownRemark.edges.length && (
   <button className="post-card1" style={{ justifyContent: "center", alignItems: "center" }} onClick={showMoreItems}>
     Show more
   </button>
-
-)}
-
-{visibleItems >= data.allMarkdownRemark.edges.length && (
-  <div className="post-card1" style={{ justifyContent: "center", alignItems: "center" }}>End of Results Reached</div>
 )}
 
 

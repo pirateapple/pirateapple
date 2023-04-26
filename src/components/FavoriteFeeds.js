@@ -25,7 +25,8 @@ const FavoriteFeeds = () => {
   const { postcount } = useSiteMetadata();
   const [favorites, setFavorites] = useState([]);
   const [feed, setFeed] = useState([]);
-  const [visibleItems, setVisibleItems] = useState(postcount);
+  const [visibleItems, setVisibleItems] = useState(postcount || 10); // default value of 10
+
 
   const combinedFeed = [
     ...favorites,
@@ -142,7 +143,7 @@ const FavoriteFeeds = () => {
 
 
           {/* {combinedFeed.slice(0, visibleItems).map((item, index) => ( */}
-          {favorites.map((item, index) => (
+          {favorites.slice(0, visibleItems).map((item, index) => (
 
           <div className="post-card1" style={{ justifyContent: "end", alignItems: "center", position:'relative' }} key={index}>
 

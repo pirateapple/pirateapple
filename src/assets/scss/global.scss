@@ -63,7 +63,7 @@ body.blogpost .backimage{z-index:-5;}
 
 body.homepage section{margin-bottom:0;margin-top:0; height:auto;}
 
-body.homepage #gobacker{display: none;}
+body.homepage #gobacker, body.social #gobacker{display: none;}
 
 
 body{overflow-x:hidden; overflow-y:auto !important;}
