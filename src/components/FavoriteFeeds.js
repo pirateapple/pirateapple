@@ -4,6 +4,8 @@ import Layout from "../components/siteLayout";
 import { Helmet } from "react-helmet";
 import TimeAgo from "react-timeago";
 import userRssData from "../util/userRss.json";
+import Menu from "../components/menu"
+import useNetlifyIdentity from '../components/useNetlifyIdentity';
 
 const createExcerpt = (text, maxLength) => {
   if (!text) {
@@ -27,6 +29,8 @@ const FavoriteFeeds = () => {
   const [feed, setFeed] = useState([]);
   const [visibleItems, setVisibleItems] = useState(postcount || 10); // default value of 10
 
+  const [loggedIn, setLoggedIn] = useState(false);
+  useNetlifyIdentity(setLoggedIn);
 
   const combinedFeed = [
     ...favorites,
@@ -130,10 +134,20 @@ const FavoriteFeeds = () => {
 {/* <h1 style={{ position: 'relative', zIndex: '1', margin: '0 auto', textAlign:'center' }}>My Timeline:</h1> */}
 <div className='flexbutt' style={{}}> 
 
-<div className="flexcheek" style={{maxWidth:'20%', position:'sticky', top:'0', zIndex:'1'}}>
-  <div className="post-card controlpanel" style={{display:'flex', height:'100vh', minWidth:'20%', position:'fixed', alignItems:'center', justifyContent:'start', padding:'1vh 2vw',}}>
-  <h3>Controls</h3>
-  </div>
+<div className="post-card controlpanel sidebarMenuInner" style={{display:'flex', flexDirection:'column', height:'100vh', minWidth:'1%', position:'fixed', alignItems:'center', justifyContent:'center', padding:'1vh 0', zIndex:'2'}}>
+
+<div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px'}}><h3>Open &nbsp;&nbsp; Controls</h3></div>
+
+
+
+{loggedIn ? (
+    <ul style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',}}><Menu /></ul>
+              ) : (
+                <ul style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',}}><Menu /></ul>
+              )}
+
+
+
 </div>
 
 

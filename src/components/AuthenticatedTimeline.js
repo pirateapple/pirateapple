@@ -149,7 +149,7 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
 
   <div className="post-card controlpanel sidebarMenuInner" style={{display:'flex', flexDirection:'column', height:'100vh', minWidth:'1%', position:'fixed', alignItems:'center', justifyContent:'center', padding:'1vh 0', zIndex:'2'}}>
 
-  <div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px'}}><h3>Open &nbsp;&nbsp; Controls</h3></div>
+  <div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px'}}><h3>Profile</h3></div>
 
   
 
