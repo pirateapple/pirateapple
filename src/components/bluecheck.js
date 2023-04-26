@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import {BsFillPatchCheckFill} from 'react-icons/bs'
+import { BsFillPatchCheckFill } from "react-icons/bs"
+
 const BlueCheck = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -15,11 +16,11 @@ const BlueCheck = () => {
   const hasNetlifyApp = data.site.siteMetadata.siteUrl.includes("netlify.app")
 
   return (
-    <>
+    <span title="This site is verified">
       {!hasNetlifyApp ? (
-        <span style={{ color: "#1D9BF0" }}><BsFillPatchCheckFill /></span>
+        <BsFillPatchCheckFill style={{ color: "#1D9BF0" }} />
       ) : null}
-    </>
+    </span>
   )
 }
 
