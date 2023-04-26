@@ -64,6 +64,7 @@ const TimeLine = () => {
   onChange={(event) => handleInputChange(event, index)}
   style={{ fontSize: "3rem", width: "2rem", margin: "1rem" }}
   autoFocus={index === 0}
+  autoCapitalize="none"
 />
             ))}
           </form>
