@@ -28,12 +28,43 @@ import { MdOutlineRectangle } from "react-icons/md"
 import Menu from "./menu-social"
 import userStyles from "../util/userStyles.json"
 import SignUp from "./newssign"
+import netlifyIdentity from 'netlify-identity-widget';
 
 
-
+// Initialize Netlify Identity
+netlifyIdentity.init();
 
 const Layout = ({ children }) => {
 
+
+
+
+const [loggedIn, setLoggedIn] = useState(false);
+
+
+
+useEffect(() => {
+  // Check for the current user
+  const currentUser = netlifyIdentity.currentUser();
+  if (currentUser) {
+    setLoggedIn(true);
+  }
+
+  // Set up an event listener for login/logout events
+  const updateUserStatus = () => {
+    const user = netlifyIdentity.currentUser();
+    setLoggedIn(!!user);
+  };
+
+  netlifyIdentity.on('login', updateUserStatus);
+  netlifyIdentity.on('logout', updateUserStatus);
+
+  // Clean up the event listeners
+  return () => {
+    netlifyIdentity.off('login', updateUserStatus);
+    netlifyIdentity.off('logout', updateUserStatus);
+  };
+}, []);
 
 
 
@@ -331,8 +362,12 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
 
 
-
+{loggedIn && (
+  <div>
 <Menu />
+  </div>
+)}
+
 
 
 

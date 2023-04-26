@@ -22,7 +22,7 @@ function Test2() {
     <CustomBox>
 <Layout>
 <Helmet>
-        <body id="body" className="test" />
+        <body id="body" className="social" />
       </Helmet>
 
 <div className="scroll-container1" style={{display:'flex', justifyContent:'start', maxWidth:'', height:'100vh', margin:'0 auto 0 auto', position:'fixed', left:'0', right:'0', top:'0'}}>
