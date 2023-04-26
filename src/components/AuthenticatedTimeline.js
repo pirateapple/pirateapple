@@ -222,7 +222,7 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
       event.preventDefault();
       toggleFavorite(item);
     }}
-    style={{ cursor: "pointer", background: "none", border: "none", position:'relative', top:'-10px', right:'10px', zIndex:'2' }}
+    style={{ cursor: "pointer", background: "none", border: "none", position:'relative', top:'-10px', right:'10px', zIndex:'' }}
   >
     ☆
   </button>
@@ -234,7 +234,7 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
       event.preventDefault();
       toggleFavorite(item);
     }}
-    style={{ cursor: "pointer", background: "none", border: "none", position:'relative', top:'-10px', right:'10px', zIndex:'2' }}
+    style={{ cursor: "pointer", background: "none", border: "none", position:'relative', top:'-10px', right:'10px', zIndex:'' }}
   >
     ⭐
   </button>
