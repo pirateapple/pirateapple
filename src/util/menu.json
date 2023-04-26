@@ -13,8 +13,8 @@
       "url": "/contact"
     },
     {
-      "menutitle": "Login/Sign up",
-      "url": "/login"
+      "menutitle": "Pirate Social",
+      "url": "/pirate"
     }
   ]
 }

@@ -11,7 +11,7 @@ const CustomBox = styled.div`
 
 `
 
-function Test2() {
+function Pirate() {
   const { showNav } = useSiteMetadata()
   
   
@@ -49,6 +49,6 @@ function Test2() {
   );
 }
 
-export default Test2;
+export default Pirate;
 
 
