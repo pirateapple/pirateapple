@@ -17,7 +17,7 @@ const BlueCheck = () => {
   return (
     <>
       {!hasNetlifyApp ? (
-        <span style={{ color: "var(--theme-ui-colors-siteColor)" }}><BsFillPatchCheckFill /></span>
+        <span style={{ color: "#1D9BF0" }}><BsFillPatchCheckFill /></span>
       ) : null}
     </>
   )
