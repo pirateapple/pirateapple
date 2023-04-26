@@ -19,10 +19,22 @@ const TimeLine = () => {
       inputRefs.current[index - 1].focus();
     }
   };
-  
+
+  const safeLocalStorageGetItem = (key) => {
+    if (typeof window === "undefined") {
+      return null;
+    }
+    return localStorage.getItem(key);
+  };
+
+  const safeLocalStorageSetItem = (key, value) => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(key, value);
+    }
+  };
 
   const [pagePassword, setPagePassword] = useState(
-    localStorage.getItem("pagePassword") || data.markdownRemark.frontmatter.pagePW || ""
+    safeLocalStorageGetItem("pagePassword") || data.markdownRemark.frontmatter.pagePW || ""
   );
   const [password, setPassword] = useState(Array(4).fill(""));
   const [verified, setVerified] = useState(false);
@@ -33,7 +45,7 @@ const TimeLine = () => {
   }, [password]);
 
   useEffect(() => {
-    const storedPassword = localStorage.getItem("pagePassword");
+    const storedPassword = safeLocalStorageGetItem("pagePassword");
     if (!storedPassword && data.markdownRemark.frontmatter.pagePW) {
       setPagePassword(data.markdownRemark.frontmatter.pagePW);
     } else if (storedPassword && storedPassword.length > 0) {
@@ -43,17 +55,15 @@ const TimeLine = () => {
     console.log(`Password saved to local storage: ${pagePassword}`);
   }, []);
 
-
   useEffect(() => {
     if (password.join("").toLowerCase() === pagePassword.toLowerCase()) {
       setVerified(true);
-      localStorage.setItem("pagePassword", pagePassword);
+      safeLocalStorageSetItem("pagePassword", pagePassword);
       setPassword(Array(4).fill(""));
       console.log(`Password input fields cleared: ${password}`);
     }
     console.log(`Password updated to: ${pagePassword}`);
   }, [password, pagePassword]);
-  
 
   const handleInputChange = (event, index) => {
     const newValue = event.target.value;
@@ -83,8 +93,22 @@ const TimeLine = () => {
   if (pagePassword) {
     return (
       <Layout>
-    <div className="timeline-wrapper" style={{display:'grid', placeContent:'center', height:'100vh',}}>
-    <h2 style={{color:'var(--theme-ui-colors-text)', textAlign:'center', fontSize:'150%'}}>This Use has Protected their profile</h2>
+        <div
+          className="timeline-wrapper"
+          style={{
+            display: "grid",
+            placeContent: "center",
+            height: "100vh",
+          }}
+        >
+          <h2
+            style={{
+              color: "var(--theme-ui-colors-text)",
+              textAlign: "center",
+              fontSize: "150%",
+            }}
+          >
+            This Use has Protected their profile</h2>
       <div style={{ textAlign:'center', border:'1px solid #777', borderRadius:'8px', padding:'4vh 4vw', background:'rgba(0, 0, 0, .5)'}}>
       <h3 style={{color:'var(--theme-ui-colors-text)', textAlign:'center'}}>Enter 4 Digit Code:</h3>
       
