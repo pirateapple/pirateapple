@@ -146,7 +146,7 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
 <div className='flexbutt' style={{}}> 
 
 <div className="flexcheek" style={{maxWidth:'20%', position:'sticky', top:'0', zIndex:'1'}}>
-  <div className="post-card controlpanel" style={{display:'flex', height:'100vh', minWidth:'20%', position:'fixed', alignItems:'center', justifyContent:'start', padding:'1vh 2vw',}}>
+  <div className="post-card controlpanel sidebarMenuInner" style={{display:'flex', flexDirection:'column', height:'100vh', minWidth:'1%', position:'fixed', alignItems:'center', justifyContent:'center', padding:'1vh 2vw',}}>
   <h3>Controls</h3>
 
   {loggedIn ? (

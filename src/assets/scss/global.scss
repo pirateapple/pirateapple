@@ -195,6 +195,7 @@ body.blogpost .gatsby-image-wrapper {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3vw;
   padding-bottom: 10vh;
+  margin:2vh auto 10vh auto;
 }
 
 
@@ -203,7 +204,9 @@ body.blogpost .gatsby-image-wrapper {
   max-height: 20vh !important;
 }
 
-
+.controlpanel:hover{
+  min-width:100% !important;
+}
 
 .postlink:hover h2{color:var(--theme-ui-colors-siteColor); outline:0px solid var(--theme-ui-colors-siteColor); border-radius: 12px;}
 
