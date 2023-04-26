@@ -204,9 +204,20 @@ body.blogpost .gatsby-image-wrapper {
   max-height: 20vh !important;
 }
 
-.controlpanel:hover{
-  min-width:100% !important;
+body.social .controlpanel:hover{
+  min-width:40% !important;
 }
+
+body.social .controlpanel{left:-12%; min-width:10%; }
+body.social .controlpanel ul{visibility:hidden;}
+body.social .controlpanel:hover{
+  min-width:50% !important;
+  left:0;
+}
+body.social .controlpanel:hover ul{visibility:visible;}
+
+
+
 
 .postlink:hover h2{color:var(--theme-ui-colors-siteColor); outline:0px solid var(--theme-ui-colors-siteColor); border-radius: 12px;}
 
@@ -279,7 +290,7 @@ body.social .grid-container {
   column-count: 1;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.controlpanel{background:linear-gradient(0deg,#111,#222,#000,#111);background-color:#111;background-size:300% 300%;bottom:0;color:#fff;display:flex;justify-content:center;margin:5vh auto 0;opacity:.8;padding:.1rem 0;padding-bottom:10vh;position:relative;}
+body.social .controlpanel{background:linear-gradient(0deg,#111,#222,#000,#111);background-color:#111;background-size:300% 300%;bottom:0;color:#fff;display:flex;justify-content:center;margin:5vh auto 0;opacity:.8;padding:.1rem 0;padding-bottom:10vh;position:relative;}
 
 .iiz__btn {
   background: rgba(6, 6, 6, 0.4);
@@ -1025,6 +1036,16 @@ body.homepage:before{display:none}
 .clickplays{color:default; height:100%; max-height: 280px;}
 .bumper{display:none;}
 .cattags{top:140px ; }
+
+body.social .controlpanel{left:-25%; min-width:10%; }
+body.social .controlpanel ul{visibility:hidden;}
+body.social .controlpanel:hover{
+  min-width:50% !important;
+  left:0;
+}
+body.social .controlpanel:hover ul{visibility:visible;}
+
+
 }
 @media(min-width:1300px) {
 .pagination{bottom:120px}
