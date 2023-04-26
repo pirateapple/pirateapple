@@ -264,10 +264,10 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
           ) : (
           
                         <Link to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'60px', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
-            {iconimage ? (
+      {loggedIn ? (
       <SiteLogo />
                 ) : (
-                  <div style={{fontWeight:'bold', display:'grid', justifyContent:'center', alignItems:'center', height:'60px', fontSize:'150%' }}><SiteLogo /></div>
+                  <img className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', padding:'0', maxHeight:''}} src={iconimage} alt={companyname} width="117" height="60" />
                   
                 )}
             </Link>
@@ -277,6 +277,7 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
           
 
+    
 
 
 
@@ -333,9 +334,9 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 
 
 {loggedIn && (
-        <div>
+        
           <Menu />
-        </div>
+        
       )}
 
 
