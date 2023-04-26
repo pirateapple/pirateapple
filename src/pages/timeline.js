@@ -14,6 +14,13 @@ const TimeLine = () => {
     }
   `);
 
+  const handleKeyDown = (event, index) => {
+    if (event.key === "Backspace" && event.target.value === "" && index > 0) {
+      inputRefs.current[index - 1].focus();
+    }
+  };
+  
+
   const [pagePassword, setPagePassword] = useState(
     localStorage.getItem("pagePassword") || data.markdownRemark.frontmatter.pagePW || ""
   );
@@ -85,15 +92,26 @@ const TimeLine = () => {
           
             {password.map((_, index) => (
               <input
-                key={index}
-                ref={(el) => (inputRefs.current[index] = el)}
-                type="text"
-                maxLength="1"
-                onChange={(event) => handleInputChange(event, index)}
-                style={{fontSize: "3rem", width: "4rem", margin: "1rem", textAlign:'center', border:'1px solid', borderRadius:'8px', background:'rgba(0, 0, 0, .5)', color:'#999'}}
-                autoFocus={index === 0}
-                autoCapitalize="none"
-              />
+  key={index}
+  ref={(el) => (inputRefs.current[index] = el)}
+  type="text"
+  maxLength="1"
+  onChange={(event) => handleInputChange(event, index)}
+  onKeyDown={(event) => handleKeyDown(event, index)}
+  style={{
+    fontSize: "3rem",
+    width: "4rem",
+    margin: "1rem",
+    textAlign: "center",
+    border: "1px solid",
+    borderRadius: "8px",
+    background: "rgba(0, 0, 0, .5)",
+    color: "#999",
+  }}
+  autoFocus={index === 0}
+  autoCapitalize="none"
+/>
+
             ))}
           </form>
           <h3 style={{color:'var(--theme-ui-colors-text)', textAlign:'center'}}>to view this content.</h3>
