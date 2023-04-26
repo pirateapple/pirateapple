@@ -147,9 +147,9 @@ const filteredFeed = combinedFeed.filter((item) => !item.favorite);
 
 
 
-  <div className="post-card controlpanel sidebarMenuInner" style={{display:'flex', flexDirection:'column', height:'100vh', minWidth:'1%', position:'fixed', alignItems:'center', justifyContent:'center', padding:'1vh 0', zIndex:'2'}}>
+  <div className="post-card controlpanel sidebarMenuInner" style={{display:'flex', flexDirection:'column', height:'50vh', minWidth:'', position:'fixed', alignItems:'center', justifyContent:'center', margin:'2% auto 0 auto', zIndex:'2', borderRadius:'0 8px 0 0', border:'0px solid', borderRight:'1px 1px 0 0 solid #888'}}>
 
-  <div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px'}}><h3>Profile</h3></div>
+  <div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px', letterSpacing:'2px', fontSize:'clamp(1.2rem,2.2vw,1.8rem)'}}><h3>Profile</h3></div>
 
   
 
