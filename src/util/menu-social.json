@@ -1,23 +1,23 @@
 {
   "menuItems": [
     {
-      "menutitle": "Timeline",
+      "menutitle": "Pillage",
       "url": "/timeline"
     },
     {
-      "menutitle": "Favorites",
+      "menutitle": "Plunder",
       "url": "/favorites"
     },
     {
-      "menutitle": "Discover",
+      "menutitle": "Explore",
       "url": "/tags"
     },
     {
-      "menutitle": "Friends",
+      "menutitle": "Mates",
       "url": "/archive"
     },
     {
-      "menutitle": "Create",
+      "menutitle": "Walk The Plank",
       "url": "/pirate"
     }
   ]
