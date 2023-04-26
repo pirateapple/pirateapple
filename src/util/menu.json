@@ -9,12 +9,12 @@
       "url": "/tags"
     },
     {
-      "menutitle": "View Archives",
-      "url": "/archive"
-    },
-    {
       "menutitle": "Contact Us",
       "url": "/contact"
+    },
+    {
+      "menutitle": "Login/Sign up",
+      "url": "/login"
     }
   ]
 }
