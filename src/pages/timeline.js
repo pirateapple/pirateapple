@@ -57,13 +57,14 @@ const TimeLine = () => {
           <form>
             {password.map((_, index) => (
               <input
-                key={index}
-                ref={(el) => (inputRefs.current[index] = el)}
-                type="text"
-                maxLength="1"
-                onChange={(event) => handleInputChange(event, index)}
-                style={{ fontSize: "3rem", width: "2rem", margin: "1rem" }}
-              />
+  key={index}
+  ref={(el) => (inputRefs.current[index] = el)}
+  type="text"
+  maxLength="1"
+  onChange={(event) => handleInputChange(event, index)}
+  style={{ fontSize: "3rem", width: "2rem", margin: "1rem" }}
+  autoFocus={index === 0}
+/>
             ))}
           </form>
         </div>
