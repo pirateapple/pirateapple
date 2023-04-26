@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useSiteMetadata from "../hooks/SiteMetadata";
-import Layout from "../components/socialLayout";
+import Layout from "../components/siteLayout";
 import { Helmet } from "react-helmet";
 import TimeAgo from "react-timeago";
 import userRssData from "../util/userRss.json";

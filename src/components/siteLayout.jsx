@@ -11,7 +11,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import { StoreContext } from "../context/store-context"
 // import { Toast } from "./toast"
 // import Bug from "../../static/assets/logo.svg"
-// import SiteLogo from "../../static/assets/logo.svg"
+import SiteLogo from "../../static/assets/pirate-logo.svg"
 import { Helmet } from "react-helmet"
 import Theme from "./theme"
 // import { CartButton } from "./cart-button"
@@ -26,15 +26,17 @@ import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-4'
 import { BiGridHorizontal } from "react-icons/bi"
 import { MdOutlineRectangle } from "react-icons/md"
 import Menu from "../components/menu"
+import MenuSocial from "../components/menu-social"
 import userStyles from "../util/userStyles.json"
 import SignUp from "../components/newssign"
-
+import useNetlifyIdentity from '../components/useNetlifyIdentity';
 
 
 
 const Layout = ({ children }) => {
 
-
+  const [loggedIn, setLoggedIn] = useState(false);
+  useNetlifyIdentity(setLoggedIn);
 
 
 const { companyname } = useSiteMetadata()
@@ -264,7 +266,14 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
           
                         <Link to="/" className="cornerlogo" name="homereturn" style={{position:'', display:'block', maxWidth:'', height:'auto', border:'0px solid transparent'}}  aria-label="Link to Top" title="Back to Top">
             {iconimage ? (
-      <img className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', padding:'0', maxHeight:''}} src={iconimage} alt={companyname} width="117" height="60" />
+<>
+{loggedIn ? (
+  <SiteLogo />
+) : (
+  <img className="cornerlogo" style={{position:'relative', top:'', left:'4%', border:'0px solid white', padding:'0', maxHeight:''}} src={iconimage} alt={companyname} width="117" height="60" />
+              
+)}
+</>    
                 ) : (
                   <div style={{fontWeight:'bold', display:'grid', justifyContent:'center', alignItems:'center', height:'60px', fontSize:'150%' }}>{companyname}</div>
                 )}
@@ -329,8 +338,18 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
 )} */}
 
 
-<Menu />
+{/* {loggedIn && (
+        
+        <Menu />
+      
+    )} */}
 
+{loggedIn ? (
+      <Menu />
+                ) : (
+                  <Menu />
+                  
+                )}
 
 
 
@@ -481,10 +500,18 @@ const fontUrl = "https://fonts.googleapis.com/css?family=" + font1.replace(/\s+/
   ""
 )} */}
 
-<Menu />
+{loggedIn ? (
+      <Menu />
+    ) : (
+       <Menu />
+                  
+)}
 
 <li>
 <ul className="missioncontrol sitecontrols" style={{display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'', textAlign:'center', maxHeight:'', alignItems:'center', paddingTop:'5px'}}>
+
+
+
 
 {showSearch ? (
 <li>
