@@ -14,6 +14,10 @@ const TimeLine = () => {
     }
   `);
 
+  const [passwordUpdated, setPasswordUpdated] = useState(false);
+
+
+
   const handleKeyDown = (event, index) => {
     if (event.key === "Backspace" && event.target.value === "" && index > 0) {
       inputRefs.current[index - 1].focus();
@@ -56,6 +60,8 @@ const TimeLine = () => {
   }, []);
 
   useEffect(() => {
+    if (!passwordUpdated) return;
+  
     if (password.join("").toLowerCase() === pagePassword.toLowerCase()) {
       setVerified(true);
       safeLocalStorageSetItem("pagePassword", pagePassword);
@@ -63,23 +69,29 @@ const TimeLine = () => {
       console.log(`Password input fields cleared: ${password}`);
     }
     console.log(`Password updated to: ${pagePassword}`);
-  }, [password, pagePassword]);
+  
+    setPasswordUpdated(false);
+  }, [password, pagePassword, passwordUpdated]);
+  
 
   const handleInputChange = (event, index) => {
-    const newValue = event.target.value;
+  const newValue = event.target.value;
 
-    setPassword((prev) => {
-      const newPW = [...prev];
-      newPW[index] = newValue;
-      return newPW;
-    });
+  setPassword((prev) => {
+    const newPW = [...prev];
+    newPW[index] = newValue;
+    return newPW;
+  });
 
-    if (newValue && index < inputRefs.current.length - 1) {
-      setTimeout(() => {
-        inputRefs.current[index + 1].focus();
-      }, 0);
-    }
-  };
+  setPasswordUpdated(true);
+
+  if (newValue && index < inputRefs.current.length - 1) {
+    setTimeout(() => {
+      inputRefs.current[index + 1].focus();
+    }, 0);
+  }
+};
+
 
   if (verified) {
     return (
