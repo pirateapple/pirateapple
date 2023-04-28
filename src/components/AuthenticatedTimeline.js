@@ -233,7 +233,7 @@ return (
           
           <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'end', alignItems: "center", gap:'1vh', maxHeight:'50vw'}}>
             
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
+            <a href={item.link} rel="noopener noreferrer">
             {item.imageUrl && (
               <img src={item.imageUrl} alt={item.title} className="post-image" />
             )}
