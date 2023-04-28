@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Launch Your Web App
+tagline:  Avast A New Social Media
 featuredImage: /assets/pirate-propaganda.webp
 youtube:
   youtuber: 
@@ -57,7 +57,7 @@ cta:
   ctaLink: "https://google.com/contact"
 svgImage: 
 secondaryImage: /assets/default-user.webp
-title: Complete Web Solutions
+title: A new social media platform owned by the people
 sharethis: false
 liarliar: false
 bumpertext: "Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha"
@@ -74,9 +74,9 @@ maratingtx4: x
 template: index-page
 description: A description of the site
 svgzindex: x
-profTitle: Complete Web
+profTitle: Pirate Social
 coverletter:
-  coverText: About Complete Web
+  coverText: About Pirate Social
   coverLink: /about
 scrollable: false
 contentinvideo: false
