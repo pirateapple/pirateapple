@@ -1,5 +1,5 @@
-import defaultColors from "../util/default-colors.json"
-import darkColors from "../util/dark-theme-colors.json"
+import defaultColors from "../../static/data/default-colors.json"
+import darkColors from "../../static/data/dark-theme-colors.json"
 import { lightness } from "@theme-ui/color"
 const theme = {
   colors: {

@@ -3,7 +3,7 @@ import useSiteMetadata from "../hooks/SiteMetadata";
 import Layout from "../components/siteLayout";
 import { Helmet } from "react-helmet";
 import TimeAgo from "react-timeago";
-import userRssData from "../util/userRss.json";
+import userRssData from "../../static/data/userRss.json";
 import Menu from "../components/menu"
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
 

@@ -619,19 +619,19 @@ Click to play
 
 {/* show feature */}
 {showFeature ? (   
-<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'90vh', maxHeight:'', margin:'0 0 0 0', padding:'0 0 10px 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'', maxHeight:'', margin:'0 0 0 0', padding:'0 0 0 0', position:'relative'}}>
   <article>
 
-  <div className=""  >
+  <div className="" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}  >
 {FrontImage ? (
 
 <GatsbyImage
 image={FrontImage}
 alt={frontmatter.title + " - Featured image"}
-className="featured-image2 layer12 iiz__img"
+className="featuredimagelayer12"
 placeholder="blurred"
 loading="eager"
-style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'0px solid !important', objectFit:'contain', margin:'0 auto'}}
+style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'1px solid #fff !important', objectFit:'contain', margin:'0 auto'}}
 />
 
 
@@ -649,7 +649,9 @@ style={{height:'auto', width:'100vw', maxHeight:'100vh', position:'relative', zI
           ) : (
             ""
           )}
+          <br /><strong>Coming Soon</strong>
       </div>
+      
   </article>
 </section>
 ) : (

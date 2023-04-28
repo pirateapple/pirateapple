@@ -1,10 +1,10 @@
 ---
 template: team
 slug: "/team/team-member"
-name: Alex Wood
+name: Team Member
 credentials: PE
 jobTitle: Senior Project Manager, Associate
-profilePicture: /assets/team_alex_wood.jpg
+profilePicture: /assets/default-user.webp
 order: 7
 showDetailedPage: TRUE
 list: true

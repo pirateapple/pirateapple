@@ -392,7 +392,7 @@ collections:
     files:
       - name: general
         label: General
-        file: "src/util/site.json"
+        file: "data/site.json"
         fields:
           - label: meta
             name: meta
@@ -563,7 +563,7 @@ collections:
         name: socialIcons
         editor:
           preview: false
-        file: "src/util/socialmedia.json"
+        file: "data/socialmedia.json"
         fields:
           - label: Social Icons
             name: socialIcons
@@ -604,7 +604,7 @@ collections:
         name: menuNavigation
         editor:
           preview: false
-        file: "src/util/menu.json"
+        file: "data/menu.json"
         fields:
           - label: Menu Items
             name: menuItems
@@ -631,7 +631,7 @@ collections:
     files:
       - label: "User Styles"
         name: "userStyles"
-        file: "src/util/userStyles.json"
+        file: "data/userStyles.json"
         fields:
           - label: "Override Site Styles"
             name: "userStyles"
@@ -640,7 +640,7 @@ collections:
 
       - label: "Default Theme"
         name: "themescolors"
-        file: "src/util/default-colors.json"
+        file: "data/default-colors.json"
         fields:
           - label: "siteColor"
             name: "siteColor"
@@ -690,7 +690,7 @@ collections:
 
       - label: "Dark Theme"
         name: "darkthemescolors"
-        file: "src/util/dark-theme-colors.json"
+        file: "data/dark-theme-colors.json"
         fields:
           - label: "siteColor"
             name: "siteColor"

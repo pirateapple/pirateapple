@@ -27,7 +27,7 @@ import { BiGridHorizontal } from "react-icons/bi"
 import { MdOutlineRectangle } from "react-icons/md"
 import Menu from "../components/menu"
 import MenuSocial from "../components/menu-social"
-import userStyles from "../util/userStyles.json"
+import userStyles from "../../static/data/userStyles.json"
 import SignUp from "../components/newssign"
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
 

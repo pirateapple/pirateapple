@@ -11,7 +11,7 @@ const netlifyCmsPaths = {
   },
 }
 
-const settings = require("./src/util/site.json")
+const settings = require("./static/data/site.json")
 
 module.exports = {
   flags: {},
@@ -173,7 +173,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/content/`,
+        path: `${__dirname}/static/content/`,
         name: `content`,
       },
     },

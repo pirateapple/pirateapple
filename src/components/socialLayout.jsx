@@ -26,7 +26,7 @@ import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-4'
 import { BiGridHorizontal } from "react-icons/bi"
 import { MdOutlineRectangle } from "react-icons/md"
 import Menu from "./menu-social"
-import userStyles from "../util/userStyles.json"
+import userStyles from "../../static/data/userStyles.json"
 import SignUp from "./newssign"
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
 
