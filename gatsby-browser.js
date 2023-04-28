@@ -11,12 +11,12 @@
 
 
 
-import React from "react";
-import { AuthProvider } from "./src/AuthProvider";
+// import React from "react";
+// import { AuthProvider } from "./src/AuthProvider";
 
-export const wrapRootElement = ({ element }) => {
-  return <AuthProvider>{element}</AuthProvider>;
-};
+// export const wrapRootElement = ({ element }) => {
+//   return <AuthProvider>{element}</AuthProvider>;
+// };
 
 
 export const onInitialClientRender = () => {
