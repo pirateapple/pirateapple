@@ -220,16 +220,6 @@ module.exports = {
           {
             resolve: 'gatsby-plugin-feed',
             options: {
-              custom_namespaces: {
-                media: "http://search.yahoo.com/mrss/",
-              },
-              custom_elements: [
-                {
-                  _attr: {
-                    "xmlns:media": "http://search.yahoo.com/mrss/",
-                  },
-                },
-              ],
               query: `
                 {
                   site {
@@ -269,6 +259,11 @@ module.exports = {
                         custom_elements: [
                           { "content:encoded": node.html },
                           mediaContent,
+                          {
+                            _attr: {
+                              "xmlns:media": "http://search.yahoo.com/mrss/",
+                            },
+                          },
                         ].filter(Boolean),
                       });
                     });
@@ -299,13 +294,14 @@ module.exports = {
                       }
                     }
                   }
-                `,
-                output: '/rss.xml',
+                  `,
+                  output: '/rss.xml',
                   title: 'Feed Title',
                 },
               ],
             },
           },
+          
           
           
           
