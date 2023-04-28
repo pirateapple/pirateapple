@@ -1,12 +1,17 @@
+// Construct the full URLs
+const origin = window.location.origin;
+const siteJsonUrl = `${origin}/static/data/site.json`;
+const configYmlUrl = `${origin}/static/admin/config.yml`;
+
 // Fetch the site metadata
-fetch("/static/data/site.json")
+fetch(siteJsonUrl)
   .then(response => response.json())
   .then(siteMetadata => {
     // Get the site_url from siteMetadata
     const siteUrl = siteMetadata.siteUrl;
 
     // Read the original config.yml content
-    fetch("/static/admin/config.yml")
+    fetch(configYmlUrl)
       .then(response => response.text())
       .then(configContent => {
         // Replace the placeholder with the actual site_url
