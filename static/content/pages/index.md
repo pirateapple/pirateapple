@@ -72,7 +72,7 @@ maratingtx2: x
 maratingtx3: x
 maratingtx4: x
 template: index-page
-description: A description of the site
+description: Pirate - social media owned by the people
 svgzindex: x
 profTitle: Pirate Social
 coverletter:
