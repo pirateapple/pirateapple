@@ -19,7 +19,7 @@
 <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    netlifyIdentity.on('logout', () => location.reload());
+    netlifyIdentity.on('logout', () => window.top.location.reload());
     netlifyIdentity.on('login', () => {
       // Replace '/your-page-url' with the URL of the page you want to redirect to
       window.top.location.href = '/your-page-url';
