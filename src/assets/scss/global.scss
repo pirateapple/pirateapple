@@ -10,6 +10,7 @@
 html, body{height:100vh; }
 
 body.homepage #menu{display:none !important;}
+body.homepage { background:#000 !important;}
 
 .kml-map {
   height: 90vh;

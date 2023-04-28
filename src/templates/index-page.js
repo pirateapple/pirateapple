@@ -622,7 +622,7 @@ Click to play
 <section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'', maxHeight:'', margin:'0 0 0 0', padding:'0 0 0 0', position:'relative'}}>
   <article>
 
-  <div className="" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}  >
+  <div className="" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', color:'#999'}}  >
 {FrontImage ? (
 
 <GatsbyImage
