@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useSiteMetadata from "../hooks/SiteMetadata";
+import { Link } from "gatsby"
 import Layout from "../components/siteLayout";
 import { Helmet } from "react-helmet";
 import TimeAgo from "react-timeago";
@@ -250,10 +251,6 @@ return (
 
 <div className="flexbutt" style={{width:'100%', gap:'2vw'}}>
 
-
-
-
-       
 <div className="contact-form flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', minWidth:'30vw' }}>
 <h4>Add A Feed:</h4>
         <input
@@ -270,17 +267,17 @@ return (
 />
 <button className="button" onClick={addSubscription}>Add Subscription</button>
 </div>
-<div className="flexcheek" style={{ minWidth: '50%', maxHeight: '40vh', overflow: 'scroll', border:'1px solid #333', padding:'3%', borderRadius:'8px' }}>
-<h3>Your subscribed feeds</h3>
-<p>Your subscribed feeds - please feel free to edit as needed.</p>
+<div className="flexcheek" style={{ minWidth: '', maxHeight: '40vh', overflow: 'scroll', border:'1px solid #333', padding:'100px 3% 0 3%', borderRadius:'8px', textAlign:'center', position:'relative' }}>
+<h3>Latest Subscribed Feeds:</h3>
 
-        <h4>Current Subscriptions:</h4>
-       
         <ul>
           {userSubscriptions.map((subscription, index) => (
             <li key={index}>{subscription.name}</li>
           ))}
         </ul>
+
+
+        <Link to="/favorites" className="button" style={{position:'absolute',  top:'10px', left:'0', right:'0', width:'70%', margin:'0 auto'}} >Manage Feeds</Link>
 
 </div>
 
