@@ -21,8 +21,8 @@ show_preview_links: false
 
 collections:
   
-   - name: "team"
-     editor:
+  - name: "team"
+    editor:
       preview: false
     label: "Pirate Posts"
     label_singular: "Pirate Post"
