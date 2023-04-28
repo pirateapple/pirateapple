@@ -65,20 +65,21 @@ const TeamPage = ({ data }) => {
           
         <div className="sliderSpacer" style={{height:'', paddingTop:'', display:''}}></div>
         
-          {posts.map(({ node }) => (
-            <div className="post-card1 grid-item"
-            style={{  alignItems:'center'}} key={node.id}>
-              <a href={node.frontmatter.slug}>
-                {node.frontmatter.profilePicture && (
-                  <GatsbyImage
-                    image={node.frontmatter.profilePicture.childImageSharp.gatsbyImageData}
-                    alt={node.frontmatter.title}
-                  />
-                )}
-                <h2>{node.frontmatter.teamname}</h2>
-              </a>
-            </div>
-          ))}
+        {posts.map(({ node }) => (
+  <div className="post-card1 grid-item"
+  style={{  alignItems:'center'}} key={node.id}>
+    <a href={node.frontmatter.slug}>
+      {node.frontmatter.profilePicture && (
+        <GatsbyImage
+          image={node.frontmatter.profilePicture.childImageSharp.gatsbyImageData}
+          alt={node.frontmatter.name}
+        />
+      )}
+      <h2>{node.frontmatter.name}</h2>
+    </a>
+  </div>
+))}
+
         </div>
       </div>
     </Layout>
