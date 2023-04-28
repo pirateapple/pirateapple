@@ -1,27 +1,19 @@
-// Construct the full URLs
-const origin = window.location.origin;
-const siteJsonUrl = `${origin}/static/data/site.json`;
-const configYmlUrl = `${origin}/static/admin/config.yml`;
-
 // Fetch the site metadata
-fetch(siteJsonUrl)
+fetch("/data/site.json")
   .then(response => response.json())
   .then(siteMetadata => {
     // Get the site_url from siteMetadata
     const siteUrl = siteMetadata.siteUrl;
 
     // Read the original config.yml content
-    fetch(configYmlUrl)
+    fetch("/admin/config.yml")
       .then(response => response.text())
       .then(configContent => {
-        // Replace the placeholder with the actual site_url
-        const updatedConfigContent = configContent.replace("{{site_url}}", siteUrl);
+        // Create a Blob with the config content
+        const configBlob = new Blob([configContent], { type: "text/yaml" });
 
-        // Create a Blob with the updated content
-        const configBlob = new Blob([updatedConfigContent], { type: "text/yaml" });
-
-        // Set the CMS config using the updated Blob
+        // Set the CMS config using the Blob and the siteUrl
         window.CMS_MANUAL_INIT = true;
-        CMS.init({ config: configBlob });
+        CMS.init({ config: configBlob, site_url: siteUrl });
       });
   });
