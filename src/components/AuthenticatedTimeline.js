@@ -194,7 +194,7 @@ return (
     </div>
   </div>
 
-  <div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
+  {/* <div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
 
       {favorites.map((item, index) => (
@@ -221,9 +221,10 @@ return (
           </div>
         </div>
       ))}
-    </div>
+    </div> */}
 
-    <div className="feed">
+<div className="contentpanel grid-container" style={{ marginTop: "" }}>
+          <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
       <h2>Feed</h2>
       {filteredFeed.slice(0, visibleItems).map((item, index) => (
         <div className="post-card" key={index}>

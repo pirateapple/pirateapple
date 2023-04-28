@@ -20,7 +20,7 @@ export function MenuInc() {
       {newMenu.map((menuItem, index) => (
         <li key={index}>{menuItem}</li>
       ))}
-      <li><BlueCheck /></li>
+      {/* <li><BlueCheck /></li> */}
     </>
   );
 }
