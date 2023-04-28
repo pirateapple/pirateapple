@@ -206,29 +206,15 @@ const AuthenticatedTimeline = () => {
   // };
   
 
-  const addSubscription = () => {
-    if (newFeedUrl && newFeedName) {
-      // Check for duplicates
-      const isDuplicate = userSubscriptions.some(subscription => subscription.rssFeedUrl === newFeedUrl);
-  
-      if (!isDuplicate) {
-        const newSubscription = {
-          rssFeedUrl: newFeedUrl,
-          name: newFeedName,
-        };
-        const updatedSubscriptions = [...userSubscriptions, newSubscription];
-        setUserSubscriptions(updatedSubscriptions);
-        localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
-  
-        setNewFeedUrl("");
-        setNewFeedName("");
-      } else {
-        console.warn('Duplicate subscription not added.');
-        // You can display an error message or a warning to the user about the duplicate subscription
-      }
-    }
+  const addSubscription = (item) => {
+    const newSubscription = {
+      rssFeedUrl: item.feedUrl,
+      name: item.name,
+    };
+    const updatedSubscriptions = [...userSubscriptions, newSubscription];
+    setUserSubscriptions(updatedSubscriptions);
+    localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
   };
-  
 
 
 return (
