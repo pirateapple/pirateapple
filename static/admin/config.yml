@@ -369,10 +369,10 @@ collections:
   - name: "team"
     editor:
       preview: false
-    label: "Team Members"
-    label_singular: "Team Member"
+    label: "Pirate Posts"
+    label_singular: "Pirate Post"
     description: >
-      Team Members Pages
+      Pirate Posts - your content on Pirate
     folder: "static/content/team"
     create: true
     slug: "{{slug}}"

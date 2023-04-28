@@ -179,3 +179,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+
+exports.createPages = async ({ actions }) => {
+  const { createPage } = actions;
+
+  createPage({
+    path: "/pirateship",
+    component: path.resolve("./src/pages/pirateship.js"),
+  });
+};
