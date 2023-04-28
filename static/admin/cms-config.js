@@ -20,3 +20,4 @@ fetch("/data/site.json")
         CMS.init({ config: configBlob });
       });
   });
+
