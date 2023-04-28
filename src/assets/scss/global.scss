@@ -264,18 +264,24 @@ body.blogpost .gatsby-image-wrapper {
 }
 
 
-.load-more-wrapper {
-  grid-column: 1 / -1; /* This line makes the button take up all columns */
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
+// .load-more-wrapper {
+//   grid-column: 1 / -1; /* This line makes the button take up all columns */
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+//   margin-top: 1rem;
+//   margin-bottom: 1rem;
+// }
 
-.horizontal-scroll .load-more-wrapper {
-  min-height:50vh;
-}
+// .horizontal-scroll .load-more-wrapper {
+//   min-height:50vh;
+//   grid-column: none; 
+//   display: block !important;
+//   justify-content: center;
+//   width: 100%;
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
 
 
 
@@ -283,17 +289,9 @@ body.blogpost .gatsby-image-wrapper {
   max-height: 20vh !important;
 }
 
-// body.social .controlpanel:hover{
-//   min-width:40% !important;
-// }
 
-body.social .controlpanel{left:-120px; min-width:50px; }
-body.social .controlpanel ul{visibility:hidden;}
-body.social .controlpanel:hover{
-  min-width:30% !important;
-  left:0;
-}
-body.social .controlpanel:hover ul{visibility:visible;}
+
+
 
 body.social .searchIcon{display:none;}
 
@@ -349,9 +347,9 @@ margin:0 auto;
   .grid-container {
     column-count: 2;
   }
-  body.social .grid-container {
-    margin-left:50px;
-  }
+  // body.social .grid-container {
+  //   margin-left:50px;
+  // }
 }
 @media (min-width: 760px) and (max-width: 979.5px) {
   .grid-container {
@@ -374,11 +372,11 @@ body.social .grid-container {
   display: grid;
   list-style: none;
   column-gap: 3vw;
-  padding: 0 3%;
-  column-count: 1;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 3% 0 3%;
+  // column-count: 1;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-body.social .controlpanel{background:linear-gradient(0deg,#111,#222,#000,#111);background-color:#111;background-size:300% 300%;color:#fff;display:flex;justify-content:center; opacity:.85;padding:0 0;padding-bottom:0;position:relative;}
+
 
 .iiz__btn {
   background: rgba(6, 6, 6, 0.4);
@@ -1133,14 +1131,7 @@ body.homepage:before{display:none}
 .bumper{display:none;}
 .cattags{top:140px ; }
 
-body.social .controlpanel{left:-25%; min-width:10%; }
-body.social .controlpanel ul{visibility:hidden;}
-body.social .controlpanel:hover{
-  min-width:80% !important;
-  left:0;
-  transition:all 1s ease-in-out;
-}
-body.social .controlpanel:hover ul{visibility:visible;}
+
 
 
 }
