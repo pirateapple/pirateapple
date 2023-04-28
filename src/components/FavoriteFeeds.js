@@ -194,7 +194,7 @@ const FavoriteFeeds = () => {
 
 
 
-<div className='flexbutt' style={{}}> 
+
 
 
 
@@ -295,7 +295,7 @@ const FavoriteFeeds = () => {
 )}
         
       </div>
-      </div>
+  
       </>
 
   );
