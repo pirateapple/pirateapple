@@ -373,7 +373,7 @@ collections:
     label_singular: "Team Member"
     description: >
       Team Members Pages
-    folder: "src/content/team"
+    folder: "static/content/team"
     create: true
     slug: "{{slug}}"
     fields:
