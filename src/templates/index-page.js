@@ -649,7 +649,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
           ) : (
             ""
           )}
-          <br /><strong>Coming Soon</strong>
+          <br /><strong>Summer 2023</strong>
       </div>
       
   </article>
