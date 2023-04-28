@@ -121,15 +121,22 @@ const AuthenticatedTimeline = () => {
         const feedPromises = [...userRssData.rssFeeds, ...userSubscriptions].map((feed) => fetchRssFeed(feed));
         const allFeeds = await Promise.all(feedPromises);
         const mergedFeed = [].concat(...allFeeds);
-  
+    
+        // Add the feedUrl property to each item
+        mergedFeed.forEach((item) => {
+          const feed = userRssData.rssFeeds.find((f) => f.name === item.name) || userSubscriptions.find((f) => f.name === item.name);
+          item.feedUrl = feed ? feed.rssFeedUrl : "";
+        });
+    
         // Sort the merged feeds by their pubDate in descending order (most recent first)
         const sortedFeed = mergedFeed.sort((a, b) => {
           return new Date(b.pubDate) - new Date(a.pubDate);
         });
-  
+    
         setFeed(sortedFeed);
       }
     };
+    
   
     fetchAllFeeds();
   }, [userSubscriptions]);
@@ -183,22 +190,45 @@ const AuthenticatedTimeline = () => {
   };
   
   
+  // const addSubscription = () => {
+  //   if (newFeedUrl && newFeedName) {
+  //     const newSubscription = {
+  //       rssFeedUrl: newFeedUrl,
+  //       name: newFeedName,
+  //     };
+  //     const updatedSubscriptions = [...userSubscriptions, newSubscription];
+  //     setUserSubscriptions(updatedSubscriptions);
+  //     localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
+  
+  //     setNewFeedUrl("");
+  //     setNewFeedName("");
+  //   }
+  // };
+  
+
   const addSubscription = () => {
     if (newFeedUrl && newFeedName) {
-      const newSubscription = {
-        rssFeedUrl: newFeedUrl,
-        name: newFeedName,
-      };
-      const updatedSubscriptions = [...userSubscriptions, newSubscription];
-      setUserSubscriptions(updatedSubscriptions);
-      localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
+      // Check for duplicates
+      const isDuplicate = userSubscriptions.some(subscription => subscription.rssFeedUrl === newFeedUrl);
   
-      setNewFeedUrl("");
-      setNewFeedName("");
+      if (!isDuplicate) {
+        const newSubscription = {
+          rssFeedUrl: newFeedUrl,
+          name: newFeedName,
+        };
+        const updatedSubscriptions = [...userSubscriptions, newSubscription];
+        setUserSubscriptions(updatedSubscriptions);
+        localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
+  
+        setNewFeedUrl("");
+        setNewFeedName("");
+      } else {
+        console.warn('Duplicate subscription not added.');
+        // You can display an error message or a warning to the user about the duplicate subscription
+      }
     }
   };
   
-
 
 
 return (
@@ -270,7 +300,7 @@ return (
 <div className="flexcheek" style={{ minWidth: '', maxHeight: '40vh', overflow: 'scroll', border:'1px solid #333', padding:'100px 3% 0 3%', borderRadius:'8px', textAlign:'center', position:'relative' }}>
 <h3>Latest Subscribed Feeds:</h3>
 
-        <ul>
+        <ul style={{display:'flex', flexDirection:'column'}}>
           {userSubscriptions.map((subscription, index) => (
             <li key={index}>{subscription.name}</li>
           ))}
@@ -334,37 +364,38 @@ return (
 
 
 
-      {filteredFeed.slice(0, visibleItems).map((item, index) => (
-
-<div className="post-card1" key={index} style={{ justifyContent: "center", alignItems: "center" }}>
-          
-      
-  <a className="postlink" href={item.link} rel="noopener noreferrer">
-            {item.imageUrl && (
-              <img src={item.imageUrl} alt={item.title} className="featured-image1" />
-            )}
-    <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', gap:'2vh', width:'100%', height:'', position:'relative', background:'', padding:'0 1vw', margin:'2vh auto 0 auto', textAlign:'', overFlow:'hidden'}}>
-            <h3 className="post-title">{item.title}</h3>
-           
-
-            <p className="post-excerpt">{createExcerpt(item.description, 150)}</p> 
+          {filteredFeed.slice(0, visibleItems).map((item, index) => (
+  <div className="post-card1" key={index} style={{ justifyContent: "center", alignItems: "center" }}>
+    <a className="postlink" href={item.link} rel="noopener noreferrer">
+      {item.imageUrl && (
+        <img src={item.imageUrl} alt={item.title} className="featured-image1" />
+      )}
+      <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', gap:'2vh', width:'100%', height:'', position:'relative', background:'', padding:'0 1vw', margin:'2vh auto 0 auto', textAlign:'', overFlow:'hidden'}}>
+        <h3 className="post-title">{item.title}</h3>
+        <p className="post-excerpt">{createExcerpt(item.description, 150)}</p> 
+      </div>
+    </a>
+    <div className="post-meta" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'0 auto', width:'auto', maxWidth:'80vw', margin:'0 auto', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)', gap:'2vw', }}>
+      <button
+        className="postlink"
+        onClick={(e) => {
+          e.preventDefault();
+          addSubscription(item);
+          toggleFavorite(item);
+        }}
+        style={{ border: 'none', background: 'none' }}
+      >
+        {item.name}
+      </button>
+      {showDates && <TimeAgo date={item.pubDate} />}
     </div>
- </a>
+    <button onClick={() => toggleFavorite(item)} style={{position:''}}>
+      {item.favorite ? "Unfavorite" : "☆"}
+    </button>
+  </div>
+))}
 
-
-        <div className="post-meta" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'0 auto', width:'auto', maxWidth:'80vw', margin:'0 auto', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)', gap:'2vw', }}>
-             <h4 className="post-source" style={{textAlign:'center'}}>{item.name}</h4>
-            {showDates && <TimeAgo date={item.pubDate} />}
-        </div>
-
-          <button onClick={() => toggleFavorite(item)} style={{position:''}}>
-              {item.favorite ? "Unfavorite" : "☆"}
-          </button>
-<br />
-
-</div>
-
-      ))}
+ 
 
 {visibleItems < filteredFeed.length && (
   <div className="load-more-wrapper" style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:'', width:'', height:''}}>
