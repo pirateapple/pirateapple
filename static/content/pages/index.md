@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Avast A New Social Media
+tagline:  social media by the people for the people
 featuredImage: /assets/pirate-propaganda.webp
 youtube:
   youtuber: 
@@ -57,7 +57,7 @@ cta:
   ctaLink: "https://google.com/contact"
 svgImage: 
 secondaryImage: /assets/default-user.webp
-title: A new social media platform owned by the people
+title: Pirate - social media by the people for the people
 sharethis: false
 liarliar: false
 bumpertext: "Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha"
