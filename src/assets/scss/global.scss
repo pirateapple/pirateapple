@@ -324,6 +324,12 @@ body.social .searchIcon{display:none;}
   border-radius: 8px;
 }
 
+.grid-container .post-card1 img{
+max-height: 30vh;
+margin:0 auto;
+}
+
+
 @media (min-width: 320px) and (max-width: 759.5px) {
   .grid-container {
     column-count: 2;

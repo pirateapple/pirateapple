@@ -223,13 +223,15 @@ return (
       ))}
     </div> */}
 
-<div className="contentpanel grid-container" style={{ marginTop: "" }}>
+<div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
-      <h2>Feed</h2>
+
+
+
       {filteredFeed.slice(0, visibleItems).map((item, index) => (
-        <div className="post-card" key={index} style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:''}}>
+        <div className="post-card1" key={index} style={{display:'flex', flexDirection:'column', justifyContent:'end', gap:'',}}>
           
-          <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:'1vh'}}>
+          <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'end', alignItems: "center", gap:'1vh', maxHeight:'50vw'}}>
             
             <a href={item.link} target="_blank" rel="noopener noreferrer">
             {item.imageUrl && (
@@ -237,16 +239,13 @@ return (
             )}
             <br />
             <h3 className="post-title">
-              
                 {item.title}
-              
             </h3></a>
             <p className="post-excerpt">{createExcerpt(item.description, 150)}</p>
             
           </div>
 
-
-          <div className="post-meta" style={{display:'flex', justifyContent:'space-between', gap:'2vw'}}>
+          <div className="post-meta" style={{display:'flex', justifyContent:'space-between', gap:'2vw', maxWidth:'300px', margin:'0 auto'}}>
              <h4 className="post-source" style={{textAlign:'center'}}>{item.name}</h4>
             {showDates && <TimeAgo date={item.pubDate} />}
           </div>
@@ -257,6 +256,8 @@ return (
 
 
         </div>
+
+
       ))}
       {visibleItems < filteredFeed.length && (
         <button className="load-more" onClick={showMoreItems}>
