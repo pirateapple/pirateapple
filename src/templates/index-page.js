@@ -631,7 +631,7 @@ alt={frontmatter.title + " - Featured image"}
 className="featuredimagelayer12"
 placeholder="blurred"
 loading="eager"
-style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'1px solid #fff !important', objectFit:'contain', margin:'2%'}}
+style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'1px solid #888 !important', objectFit:'contain', margin:'2%'}}
 />
 
 
