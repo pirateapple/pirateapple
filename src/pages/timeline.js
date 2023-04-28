@@ -6,7 +6,7 @@ import Layout from "../components/siteLayout";
 const TimeLine = () => {
   const data = useStaticQuery(graphql`
     query {
-      markdownRemark(fileAbsolutePath: { regex: "/src/content/pages/index.md$/" }) {
+      markdownRemark(fileAbsolutePath: { regex: "/static/content/pages/index.md$/" }) {
         frontmatter {
           pagePW
         }
