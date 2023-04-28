@@ -38,7 +38,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 const team = result.data.allMarkdownRemark.edges
 team.forEach((team) => {
   createPage({
-    path: `/team/${team.node.frontmatter.slug}`,
+    path: `/team${team.node.frontmatter.slug}`,
     component: path.resolve(`src/templates/team.js`),
     context: {
       id: team.node.id,
