@@ -22,7 +22,7 @@
     netlifyIdentity.on('logout', () => location.reload());
     netlifyIdentity.on('login', () => {
       // Replace '/your-page-url' with the URL of the page you want to redirect to
-      location.href = '/pirate';
+      window.top.location.href = '/your-page-url';
     });
   });
 </script>
