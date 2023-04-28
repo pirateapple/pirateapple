@@ -167,7 +167,7 @@ return (
         <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}><Menu /></ul>
       )} */}
 
-      <div style={{display:'flex', flexDirection:'column'}}>
+      <div className="contact-form" style={{display:'flex', flexDirection:'column'}}>
         <input
           type="text"
           placeholder="Feed name"
