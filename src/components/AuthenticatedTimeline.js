@@ -6,9 +6,60 @@ import TimeAgo from "react-timeago";
 import userRssData from "../../static/data/userRss.json";
 import Menu from "../components/menu";
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
-
+import { RiMenuUnfoldFill, RiCloseCircleFill } from "react-icons/ri"
 
 const AuthenticatedTimeline = () => {
+
+
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  /* eslint-disable-next-line no-unused-vars */
+  const [isMobile, setIsMobile] = useState(false);
+  
+
+  const resizeMobile = () => {
+    setIsMenuOpen(false);
+    setIsMobile(true);
+    const elements = document.querySelectorAll(".menusnapp");
+    elements.forEach((el) => {
+      el.style.display = "none";
+      el.style.overflow = "hidden";
+      el.style.transition = "transform 1550ms ease-in-out";
+    });
+  };
+
+  const resizeDesk = () => {
+    setIsMenuOpen(true);
+    setIsMobile(false);
+    const elements = document.querySelectorAll(".menusnapp");
+    elements.forEach((el) => {
+      el.style.display = "flex";
+      el.style.transition = "transform 1550ms ease-in-out";
+    });
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedIsMenuOpen = window.localStorage.getItem("isMenuOpen");
+      if (storedIsMenuOpen) {
+        setIsMenuOpen(storedIsMenuOpen === "true");
+      } else {
+        setIsMenuOpen(true); // set default value to true if no value found in local storage
+      }
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("isMenuOpen", isMenuOpen);
+    }
+  }, [isMenuOpen]);
+  
+
+  const MenuIcon = isMenuOpen ? RiCloseCircleFill : RiMenuUnfoldFill;
+
+
+
+
   const { showNav } = useSiteMetadata();
   const { showDates } = useSiteMetadata();
   const { postcount } = useSiteMetadata();
@@ -162,17 +213,49 @@ return (
 
 
 
-    <div className="post-card controlpanel sidebarMenuInner" style={{ display: 'flex', flexDirection: 'column', height: '', minWidth: '', position: 'fixed', alignItems: 'center', justifyContent: 'center', margin: '2% auto 0 auto', zIndex: '2', borderRadius: '0 8px 0 0', border: '0px solid', borderRight: '1px 1px 0 0 solid #888' }}>
 
-      <div style={{ textAlign: 'right', writingMode: 'vertical-rl', textOrientation: 'mixed', position: 'absolute', top: '', right: '5px', letterSpacing: '2px', fontSize: 'clamp(1.2rem,2.2vw,1.8rem)' }}><h3>Profile</h3></div>
+        <div
+          className="pagemenu panel"
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            zIndex: "4",
+            left: "1vw",
+            right: "",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "auto",
+            maxWidth: "80vw",
+            margin: "0 auto",
+            gap: "5vw",
+            background: "rgba(0, 0, 0, .5)",
+            padding: "",
+            border: "1px solid #666",
+            borderRadius: "",
+            textShadow: "0 1px 1px rgba(0, 0, 0, .7)",
+            // fontSize: "clamp(2rem, 3vw, 3rem)",
+            verticalAlign: "center",
+          }}
+        >
+          <div
+            className="menusnapp"
+            style={{
+              gap: "0",
+              padding: "2vh 4vw",
+              alignItems: "center",
+              display: isMenuOpen ? "block" : "none",
+            }}
+          >
 
-      {/* {loggedIn ? (
-        <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}><Menu /></ul>
-      ) : (
-        <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}><Menu /></ul>
-      )} */}
+<div className="flexbutt" style={{width:'100%', gap:'2vw'}}>
 
-      <div className="contact-form" style={{display:'flex', flexDirection:'column'}}>
+
+
+
+       
+<div className="contact-form flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', minWidth:'30vw' }}>
+<h4>Add A Feed:</h4>
         <input
           type="text"
           placeholder="Feed name"
@@ -187,16 +270,34 @@ return (
 />
 <button className="button" onClick={addSubscription}>Add Subscription</button>
 </div>
-         
-<div>
-        <h4>Subscriptions</h4>
+
+<div className="flexcheek" style={{minWidth:'50%'}}>
+        <h4>Current Subscriptions:</h4>
+        {/* <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p> */}
         <ul>
           {userSubscriptions.map((subscription, index) => (
             <li key={index}>{subscription.name}</li>
           ))}
         </ul>
-      </div>
-    </div>
+</div>
+
+
+</div>   
+
+          </div>
+          <button
+            onClick={isMenuOpen ? resizeMobile : resizeDesk}
+            aria-label={isMenuOpen ? "Collapse menu" : "Expand menu"}
+            style={{ cursor: "pointer", padding: "8px", color: "#999", fontSize: 'clamp(2rem, 3vw, 3rem)' }}
+          >
+            <MenuIcon />
+          </button>
+        </div>
+
+
+
+
+
 
 
   {/* <div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
