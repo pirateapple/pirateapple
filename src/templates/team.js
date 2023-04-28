@@ -24,10 +24,12 @@ export default function Team({ data }) {
 
       
     <div>
-      <h1>{frontmatter.name} {frontmatter.credentials}</h1>
-      <p>Job Title: {frontmatter.jobTitle}</p>
-      <img src={frontmatter.profilePicture.publicURL} alt={frontmatter.name} />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+    <h1>{frontmatter.name} {frontmatter.credentials}</h1>
+  <p>Job Title: {frontmatter.jobTitle}</p>
+  {frontmatter.profilePicture && (
+    <img src={frontmatter.profilePicture.publicURL} alt={frontmatter.name} />
+  )}
+  <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
     </Layout>
   )
