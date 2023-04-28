@@ -631,7 +631,7 @@ alt={frontmatter.title + " - Featured image"}
 className="featuredimagelayer12"
 placeholder="blurred"
 loading="eager"
-style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'1px solid #fff !important', objectFit:'contain', margin:'0 auto'}}
+style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:'0', top:'0', left:'0', right:'0', border:'1px solid #fff !important', objectFit:'contain', margin:'2%'}}
 />
 
 
@@ -649,7 +649,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
           ) : (
             ""
           )}
-          <br /><strong>Summer 2023</strong>
+          <strong>Summer 2023</strong>
       </div>
       
   </article>
