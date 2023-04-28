@@ -15,7 +15,7 @@ logo_url: ../assets/logo.svg
 media_folder: "static/assets"
 public_folder: "/assets"
 publish_mode: editorial_workflow
-site_url: https://completeweb.site
+site_url: "{{site_url}}"
 # display_url: https://completeweb.site
 show_preview_links: true
 
