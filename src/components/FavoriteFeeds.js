@@ -6,6 +6,7 @@ import TimeAgo from "react-timeago";
 import userRssData from "../../static/data/userRss.json";
 import Menu from "../components/menu"
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
+import { RiMenuUnfoldFill, RiCloseCircleFill } from "react-icons/ri"
 
 const createExcerpt = (text, maxLength) => {
   if (!text) {
@@ -22,6 +23,58 @@ const createExcerpt = (text, maxLength) => {
 };
 
 const FavoriteFeeds = () => {
+
+
+
+
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  /* eslint-disable-next-line no-unused-vars */
+  const [isMobile, setIsMobile] = useState(false);
+  
+
+  const resizeMobile = () => {
+    setIsMenuOpen(false);
+    setIsMobile(true);
+    const elements = document.querySelectorAll(".menusnapp");
+    elements.forEach((el) => {
+      el.style.display = "none";
+      el.style.overflow = "hidden";
+      el.style.transition = "transform 1550ms ease-in-out";
+    });
+  };
+
+  const resizeDesk = () => {
+    setIsMenuOpen(true);
+    setIsMobile(false);
+    const elements = document.querySelectorAll(".menusnapp");
+    elements.forEach((el) => {
+      el.style.display = "flex";
+      el.style.transition = "transform 1550ms ease-in-out";
+    });
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedIsMenuOpen = window.localStorage.getItem("isMenuOpen");
+      if (storedIsMenuOpen) {
+        setIsMenuOpen(storedIsMenuOpen === "true");
+      } else {
+        setIsMenuOpen(true); // set default value to true if no value found in local storage
+      }
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("isMenuOpen", isMenuOpen);
+    }
+  }, [isMenuOpen]);
+  
+
+  const MenuIcon = isMenuOpen ? RiCloseCircleFill : RiMenuUnfoldFill;
+
+
+
   const { showNav } = useSiteMetadata();
   const { showDates } = useSiteMetadata();
   const { postcount } = useSiteMetadata();
@@ -132,23 +185,18 @@ const FavoriteFeeds = () => {
         ""
       )}
 {/* <h1 style={{ position: 'relative', zIndex: '1', margin: '0 auto', textAlign:'center' }}>My Timeline:</h1> */}
+
+
+
+
+
+
+
+
+
 <div className='flexbutt' style={{}}> 
 
-<div className="post-card controlpanel sidebarMenuInner" style={{display:'flex', flexDirection:'column', height:'100vh', minWidth:'1%', position:'fixed', alignItems:'center', justifyContent:'center', padding:'1vh 0', zIndex:'2'}}>
 
-<div style={{textAlign:'right', writingMode:'vertical-rl', textOrientation:'mixed', position:'absolute', top:'', right:'5px'}}><h3>Profile</h3></div>
-
-
-
-{loggedIn ? (
-    <ul style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',}}><Menu /></ul>
-              ) : (
-                <ul style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',}}><Menu /></ul>
-              )}
-
-
-
-</div>
 
 
 <div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
