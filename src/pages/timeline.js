@@ -108,7 +108,7 @@ const TimeLine = () => {
               fontSize: "150%",
             }}
           >
-            This Use has Protected their profile</h2>
+            This User has Protected their profile</h2>
       <div style={{ textAlign:'center', border:'1px solid #777', borderRadius:'8px', padding:'4vh 4vw', background:'rgba(0, 0, 0, .5)'}}>
       <h3 style={{color:'var(--theme-ui-colors-text)', textAlign:'center'}}>Enter 4 Digit Code:</h3>
       
