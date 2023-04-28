@@ -1,12 +1,12 @@
 // Fetch the site metadata
-fetch("/data/site.json")
+fetch("/static/data/site.json")
   .then(response => response.json())
   .then(siteMetadata => {
     // Get the site_url from siteMetadata
     const siteUrl = siteMetadata.siteUrl;
 
     // Read the original config.yml content
-    fetch("/admin/config.yml")
+    fetch("/static/admin/config.yml")
       .then(response => response.text())
       .then(configContent => {
         // Replace the placeholder with the actual site_url
@@ -20,4 +20,3 @@ fetch("/data/site.json")
         CMS.init({ config: configBlob });
       });
   });
-
