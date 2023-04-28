@@ -270,15 +270,22 @@ return (
 />
 <button className="button" onClick={addSubscription}>Add Subscription</button>
 </div>
+<div className="flexcheek" style={{ minWidth: '50%', maxHeight: '40vh', overflow: 'scroll', border:'1px solid #999', padding:'3%', borderRadius:'8px' }}>
 
-<div className="flexcheek" style={{minWidth:'50%'}}>
+
+
         <h4>Current Subscriptions:</h4>
-        {/* <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p> */}
+        <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p>
         <ul>
           {userSubscriptions.map((subscription, index) => (
             <li key={index}>{subscription.name}</li>
           ))}
         </ul>
+        <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p>
+        <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p>
+        <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p>
+        <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p>
+        <p>Todd Lambert is a photographer and web developer based in the United States. He has been active in the industry for several years and has gained a reputation for his creative and technically proficient work.</p>
 </div>
 
 
