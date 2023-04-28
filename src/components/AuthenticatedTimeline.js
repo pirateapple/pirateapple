@@ -343,7 +343,7 @@ return (
             {item.imageUrl && (
               <img src={item.imageUrl} alt={item.title} className="featured-image1" />
             )}
-    <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', width:'100%', height:'', position:'relative', background:'', padding:'0 1vw', margin:'2vh auto 0 auto', textAlign:'', overFlow:'hidden'}}>
+    <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', gap:'2vh', width:'100%', height:'', position:'relative', background:'', padding:'0 1vw', margin:'2vh auto 0 auto', textAlign:'', overFlow:'hidden'}}>
             <h3 className="post-title">{item.title}</h3>
            
 
@@ -352,7 +352,7 @@ return (
  </a>
 
 
-        <div className="post-meta" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'0 auto', width:'auto', maxWidth:'80vw', margin:'0 auto', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)', gap:'2vw', background:'rgba(0, 0, 0, 0.7)',}}>
+        <div className="post-meta" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'0 auto', width:'auto', maxWidth:'80vw', margin:'0 auto', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)', gap:'2vw', }}>
              <h4 className="post-source" style={{textAlign:'center'}}>{item.name}</h4>
             {showDates && <TimeAgo date={item.pubDate} />}
         </div>

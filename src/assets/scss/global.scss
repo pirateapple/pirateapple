@@ -312,7 +312,6 @@ body.social .searchIcon{display:none;}
   border-radius:5px;
   // box-shadow:0 5px 10px rgba(0, 0, 0, 0.8);
   color:#ccc;
-  padding:0 ;
 }
 
 .grid-container .panel, .grid-container .title1, .horizontal-scroll .title1{
@@ -335,6 +334,10 @@ body.social .searchIcon{display:none;}
   box-sizing: border-box;
   break-inside: avoid;
   border-radius: 8px;
+}
+
+.grid-container .post-content{
+  padding:0 3% !important;
 }
 
 .grid-container .post-card1 img{
