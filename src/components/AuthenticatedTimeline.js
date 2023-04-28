@@ -227,27 +227,35 @@ return (
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
       <h2>Feed</h2>
       {filteredFeed.slice(0, visibleItems).map((item, index) => (
-        <div className="post-card" key={index}>
-          <div className="post-header">
-            <h3 className="post-title">
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                {item.title}
-              </a>
-            </h3>
-            <button onClick={() => toggleFavorite(item)}>
-              {item.favorite ? "Unfavorite" : "Favorite"}
-            </button>
-          </div>
-          <div className="post-meta">
-            <span className="post-source">{item.name}</span>
-            {showDates && <TimeAgo date={item.pubDate} />}
-          </div>
-          <div className="post-content">
+        <div className="post-card" key={index} style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:''}}>
+          
+          <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:'1vh'}}>
+            
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
             {item.imageUrl && (
               <img src={item.imageUrl} alt={item.title} className="post-image" />
             )}
+            <br />
+            <h3 className="post-title">
+              
+                {item.title}
+              
+            </h3></a>
             <p className="post-excerpt">{createExcerpt(item.description, 150)}</p>
+            
           </div>
+
+
+          <div className="post-meta" style={{display:'flex', justifyContent:'space-between', gap:'2vw'}}>
+             <h4 className="post-source" style={{textAlign:'center'}}>{item.name}</h4>
+            {showDates && <TimeAgo date={item.pubDate} />}
+          </div>
+
+          <button onClick={() => toggleFavorite(item)} style={{position:''}}>
+              {item.favorite ? "Unfavorite" : "☆"}
+            </button>
+
+
         </div>
       ))}
       {visibleItems < filteredFeed.length && (
