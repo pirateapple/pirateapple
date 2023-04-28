@@ -260,6 +260,21 @@ body.blogpost .gatsby-image-wrapper {
   gap: 3vw;
   padding-bottom: 10vh;
   margin:2vh auto 10vh auto;
+  // grid-auto-flow: dense; /* Add this line */
+}
+
+
+.load-more-wrapper {
+  grid-column: 1 / -1; /* This line makes the button take up all columns */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.horizontal-scroll .load-more-wrapper {
+  min-height:50vh;
 }
 
 
@@ -290,7 +305,7 @@ body.social .searchIcon{display:none;}
   flex-direction: column;
   height: auto;
   // max-height: 70vh;
-  justify-content: start;
+  // justify-content: start;
 }
 
 .grid-container .post-card1{

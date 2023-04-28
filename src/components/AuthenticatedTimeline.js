@@ -7,6 +7,7 @@ import userRssData from "../../static/data/userRss.json";
 import Menu from "../components/menu";
 import useNetlifyIdentity from '../components/useNetlifyIdentity';
 
+
 const AuthenticatedTimeline = () => {
   const { showNav } = useSiteMetadata();
   const { showDates } = useSiteMetadata();
@@ -17,6 +18,12 @@ const AuthenticatedTimeline = () => {
   const [userSubscriptions, setUserSubscriptions] = useState([]);
   const [newFeedUrl, setNewFeedUrl] = useState("");
   const [newFeedName, setNewFeedName] = useState("");
+
+
+  const showMoreItems = () => {
+    setVisibleItems(visibleItems + postcount);
+    };
+    
 
   const [loggedIn, setLoggedIn] = useState(false);
   useNetlifyIdentity(setLoggedIn);
@@ -62,16 +69,16 @@ const AuthenticatedTimeline = () => {
         const feedPromises = [...userRssData.rssFeeds, ...userSubscriptions].map((feed) => fetchRssFeed(feed));
         const allFeeds = await Promise.all(feedPromises);
         const mergedFeed = [].concat(...allFeeds);
-
+  
         // Sort the merged feeds by their pubDate in descending order (most recent first)
         const sortedFeed = mergedFeed.sort((a, b) => {
           return new Date(b.pubDate) - new Date(a.pubDate);
         });
-
+  
         setFeed(sortedFeed);
       }
     };
-
+  
     fetchAllFeeds();
   }, [userSubscriptions]);
 
@@ -125,24 +132,22 @@ const AuthenticatedTimeline = () => {
   
   
   const addSubscription = () => {
-  if (newFeedUrl && newFeedName) {
-  const newSubscription = {
-  rssFeedUrl: newFeedUrl,
-  name: newFeedName,
+    if (newFeedUrl && newFeedName) {
+      const newSubscription = {
+        rssFeedUrl: newFeedUrl,
+        name: newFeedName,
+      };
+      const updatedSubscriptions = [...userSubscriptions, newSubscription];
+      setUserSubscriptions(updatedSubscriptions);
+      localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
+  
+      setNewFeedUrl("");
+      setNewFeedName("");
+    }
   };
-  const updatedSubscriptions = [...userSubscriptions, newSubscription];
-  setUserSubscriptions(updatedSubscriptions);
-  localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
-    
-  setNewFeedUrl("");
-  setNewFeedName("");
-}
+  
 
-};
 
-const showMoreItems = () => {
-setVisibleItems(visibleItems + postcount);
-};
 
 return (
 <Layout>
@@ -155,9 +160,9 @@ return (
     ""
   )}
 
-  <div className='flexbutt' style={{}}>
 
-    <div className="post-card controlpanel sidebarMenuInner" style={{ display: 'flex', flexDirection: 'column', height: '50vh', minWidth: '', position: 'fixed', alignItems: 'center', justifyContent: 'center', margin: '2% auto 0 auto', zIndex: '2', borderRadius: '0 8px 0 0', border: '0px solid', borderRight: '1px 1px 0 0 solid #888' }}>
+
+    <div className="post-card controlpanel sidebarMenuInner" style={{ display: 'flex', flexDirection: 'column', height: '', minWidth: '', position: 'fixed', alignItems: 'center', justifyContent: 'center', margin: '2% auto 0 auto', zIndex: '2', borderRadius: '0 8px 0 0', border: '0px solid', borderRight: '1px 1px 0 0 solid #888' }}>
 
       <div style={{ textAlign: 'right', writingMode: 'vertical-rl', textOrientation: 'mixed', position: 'absolute', top: '', right: '5px', letterSpacing: '2px', fontSize: 'clamp(1.2rem,2.2vw,1.8rem)' }}><h3>Profile</h3></div>
 
@@ -192,7 +197,7 @@ return (
         </ul>
       </div>
     </div>
-  </div>
+
 
   {/* <div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
@@ -223,47 +228,51 @@ return (
       ))}
     </div> */}
 
-<div className="contentpanel grid-container" style={{ marginTop: "1rem" }}>
+<div className="contentpanel grid-container" style={{ marginTop: "" }}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
 
 
 
       {filteredFeed.slice(0, visibleItems).map((item, index) => (
-        <div className="post-card1" key={index} style={{display:'flex', flexDirection:'column', justifyContent:'end', gap:'',}}>
-          
-          <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'end', alignItems: "center", gap:'1vh', maxHeight:'50vw'}}>
-            
-            <a href={item.link} rel="noopener noreferrer">
-            {item.imageUrl && (
-              <img src={item.imageUrl} alt={item.title} className="post-image" />
-            )}
-            <br />
-            <h3 className="post-title">
-                {item.title}
-            </h3></a>
-            <p className="post-excerpt">{createExcerpt(item.description, 150)}</p>
-            
-          </div>
 
-          <div className="post-meta" style={{display:'flex', justifyContent:'space-between', gap:'2vw', maxWidth:'300px', margin:'0 auto'}}>
+<div className="post-card1" key={index} style={{ justifyContent: "center", alignItems: "center" }}>
+          
+      
+  <a className="postlink" href={item.link} rel="noopener noreferrer">
+            {item.imageUrl && (
+              <img src={item.imageUrl} alt={item.title} className="featured-image1" />
+            )}
+    <div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', width:'100%', height:'', position:'relative', background:'', padding:'0 1vw', margin:'2vh auto 0 auto', textAlign:'', overFlow:'hidden'}}>
+            <h3 className="post-title">{item.title}</h3>
+           
+
+            <p className="post-excerpt">{createExcerpt(item.description, 150)}</p> 
+    </div>
+ </a>
+
+
+        <div className="post-meta" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'0 auto', width:'auto', maxWidth:'80vw', margin:'0 auto', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)', gap:'2vw', background:'rgba(0, 0, 0, 0.7)',}}>
              <h4 className="post-source" style={{textAlign:'center'}}>{item.name}</h4>
             {showDates && <TimeAgo date={item.pubDate} />}
-          </div>
+        </div>
 
           <button onClick={() => toggleFavorite(item)} style={{position:''}}>
               {item.favorite ? "Unfavorite" : "☆"}
-            </button>
+          </button>
+<br />
 
-
-        </div>
-
+</div>
 
       ))}
-      {visibleItems < filteredFeed.length && (
-        <button className="load-more" onClick={showMoreItems}>
-          Load more
-        </button>
+
+{visibleItems < filteredFeed.length && (
+  <div className="load-more-wrapper" style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:'', width:'', height:''}}>
+  <button className="button load-more" onClick={showMoreItems}>
+    Load more
+  </button>
+  </div>
       )}
+
     </div>
 
 </Layout>
