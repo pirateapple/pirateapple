@@ -1,10 +1,10 @@
 ---
-templateKey: team
+template: team
 slug: todd
 name: Todd
 jobTitle: Owner
 credentials: Ninja
-order: "1"
+order: 1
 profilePicture: /assets/todd-nin-avatar.png
 ---
-H﻿i, I'm todd and this is my second YoHo!
+Hi, I'm todd and this is my second YoHo!

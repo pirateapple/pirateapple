@@ -38,35 +38,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 const team = result.data.allMarkdownRemark.edges
 team.forEach((team) => {
   createPage({
-    path: `/team${team.node.frontmatter.slug}`,
+    path: `/team/${team.node.frontmatter.slug}`,
     component: path.resolve(`src/templates/team.js`),
     context: {
       id: team.node.id,
     },
   })
 })
-
-
-// const rssTemplate = path.resolve(`src/pages/rss.xml.js`);
-
-//   createPage({
-//     path: "/rss.xml",
-//     component: rssTemplate,
-//     context: {
-//       // Data passed to context is available in page queries as GraphQL variables.
-//     },
-//   });
-
-
-
-
-
-
-
-
-
-
-
 
   // Create markdown pages
   const posts = result.data.allMarkdownRemark.edges
@@ -78,34 +56,37 @@ team.forEach((team) => {
     const id = post.node.id
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
-
-    createPage({
-      path: post.node.frontmatter.slug,
-      component: path.resolve(
-        `src/templates/${String(post.node.frontmatter.template)}.js`
-      ),
-      // additional data can be passed via context
-      context: {
-        id,
-        previous,
-        next,
-      },
-    })
-
-
+  
+    if (post.node.frontmatter.template) {
+      createPage({
+        path: post.node.frontmatter.slug,
+        component: path.resolve(
+          `src/templates/${String(post.node.frontmatter.template)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id,
+          previous,
+          next,
+        },
+      })
+    } else {
+      console.warn(`Missing template for markdown file with id: ${id}`);
+    }
+  
     // Count blog posts.
     if (post.node.frontmatter.template === "blog-post") {
       blogPostsCount++
     }
-
-// Collect categories and tags
-if (post.node.frontmatter.category) {
-  category.add(post.node.frontmatter.category)
-}
-if (post.node.frontmatter.tags) {
-  post.node.frontmatter.tags.forEach((tag) => tags.add(tag))
-}
-})
+  
+    // Collect categories and tags
+    if (post.node.frontmatter.category) {
+      category.add(post.node.frontmatter.category)
+    }
+    if (post.node.frontmatter.tags) {
+      post.node.frontmatter.tags.forEach((tag) => tags.add(tag))
+    }
+  })
 
 // Create blog-list pages
 const postsPerPage = 6
@@ -161,16 +142,6 @@ category.forEach((category) => {
     })
   }
 })
-
-
-
-
-
-
-
-
-
-
 
   // Create tag pages
   const tagTemplate = path.resolve(`./src/templates/tag-template.js`)
