@@ -17,7 +17,7 @@ public_folder: "/assets"
 publish_mode: editorial_workflow
 site_url: "{{site_url}}"
 display_url: "{{site_url}}"
-show_preview_links: tr
+show_preview_links: true
 
 collections:
   
