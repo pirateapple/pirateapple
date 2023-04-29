@@ -9,13 +9,11 @@ const SubmitForm = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('/.netlify/functions/submit-form', {
+      const response = await fetch('/.netlify/edge-functions/submit-form', {
         method: 'POST',
         body: JSON.stringify({ name, email }),
       });
-
       const data = await response.json();
-
       setMessage(data.message);
     } catch (error) {
       setMessage('Error submitting form');
@@ -49,3 +47,4 @@ const SubmitForm = () => {
 };
 
 export default SubmitForm;
+

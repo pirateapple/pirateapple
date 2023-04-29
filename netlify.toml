@@ -1,7 +1,6 @@
 [build]
   publish = "public"
   command = "gatsby build"
-  edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -14,6 +13,9 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
 
+[[edge_functions]]
+  function = "hello" 
+  path = "/hello" 
 
 
 
