@@ -1,6 +1,7 @@
 [build]
   publish = "public"
   command = "gatsby build"
+  edge_functions = "netlify/edge_functions"
 
 [build.environment]
   NODE_VERSION = "18"
