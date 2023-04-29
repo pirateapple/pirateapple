@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs-extra');
 
 exports.handler = async (event) => {
   try {
@@ -6,7 +6,7 @@ exports.handler = async (event) => {
 
     const formData = `Name: ${name}\nEmail: ${email}\n`;
 
-    fs.appendFileSync('./public/form-data.txt', formData);
+    await fs.appendFile('./public/form-data.txt', formData);
 
     return {
       statusCode: 200,
