@@ -9,14 +9,6 @@
       "url": "/favorites"
     },
     {
-      "menutitle": "Explore",
-      "url": "/tags"
-    },
-    {
-      "menutitle": "Mateys",
-      "url": "/archive"
-    },
-    {
       "menutitle": "Walk The Plank",
       "url": "/pirate"
     }
