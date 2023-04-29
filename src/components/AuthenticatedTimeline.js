@@ -11,6 +11,7 @@ import { RiMenuUnfoldFill, RiCloseCircleFill } from "react-icons/ri"
 
 const AuthenticatedTimeline = () => {
 
+  const [storedFeedUrls, setStoredFeedUrls] = useState([]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   /* eslint-disable-next-line no-unused-vars */
@@ -146,12 +147,19 @@ const AuthenticatedTimeline = () => {
     if (storedFavorites) {
       setFavorites(JSON.parse(storedFavorites));
     }
-
+  
     const storedSubscriptions = localStorage.getItem("userSubscriptions");
     if (storedSubscriptions) {
-      setUserSubscriptions(JSON.parse(storedSubscriptions));
+      const parsedSubscriptions = JSON.parse(storedSubscriptions);
+      setUserSubscriptions(parsedSubscriptions);
+    
+      // Update the stored feed URLs
+      const urls = parsedSubscriptions.map((subscription) => subscription.rssFeedUrl);
+      setStoredFeedUrls(urls);
     }
   }, []);
+  
+    
 
   const toggleFavorite = (item) => {
     const newFavorites = [...favorites];
@@ -205,16 +213,41 @@ const AuthenticatedTimeline = () => {
   //   }
   // };
   
+  const uniqueSubscriptions = [...new Set(userSubscriptions.map(subscription => subscription.name))];
 
-  const addSubscription = (item) => {
+  const addSubscription = () => {
     const newSubscription = {
-      rssFeedUrl: item.feedUrl,
-      name: item.name,
+      name: newFeedName,
+      url: newFeedUrl,
     };
+  
+    // Check if subscription already exists
+    const subscriptionExists = userSubscriptions.some(
+      (subscription) => subscription.name === newFeedName
+    );
+  
+    if (!subscriptionExists) {
+      setUserSubscriptions([...userSubscriptions, newSubscription]);
+      setNewFeedName("");
+      setNewFeedUrl("");
+    }
+  
+    // Check if the RSS feed URL is already stored in local storage
+    if (storedFeedUrls.includes(newSubscription.rssFeedUrl)) {
+      return;
+    }
+  
     const updatedSubscriptions = [...userSubscriptions, newSubscription];
     setUserSubscriptions(updatedSubscriptions);
     localStorage.setItem("userSubscriptions", JSON.stringify(updatedSubscriptions));
+  
+    // Update the stored feed URLs
+    const urls = [...storedFeedUrls, newSubscription.rssFeedUrl];
+    setStoredFeedUrls(urls);
   };
+  
+  
+  
 
 
 return (
@@ -286,11 +319,11 @@ return (
 <div className="flexcheek" style={{ minWidth: '', maxHeight: '40vh', overflow: 'scroll', border:'1px solid #333', padding:'100px 3% 0 3%', borderRadius:'8px', textAlign:'center', position:'relative' }}>
 <h3>Latest Subscribed Feeds:</h3>
 
-        <ul style={{display:'flex', flexDirection:'column'}}>
-          {userSubscriptions.map((subscription, index) => (
-            <li key={index}>{subscription.name}</li>
-          ))}
-        </ul>
+<ul style={{display:'flex', flexDirection:'column'}}>
+  {uniqueSubscriptions.map((subscription, index) => (
+    <li key={index}>{subscription}</li>
+  ))}
+</ul>
 
 
         <Link to="/favorites" className="button" style={{position:'absolute',  top:'10px', left:'0', right:'0', width:'70%', margin:'0 auto'}} >Manage Feeds</Link>
@@ -362,17 +395,18 @@ return (
       </div>
     </a>
     <div className="post-meta" style={{display:'flex', justifyContent:'space-between', alignItems:'center', margin:'0 auto', width:'auto', maxWidth:'80vw', margin:'0 auto', textAlign:'center', padding:'1vh 2vw', fontSize:'clamp(1rem, 1vw, 1rem)', gap:'2vw', }}>
-      <button
-        className="postlink"
-        onClick={(e) => {
-          e.preventDefault();
-          addSubscription(item);
-          toggleFavorite(item);
-        }}
-        style={{ border: 'none', background: 'none' }}
-      >
-        {item.name}
-      </button>
+    <a
+  href={item.feedUrl} // Set the href to the feed URL
+  className="postlink"
+  onClick={(e) => {
+    e.preventDefault();
+    addSubscription(item);
+    toggleFavorite(item);
+  }}
+  style={{ border: 'none', background: 'none' }}
+>
+  {item.name}
+</a>
       {showDates && <TimeAgo date={item.pubDate} />}
     </div>
     <button onClick={() => toggleFavorite(item)} style={{position:''}}>
