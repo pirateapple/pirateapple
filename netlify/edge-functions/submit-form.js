@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { writeFile } = require('@netlify/fs-utils');
 
 exports.handler = async (event) => {
   try {
@@ -6,7 +6,7 @@ exports.handler = async (event) => {
 
     const formData = `Name: ${name}\nEmail: ${email}\n`;
 
-    fs.appendFileSync('./public/form-data.txt', formData);
+    await writeFile('./public/form-data.txt', formData, { append: true });
 
     return {
       statusCode: 200,
