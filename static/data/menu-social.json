@@ -1,15 +1,15 @@
 {
   "menuItems": [
     {
-      "menutitle": "Pillage",
+      "menutitle": "Feeds",
       "url": "/timeline"
     },
     {
-      "menutitle": "Plunder",
+      "menutitle": "Timeline",
       "url": "/favorites"
     },
     {
-      "menutitle": "Walk The Plank",
+      "menutitle": "Create",
       "url": "/pirate"
     }
   ]
