@@ -14,7 +14,7 @@ backend:
 logo_url: ../assets/logo.svg
 media_folder: "static/assets"
 public_folder: "/assets"
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 # site_url: ""
 # display_url: ""
 show_preview_links: false
