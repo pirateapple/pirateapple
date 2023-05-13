@@ -27,6 +27,8 @@
     "@theme-ui/mdx": "^0.15.7",
     "browser-monads": "^1.0.0",
     "commentbox.io": "^2.1.0",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^10.0.0",
     "gatsby": "^5.8.1",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^3.11.0",
@@ -58,6 +60,7 @@
     "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-remark": "^6.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
+    "install": "^0.13.0",
     "isomorphic-fetch": "^3.0.0",
     "netlify-cms-app": "^2.15.72",
     "netlify-identity-widget": "^1.9.2",
@@ -81,7 +84,6 @@
     "simple-react-lightbox": "^3.6.9-0",
     "stream-browserify": "^3.0.0",
     "styled-components": "^5.3.9",
-    "fs-extra": "^10.0.0",
     "theme-ui": "^0.15.7"
   },
   "devDependencies": {}

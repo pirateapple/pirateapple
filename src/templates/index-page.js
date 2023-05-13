@@ -22,7 +22,7 @@ import { MdVolumeUp } from "react-icons/md"
 // import { RiArrowRightDownFill } from "react-icons/ri"
 // import TwilightLogo from "../../static/assets/logo.svg"
 
-
+// import SignUp from "../components/newssign"
 // import SearchSlider from "../components/search1"
 
 // import styled from "styled-components"
@@ -97,10 +97,10 @@ const seoProps = {
 const CommonElements = ({ title, tagline, description }) => (
   <div className=" mob print" style={{ position:'sticky', top:'0', fontSize: 'clamp(1rem, 1.5vw, 3.2rem)' }}>
     <h1 className="title1" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)' }}>{title}</h1>
-    <h2 className="tagline1">
+    <h2 className="tagline1" style={{ fontSize: 'clamp(1.2rem, 1.8vw, 3.2rem)' }}>
       {tagline}
     </h2>
-    <div style={{}} className="description" dangerouslySetInnerHTML={{ __html: description }} />
+    <div style={{ fontSize: 'clamp(1.2rem, 1.8vw, 3.2rem)' }} className="description" dangerouslySetInnerHTML={{ __html: description }} />
   </div>
 );
 
@@ -664,7 +664,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0', padding:'0 0 10vh 0', border:'0px solid blue'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 10vh 0', border:'0px solid blue', background:'#222',maxWidth:'95%', borderRadius:'8px'}}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
@@ -682,7 +682,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 </div>
 
 <div id="profiletop" className="flexbutt" style={{display:'', gap:'10px', justifyContent:'center', alignItems:"center", margin:'0 0',
-  padding:'0 2% 0 2%', position:'relative'}}>
+  padding:'0 2% 0 2%', position:'relative', color: '#fff'}}>
 
 
 
@@ -721,7 +721,8 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
   textShadow:'0 2px 7px #000',
   maxWidth:'70%'
 }}>
-  <span style={{margin:'10px auto', fontSize:'160%'}}>{companyname}</span>
+  {/* <span style={{margin:'10px auto', fontSize:'160%'}}>{companyname}</span> */}
+    <span style={{margin:'10px auto', fontSize:'160%'}}>Become a Captain!</span>
   
   {frontmatter.addressText ? (
     frontmatter.addressText
@@ -735,7 +736,10 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
     ""
   )}
   <br />
-  <Link to={frontmatter.cta.ctaLink} className="button print" style={{ display: 'flex', justifyContent: 'center', padding:'1vh .2vw', maxWidth:'250px', }}>{frontmatter.cta.ctaText}</Link>
+  {/* <Link to={frontmatter.cta.ctaLink} className="button print" style={{ display: 'flex', justifyContent: 'center', padding:'1vh .5vw', maxWidth:'250px', }}>{frontmatter.cta.ctaText}</Link> */}
+  <br />
+  {/* <SignUp /> */}
+
   <br />
   {showCover ? (
     <Link to={frontmatter.coverletter.coverLink} className="print" style={{color:'', fontSize:'', margin:'5px auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{coverText}</Link>
@@ -848,7 +852,100 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 
 
 
+<section id="SecondaryInfo" order="6" className="nameblock" style={{margin:'0 auto 20vh auto', padding:'1% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
+  color:'#fff',
+  fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
+  // background:'rgba(0,0,0,0.50)',
+  backdropFilter:'blur(8px)',
+  borderRadius:'10px',
+  textShadow:'0 2px 7px #000',
+  maxWidth:'95%',
+  border:'1px solid #333',
+  background:'#222'
+   }}>
 
+
+{/* <p>Ready to set sail on your own social media voyage? Joining the Pirate Social revolution is as easy as hoisting your flag. Click on the 'Sign Up' button to embark on your journey. You'll be taken through a simple process where you'll establish your own personal galleon - your unique website that serves as your profile in the Pirate Social fleet.</p>
+
+<p>Upon signing up, you'll gain access to the Netlify CMS and Netlify Identity, the wind in your sails that will allow you to customize your profile, post your own content, and chart your course in the vast digital sea. Remember, your voice and content are your own on Pirate Social. So, get ready to make some waves, captain!</p> */}
+
+<div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+    <h2>About Pirate Social</h2>
+  </div>
+  
+
+    <p>Pirate Social is a revolutionary new social media platform. With NO central authority, each user hosts their own personal website app or "Galleon", which also transforms into their own social media profile.</p>
+    
+    <p>These website apps, or 'Galleons' as we like to call them, are hosted for free on platforms like Netlify and GitHub, offering a decentralized network powered by the spirit of digital freedom.</p>
+
+  <p>Your voice matters. Every post you make is an entry, a testament to your individuality, and a piece of content that remains unequivocally yours.</p> 
+    
+    <p>The Pirate platform encourages active content curation, where 'liking' a website contributes to a custom timeline, offering a personalized journey through the digital world.</p>
+      
+      
+      <p>We proudly hoist our black and white Jolly Roger as a symbol of our commitment to stand against corporate influence, central ownership, and censorship.</p>
+
+      <p>With Pirate Social, you're not just part of a community, you're part of a revolution.</p>
+</section>
+
+
+
+
+<section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'0 auto 20vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
+  color:'#fff',
+  border:'0px solid red', 
+  fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
+  background:'#222',
+  backdropFilter:'blur(8px)',
+  borderRadius:'10px',
+  textShadow:'0 2px 7px #000',
+  maxWidth:'95%' }}>
+
+
+
+  <div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+    <h2>How It Works</h2>
+  </div>
+
+
+
+
+<div className="flexbutt" style={{gap:'10vw'}}>
+<div className="flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Set Sail:</h2> <p>At Pirate Social, your personal website is your galleon in the digital sea. Hosted for free on Netlify and GitHub, you're not just a landlubber, you're a captain, steering your own course through the social media maelstrom.</p>
+
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Chart Your Course:</h2> <p>With Netlify CMS and Netlify Identity, your homepage and profile become your captain's log and your personal flag, flying high above the digital waves. Your posts are more than mere messages in a bottle, they're personal tales of your adventures in the vast sea of the internet.</p>
+
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Spyglass View:</h2> <p>Every ship you spot and like enhances your view of the digital horizon. Your custom timeline transforms your voyage into a grand exploration of the treasures you've chosen to seek out.</p>
+
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>High Seas Freedom:</h2> <p>Pirate Social is a haven from the corporate armada, from central rule, and from censorship. Every word you scribe and every tale you tell is unequivocally yours. It's about sailing under your own flag, following your own chart, and staking your claim in the digital world.</p>
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Shipmates Unite:</h2> <p>This platform is about building your crew on your terms. Your content is free from the manipulations of corporate quartermasters, allowing you to forge alliances based on authenticity and shared quests.</p>
+</div>
+
+<div className="flexcheek" style={{display:'flex', gap:'2vw', flexDirection:'column', justifyContent:'space-between', fontSize: 'clamp(1rem, 1vw, 2.2rem)', textAlign:'center'}}> 
+
+<StaticImage src="../../static/assets/action3.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+Control Both Your Website and Social Media Together In One App
+<StaticImage src="../../static/assets/action6.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+Scan Timelines Faster And How You Want With Swipe Or Scroll Interface
+<StaticImage src="../../static/assets/action5.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+Customize All Aspects Of Both Your Website AND Your App.
+<StaticImage src="../../static/assets/action2.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+You Control Your Timeline (And Everything Else), Not Some Billionaire. 
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</section>
 
 
 

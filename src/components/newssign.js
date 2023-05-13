@@ -41,7 +41,7 @@ const NewsletterPage = () => (
 <CustomBox style={{}}> 
 
 
-<form  style={{width:'90%', margin:'0 auto 10vh auto', display:'flex', flexDirection:'column', justifyContent:'center', background: 'rgba(0,0,0,0.50)',
+<form  style={{width:'100%', margin:'0 auto 10vh auto', display:'flex', flexDirection:'column', justifyContent:'center', background: 'rgba(0,0,0,0.50)',
   backdropFilter: 'blur(4px)', border:'1px solid #000', borderRadius:'12px', textAlign:'center', alignSelf:'center', overflow:'hidden', color:'#fff'}}
           className="contact-form"
           action="/signedup/"
@@ -54,11 +54,11 @@ const NewsletterPage = () => (
 
 
             
-              <div className="txtshadow" style={{fontSize:'clamp(1.4rem, 1.5vw, 1.5rem)', textAlign:'center', marginTop:'10px'}}><strong>Get All The Latest Minutes</strong></div>
-              <br />
-              <span className="txtshadow" style={{fontSize:'95%'}}>Get notified when NEW Minutes drop </span>
+              {/* <div className="txtshadow" style={{fontSize:'clamp(1.4rem, 1.5vw, 1.5rem)', textAlign:'center', marginTop:'10px'}}><strong>The Fleet Launches Soon!</strong></div>
+              <br /> */}
+              <span className="txtshadow" style={{fontSize:'95%'}}>Join the wait list - enter your email: </span>
 
-             <div className="signbox" style={{display:'flex', gap:'10px'}}>
+             <div className="signbox" style={{display:'flex', flexDirection:'column',gap:'10px'}}>
              
              
 
@@ -80,7 +80,7 @@ const NewsletterPage = () => (
               type="submit"
               style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
             >
-              Notify Me&nbsp;{" "}
+              Reserve Your Galleon&nbsp;{" "}
               <span className="icon -right">
                 <RiSendPlane2Line />
               </span>
@@ -90,8 +90,8 @@ const NewsletterPage = () => (
             </div>
 
 
-            <div style={{fontSize: '', padding: '0px 3%', margin:'30px 0 10px 0', textAlign: 'center', color:'#fff'}}>
-            <Link to="/privacy/" className="" style={{textAlign: 'center', padding: '15px',  textDecoration: 'underline', border:'0px solid yellow'}}>privacy policy (NO SPAM!)</Link>
+            <div style={{padding: '0px 3%', margin:'5px 0 10px 0', textAlign: 'center', color:'#fff', fontSize:'70%'}}>
+            <Link to="/privacy/" className="" style={{textAlign: 'center', padding: '15px',  textDecoration: 'underline', border:'0px solid yellow'}}>Privacy Policy (NO SPAM!)</Link>
            
             </div>
 </form>

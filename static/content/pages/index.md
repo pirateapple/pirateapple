@@ -1,10 +1,10 @@
 ---
 slug: /
-tagline:  social media by the people for the people
+tagline:  Welcome to Pirate Social, matey!
 featuredImage: /assets/pirate-propaganda.webp
 youtube:
   youtuber: 
-  youtuber2: https://youtu.be/yBet3jC7Kss
+  youtuber2: ""
   youtubeautostart: false
   youtubemute: false
   youtubecontrols: false
@@ -20,16 +20,30 @@ youtube:
 audiostart: "0"
 audioend: ""
 audiotitle: "Shoop"
-underlayImage: /assets/circuit-bg.webp
+underlayImage: 
 profText:
- <div class="" style="text-align:left;">Memes are a way of life for many and this site is meant to be an outlet for that. This site was created to make it easy to post new memes and have somewhere to archive all of them.</div><br />
-  <p>Please enjoy(and share) the memes! <br /><br />Stay tuned for really big news about the platform that we're building and that we'll soon be offering to everyone. </p>
-addressText: "1234 Main Street"
+
+  <p>You're the Captain of your domain, steering your Galleon through waves of content, shaping your own journey, and carving out your own corner of the web.</p>
+
+ <p>Set sail with your own social media website app ("Galleon") on the high seas of the Internet.</p>
+
+  <p>A safe haven for those seeking refuge from corporate influence, central ownership, and censorship.</p>
+  
+  <p>A place where every word you scribe, every tale you tell, is unequivocally yours and only yours.</p>
+
+  # <p style="text-align:center;">Join us, as we raise our black and white Jolly Roger <br /> <span >Signaling to all that the social revolution has begun.</span></p>
+  
+
+
+
+# /assets/shipbg.webp
+
+addressText: "The Fleet Launches Soon!"
 portfolio:
   openText: ""
   closeText: ""
-addressText2: "Anywhere, Planet Earth"
-skillsTitle: "Mad Skills Yo!"
+addressText2: ""
+skillsTitle: ""
 skillsText: 
   <dl>
   <dt>
@@ -53,8 +67,8 @@ skillsText:
   <dd class="percentage percentage-99"><span class="text">Hacking</span> <span class="percent">99%</span></dd>
   </dl>
 cta:
-  ctaText: Contact
-  ctaLink: "https://google.com/contact"
+  ctaText: Reserve Your Galleon
+  ctaLink: /contact
 svgImage: 
 secondaryImage: /assets/default-user.webp
 title: Pirate - social media by the people for the people
@@ -74,7 +88,7 @@ maratingtx4: x
 template: index-page
 description: Pirate - social media owned by the people
 svgzindex: x
-profTitle: Pirate Social
+profTitle: Hoist Your Flag!
 coverletter:
   coverText: About Pirate Social
   coverLink: /about
