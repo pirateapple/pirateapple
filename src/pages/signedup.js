@@ -20,9 +20,9 @@ import { RiArrowLeftSLine } from "react-icons/ri"
 export default function SignedUpPage() {
    return (
 
-
+<>
     
-    <Layout className="thanks-page">
+    {/* <Layout className="thanks-page"> */}
 
 
  
@@ -37,13 +37,13 @@ export default function SignedUpPage() {
           textAlign:'center'
         }}
       /> */}
-      <h1 className="neonText" style={{fontSize:'200%'}}>Thank you!<br />We'll let you know the instant we release new material.</h1>
+      <h1 className="neonText" style={{fontSize:'200%'}}>Thank you!<br />We'll let you know the instant we open the gates.</h1>
    
 
       <div className="spacer33"></div> 
       <Link to="/" className="button">
         <RiArrowLeftSLine className="icon -left" />
-        For now, check out the latest Meme Genes.
+        For now, feel free to check out the latest
       </Link>
     </div>
     <div className="spacer33"></div> 
@@ -51,7 +51,8 @@ export default function SignedUpPage() {
  
     
     
-    </Layout>
+    {/* </Layout> */}
+    </>
 
   )
 }

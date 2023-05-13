@@ -619,7 +619,7 @@ Click to play
 
 {/* show feature */}
 {showFeature ? (   
-<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'', maxHeight:'', margin:'0 0 0 0', padding:'0 0 0 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'', maxHeight:'', margin:'0 auto 20vh auto', padding:'0 0 0 0', position:'relative'}}>
   <article>
 
   <div className="" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', color:'#999'}}  >
@@ -664,7 +664,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 10vh 0', background:'#222',maxWidth:'95%', borderRadius:'8px', border:'1px solid #333',}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto 20vh auto', padding:'0 0 10vh 0', background:'#222',maxWidth:'95%', borderRadius:'8px', border:'1px solid #333',}}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
