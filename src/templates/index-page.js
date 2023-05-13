@@ -886,7 +886,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
       
       <p>We proudly hoist our black and white Jolly Roger as a symbol of our commitment to stand against corporate influence, central ownership, and censorship.</p>
 
-      <p>With Pirate Social, you're not just part of a community, you're part of a revolution.</p>
+
       </div>
 
 
@@ -976,8 +976,10 @@ You Control Your Timeline (And Everything Else), Not Some Billionaire.
     <h2>Technology Partners</h2>
   </div>
 
-  <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 2vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
-    <p>We've designed this platform from the ground up the best, most secure and modern development technology available today. We're proud to partner with these technologies and using them to bring you the most flexible, safe web platform. </p>
+  <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 2vw, 3.2rem)', textAlign:'left', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+    <p>We've designed this platform from the ground up using the best, most secure and modern development technology available today.</p> 
+    
+    <p>We're proud to partner with these technologies to bring you the most flexible, and safe social web platform that puts YOU in complete control. </p>
   </div>
 
 
