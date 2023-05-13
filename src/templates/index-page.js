@@ -22,7 +22,7 @@ import { MdVolumeUp } from "react-icons/md"
 // import { RiArrowRightDownFill } from "react-icons/ri"
 // import TwilightLogo from "../../static/assets/logo.svg"
 
-// import SignUp from "../components/newssign"
+import SignUp from "../components/newssign"
 // import SearchSlider from "../components/search1"
 
 // import styled from "styled-components"
@@ -738,7 +738,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
   <br />
   {/* <Link to={frontmatter.cta.ctaLink} className="button print" style={{ display: 'flex', justifyContent: 'center', padding:'1vh .5vw', maxWidth:'250px', }}>{frontmatter.cta.ctaText}</Link> */}
   <br />
-  {/* <SignUp /> */}
+  <SignUp />
 
   <br />
   {showCover ? (
