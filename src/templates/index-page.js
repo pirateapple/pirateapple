@@ -664,7 +664,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 10vh 0', border:'0px solid blue', background:'#222',maxWidth:'95%', borderRadius:'8px'}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto', padding:'0 0 10vh 0', background:'#222',maxWidth:'95%', borderRadius:'8px', border:'1px solid #333',}}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
@@ -915,6 +915,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
   fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
   background:'#222',
   backdropFilter:'blur(8px)',
+  border:'1px solid #333',
   borderRadius:'10px',
   textShadow:'0 2px 7px #000',
   maxWidth:'95%' }}>
@@ -966,6 +967,7 @@ You Control Your Timeline (And Everything Else), Not Some Billionaire.
   fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
   background:'#222',
   backdropFilter:'blur(8px)',
+  border:'1px solid #333',
   borderRadius:'10px',
   textShadow:'0 2px 7px #000',
   maxWidth:'95%' }}>
