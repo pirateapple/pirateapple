@@ -985,7 +985,7 @@ You Control Your Timeline (And Everything Else), Not Some Billionaire.
   </div>
 
 
-<div className="flexbutt" style={{gap:'40px'}}>
+<div className="flexbutt" style={{gap:'2vw'}}>
 <div className="flexcheek" style={{display:'flex', gap:'2vw', flexDirection:'row', justifyContent:'space-around', fontSize: 'clamp(1rem, 1vw, 2.2rem)', textAlign:'center', width:'100%', alignItems:'center'}}> 
 
 <StaticImage src="../../static/assets/partner3.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
