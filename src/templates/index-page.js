@@ -944,13 +944,13 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 <div className="flexcheek" style={{display:'flex', gap:'2vw', flexDirection:'column', justifyContent:'space-between', fontSize: 'clamp(1rem, 1vw, 2.2rem)', textAlign:'center', padding:'1rem 0'}}> 
 
 <StaticImage src="../../static/assets/action3.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-Control Both Your Website and Social Media Together In One App
+Control your website and social media together in one app - easily installs onto your device so you have it with you at all times, even if you're offline.
 <StaticImage src="../../static/assets/action6.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-Scan Timelines Faster And How You Want With Swipe Or Scroll Interface
+Scan your timelines faster and the way you want. Featuring a unique swipe OR scroll interface, your choice.
 <StaticImage src="../../static/assets/action5.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-Customize All Aspects Of Both Your Website AND Your App.
+Customize all aspects of your website in the app. Just love purple? Great, you can always be you!
 <StaticImage src="../../static/assets/action2.webp" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-You Control Your Timeline (And Everything Else), Not Some Billionaire. 
+You control your timeline (and everything else), not some billionaire appeasing stockholders or their bottomline. 
 </div>
 </div>
 
