@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Welcome to Pirate Social, matey!
+tagline:  Welcome to Pirate, Matey!
 featuredImage: /assets/pirate-propaganda.webp
 youtube:
   youtuber: 
@@ -31,7 +31,7 @@ profText:
   
   <p>A place where every word you scribe, every tale you tell, is unequivocally yours and only yours.</p>
 
-  <p>With Pirate Social, you're not just part of a community, you're part of a revolution.</p>
+  <p>With Pirate, you're not just part of a community, you're part of a social revolution.</p>
 
   # <p style="text-align:center;">Join us, as we raise our black and white Jolly Roger <br /> <span >Signaling to all that the social revolution has begun.</span></p>
   
@@ -92,7 +92,7 @@ description: Pirate - social media owned by the people
 svgzindex: x
 profTitle: Hoist Your Flag!
 coverletter:
-  coverText: About Pirate Social
+  coverText: About Pirate
   coverLink: /about
 scrollable: false
 contentinvideo: false
