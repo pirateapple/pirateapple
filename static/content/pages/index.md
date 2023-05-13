@@ -25,13 +25,13 @@ profText:
 
   <p>You're the Captain of your domain, steering your Galleon through waves of content, shaping your own journey, and carving out your own corner of the web.</p>
 
- <p>Set sail with your own social media website app ("Galleon") on the high seas of the Internet.</p>
+ <p>Set sail with your own custom social media website app on the high seas of the Internet.</p>
 
   <p>A safe haven for those seeking refuge from corporate influence, central ownership, and censorship.</p>
   
   <p>A place where every word you scribe, every tale you tell, is unequivocally yours and only yours.</p>
 
-  <p>With Pirate, you're not just part of a community, you're part of a social revolution.</p>
+  <p>With Pirate, you're not just part of a community, you're part of a Social Revolution.</p>
 
   # <p style="text-align:center;">Join us, as we raise our black and white Jolly Roger <br /> <span >Signaling to all that the social revolution has begun.</span></p>
   
