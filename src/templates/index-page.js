@@ -975,13 +975,13 @@ You control your timeline (and everything else), not some billionaire appeasing 
 
 
   <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
-    <h2>Technology Partners</h2>
+    <h2>Leading Technology Partners</h2>
   </div>
 
   <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 2vw, 3.2rem)', textAlign:'left', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
     <p>We've designed this platform from the ground up using the best, most secure and modern development technology available today.</p> 
     
-    <p>We're proud to partner with these technologies to bring you the most flexible, and safe social web platform that puts YOU in complete control. </p>
+    <p>We're proud to partner with these industry leading technologies to bring you the most flexible, and secure Open Source social web platform that keeps YOU in complete control. </p>
   </div>
 
 
