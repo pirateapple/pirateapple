@@ -27,7 +27,7 @@
     "menu4": "Skills",
     "showPosts": false,
     "title": "Pirate Social",
-    "showfooter": true,
+    "showfooter": false,
     "showFeature": true,
     "showCover": false,
     "image": "",

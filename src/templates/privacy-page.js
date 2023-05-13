@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import useSiteMetadata from "../hooks/SiteMetadata"
 import Seo from "../components/seo"
-import Layout from "../components/siteLayout"
+// import Layout from "../components/siteLayout"
 import GoBack from "../components/goBack"
 import Footer from "../components/footer"
 import { Helmet } from "react-helmet"
@@ -26,8 +26,8 @@ const Privacy = ({ data }) => {
   const { frontmatter, html, excerpt } = markdownRemark
 
   return (
-    <Layout className="page">
-
+   <>
+   {/* <Layout className="page"> */}
 
   <Helmet>
   <body id="body" className="utilitypage" style={{}} />
@@ -70,7 +70,8 @@ const Privacy = ({ data }) => {
       <br />
       <br />
       <Footer />
-    </Layout>
+    {/* </Layout> */}
+    </>
   )
 }
 
