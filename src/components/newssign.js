@@ -78,7 +78,7 @@ const NewsletterPage = () => (
               className="button"
               
               type="submit"
-              style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
+              style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap', color:'#22e3f1'}}
             >
               Reserve Your Galleon&nbsp;{" "}
               <span className="icon -right">
