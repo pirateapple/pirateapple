@@ -933,7 +933,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 <div className="flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
 <h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Set Sail:</h2> <p>At Pirate, your personal website is your Galleon in the digital sea. Hosted for FREE on Netlify and GitHub, you're not just a landlubber, you're a Captain, steering your own course through the Social Media Seas.</p>
 
-<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Chart Your Course:</h2> <p>With Netlify CMS and Netlify Identity, your homepage and profile become your Captain's Log and your personal flag, flying high above the digital waves. Your posts are more than mere messages in a bottle, they're personal tales of your adventures in the vast sea of the internet.</p>
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Chart Your Course:</h2> <p>With DeCap CMS and Netlify Identity, your homepage and profile become your Captain's Log and your personal flag, flying high above the digital waves. Your posts are more than mere messages in a bottle, they're personal tales of your adventures in the vast sea of the internet.</p>
 
 <h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Spyglass View:</h2> <p>Every ship you spot and like enhances your view of the digital horizon. Your custom timeline transforms your voyage into a grand exploration of the treasures you've chosen to seek out.</p>
 
