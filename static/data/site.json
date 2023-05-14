@@ -15,7 +15,7 @@
     "showSocial": false,
     "showResume": false,
     "showInfo": true,
-    "showNav2": false,
+    "showNav2": true,
     "postcount": 25,
     "showPopup": false,
     "icon192": "/assets/logo.svg",

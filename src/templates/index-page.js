@@ -24,12 +24,14 @@ import { MdVolumeUp } from "react-icons/md"
 
 import SignUp from "../components/newssign"
 // import SearchSlider from "../components/search1"
+import LHScores from "../../static/assets/logo.svg"
 
 // import styled from "styled-components"
 import Social from "../components/social"
 import BlogListHome from "../components/blog-list-home"
 import Seo from "../components/seo"
 import Layout from "../components/siteLayout"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
 const HomePage = ({ data }) => {
@@ -619,7 +621,20 @@ Click to play
 
 {/* show feature */}
 {showFeature ? (   
-<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'', maxHeight:'', margin:'0 auto 20vh auto', padding:'0 0 0 0', position:'relative'}}>
+<section id="feature" order="1" name="feature" className="print scroll-area" style={{ display:'', height:'100vh', maxHeight:'', margin:'0 auto 10vh auto', padding:'0 0 0 0', position:'relative',
+
+ alignContent:'center', display:'flex', textAlign:'left', justifyContent:'start', verticalAlign:'center',
+  color:'#fff',
+  fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
+  // background:'rgba(0,0,0,0.50)',
+  // backdropFilter:'blur(8px)',
+  // borderRadius:'10px',
+  textShadow:'0 2px 7px #000',
+  // maxWidth:'95%',
+  // border:'1px solid #333',
+  background:'#000'
+
+}}>
   <article>
 
   <div className="" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', color:'#999'}}  >
@@ -664,7 +679,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 
 {/* show Info */}
 {showInfo ? (
-<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto 20vh auto', padding:'0 0 10vh 0', background:'#222',maxWidth:'95%', borderRadius:'8px', border:'1px solid #333',}}>
+<section className="scroll-area" id="info" order="2" name="info" style={{ display:'', height:'100%', minHeight:'', position:'relative', zIndex:'0', overflow:'visible', margin:'0 auto 20vh auto', padding:'0 0 10vh 0', background:'var(--theme-ui-colors-background)', color:'var(--theme-ui-colors-text)', maxWidth:'95%', borderRadius:'8px', }}>
   <article style={{ margin:'0 0 0 0'}}>
 
   <div className="" style={{maxHeight:'100vh', width:'100vw', height:'', overflow:'visible',position:'absolute', top:'', zIndex:'-1',}}>
@@ -682,12 +697,12 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 </div>
 
 <div id="profiletop" className="flexbutt" style={{display:'', gap:'10px', justifyContent:'center', alignItems:"center", margin:'0 0',
-  padding:'0 2% 0 2%', position:'relative', color: '#fff'}}>
+  padding:'0 2% 0 2%', position:'relative', color: ''}}>
 
 
 
 {UnderlayImage ? (
-  <div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '1rem 2rem 0 2rem', maxHeight: '', fontSize: 'clamp(1rem, 1.4vw, 3.2rem)', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+  <div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '1rem 2rem 0 2rem', maxHeight: '', fontSize: 'clamp(1rem, 1.4vw, 3.2rem)', textShadow: '0 2px 3px #000', color: '', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
     <CommonElements title={frontmatter.profTitle} tagline={frontmatter.tagline} description={ProfText} />
   </div>
 ) : (
@@ -718,7 +733,8 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
   background:'rgba(0,0,0,0.50)',
   backdropFilter:'blur(8px)',
   borderRadius:'10px',
-  textShadow:'0 2px 7px #000',
+  border:'10px double var(--theme-ui-colors-buttonHoverBg)', borderRadius:'12px',
+  textShadow:'0 2px 0px #000',
   maxWidth:'70%'
 }}>
   {/* <span style={{margin:'10px auto', fontSize:'160%'}}>{companyname}</span> */}
@@ -737,8 +753,10 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
   )}
   <br />
   {/* <Link to={frontmatter.cta.ctaLink} className="button print" style={{ display: 'flex', justifyContent: 'center', padding:'1vh .5vw', maxWidth:'250px', }}>{frontmatter.cta.ctaText}</Link> */}
+Join Now!
+    <AnchorLink to='#captain' className="button fire print" style={{ display: 'flex', justifyContent: 'center', padding:'1vh .5vw', maxWidth:'250px', }}>Become a Captain!</AnchorLink>
   <br />
-  <SignUp />
+  {/* <SignUp /> */}
 
   <br />
   {showCover ? (
@@ -801,7 +819,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 <section className="scroll-area" id="resume" order="4" style={{ display:'', minHeight:'100vh', overflow:'', margin:'0 0 0 0', position:'relative', border:'0px solid blue',}}>
 
 
-<article className="hasapp"  style={{ display:'', height:'', overflow:'', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff'}}>
+<article className="hasapp"  style={{ display:'', height:'', overflow:'', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:''}}>
 
 <div id="resumename" style={{display:'none', position:'relative', top:'', fontSize:'160%', padding:'0 0 0 0', textAlign:'left', width:'100%',}}>{companyname}<br />
 {frontmatter.addressText}
@@ -842,7 +860,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 {/*  show Skills */}
 {showSkills ? (
 <section className="print scroll-area" id="skills" order="5" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'0 auto', textAlign:'center', borderRadius:'8px', minHeight:'', maxWidth:'', padding:'1rem', display:'', placeContent:'',  }}>
-<div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'#fff' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
+<div className="flexbutt" style={{display:'flex', justifyContent:'center', width:'', columnGap:'50px', border:'0px solid blue',  background:'rgba(24, 29, 31, 0.7)',  backdropFilter:'blur(12px)', padding:'4%', borderRadius:'12px', color:'' }} dangerouslySetInnerHTML={{ __html: SkillsText }}>
 </div>
   </section>
           ) : (
@@ -852,73 +870,19 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
 
 
 
-<section id="SecondaryInfo" order="6" className="nameblock" style={{margin:'0 auto 20vh auto', padding:'1% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
-  color:'#fff',
-  fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
-  // background:'rgba(0,0,0,0.50)',
-  backdropFilter:'blur(8px)',
-  borderRadius:'10px',
-  textShadow:'0 2px 7px #000',
-  maxWidth:'95%',
-  border:'1px solid #333',
-  background:'#222'
-   }}>
 
-
-{/* <p>Ready to set sail on your own social media voyage? Joining the Pirate Social revolution is as easy as hoisting your flag. Click on the 'Sign Up' button to embark on your journey. You'll be taken through a simple process where you'll establish your own personal galleon - your unique website that serves as your profile in the Pirate Social fleet.</p>
-
-<p>Upon signing up, you'll gain access to the Netlify CMS and Netlify Identity, the wind in your sails that will allow you to customize your profile, post your own content, and chart your course in the vast digital sea. Remember, your voice and content are your own on Pirate Social. So, get ready to make some waves, captain!</p> */}
-
-<div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
-    <h2>Pirate's No-Quarter</h2>
-  </div>
-  
-  <div className="flexbutt1" style={{gap:'10vw', display:'flex'}}>
-<div className="flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'space-around', width:'100%'}}>
-    <p>Pirate is a revolutionary new social media platform with NO central authority. A decentralized network where each user hosts their own personal website app or "Galleon", which also transforms into their own social media profile.</p>
-    
-    <p>These website apps, or 'Galleons' as we like to call them, are hosted for free on platforms like Netlify and GitHub, offering a decentralized network powered by the spirit of digital freedom.</p>
-
-  <p>Your voice matters. Every post you make is an entry, a testament to your individuality, and a piece of content that remains unequivocally yours.</p> 
-    
-    <p>The Pirate platform encourages active content curation, where 'liking' a website contributes to a custom timeline, offering a personalized journey through the digital world.</p>
-      
-      
-      <p>We proudly hoist our black and white Jolly Roger as a symbol of our commitment to stand against corporate influence, central ownership, and censorship.</p>
-
-
-      </div>
-
-
-      <div className="flexcheek" style={{display:'flex', gap:'2vw', flexDirection:'column', justifyContent:'space-around', fontSize: 'clamp(1rem, 1vw, 2.2rem)', textAlign:'center', width:'200px', alignItems:'center'}}> 
-
-<StaticImage src="../../static/assets/anti1.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-
-<StaticImage src="../../static/assets/anti2.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-
-<StaticImage src="../../static/assets/anti3.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-
-<StaticImage src="../../static/assets/anti4.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0',border:'1px solid #222', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
-
-</div>
-
-
-      </div>
-</section>
-
-
-
-
-<section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'0 auto 20vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
-  color:'#fff',
+<section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'0 auto 10vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
+  color:'var(--theme-ui-colors-text)',
   border:'0px solid red', 
   fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
-  background:'#222',
+  background:'var(--theme-ui-colors-cardBg)',
   backdropFilter:'blur(8px)',
-  border:'1px solid #333',
+  // border:'1px solid #333',
   borderRadius:'10px',
-  textShadow:'0 2px 7px #000',
-  maxWidth:'95%' }}>
+  // textShadow:'0 2px 0px #000',
+  maxWidth:'95%' ,
+  // border:'10px double var(--theme-ui-colors-buttonHoverBg)', borderRadius:'12px'
+  }}>
 
 
 
@@ -960,6 +924,518 @@ You control your timeline (and everything else), not some billionaire appeasing 
 
 
 
+<section id="SecondaryInfo" order="6" className="nameblock" style={{margin:'10vh auto 10vh auto', padding:'1% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
+  fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
+  // background:'rgba(0,0,0,0.50)',
+  backdropFilter:'blur(8px)',
+  borderRadius:'10px',
+  // textShadow:'0 2px 7px #000',
+  maxWidth:'95%',
+
+  background:'var(--theme-ui-colors-background)', color:'var(--theme-ui-colors-text)',
+   }}>
+
+
+{/* <p>Ready to set sail on your own social media voyage? Joining the Pirate Social revolution is as easy as hoisting your flag. Click on the 'Sign Up' button to embark on your journey. You'll be taken through a simple process where you'll establish your own personal galleon - your unique website that serves as your profile in the Pirate Social fleet.</p>
+
+<p>Upon signing up, you'll gain access to the Netlify CMS and Netlify Identity, the wind in your sails that will allow you to customize your profile, post your own content, and chart your course in the vast digital sea. Remember, your voice and content are your own on Pirate Social. So, get ready to make some waves, captain!</p> */}
+
+<div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+    <h2>Pirate's No-Quarter</h2>
+  </div>
+  
+  <div className="flexbutt1" style={{gap:'10vw', display:'flex'}}>
+<div className="flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'space-around', width:'100%'}}>
+    <p>Pirate is a revolutionary new social media platform with NO central authority. A decentralized network where each user hosts their own personal website app or "Galleon", which also transforms into their own social media profile.</p>
+    
+    <p>These website apps, or 'Galleons' as we like to call them, are hosted for free on platforms like Netlify and GitHub, offering a decentralized network powered by the spirit of digital freedom.</p>
+
+  <p>Your voice matters. Every post you make is an entry, a testament to your individuality, and a piece of content that remains unequivocally yours.</p> 
+    
+    <p>The Pirate platform encourages active content curation, where 'liking' a website contributes to a custom timeline, offering a personalized journey through the digital world.</p>
+      
+      
+      <p>We proudly hoist our black and white Jolly Roger as a symbol of our commitment to stand against corporate influence, central ownership, and censorship.</p>
+
+
+      </div>
+
+
+      <div className="flexcheek" style={{display:'flex', gap:'2vw', flexDirection:'column', justifyContent:'space-around', fontSize: 'clamp(1rem, 1vw, 2.2rem)', textAlign:'center', width:'200px', alignItems:'center'}}> 
+
+<StaticImage src="../../static/assets/anti1.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+
+<StaticImage src="../../static/assets/anti2.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+
+<StaticImage src="../../static/assets/anti3.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+
+<StaticImage src="../../static/assets/anti4.webp" alt="Default Image" style={{height:'auto', maxWidth:'150px', position:'relative', zIndex:'0', top:'0', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+
+</div>
+
+
+      </div>
+</section>
+
+
+
+<section id="SecondaryInfo" order="6" className="nameblock" style={{margin:'10vh auto 10vh auto', padding:'1% 4%',alignContent:'center', display:'flex', textAlign:'left', justifyContent:'center', verticalAlign:'center', }}>
+
+
+      <div className="container" style={{padding: '0 10%', color:'#fff'}}>
+
+{/* <div id="costs" style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', margin:'0 0 2rem 0', width:'100%'}}>
+              
+              
+
+              <p style={{fontSize:'150%', textAlign:'center', margin:'2rem 0 0 0'}}><u>LOW</u> Monthly Costs</p>
+              
+              <div style={{display:'flex', padding:'1rem 10%', margin:'0 2% 0 2%', borderRadius:'12px', height:'', textAlign:'center', justifyContent:'space-around', alignContent:'center', alignItems:'center', maxWidth:'1000px', gap:'20px', background:'rgba(0,0,0,0.30)', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px #ad04a5)', border:'1px solid #000'}}>
+              
+                <span style={{fontSize:'3rem', color:'white', transform:'rotate()', lineHeight:'100%'}}>Web Apps </span>
+              
+                <span style={{width:'70%', fontSize:'40px', color:'var(--primary-color)', lineHeight:'100%'}}>
+                WITH NO<br /> HIDDEN COSTS
+                </span>
+              </div>
+
+              <p style={{fontSize:'150%', textAlign:'center', margin:'0 0 0 0'}}>uses metered Cloud Based Services</p>
+
+              </div> */}
+
+
+<h2 id="costs" className="letter" style={{fontSize:'240%', textAlign:'center'}}>Pirate Runs Free Of Cost</h2>
+<p style={{fontSize:'150%', textAlign:'center'}}>Pirates have <u>NO</u> monthly costs.
+
+</p> 
+
+
+
+<div className="flexbutt hover" style={{display:'flex', padding:'0', gap:'20px',}}>
+
+
+<div className="flexcheek" style={{width:'33%', background: 'rgba(0,0,0,0.60)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-siteColor)', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext letter" style={{color:'#fff', fontWeight:'700'}}>Cloud Hosting</h3>
+
+<div style={{}}>Virtually all sites operate month-to-month for <strong className="highlight">FREE or low cost</strong>. 
+  <br />
+Pay only when your site uses a LOT of data.<br /> 
+ <br />
+ <div style={{textDecoration:'underline', textAlign:'center'}}><a href="https://www.netlify.com/pricing/" target="_blank" rel="noreferrer" >View  <strong className="highlight"></strong> Hosting Plan</a></div>
+ </div>
+
+</div>
+
+<div className="flexcheek" style={{width:'33%', background: 'rgba(0,0,0,0.60)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-buttonHoverBg)', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext letter" style={{color:'#fff', fontWeight:'700'}}>Analytics</h3>
+<p>Complete integration with Google Analytics. Simply paste your account tracking code into the CMS settings. 
+  <br />
+  <br />Track your website performance for <strong className="highlight">FREE</strong>!</p>
+</div>
+
+<div className="flexcheek" style={{width:'33%', background: 'rgba(0,0,0,0.60)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-siteColor)', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext letter" style={{color:'#fff', fontWeight:'700'}}>E-Commerce</h3>
+<p>Complete Shopify API integration with Shopify shopping cart built-in.
+Get FULL Shopify functionality directly inside your site.
+<br />
+   <br />Shopify API costs <strong className="highlight">$8.99mo</strong>.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div className="flexbutt hover" style={{display:'flex', marginTop:'20px', padding:'', gap:'20px'}}>
+
+
+<div className="flexcheek" style={{width:'33%', background: 'rgba(0,0,0,0.60)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-buttonHoverBg)', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext letter" style={{color:'#fff', fontWeight:'700'}}>Social Sharing</h3>
+<p>Why pay for plugins just to allow for your users to share your content? Social sharing is built-in, along with other great features. <br /><br />All INCLUDED for <strong className="highlight">FREE</strong>.</p>
+</div>
+
+<div className="flexcheek" style={{width:'33%', background: 'rgba(0,0,0,0.60)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-siteColor)', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext letter" style={{color:'#fff', fontWeight:'700'}}>AdFree YouTube</h3>
+<p>We use AdFree YouTube to remove ads. This means you have complete control of your videos without any ads.
+  
+  <br /><br />AdFree YouTube <strong className="highlight">FREE!</strong></p>
+</div>
+
+{/* <div className="flexcheek" style={{width:'33%', padding:'2rem', background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double #999', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext">NFT Features</h3>
+<p>Setup countdown timers for your own NFT Drops!  <br /> Embed your Foundation or OpenSea into your posts. Just copy and paste the share code.</p>
+</div> */}
+<div className="flexcheek" style={{width:'33%', background: 'rgba(0,0,0,0.60)', padding:'1rem 2rem ', backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-buttonHoverBg)', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+<h3 className="vartext letter" style={{color:'#fff', fontWeight:'700'}}>Comments</h3>
+<p>We use CommentBox.io and with their generous 100 comments a month.
+  
+  <br /><br /><strong className="highlight" style={{color:''}}>FREE!</strong> Comments without ads</p>
+</div>
+
+
+</div>
+
+
+
+      </div>
+</section>
+
+
+
+{/* <GatsbyImage
+                image={UnderlayImage}
+                alt={frontmatter.title + " - image"}
+                className="mcboaty1"
+                style={{height:'auto', width:'', maxHeight:'100vh', overflow:'hidden', position:'absolute', left:'0', right:'0', bottom:'0', top:'', zIndex:'0',
+               objectFit:'cover', border:'1px solid red !important', background:'transparent',}}
+              /> */}
+
+<StaticImage style={{height:'auto', width:'100vw', height:'100vh', overflow:'', position:'relative', margin:'0 auto', zIndex:'0', objectFit:'cover', border:'0px solid red', background:'transparent',}} src="../../static/assets/shipbg.webp" alt="Lighthouse Scores for VidSocks" width="100%" height="auto" className="rounded" />
+
+
+
+
+
+<section id="features" className="">
+<div className="flexbutt featurelisting" style={{display:'flex', padding:'2rem', alignItems:'baseline', gap:'30px', color:'#fff'}}>
+
+
+
+  <div className="flexcheek" >
+    <div className="frontcontent">
+      <div className="content-inside" style={{padding:'8px', textAlign:'left'}}>
+        
+      <h2
+  className="title1 txtshadow-header"
+  style={{
+   position: 'relative',
+    textAlign: 'center', 
+    float: 'none',
+    margin:'0 0 10px 0',
+    padding:'0',
+    fontSize:'1.7rem'
+  }}
+>
+
+<span  className="" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate includes:</span></h2>
+          
+        <ul className="featurelist" style={{listStyleType:'none'}}>
+        <li>User-installable PWA (Progressive Web Apps) which means your site can be installed on any device without the need for expensive and complex App Stores.</li>
+        <li>Hosted on Global Edge Network (the cloud)</li>
+        <li>Automated backups with intant rollbacks to any version.</li>
+        <li>FREE - 100GB/Mo Bandwidth</li>
+<li>FREE - 100 Site Form Submits per Mo</li>
+<li>FREE Secured Socket Layer (SSL) Cert (https://)</li>
+<li>Customizable with your own domain name</li>
+<li>Responsive Design, built with React and Gatsby</li>
+<li>Dark / Light Mode (also full support for all web accessibility guidelines)</li>
+<li>Custom Resume and Skills sections</li>
+<li>Edit website settings, Change colors, logos, etc all from within the CMS.</li>
+
+</ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div className="flexcheek">
+    <div className="frontcontent content-lr">
+    
+      <div className="content-inside" style={{padding:'8px'}}>
+        
+
+        <h2
+  className="title1 txtshadow-header"
+  style={{
+
+
+   position: 'relative',
+    textAlign: 'center', 
+    float: 'none',
+    margin:'0 0 10px 0',
+    padding:'0',
+    fontSize:'1.7rem'
+  }}
+>
+
+<span  className="" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Galleon Features:</span></h2>
+
+
+        <ul className="featurelist" style={{listStyleType:'none'}}>
+        
+
+<li>100% SEO Optimized - Google LOVES Pirate. </li>
+
+<li>Full Privacy Compliance Support (GDPR and CCPA). </li>
+
+<li>Contact Form - an integrated contact form on all pages of the your site, that sends everything right to your email inbox.</li>
+
+
+
+<li>Social Media Icons - link to all your sites and allow users to easily share your content</li>
+
+<li>OpenGraph structured data - all of site is structured to be shared with high quality image links on social sites</li>
+
+<li>Twitter Cards meta - Your pages will look great when shared on Twitter</li>
+
+<li>XML Sitemaps - Your entire site is automatically indexed and links provided to search engines.</li>
+
+<li>Your Stuff is SAFE - All stored in native image formats and markdown files that are downloadable at any time</li>
+
+
+
+
+</ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div className="flexcheek hover">
+    <div className="frontcontent">
+      <div className="content-inside" style={{padding:'8px'}}>
+        {/* <h2 className="vartext txtshadow">Pirate Features:</h2> */}
+        <h2
+  className="title1 txtshadow-header"
+  style={{
+
+
+   position: 'relative',
+    textAlign: 'center', 
+    float: 'none',
+    margin:'0 0 10px 0',
+    padding:'0',
+    fontSize:'1.7rem'
+  }}
+>
+
+<span  className="fire" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Galleon Pro Adds:</span></h2>
+
+        <ul className="featurelist" style={{listStyleType:'none'}}>
+
+
+
+
+
+
+<li>Customize all content of included Homepage, About and Contact page. Add / Modify / Delete blog posts.</li>
+
+<li>Edit website settings, Add Google Analytics change colors, settings, logos, etc all from within the CMS.</li>
+
+
+<li>Hide/Show Comments, Social Sharing, or User-interactivity (youtube video changer) on a post-by-post basis</li>
+
+<li>Control YouTube videos with starting/stopping times, loop, mute, etc..</li>
+
+<li>Custom Ad-Free YouTube Player</li>
+
+<li>PWA Exclusive Content (make some of your content only available to your site's user base - great to boost engagement!)</li>
+
+<li>Drop Timers - Easily create your own Drops. Make posts appear when your NFT drops. Just add the drop date and time</li>
+
+
+<li>E-Newsletter Form - Build your email newsletter by allowing peole to easily sign up</li>
+{/* <li>Auction Timers - Make posts disappear when your auction expires</li> */}
+
+</ul>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+  
+</div>
+</section>
+
+
+
+
+
+
+
+<section className="" id="captain" style={{ display:'', height:'', overflow:'', paddingTop:''}}>
+
+
+
+<div id="" className="" style={{width:'75vw', margin:'0 auto 6vh auto', top:'', order:''}} >
+ 
+ <div className="" style={{ background: '', padding:'2rem ',
+          backdropFilter: 'blur(4px)', border:'0px solid #000', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
+
+<div style={{display: '', flexDirection:'', justifyContent:'', padding:'0 0 0 0', fontSize:'.8rem', textAlign:'center'}}>
+
+     {/* <LHScores style={{maxWidth:'300px', margin:'0 auto 2vh auto'}} /> */}
+  <h2 style={{fontSize:'clamp(3rem, 4.5vw, 1.5rem)'}}>Become A Captain!</h2>
+          {/* <a target="_blank" rel="noreferrer" className="button" style={{textDecoration:''}} href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https://vidsock.com%2F&amp;strategy=mobile&amp;category=performance&amp;category=accessibility&amp;category=best-practices&amp;category=seo&amp;category=pwa&amp;utm_source=lh-chrome-ext">Verify Our Google Scores</a>
+          <br />Opens Full Google Speed Report (slow to load)  */}
+          
+</div>
+ 
+</div>
+ 
+
+ </div>
+
+
+
+
+  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'space-between', alignItems:'baseline', color:'', padding:'0 4%'}}>
+
+
+        
+
+<div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'space-between', alignItems:'baseline',}}>
+ 
+ <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
+     backdropFilter: 'blur(4px)', border:'10px double #fff', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
+
+<h2
+className="title1"
+style={{
+position: 'relative',
+textAlign: 'center', 
+float: 'none',
+margin:'0 0 0 0',
+padding:'0',
+
+}}
+>
+
+<span  className="free" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate Galleon</span>
+
+<br />
+
+Ready To Use = Easy to Learn<br />
+Serverless = NO WordPress<br />
+{/* Cloud Hosting = Free Forever<br /> */}
+Web Apps = NO Apple or Google
+<br />
+<span  className="neonText">Single Price = NO Fees<br />
+</span>
+<br />
+<span style={{color:'', fontSize:'90%'}}>Fast | Flexible | Secure | Features</span>
+<br /><br />
+
+
+
+<span style={{color:'', fontSize:'70%'}}>Get all the details sent to your email:</span>
+
+
+</h2>
+
+     <SignUp />
+     
+     <br /><br /> 
+
+
+
+
+
+
+</div>
+ 
+
+
+
+
+
+
+
+ </div> 
+
+
+
+
+
+
+      <div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'space-between', alignItems:'center',}}>
+ 
+      <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
+     backdropFilter: 'blur(4px)', border:'10px double #fff', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
+
+  <h2
+  className="title1 txtshadow-header"
+  style={{
+   position: 'relative',
+    textAlign: 'center', 
+    float: 'none',
+    margin:'0 0 0 0',
+    padding:'0',
+    // fontSize:'1.7rem'
+  }}
+>
+
+<span  className="fire pro" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate Galleon&nbsp;<span className="neonText" style={{color:'#a6fcff'}}> Pro</span></span>
+
+<br />
+     
+<p>A complete website/app platform with multimedia blog and customizable home page, about and contact pages.</p>
+
+<p>Built for artists, photographers, musicians, clubs & restaurants and other small businesses.</p>
+
+
+{/* Ready To Use = Easy to Learn<br />
+Serverless = NO WordPress<br />
+Cloud Hosting = Free Forever<br />
+Web App = NO App Store */}
+{/* <span  className="neonText">Single Price = NO Fees<br />
+</span> */}
+<br />
+<span style={{color:'', fontSize:'90%'}}>Fast | Flexible | Secure | Features</span>
+<br /><br />
+
+
+
+{/* <span style={{color:'', fontSize:'70%'}}>Get all the details sent to your email:</span> */}
+
+
+</h2>
+
+          <SignUp />
+          
+          <br /><br /> 
+
+
+
+
+
+
+</div>
+      
+
+
+
+
+
+
+
+      </div> 
+</div>
+
+</section>
+
+
+
+
+
+
+
+ 
+
 
 <section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'0 auto 20vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
   color:'#fff',
@@ -967,7 +1443,7 @@ You control your timeline (and everything else), not some billionaire appeasing 
   fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
   background:'#222',
   backdropFilter:'blur(8px)',
-  border:'1px solid #333',
+  // border:'1px solid #333',
   borderRadius:'10px',
   textShadow:'0 2px 7px #000',
   maxWidth:'95%' }}>
@@ -975,10 +1451,10 @@ You control your timeline (and everything else), not some billionaire appeasing 
 
 
   <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
-    <h2>Leading Technology Partners</h2>
+    <h2>Technology Partners</h2>
   </div>
 
-  <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 2vw, 3.2rem)', textAlign:'left', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
+  <div className="nameblock" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 2vw, 3.2rem)', textAlign:'left', textShadow: '0 2px 3px #000', color: 'var(--theme-ui-colors-text)', background: 'var(--theme-ui-colors-cardBg)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
     <p>We've designed this platform from the ground up using the best, most secure and modern development technology available today.</p> 
     
     <p>We're proud to partner with these industry leading technologies to bring you the most flexible, and secure Open Source social web platform that keeps YOU in complete control. </p>
