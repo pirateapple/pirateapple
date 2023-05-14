@@ -1089,21 +1089,28 @@ Get FULL Shopify functionality directly inside your site.
 
 
 
-{/* <GatsbyImage
-                image={UnderlayImage}
-                alt={frontmatter.title + " - image"}
-                className="mcboaty1"
-                style={{height:'auto', width:'', maxHeight:'100vh', overflow:'hidden', position:'absolute', left:'0', right:'0', bottom:'0', top:'', zIndex:'0',
-               objectFit:'cover', border:'1px solid red !important', background:'transparent',}}
-              /> */}
 
-<StaticImage style={{height:'auto', width:'100vw', height:'100vh', overflow:'', position:'relative', margin:'0 auto', zIndex:'0', objectFit:'cover', border:'0px solid red', background:'transparent',}} src="../../static/assets/shipbg.webp" alt="Lighthouse Scores for VidSocks" width="100%" height="auto" className="rounded" />
+
+
 
 
 
 
 
 <section id="features" className="">
+
+
+  
+  <div style={{position:'relative', display:'grid', margin:'0 auto', placeContent:'center', right:'', height:'100vh', width:'100vw', }}>
+
+<h2 id="" style={{fontSize:'clamp(1vw, 7.5vw, 9.5vw)', textShadow:'1px 2px 0px #111', position:'relative',}}>Pirate Galleons</h2>
+<h3 style={{fontSize:'clamp(1vw, 4.5vw, 9.5vw)', textShadow:'1px 2px 0px #111', position:'relative', textAlign:'center'}}>(Your website app)</h3>
+
+    <StaticImage style={{height:'auto', width:'100vw', height:'100vh', overflow:'', position:'absolute', margin:'0 auto', zIndex:'-1', objectFit:'cover', border:'0px solid red', background:'transparent',}} src="../../static/assets/shipbg.webp" alt="Lighthouse Scores for VidSocks" width="100%" height="auto" className="rounded" />
+
+</div>
+
+
 <div className="flexbutt featurelisting" style={{display:'flex', padding:'2rem', alignItems:'baseline', gap:'30px', color:'#fff'}}>
 
 
@@ -1128,7 +1135,7 @@ Get FULL Shopify functionality directly inside your site.
           
         <ul className="featurelist" style={{listStyleType:'none'}}>
         <li>User-installable PWA (Progressive Web Apps) which means your site can be installed on any device without the need for expensive and complex App Stores.</li>
-        <li>Hosted on Global Edge Network (the cloud)</li>
+        <li>Hosting on Global Edge Network (the cloud)</li>
         <li>Automated backups with intant rollbacks to any version.</li>
         <li>FREE - 100GB/Mo Bandwidth</li>
 <li>FREE - 100 Site Form Submits per Mo</li>
@@ -1136,8 +1143,8 @@ Get FULL Shopify functionality directly inside your site.
 <li>Customizable with your own domain name</li>
 <li>Responsive Design, built with React and Gatsby</li>
 <li>Dark / Light Mode (also full support for all web accessibility guidelines)</li>
-<li>Custom Resume and Skills sections</li>
-<li>Edit website settings, Change colors, logos, etc all from within the CMS.</li>
+
+
 
 </ul>
       </div>
@@ -1174,10 +1181,10 @@ Get FULL Shopify functionality directly inside your site.
 
         <ul className="featurelist" style={{listStyleType:'none'}}>
         
+ <li>Custom Homepage with Resume and Skills sections</li>
+<li>Edit website settings, Change colors, logos, etc all from within the CMS.</li>
 
 <li>100% SEO Optimized - Google LOVES Pirate. </li>
-
-<li>Full Privacy Compliance Support (GDPR and CCPA). </li>
 
 <li>Contact Form - an integrated contact form on all pages of the your site, that sends everything right to your email inbox.</li>
 
@@ -1190,6 +1197,7 @@ Get FULL Shopify functionality directly inside your site.
 <li>Twitter Cards meta - Your pages will look great when shared on Twitter</li>
 
 <li>XML Sitemaps - Your entire site is automatically indexed and links provided to search engines.</li>
+
 
 <li>Your Stuff is SAFE - All stored in native image formats and markdown files that are downloadable at any time</li>
 
@@ -1234,12 +1242,14 @@ Get FULL Shopify functionality directly inside your site.
 
 <li>Edit website settings, Add Google Analytics change colors, settings, logos, etc all from within the CMS.</li>
 
-
 <li>Hide/Show Comments, Social Sharing, or User-interactivity (youtube video changer) on a post-by-post basis</li>
+
 
 <li>Control YouTube videos with starting/stopping times, loop, mute, etc..</li>
 
 <li>Custom Ad-Free YouTube Player</li>
+
+<li>Full Privacy Compliance Support (GDPR and CCPA). </li>
 
 <li>PWA Exclusive Content (make some of your content only available to your site's user base - great to boost engagement!)</li>
 
