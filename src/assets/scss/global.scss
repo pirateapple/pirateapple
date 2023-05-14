@@ -98,30 +98,65 @@ body.blogpost .backimage{z-index:-5;}
 .free:after{
     top:0;
     content:' free ';
-    right:0;
+    right:-10px;
     // opacity:.3;
     position:absolute;
     // height:100%;
     // width:100%;
     display: block;
     -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+    transform: rotate(30deg);
 }
 
 .pro:after{
   top:0;
-  content:' $TBD ';
-  right:0;
+  content:' $199 ';
+  right:-10px;
   // opacity:.3;
   position:absolute;
   // height:100%;
   // width:100%;
   display: block;
   -webkit-transform: rotate(20deg);
-  transform: rotate(20deg);
+  transform: rotate(30deg);
 }
 
+.iconmenu{display:flex; flex-direction: column; justify-content: center; align-items: center; font-size: 40px; }
 
+.iconmenu span{display:block; width:100%; top:0; font-size:12px; background:none; text-align: center; line-height: 120%; }
+
+.react-tabs__tab{
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 12px 5px;
+	border: 0px solid #ccc;
+	color: #fff;
+	font-size: 12px; 
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;	
+  transition: all 0.3s;
+  border-radius:0;
+}
+.react-tabs__tab:hover {
+	/* color: #333; */
+  color:0;
+}
+
+.react-tabs__tab-list {
+  /* border-bottom: 1px solid #aaa; */
+  margin: 0 0;
+  padding: 0;
+  clear:both;
+  display:flex;
+  justify-content:space-between;
+  }
+
+  .react-tabs__tab--selected, .react-tabs__tab{background:transparent !important; border: none !important; color:inherit !important;}
+
+
+  
 // .background {
 
 //   z-index: 0;

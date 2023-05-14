@@ -22,6 +22,7 @@ import { MdVolumeUp } from "react-icons/md"
 // import { RiArrowRightDownFill } from "react-icons/ri"
 // import TwilightLogo from "../../static/assets/logo.svg"
 
+import Faqs from "../components/equipment-list"
 import SignUp from "../components/newssign"
 // import SearchSlider from "../components/search1"
 import LHScores from "../../static/assets/logo.svg"
@@ -1267,11 +1268,11 @@ Get FULL Shopify functionality directly inside your site.
 
 
 
-<section className="" id="captain" style={{ display:'', height:'', overflow:'', paddingTop:''}}>
+<section className="" id="" style={{ display:'', height:'', overflow:'', paddingTop:''}}>
 
 
 
-<div id="" className="" style={{width:'75vw', margin:'0 auto 6vh auto', top:'', order:''}} >
+<div id="" className="" style={{width:'75vw', margin:'0 auto 2vh auto', top:'', order:''}} >
  
  <div className="" style={{ background: '', padding:'2rem ',
           backdropFilter: 'blur(4px)', border:'0px solid #000', borderRadius:'12px', textAlign:'', alignSelf:'', }}>
@@ -1279,7 +1280,8 @@ Get FULL Shopify functionality directly inside your site.
 <div style={{display: '', flexDirection:'', justifyContent:'', padding:'0 0 0 0', fontSize:'.8rem', textAlign:'center'}}>
 
      {/* <LHScores style={{maxWidth:'300px', margin:'0 auto 2vh auto'}} /> */}
-  <h2 style={{fontSize:'clamp(3rem, 4.5vw, 1.5rem)'}}>Become A Captain!</h2>
+  <h2 id="captain" style={{fontSize:'clamp(3rem, 4.5vw, 1.5rem)'}}>Become A Captain!</h2>
+  <span style={{fontSize:'clamp(1.5rem, 2.5vw, 1.5rem)'}}>Choose Your Galleon:</span>
           {/* <a target="_blank" rel="noreferrer" className="button" style={{textDecoration:''}} href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https://vidsock.com%2F&amp;strategy=mobile&amp;category=performance&amp;category=accessibility&amp;category=best-practices&amp;category=seo&amp;category=pwa&amp;utm_source=lh-chrome-ext">Verify Our Google Scores</a>
           <br />Opens Full Google Speed Report (slow to load)  */}
           
@@ -1293,15 +1295,15 @@ Get FULL Shopify functionality directly inside your site.
 
 
 
-  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'space-between', alignItems:'baseline', color:'', padding:'0 4%'}}>
+  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'space-between', alignItems:'start', color:'', padding:'0 4%'}}>
 
 
         
 
-<div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'space-between', alignItems:'baseline',}}>
+<div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'', justifyContent:'space-between', alignItems:'end',}}>
  
  <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
-     backdropFilter: 'blur(4px)', border:'10px double #fff', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
+     backdropFilter: 'blur(4px)', border:'10px double #fff', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%', }}>
 
 <h2
 className="title1"
@@ -1318,28 +1320,29 @@ padding:'0',
 <span  className="free" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate Galleon</span>
 
 <br />
+The Pirate Social Platform<br />+<br />
+Your own custom homepage<br />
+Custom Resume and Skills section<br />
+{/* Ready To Use = Easy to Learn<br /> */}
+{/* Serverless = NO WordPress<br /> */}
+Cloud Hosted = Free Forever<br />
 
-Ready To Use = Easy to Learn<br />
-Serverless = NO WordPress<br />
-{/* Cloud Hosting = Free Forever<br /> */}
-Web Apps = NO Apple or Google
+{/* Web Apps = NO Apple or Google */}
 <br />
-<span  className="neonText">Single Price = NO Fees<br />
-</span>
-<br />
-<span style={{color:'', fontSize:'90%'}}>Fast | Flexible | Secure | Features</span>
+
+
+Join the Social Revolution<br />
+Own Your Own Content!
 <br /><br />
+{/* <span style={{color:'', fontSize:'90%'}}>Fast | Flexible | Secure | Features</span> */}
 
-
-
-<span style={{color:'', fontSize:'70%'}}>Get all the details sent to your email:</span>
-
+BECOME A CAPTAIN!
 
 </h2>
 
      <SignUp />
      
-     <br /><br /> 
+ 
 
 
 
@@ -1365,7 +1368,7 @@ Web Apps = NO Apple or Google
       <div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'space-between', alignItems:'center',}}>
  
       <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
-     backdropFilter: 'blur(4px)', border:'10px double #fff', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
+     backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-siteColor)', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
 
   <h2
   className="title1 txtshadow-header"
@@ -1382,38 +1385,19 @@ Web Apps = NO Apple or Google
 <span  className="fire pro" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate Galleon&nbsp;<span className="neonText" style={{color:'#a6fcff'}}> Pro</span></span>
 
 <br />
-     
-<p>A complete website/app platform with multimedia blog and customizable home page, about and contact pages.</p>
 
-<p>Built for artists, photographers, musicians, clubs & restaurants and other small businesses.</p>
+The Pirate Social Platform<br />+<br />
 
-
-{/* Ready To Use = Easy to Learn<br />
-Serverless = NO WordPress<br />
-Cloud Hosting = Free Forever<br />
-Web App = NO App Store */}
-{/* <span  className="neonText">Single Price = NO Fees<br />
-</span> */}
+Complete website/app platform<br />
+Customize all pages and build a unique multimedia blog/portfolio.<br />
 <br />
-<span style={{color:'', fontSize:'90%'}}>Fast | Flexible | Secure | Features</span>
+Built for artists, photographers, musicians, clubs & restaurants and other small businesses.
 <br /><br />
-
-
-
-{/* <span style={{color:'', fontSize:'70%'}}>Get all the details sent to your email:</span> */}
-
-
+<span  className="neonText">BECOME A CAPTAIN!</span>
 </h2>
 
           <SignUp />
           
-          <br /><br /> 
-
-
-
-
-
-
 </div>
       
 
@@ -1430,7 +1414,16 @@ Web App = NO App Store */}
 
 
 
-
+<section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'2vh auto 10vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
+   color:'var(--theme-ui-colors-text)',
+  // border:'0px solid red', 
+  fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
+  // background:'#222',
+  // backdropFilter:'blur(8px)',
+  // border:'1px solid #333',
+  borderRadius:'10px',
+  // textShadow:'0 2px 7px #000',
+  maxWidth:'95%' }}><Faqs /></section>
 
 
 

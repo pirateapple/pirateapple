@@ -41,7 +41,7 @@ const NewsletterPage = () => (
 <CustomBox style={{}}> 
 
 
-<form  style={{width:'100%', margin:'0 auto 10vh auto', display:'flex', flexDirection:'column', justifyContent:'center', background: 'rgba(0,0,0,0.50)',
+<form  style={{width:'100%', margin:'0 auto 0 auto', display:'flex', flexDirection:'column', justifyContent:'center', background: 'rgba(0,0,0,0.50)',
   backdropFilter: 'blur(4px)', border:'1px solid #000', borderRadius:'12px', textAlign:'center', alignSelf:'center', overflow:'hidden', color:'#fff'}}
           className="contact-form"
           action="/signedup/"
@@ -56,7 +56,7 @@ const NewsletterPage = () => (
             
               {/* <div className="txtshadow" style={{fontSize:'clamp(1.4rem, 1.5vw, 1.5rem)', textAlign:'center', marginTop:'10px'}}><strong>The Fleet Launches Soon!</strong></div>
               <br /> */}
-              <span className="txtshadow" style={{fontSize:'95%'}}>Join the wait list - enter your email: </span>
+              <span className="txtshadow" style={{fontSize:'95%'}}>Join wait list - enter your email: </span>
 
              <div className="signbox" style={{display:'flex', flexDirection:'column',gap:'10px'}}>
              
