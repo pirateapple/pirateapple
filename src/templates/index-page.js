@@ -896,13 +896,13 @@ Join Now!
 
 <div className="flexbutt" style={{gap:'10vw'}}>
 <div className="flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
-<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Set Sail:</h2> <p>At Pirate, your personal website is your Galleon in the digital sea. Hosted for FREE on Netlify and GitHub, you're not just a landlubber, you're a Captain, steering your own course through the Social Media Seas.</p>
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Set Sail:</h2> <p>At PIRATE, your personal website is your Galleon in the digital sea. Hosted for FREE on Netlify and GitHub, you're not just a landlubber, you're a Captain, steering your own course through the Social Media Seas.</p>
 
 <h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Chart Your Course:</h2> <p>With DeCap CMS and Netlify Identity, your homepage and profile become your Captain's Log and your personal flag, flying high above the digital waves. Your posts are more than mere messages in a bottle, they're personal tales of your adventures in the vast sea of the internet.</p>
 
 <h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Spyglass View:</h2> <p>Every ship you spot and like enhances your view of the digital horizon. Your custom timeline transforms your voyage into a grand exploration of the treasures you've chosen to seek out.</p>
 
-<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>High Seas Freedom:</h2> <p>Pirate is a haven from the corporate armada, from central rule, and from censorship. Every word you scribe and every tale you tell is unequivocally yours. It's about sailing under your own flag, following your own chart, and staking your claim in the digital world.</p>
+<h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>High Seas Freedom:</h2> <p>PIRATE is a haven from the corporate armada, from central rule, and from censorship. Every word you scribe and every tale you tell is unequivocally yours. It's about sailing under your own flag, following your own chart, and staking your claim in the digital world.</p>
 <h2 style={{fontSize: 'clamp(1rem, 3vw, 2.2rem)'}}>Shipmates Unite:</h2> <p>This platform is about building your crew on your terms. Your content is free from the manipulations of corporate quartermasters, allowing you to forge alliances based on authenticity and shared quests.</p>
 </div>
 
@@ -937,23 +937,23 @@ You control your timeline (and everything else), not some billionaire appeasing 
    }}>
 
 
-{/* <p>Ready to set sail on your own social media voyage? Joining the Pirate Social revolution is as easy as hoisting your flag. Click on the 'Sign Up' button to embark on your journey. You'll be taken through a simple process where you'll establish your own personal galleon - your unique website that serves as your profile in the Pirate Social fleet.</p>
+{/* <p>Ready to set sail on your own social media voyage? Joining the PIRATE Social revolution is as easy as hoisting your flag. Click on the 'Sign Up' button to embark on your journey. You'll be taken through a simple process where you'll establish your own personal galleon - your unique website that serves as your profile in the PIRATE Social fleet.</p>
 
-<p>Upon signing up, you'll gain access to the Netlify CMS and Netlify Identity, the wind in your sails that will allow you to customize your profile, post your own content, and chart your course in the vast digital sea. Remember, your voice and content are your own on Pirate Social. So, get ready to make some waves, captain!</p> */}
+<p>Upon signing up, you'll gain access to the Netlify CMS and Netlify Identity, the wind in your sails that will allow you to customize your profile, post your own content, and chart your course in the vast digital sea. Remember, your voice and content are your own on PIRATE Social. So, get ready to make some waves, captain!</p> */}
 
 <div className="nameblock flexcheek" style={{position:'sticky', top:'0', marginTop: '', width:'100%', padding: '0 2rem 0 2rem', margin:'2vh 0', maxHeight: '', fontSize: 'clamp(1rem, 3.5vw, 3.2rem)', textAlign:'center', textShadow: '0 2px 3px #000', color: '#fff', background: 'rgba(0,0,0,0.50)', backdropFilter: 'blur(12px)', borderRadius: '10px' }}>
-    <h2>Pirate's No-Quarter</h2>
+    <h2>PIRATE's No-Quarter</h2>
   </div>
   
   <div className="flexbutt1" style={{gap:'10vw', display:'flex'}}>
 <div className="flexcheek" style={{display:'flex', flexDirection:'column', justifyContent:'space-around', width:'100%'}}>
-    <p>Pirate is a revolutionary new social media platform with NO central authority. A decentralized network where each user hosts their own personal website app or "Galleon", which also transforms into their own social media profile.</p>
+    <p>PIRATE is a revolutionary new social media platform with NO central authority. A decentralized network where each user hosts their own personal website app or "Galleon", which also transforms into their own social media profile.</p>
     
     <p>These website apps, or 'Galleons' as we like to call them, are hosted for free on platforms like Netlify and GitHub, offering a decentralized network powered by the spirit of digital freedom.</p>
 
   <p>Your voice matters. Every post you make is an entry, a testament to your individuality, and a piece of content that remains unequivocally yours.</p> 
     
-    <p>The Pirate platform encourages active content curation, where 'liking' a website contributes to a custom timeline, offering a personalized journey through the digital world.</p>
+    <p>The PIRATE platform encourages active content curation, where 'liking' a website contributes to a custom timeline, offering a personalized journey through the digital world.</p>
       
       
       <p>We proudly hoist our black and white Jolly Roger as a symbol of our commitment to stand against corporate influence, central ownership, and censorship.</p>
@@ -1005,8 +1005,8 @@ You control your timeline (and everything else), not some billionaire appeasing 
               </div> */}
 
 
-<h2 id="costs" className="letter" style={{fontSize:'240%', textAlign:'center'}}>Pirate Runs Free Of Cost</h2>
-<p style={{fontSize:'150%', textAlign:'center'}}>Pirates have <u>NO</u> monthly costs.
+<h2 id="costs" className="letter" style={{fontSize:'240%', textAlign:'center'}}>PIRATE Runs Free Of Cost</h2>
+<p style={{fontSize:'150%', textAlign:'center'}}>PIRATEs have <u>NO</u> monthly costs.
 
 </p> 
 
@@ -1103,7 +1103,7 @@ Get FULL Shopify functionality directly inside your site.
   
   <div style={{position:'relative', display:'grid', margin:'0 auto', placeContent:'center', right:'', height:'100vh', width:'100vw', }}>
 
-<h2 id="" style={{fontSize:'clamp(1vw, 7.5vw, 9.5vw)', textShadow:'1px 2px 0px #111', position:'relative',}}>Pirate Galleons</h2>
+<h2 id="" style={{fontSize:'clamp(1vw, 7.5vw, 9.5vw)', textShadow:'1px 2px 0px #111', position:'relative',}}>PIRATE Galleons</h2>
 <h3 style={{fontSize:'clamp(1vw, 4.5vw, 9.5vw)', textShadow:'1px 2px 0px #111', position:'relative', textAlign:'center'}}>(Your website app)</h3>
 
     <StaticImage style={{height:'auto', width:'100vw', height:'100vh', overflow:'', position:'absolute', margin:'0 auto', zIndex:'-1', objectFit:'cover', border:'0px solid red', background:'transparent',}} src="../../static/assets/shipbg.webp" alt="Lighthouse Scores for VidSocks" width="100%" height="auto" className="rounded" />
@@ -1131,7 +1131,7 @@ Get FULL Shopify functionality directly inside your site.
   }}
 >
 
-<span  className="" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate includes:</span></h2>
+<span  className="" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>PIRATE includes:</span></h2>
           
         <ul className="featurelist" style={{listStyleType:'none'}}>
         <li>User-installable PWA (Progressive Web Apps) which means your site can be installed on any device without the need for expensive and complex App Stores.</li>
@@ -1176,7 +1176,7 @@ Get FULL Shopify functionality directly inside your site.
   }}
 >
 
-<span  className="" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Galleon Features:</span></h2>
+<span  className="" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>PIRATE Features:</span></h2>
 
 
         <ul className="featurelist" style={{listStyleType:'none'}}>
@@ -1184,7 +1184,7 @@ Get FULL Shopify functionality directly inside your site.
  <li>Custom Homepage with Resume and Skills sections</li>
 <li>Edit website settings, Change colors, logos, etc all from within the CMS.</li>
 
-<li>100% SEO Optimized - Google LOVES Pirate. </li>
+<li>100% SEO Optimized - Google LOVES PIRATE. </li>
 
 <li>Contact Form - an integrated contact form on all pages of the your site, that sends everything right to your email inbox.</li>
 
@@ -1214,7 +1214,7 @@ Get FULL Shopify functionality directly inside your site.
   <div className="flexcheek hover">
     <div className="frontcontent">
       <div className="content-inside" style={{padding:'8px'}}>
-        {/* <h2 className="vartext txtshadow">Pirate Features:</h2> */}
+        {/* <h2 className="vartext txtshadow">PIRATE Features:</h2> */}
         <h2
   className="title1 txtshadow-header"
   style={{
@@ -1229,7 +1229,7 @@ Get FULL Shopify functionality directly inside your site.
   }}
 >
 
-<span  className="fire" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Galleon Pro Adds:</span></h2>
+<span  className="fire" style={{fontSize:'100%', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'absolute', width:'100%', display:'flex', justifyContent:'center', textShadow:'2px 2px 10px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pro Features:</span></h2>
 
         <ul className="featurelist" style={{listStyleType:'none'}}>
 
@@ -1290,7 +1290,7 @@ Get FULL Shopify functionality directly inside your site.
 <div style={{display: '', flexDirection:'', justifyContent:'', padding:'0 0 0 0', fontSize:'.8rem', textAlign:'center'}}>
 
      {/* <LHScores style={{maxWidth:'300px', margin:'0 auto 2vh auto'}} /> */}
-  <h2 id="captain" style={{fontSize:'clamp(3rem, 4.5vw, 1.5rem)'}}>Become A Captain!</h2>
+  <h2 id="captain" style={{fontSize:'clamp(3rem, 4.5vw, 1.5rem)'}}>Become A PIRATE!</h2>
   <span style={{fontSize:'clamp(1.5rem, 2.5vw, 1.5rem)'}}>Choose Your Galleon:</span>
           {/* <a target="_blank" rel="noreferrer" className="button" style={{textDecoration:''}} href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https://vidsock.com%2F&amp;strategy=mobile&amp;category=performance&amp;category=accessibility&amp;category=best-practices&amp;category=seo&amp;category=pwa&amp;utm_source=lh-chrome-ext">Verify Our Google Scores</a>
           <br />Opens Full Google Speed Report (slow to load)  */}
@@ -1327,10 +1327,10 @@ padding:'0',
 }}
 >
 
-<span  className="free" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate Galleon</span>
+<span  className="free" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Get PIRATE</span>
 
 <br />
-The Pirate Social Platform<br />+<br />
+PIRATE Social Platform<br />+<br />
 Your own custom homepage<br />
 Custom Resume and Skills section<br />
 {/* Ready To Use = Easy to Learn<br /> */}
@@ -1392,11 +1392,11 @@ BECOME A CAPTAIN!
   }}
 >
 
-<span  className="fire pro" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Pirate Galleon&nbsp;<span className="neonText" style={{color:'#a6fcff'}}> Pro</span></span>
+<span  className="fire pro" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Get PIRATE&nbsp;<span className="neonText" style={{color:'#a6fcff'}}> Pro</span></span>
 
 <br />
 
-The Pirate Social Platform<br />+<br />
+PIRATE Social Platform<br />+<br />
 
 Complete website/app platform<br />
 Customize all pages and build a unique multimedia blog/portfolio.<br />
