@@ -1307,16 +1307,16 @@ Get FULL Shopify functionality directly inside your site.
 
 
 
-  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'space-between', alignItems:'start', color:'', padding:'0 4%'}}>
+  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'space-between', alignItems:'center', color:'', padding:'0 4%'}}>
 
 
         
 
-<div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'', justifyContent:'space-between', alignItems:'end',}}>
+<div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'', justifyContent:'start', alignItems:'',}}>
  
 
 
-<StaticImage src="../../static/assets/galleon-pirate.webp" alt="Default Image" style={{height:'auto', maxWidth:'470px', position:'relative', zIndex:'0', top:'0', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+<StaticImage src="../../static/assets/galleon-pirate.webp" alt="Default Image" style={{height:'auto', maxWidth:'', position:'relative', zIndex:'0', top:'', borderRadius:'8px', objectFit:'contain', margin:'0 auto 0 auto'}} />
 
 
  <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
@@ -1383,11 +1383,11 @@ BECOME A CAPTAIN!
 
 
 
-      <div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'space-between', alignItems:'center',}}>
+      <div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'center', alignItems:'',}}>
  
-      <StaticImage src="../../static/assets/galleon-pro.webp" alt="Default Image" style={{height:'auto', maxWidth:'450px', position:'relative', zIndex:'0', top:'0', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+      <StaticImage src="../../static/assets/galleon-pro.webp" alt="Default Image" style={{height:'auto', maxWidth:'', position:'relative', zIndex:'0', top:'20px', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
 
-      <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'.5rem 2rem ',
+      <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
      backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-siteColor)', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
 
   <h2
