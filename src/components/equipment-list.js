@@ -47,7 +47,7 @@ const NFTDetails = () => (
  
 
     <TabPanel style={{width:'100%', background: 'var(--theme-ui-colors-panelBG)', padding:'2rem', borderRadius:'12px'}}>
-      <div style={{display:'block', width:'100%', padding:'0 25%'}}>Secure Fo Sure</div>
+      {/* <div style={{display:'block', width:'100%', padding:'0'}}>Secure Fo Sure</div> */}
     </TabPanel>
 
 
