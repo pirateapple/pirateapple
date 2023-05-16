@@ -1,6 +1,6 @@
 ---
 slug: /
-tagline:  Welcome to Pirate, Matey!
+tagline:  Welcome to PIRATE, Matey!
 featuredImage: /assets/pirate-propaganda.webp
 youtube:
   youtuber: 
@@ -25,13 +25,13 @@ profText:
 
   <p>You're the Captain of your domain, steering your Galleon through waves of content, shaping your own journey, and carving out your own corner of the web.</p>
 
- <p>Set sail with your own custom social media website app on the high seas of the Internet.</p>
+ <p>Set sail with your own custom social media website on the high seas of the Internet.</p>
 
   <p>A safe haven for those seeking refuge from corporate influence, central ownership, and censorship.</p>
   
   <p>A place where every word you scribe, every tale you tell, is unequivocally yours and only yours.</p>
 
-  <p>With Pirate, you're not just part of a community, you're part of a Social Revolution.</p>
+  <p>With PIRATE, you're not just part of a community, you're part of a Social Revolution.</p>
 
   # <p style="text-align:center;">Join us, as we raise our black and white Jolly Roger <br /> <span >Signaling to all that the social revolution has begun.</span></p>
   
@@ -73,7 +73,7 @@ cta:
   ctaLink: /contact
 svgImage: 
 secondaryImage: /assets/default-user.webp
-title: Pirate - social media by the people for the people
+title: social media by the people for the people
 sharethis: false
 liarliar: false
 bumpertext: "Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha"
@@ -88,11 +88,11 @@ maratingtx2: x
 maratingtx3: x
 maratingtx4: x
 template: index-page
-description: Pirate - social media owned by the people
+description: PIRATE - social media owned by the people
 svgzindex: x
 profTitle: Hoist Your Flag!
 coverletter:
-  coverText: About Pirate
+  coverText: About PIRATE
   coverLink: /about
 scrollable: false
 contentinvideo: false

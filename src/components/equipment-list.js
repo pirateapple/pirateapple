@@ -33,8 +33,9 @@ const NFTDetails = () => (
 
 {/* <h2 style={{fontSize:'240%', textAlign:'center', margin:'0',  background: 'var(--theme-ui-colors-panelBG)', padding:'.5rem', borderRadius:'12px 12px 0 0'}}>Info Center </h2> */}
 
-    <TabList style={{width:'100%', background: 'var(--theme-ui-colors-cardBg)', padding:'10px 0 0 0', border:'0', borderRadius:'8px', display:'flex', justifyContent:'space-around', alignItems:'center'}}>
+    <TabList style={{width:'100%', minWidth:'400px', background: 'var(--theme-ui-colors-cardBg)', padding:'10px 0', border:'0', borderRadius:'8px', display:'flex', justifyContent:'space-around', alignItems:'center'}}>
 
+    <Tab></Tab>
     <Tab><div className="iconmenu"><RiSecurePaymentLine/><span>Secure</span></div></Tab>
     <Tab><div className="iconmenu"><CgRatio /><span>FAQ</span></div></Tab>
     
@@ -45,13 +46,15 @@ const NFTDetails = () => (
     </TabList>
  
 
-  
+    <TabPanel style={{width:'100%', background: 'var(--theme-ui-colors-panelBG)', padding:'2rem', borderRadius:'12px'}}>
+      <div style={{display:'block', width:'100%', padding:'0 25%'}}>Secure Fo Sure</div>
+    </TabPanel>
 
 
 
     <TabPanel style={{width:'100%', background: 'var(--theme-ui-colors-panelBG)', padding:'2rem', borderRadius:'12px'}}>
-            <strong style={{fontSize:'1.5rem'}}>The Pirate platform is virtually hack-proof</strong><br /><br />
-            <p>Because Pirate sites are built using a new method of distributed cloud-based hosting of static text and graphic files there is no server to be hacked. Pirate sites are pre-rendered web applications that build the site contents ahead of time and then served as basic media files and assembled in the site visitors browser.
+            <strong style={{fontSize:'1.5rem'}}>The PIRATE platform is virtually hack-proof</strong><br /><br />
+            <p>Because PIRATE sites are built using a new method of distributed cloud-based hosting of static text and graphic files there is no server to be hacked. PIRATE sites are pre-rendered web applications that build the site contents ahead of time and then served as basic media files and assembled in the site visitors browser.
             <br />
             <br />
              So there are no normal vulnerabilities in running a web server to worry about. There isn't anything for hackers to hack. <br />
@@ -87,7 +90,7 @@ const NFTDetails = () => (
             <p style={{fontWeight:'bold', marginBottom:'0', fontSize:'130%'}}>Do I own this website and site copyright or can I claim it as mine?</p>
             <p style={{}}>Yes, you own all of the content that you display on your website and you own the accounts used for the site if there are any (for instance: Netlify account, CodeBox account, Google Analytics account, Shopify account, etc. )
             <br /><br />
-             The intellectual rights and copyrights associated with the website coding and platform itself, are NOT transferred in any way and will remain the sole property of Pirate.</p>
+             The intellectual rights and copyrights associated with the website coding and platform itself, are NOT transferred in any way and will remain the sole property of PIRATE.</p>
 
             
 
@@ -106,7 +109,7 @@ const NFTDetails = () => (
     <strong style={{fontSize:'1.5rem'}}>Built Right In All The Right Spots</strong><br /><br />
 
 
-    <strong style={{fontSize:'1.3rem'}}>The Pirate Platform was built for the specific needs of photographers and other creative artists because it was built by one.</strong>
+    <strong style={{fontSize:'1.3rem'}}>The PIRATE Platform was built for the specific needs of photographers and other creative artists because it was built by one.</strong>
 <ol style={{margin:'1rem 3rem'}}>
 <li style={{}}>A complete system including video blog with unlimited posts, and customizable home page, about and contact pages with integrated contact form.</li>
 <br />
@@ -122,7 +125,7 @@ const NFTDetails = () => (
 Custom Domain names available
 </li>
 <br />
-<li style={{}}>Need more? The Pirate Platform also has complete E-Commerce integration with Shopify. Not only will you be able to sell your products right from your blog pages, but we utelize Shopify's Developer API which means it only costs $9 a month to run a full featured store. This saves you almost $20 off their normal base $28 monthly fee.</li>
+<li style={{}}>Need more? The PIRATE Platform also has complete E-Commerce integration with Shopify. Not only will you be able to sell your products right from your blog pages, but we utelize Shopify's Developer API which means it only costs $9 a month to run a full featured store. This saves you almost $20 off their normal base $28 monthly fee.</li>
 
 <li style={{}}>Seo? Social? It's in the bag. Our entire content management system(CMS) behind out plaltform is designed to make producing top-notch SEO-minded content that ranks incredibly well in Google page rankings. Also, every page and every post has custom graphics for default social image previews and custom page titles and descriptions on social media sites. Our sites kick butt. Don't believe us? Check out how we do with <a href="https://pagespeed.google.com" target="_blank" rel="noreferrer" nofollow>Google Page Speed</a>.</li> 
 </ol>
@@ -130,7 +133,7 @@ Custom Domain names available
 
 
 <blockquote className="frontquote" style={{width:'70%', margin:'2rem auto'}}>
-<p>Beyond just the best industry-leading performance and visibility, each Pirate Platform has tons of great built-in features such as image zooming, tab panels, custom color options for both light and dark themes. The sites are also user installable PWA (Progressive Web Apps) which means your site can be installed on any device without any need for expensive and complex App Stores.  </p>
+<p>Beyond just the best industry-leading performance and visibility, each PIRATE Platform has tons of great built-in features such as image zooming, tab panels, custom color options for both light and dark themes. The sites are also user installable PWA (Progressive Web Apps) which means your site can be installed on any device without any need for expensive and complex App Stores.  </p>
 
 <div style={{textAlign:'right', marginRight:'20%', marginTop:'20px'}}> – 
 </div></blockquote>
@@ -164,13 +167,13 @@ Custom Domain names available
 
 
 <TabPanel style={{width:'100%', background: 'rgba(0,0,0,0.75)', padding:'2rem', borderRadius:'12px'}}>
-           <strong style={{fontSize:'1.5rem'}}>Pirate uses metered web services wherever possible</strong><br /><br />
+           <strong style={{fontSize:'1.5rem'}}>PIRATE uses metered web services wherever possible</strong><br /><br />
            <p>
-           Pirate is built using distributed web services and utelize these metered services for delivery<br /> <br />
+           PIRATE is built using distributed web services and utelize these metered services for delivery<br /> <br />
            Because metered use of a small portion of a specific transaction is very small, they incure very little or no costs in actual usage.<br /> <br />
            Of course, if your site becomes very active or gets swamped with traffic, the metered costs will kick in and you will be billed according to the providers use accounting.<br /> <br />
 
-           Pirate takes advantage of free-tier user packages available from a variety of Providers and you will need to open/have your own accounts here: 
+           PIRATE takes advantage of free-tier user packages available from a variety of Providers and you will need to open/have your own accounts here: 
            <br /><br />
            <span style={{fontSize:'1.4rem'}}>
             - <a target="_blank" rel="noreferrer" style={{textDecoration:'underline'}} href="https://netlify.com/">Netlify.com</a> for web hosting <br />(we set this up for you and transfer ownership to you)<br />
