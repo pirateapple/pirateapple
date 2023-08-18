@@ -47,7 +47,7 @@ const NFTDetails = () => (
  
 
     <TabPanel style={{width:'100%', background: 'var(--theme-ui-colors-panelBG)', padding:'2rem', borderRadius:'12px'}}>
-      {/* <div style={{display:'block', width:'100%', padding:'0'}}>Secure Fo Sure</div> */}
+      {/* <div style={{display:'block', width:'100%', padding:'0 25%'}}>Secure Fo Sure</div> */}
     </TabPanel>
 
 
@@ -68,7 +68,7 @@ const NFTDetails = () => (
             <strong style={{fontSize:'1.5rem'}}>FAQ</strong><br /><br />
 
             <p style={{fontWeight:'bold', marginBottom:'0', fontSize:'130%'}}>So, what do I get?</p>
-            <p style={{}}>Upon completion of your purchase, you will receive access to your new website. It will be hosted with Netlify.com and thus will have an address like mynewsite.netlify.app <br />You can point any domain names if you wish or purchase a new one to assign it.</p>
+            <p style={{}}>Upon completion of your signup, you will receive access to your new website. It will be hosted with Netlify.com and thus will have an address like mynewsite.netlify.app <br />You can point any domain names if you wish or purchase a new one to assign it.</p>
 
             <p style={{fontWeight:'bold', marginBottom:'0', fontSize:'130%'}}>What CAN I do with these websites?</p>
             <p style={{}}>Almost anything that you want. Use it for your main website to show off your art or your business, you name it! You can also use it only for the blog features by assigning it to a sub domain like blog.existingwebsite.com</p>
@@ -80,7 +80,7 @@ const NFTDetails = () => (
             </p>
 
             <p style={{fontWeight:'bold', marginBottom:'0', fontSize:'130%'}}>Do I get the website right away?</p>
-            <p style={{}}>Yes, upon completion of transaction and once your account has been created you will receive an email with the details of logging into your new website.</p>
+            <p style={{}}>Yes, upon completion of signup and once your account has been created you will receive an email with the details of logging into your new website.</p>
 
             <p style={{fontWeight:'bold', marginBottom:'0', fontSize:'130%'}}>What if I lose the email, or I forget my details?</p>
             <p style={{}}>Once your account is setup with Netlify, your account information no longer passes through us. You can retrieve any of your account details by contacting Netlify.com</p>
@@ -90,7 +90,7 @@ const NFTDetails = () => (
             <p style={{fontWeight:'bold', marginBottom:'0', fontSize:'130%'}}>Do I own this website and site copyright or can I claim it as mine?</p>
             <p style={{}}>Yes, you own all of the content that you display on your website and you own the accounts used for the site if there are any (for instance: Netlify account, CodeBox account, Google Analytics account, Shopify account, etc. )
             <br /><br />
-             The intellectual rights and copyrights associated with the website coding and platform itself, are NOT transferred in any way and will remain the sole property of PIRATE.</p>
+             </p>
 
             
 

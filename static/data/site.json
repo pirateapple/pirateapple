@@ -14,7 +14,7 @@
     "titleDefault": "PIRATE",
     "showSocial": false,
     "showResume": false,
-    "showInfo": true,
+    "showInfo": false,
     "showNav2": false,
     "postcount": 25,
     "showPopup": false,
