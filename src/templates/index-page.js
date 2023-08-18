@@ -665,7 +665,7 @@ style={{height:'auto', width:'100vw', maxHeight:'', position:'relative', zIndex:
           ) : (
             ""
           )}
-          <strong>Summer 2023</strong>
+          <strong>Coming Soon</strong>
       </div>
       
   </article>
@@ -872,7 +872,7 @@ Join Now!
 
 
 
-<section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'0 auto 10vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
+{/* <section id="SecondaryInfo2" order="7" className="nameblock" style={{margin:'0 auto 10vh auto', padding:'2% 4%',alignContent:'center', display:'grid', textAlign:'left', justifyContent:'center', verticalAlign:'center',
   color:'var(--theme-ui-colors-text)',
   border:'0px solid red', 
   fontSize:'clamp(1rem, 1.8vw, 3.2rem)',
@@ -920,7 +920,7 @@ You control your timeline (and everything else), not some billionaire appeasing 
 </div>
 
 
-</section>
+</section> */}
 
 
 
@@ -1385,7 +1385,7 @@ BECOME A CAPTAIN!
 
       <div id="" className="flexcheek" style={{display:'flex', flexDirection:'column', gap:'30px', justifyContent:'center', alignItems:'',}}>
  
-      <StaticImage src="../../static/assets/galleon-pro.webp" alt="Default Image" style={{height:'auto', maxWidth:'', position:'relative', zIndex:'0', top:'15px', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
+      <StaticImage src="../../static/assets/galleon-pro.webp" alt="Default Image" style={{height:'auto', maxWidth:'', position:'relative', zIndex:'0', top:'20px', borderRadius:'8px', objectFit:'contain', margin:'0 auto'}} />
 
       <div className="" style={{ background: 'rgba(0,0,0,0.30)', padding:'1rem 2rem ',
      backdropFilter: 'blur(4px)', border:'10px double var(--theme-ui-colors-siteColor)', borderRadius:'12px', textAlign:'', alignSelf:'', width:'100%' }}>
@@ -1402,7 +1402,7 @@ BECOME A CAPTAIN!
   }}
 >
 
-<span  className="fire pro" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Get PIRATE&nbsp;<span className="neonText" style={{color:'#a6fcff'}}> Pro</span></span>
+<span  className="fire" style={{fontSize:'1.7rem', fontWeight:'bold', textTransform:'', background:'rgba(0,0,0,0.30)', borderRadius:'12px', marginTop:'-40px', position:'relative', width:'100%', color:'#fff', display:'flex', justifyContent:'center', textShadow:'0px 2px 0px #222', filter:'drop-shadow(0px 0px 10px var(--theme-ui-colors-siteColor))', border:'1px solid var(--theme-ui-colors-siteColor)' }}>Get PIRATE&nbsp;<span className="neonText" style={{color:'#a6fcff'}}> Pro</span></span>
 
 <br />
 
